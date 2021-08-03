@@ -1,0 +1,103 @@
+@import "../../styles/config/utilities";
+@import "../../styles/config/variable";
+
+$lightBlue: rgba($main, 0.7);
+
+.footer {
+  @include flex_layout(null, null, column);
+  border-radius: 2.7rem 2.7rem 0 0;
+  border: 0.1rem solid #ccc;
+  overflow: hidden;
+  padding: 2rem 8rem;
+  margin-top: 4rem;
+  .logo {
+    padding: 0;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30rem, 1fr));
+    grid-gap: 4rem 5rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(2, minmax(10rem, 20rem));
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, minmax(10rem, 20rem));
+    }
+    .text {
+      font-size: 1.5rem;
+      color: $lightBlue;
+      font-weight: bolder;
+      text-align: justify;
+    }
+    .ul {
+      font-weight: bolder;
+      & > span {
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+      & > li {
+        list-style: none;
+        font-size: 1.4rem;
+        color: $lightBlue;
+        .icon {
+          font-size: 1.5rem;
+          margin-right: 1rem;
+        }
+        .social,
+        .store {
+          margin-right: 1rem;
+          font-size: 2.5rem;
+        }
+        @include flex_layout(center, null);
+        &:not(:last-child) {
+          margin-bottom: 0.7rem;
+        }
+        .link {
+          font-size: 1.4rem;
+          color: $lightBlue;
+        }
+      }
+    }
+  }
+  .footer_text {
+    font-size: 1.4rem;
+    text-align: justify;
+    color: $lightBlue;
+    font-weight: bolder;
+    padding: 0 2rem;
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+    & > span {
+      font-size: 1.6rem;
+      display: block;
+      color: $main;
+      font-weight: bolder;
+      margin-bottom: 1.5rem;
+    }
+    & > strong {
+      color: $orange;
+    }
+    & > ul {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+      & > strong {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: $orange;
+      }
+      & > li {
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

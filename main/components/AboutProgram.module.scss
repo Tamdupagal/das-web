@@ -1,0 +1,51 @@
+@import "../../styles/config/utilities";
+@import "../../styles/config/variable";
+
+$lightBlue: rgba($main, 0.7);
+
+.container {
+  position: relative;
+  width: 100%;
+  @include flex_layout(center, null, column);
+  .main_heading {
+    font-size: 3rem;
+    color: $main;
+    align-self: center;
+    padding: 2rem 0;
+  }
+  .wrapper {
+    position: relative;
+    width: 100%;
+    padding: 2rem 5rem;
+    @include flex_layout(null, null);
+    .image {
+      position: relative;
+      width: 50%;
+      order: 2;
+    }
+    .about {
+      position: relative;
+      width: 50%;
+      text-align: justify;
+      color: $lightBlue;
+      font-weight: bolder;
+      font-size: 1.8rem;
+      padding: 0;
+      margin-right: 4rem;
+      line-height: 1.6;
+      order: 1;
+    }
+    @media screen and (max-width: 768px) {
+      @include flex_layout(center, null, column);
+      padding: 2rem 2.5rem;
+      .image,
+      .about {
+        width: 100%;
+        margin: 0;
+      }
+      .about {
+        margin-bottom: 6rem;
+      }
+    }
+  }
+}

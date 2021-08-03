@@ -1,0 +1,68 @@
+@import "../../styles/config/utilities";
+@import "../../styles/config/variable";
+
+$lightBlue: rgba($main, 0.7);
+
+.container {
+  position: relative;
+  width: 100%;
+  padding: 0 0.5rem;
+  .main_title {
+    font-size: 3rem;
+    color: $main;
+    text-align: center;
+    padding: 5rem 0;
+  }
+  .mission__box {
+    width: 100%;
+    @include flex_layout(center, null);
+    padding: 2rem 5rem;
+    .image {
+      position: relative;
+      width: 50%;
+      margin-right: 3rem;
+    }
+    .footer_text {
+      width: 50%;
+      font-size: 1.6rem;
+      text-align: justify;
+      line-height: 1.8;
+      color: $lightBlue;
+      font-weight: bolder;
+      padding: 5rem 2rem;
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+      & > strong {
+        color: $orange;
+        font-size: 1.8rem;
+      }
+      & > ul {
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+        & > strong {
+          display: block;
+          margin-bottom: 0.5rem;
+          color: $orange;
+        }
+        & > li {
+          margin-left: 3rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      @include flex_layout(center, null, column);
+      padding: 2rem 1rem;
+      .image,
+      .footer_text {
+        width: 100%;
+        margin: 0;
+      }
+      .image {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}

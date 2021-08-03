@@ -1,0 +1,70 @@
+import styles from './Header.module.scss';
+import Images from 'next/image'
+import Link from 'next/link'
+import logo from '../assets/das.webp'
+import { FaAngleDown, FaBars, FaTimes, FaAngleRight} from 'react-icons/fa'
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+
+
+function Header() {
+
+    const [toggle, setToggle] = useState(false)
+
+    const dropdown = {
+        hidden: {
+            scale: 0,
+            originX: 0,
+            originY: 0,
+            borderTop: "0.25rem solid #ffffff",
+            opacity: 0,
+        },
+        vissible: {
+            scale: 1,
+            opacity: 1,
+            borderTop: "0.25rem solid #fd7e14",
+            transition: {
+                type: "tween",
+                staggerChildren: 0.05,
+                delayChildren: 0.3,
+                duration: 0.3,
+            },
+        },
+
+        
+    }
+
+    const fadeIn = {
+        hidden: {
+            x: "-5rem",
+            opacity: 0,
+        },
+        vissible: {
+             x: 0,
+            opacity: 1
+        }
+    }
+
+    return (
+        <header className={styles.header}>
+                <figure className={styles.logo}>
+                <Images src={logo} objectFit="contain" layout='responsive' className={styles.image}/>
+                </figure>
+                <nav className={styles.nav}>
+                    <ul className={styles.list}>
+                    <motion.li onHoverStart={() => setToggle(true)} onHoverEnd={() => setToggle(false)}> Courses <FaAngleDown className={styles.arrow_down} />
+                                <motion.ul key="dropdown" variants={dropdown} animate={toggle ? "vissible" : "hidden"} initial="hidden" className={styles.dropdown}>
+                                <motion.li variants={fadeIn}><FaAngleRight className={styles.arrow_right}/> Web Development</motion.li>
+                                <motion.li variants={fadeIn}><FaAngleRight className={styles.arrow_right}/>Digital Marketing</motion.li>
+                                <motion.li variants={fadeIn}><FaAngleRight className={styles.arrow_right}/>Data Science</motion.li>
+                            </motion.ul>
+                    </motion.li>
+                    </ul>
+                </nav>
+                <button className={styles.login__btn}>Login</button>
+            {/* <FaBars className={styles.menu} onClick={() => setToggleNav(true)}/> */}
+        </header>
+    )
+}
+
+export default Header
