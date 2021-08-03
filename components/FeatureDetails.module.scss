@@ -1,0 +1,72 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.feature__img {
+  min-width: 10rem;
+  margin-right: 1.5rem;
+}
+.workflow__icon {
+  width: max-content;
+  height: max-content;
+  @include flex_layout(center, null);
+  margin-bottom: 2.5rem;
+  & > span {
+    display: inline-block;
+    background-color: white;
+    color: #234582;
+    border-radius: 3rem;
+    font-size: 2.7rem;
+    width: 7rem;
+    height: 7rem;
+    font-weight: bolder;
+    display: grid;
+    place-items: center;
+    letter-spacing: 0.1rem;
+    margin-right: 1rem;
+  }
+  @media screen and (max-width: 768px) {
+    .arrow__odd,
+    .arrow__even {
+      display: none;
+    }
+  }
+  .arrow__odd {
+    transform: translateY(-1rem);
+  }
+  .arrow__even {
+    transform: translateY(1rem);
+  }
+}
+.feature__details {
+  &[data-white="true"] {
+    .title,
+    .description {
+      color: white;
+    }
+  }
+  .title {
+    font-size: 1.8rem;
+    color: black;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+  }
+  .description {
+    font-size: 1.55rem;
+    text-align: inherit;
+    font-weight: 500;
+    color: rgba(black, 0.8);
+    line-height: 1.8;
+  }
+  .feature__btn {
+    display: inline-block;
+    background-color: $red;
+    padding: 1.5rem 3rem;
+    color: white;
+    font-size: 1.6rem;
+    width: max-content;
+    border-radius: 3rem;
+    border: none;
+    font-weight: bolder;
+    margin-top: 4rem;
+  }
+}

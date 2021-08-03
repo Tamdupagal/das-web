@@ -1,0 +1,48 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.container {
+  margin-top: 19rem;
+  position: relative;
+  background-image: url("../assets/shape-left.png"),
+    url("../assets/shape-right.png");
+  background-position: 0 50%, 100% 60%;
+  background-repeat: no-repeat;
+  background-size: 35%, 35%;
+  width: 100%;
+  @include flex_layout(center, center, column);
+  .content__box {
+    @include flex_layout(center, null, column);
+    position: relative;
+    width: 40%;
+    min-width: 45rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    .heading {
+      font-size: clamp(1rem, -0.875rem + 8.333vw, 5rem);
+      font-weight: bolder;
+      color: black;
+    }
+    .desc {
+      font-size: 1.6rem;
+      color: rgba(black, 0.8);
+      margin: 3rem 0;
+    }
+    .banner__btn {
+      background-color: $red;
+      padding: 1.5rem 3rem;
+      color: white;
+      font-size: 1.6rem;
+      width: max-content;
+      border-radius: 3rem;
+      border: none;
+      font-weight: bolder;
+    }
+    .banner__img {
+      position: relative;
+      width: 100%;
+      height: max-content;
+      border: 1px solid red;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 2.2rem 3rem;
+  z-index: 1000;
+  @include flex_layout(center, space-between);
+  @media screen and (max-width: 768px) {
+    @include flex_layout(center, null);
+  }
+  transition: {
+    property: padding;
+    duration: 0.3s;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0.3rem 0 2rem 0.1rem rgba(black, 0.1);
+    opacity: 0;
+    transition: {
+      property: opacity;
+      duration: 0.3s;
+    }
+  }
+  &.active {
+    padding: 1.5rem 3rem;
+    &::before {
+      opacity: 1;
+    }
+  }
+  .logo {
+    width: 20rem;
+  }
+  .nav {
+    @media screen and (max-width: 768px) {
+      order: 2;
+      margin-left: 2rem;
+    }
+    & > ul {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+      @include flex_layout(center, null);
+      & > li {
+        position: relative;
+        list-style: none;
+        padding: 1rem;
+        color: black;
+        &:not(:last-child) {
+          margin-right: 3.5rem;
+        }
+        &:hover {
+          color: $orange;
+        }
+        .underline {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0.4rem;
+          border-radius: 1rem;
+          background-color: $blue;
+        }
+        .link {
+          display: block;
+          font-size: 1.6rem;
+          color: inherit;
+          font-weight: 500;
+          cursor: pointer;
+          &.active {
+            color: $blue;
+          }
+        }
+      }
+    }
+    .menu {
+      display: none;
+      font-size: 2.7rem;
+      color: $dark;
+      cursor: pointer;
+      @media screen and (max-width: 768px) {
+        display: inline-block;
+        order: 2;
+      }
+    }
+  }
+  .header__btn {
+    border: 0.25rem solid $red;
+    border-radius: 5rem;
+    padding: 1.5rem 2.5rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: $red;
+    background-color: transparent;
+    letter-spacing: 0.03rem;
+    @media screen and (max-width: 768px) {
+      order: 1;
+      margin-left: auto;
+    }
+  }
+}
+.mobile__drawer {
+  position: relative;
+  width: 30rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  z-index: 9999;
+  & > ul {
+    width: 100%;
+    height: 100%;
+    @include flex_layout(null, null, column);
+    padding: 1.5rem 3rem;
+    & > li {
+      padding: 0.5rem 0 2.7rem 0;
+      width: 100%;
+      color: white;
+      list-style: none;
+      cursor: pointer;
+      border-bottom: 0.1rem solid rgba(#8b8b8b, 0.5);
+      letter-spacing: 0.08rem;
+      font-weight: 100;
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+      .mobile__link {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+  }
+  .close {
+    width: 100%;
+    padding: 2rem;
+    text-align: end;
+    .close__btn {
+      font-size: 2.2rem;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+}

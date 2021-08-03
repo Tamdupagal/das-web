@@ -1,0 +1,30 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.container {
+  position: relative;
+  width: 100%;
+  height: max-content;
+  padding: 1rem 0.5rem;
+  margin-bottom: 10rem;
+  @include flex_layout(center, null, column);
+  .section__header {
+    text-align: center;
+    margin-bottom: 6.5rem;
+  }
+  .feature__box {
+    position: relative;
+    width: 100%;
+    padding: 0 10rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 5rem 10rem;
+    .feature {
+      @include flex_layout(null, null, column);
+      text-align: justify;
+      @media screen and (max-width: 768px) {
+        text-align: center !important;
+      }
+    }
+  }
+}

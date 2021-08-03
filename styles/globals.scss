@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "DM Sans", sans-serif;
+  width: 100%;
+  position: relative;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 47%;
+  }
+}
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 42%;
+  }
+}
+@media screen and (max-width: 350px) {
+  html {
+    font-size: 38%;
+  }
+}
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 35%;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

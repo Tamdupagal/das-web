@@ -1,0 +1,63 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.card {
+  position: relative;
+  width: 35rem;
+  height: max-content;
+  @include flex_layout(null, null, column);
+  border: 0.1rem solid #e4e4e4;
+  border-radius: 1rem;
+  transition: {
+    property: border;
+    duration: 0.4s;
+  }
+  margin: 0 auto;
+  &::before {
+    content: "";
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 2.2rem rgba(black, 0.25);
+    opacity: 0;
+    transition: {
+      property: opacity;
+      duration: 0.2s;
+    }
+  }
+  &:hover {
+    border: 0.1rem solid transparent;
+    &::before {
+      opacity: 1;
+    }
+  }
+  & > figure {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    border-radius: 1rem 1rem 0 0;
+    overflow: hidden;
+  }
+  .blog__details {
+    padding: 3rem;
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 3rem;
+    }
+    .blog__author {
+      width: 100%;
+      @include flex_layout(center, space-between);
+      .name {
+        font-size: 1.65rem;
+        color: red;
+      }
+      .date {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

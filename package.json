@@ -9,9 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^4.1.17",
     "next": "11.0.1",
+    "npm": "^7.20.3",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
+    "react-multi-carousel": "^2.6.3",
+    "react-scroll": "^1.8.3",
+    "react-slick": "^0.28.1",
+    "sass": "^1.37.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "eslint": "7.32.0",

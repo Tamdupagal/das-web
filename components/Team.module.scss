@@ -1,0 +1,106 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.container {
+  padding: 0 0 10rem 0;
+  width: 100%;
+  position: relative;
+  @include flex_layout(null, center, column);
+  .section__header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  .team__box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 35rem);
+    grid-template-rows: repeat(auto, 30rem);
+    grid-gap: 4rem 5rem;
+    place-content: center;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(3, 35rem);
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 35rem);
+    }
+    .team__member {
+      position: relative;
+      padding: 4rem;
+      @include flex_layout(center, center, column);
+      cursor: pointer;
+      &::before {
+        content: "";
+        border-radius: 0.8rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 1.5rem rgba(black, 0.15);
+        opacity: 0;
+        transition: {
+          property: opacity;
+          duration: 0.6s;
+        }
+      }
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+        .title {
+          color: red;
+        }
+        .designation {
+          color: rgba(red, 0.6);
+        }
+      }
+      .image {
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 13rem;
+        height: 13rem;
+        display: grid;
+        place-items: center;
+        margin-bottom: 2rem;
+      }
+      .designation,
+      .title {
+        transition: {
+          property: color;
+          duration: 0.3s;
+        }
+      }
+      .title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      .designation {
+        font-size: 1.5rem;
+        color: rgba(black, 0.6);
+      }
+      .social__icons {
+        position: absolute;
+        bottom: 1rem;
+        right: 0;
+        @include flex_layout(null, center, column);
+        overflow: hidden;
+        padding: 0 2rem;
+        & > li {
+          list-style: none;
+          &:not(:last-child) {
+            margin-bottom: 0.7rem;
+          }
+          .icon {
+            color: red;
+            font-size: 2.2rem;
+            &:hover {
+              color: blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}

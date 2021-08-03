@@ -1,0 +1,93 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.card {
+  position: relative;
+  width: 33rem;
+  min-height: 50rem;
+  padding: 4rem 3rem;
+  @include flex_layout(null, null, column);
+  border: 0.1rem solid #e4e4e4;
+  border-radius: 2rem;
+  transition: {
+    property: border;
+    duration: 0.4s;
+  }
+  &::before {
+    content: "";
+    border-radius: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 2rem rgba(black, 0.1);
+    opacity: 0;
+    transition: {
+      property: opacity;
+      duration: 0.4s;
+    }
+  }
+  &:hover {
+    border: 0.1rem solid transparent;
+    &::before {
+      opacity: 1;
+    }
+  }
+  .plan__name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .plan__desc {
+    font-size: 1.65rem;
+    color: rgba(black, 0.8);
+  }
+  .plan__points {
+    margin: 3rem 0;
+    .plan__point {
+      @include flex_layout(center, null);
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+      .plan__icon {
+        margin-right: 1.2rem;
+        color: red;
+        font-size: 2.2rem;
+      }
+    }
+  }
+  .plan__price {
+    width: max-content;
+    align-self: center;
+    font-size: 1.7rem;
+    color: rgba(black, 0.8);
+    @include flex_layout();
+    & > span {
+      color: black;
+      font-size: 2.8rem;
+      font-weight: bolder;
+      margin-right: 0.3rem;
+    }
+  }
+  .plan__btn {
+    align-self: center;
+    background-color: $red;
+    padding: 1.5rem 3rem;
+    color: white;
+    font-size: 1.6rem;
+    width: max-content;
+    border-radius: 3rem;
+    border: none;
+    font-weight: bolder;
+    margin-top: 4rem;
+    cursor: pointer;
+  }
+  .another__option {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $blue;
+    margin-top: 2rem;
+    text-align: center;
+  }
+}

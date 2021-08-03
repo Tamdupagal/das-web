@@ -1,0 +1,15 @@
+.left__arow,
+.right__arow {
+  border: none;
+  background-color: transparent;
+  padding: 0.2rem 0.3rem;
+  cursor: pointer;
+  .arrow {
+    border-radius: 50%;
+    &:hover {
+      color: blue;
+    }
+    font-size: 4.5rem;
+    color: rgba(black, 0.3);
+  }
+}
