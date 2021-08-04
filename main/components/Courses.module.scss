@@ -6,8 +6,8 @@
   width: 100%;
   padding: 6rem 0;
   @include flex_layout(center, null, column);
-  background-color: rgba(#ccc, 0.1);
   border-radius: 5rem;
+
   .main_title {
     font-size: 2.7rem;
     color: $main;

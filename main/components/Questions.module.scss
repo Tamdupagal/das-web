@@ -1,0 +1,44 @@
+@import "../../styles/config/utilities";
+@import "../../styles/config/variable";
+
+.container {
+  position: relative;
+  width: 100%;
+  @include flex_layout(center, null, column);
+  padding: 3rem 0;
+  background-color: $main;
+  .main_heading {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: $white;
+    align-self: center;
+    text-align: center;
+  }
+  .wrapper {
+    @include flex_layout(null, null, column);
+    padding: 0 1rem;
+    width: 80%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+    .accordian {
+      background-color: white;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+      & > p {
+        width: 100%;
+        padding: 2rem 3rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        @include flex_layout(center, space-between);
+        .plus {
+          color: $main;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

@@ -15,36 +15,62 @@
   .wrapper {
     position: relative;
     width: 100%;
-    padding: 5rem 0;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(30rem, 50rem));
-    grid-gap: 3rem 6rem;
-    place-content: center;
-    .image {
-      position: relative;
-      margin-right: 4rem;
-      height: max-content;
-      margin: auto 0;
-    }
     .about {
       position: relative;
-      text-align: justify;
-      color: $main;
-      font-weight: bolder;
-      font-size: 1.6rem;
-      padding: 0;
-      line-height: 1.8;
-    }
-    @media screen and (max-width: 768px) {
-      @include flex_layout(center, null, column);
-      padding: 2rem 2.5rem;
-      .image,
-      .about {
+      width: 100%;
+
+      & > div {
         width: 100%;
-        margin: 0;
+        @include flex_layout(center, center);
+        padding: 3rem 0;
+        &:not(:last-child, :first-child) {
+          & > figure {
+            order: 2;
+          }
+          .desc {
+            order: 1;
+          }
+        }
+        & > figure {
+          position: relative;
+          width: 30rem;
+          padding: 3rem 0;
+        }
+        .desc {
+          width: 60%;
+          padding: 0 5rem;
+          font-size: 1.7rem;
+          font-weight: bold;
+          color: $main;
+          line-height: 1.8;
+          @media screen and (max-width: 768px) {
+            width: 100%;
+            padding: 0;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          @include flex_layout(center, center, column);
+          &:not(:last-child, :first-child) {
+            & > figure {
+              order: 1;
+            }
+            .desc {
+              order: 1;
+            }
+          }
+        }
       }
-      .about {
-        margin-bottom: 6rem;
+      @media screen and (max-width: 768px) {
+        @include flex_layout(center, null, column);
+        padding: 2rem 2.5rem;
+        .image,
+        .about {
+          width: 100%;
+          margin: 0;
+        }
+        .about {
+          margin-bottom: 6rem;
+        }
       }
     }
   }

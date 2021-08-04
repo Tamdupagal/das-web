@@ -50,20 +50,18 @@ function Header() {
     return (
         <header className={styles.header} ref={headerRef}>
                 <figure className={styles.logo}>
-                <Images src={logo} objectFit="contain" layout='responsive' className={styles.image}/>
-                </figure>
-                <nav className={styles.nav}>
-                    <ul className={styles.list}>
-                    <motion.li onHoverStart={() => setToggle(true)} onHoverEnd={() => setToggle(false)}> Courses <FaAngleDown className={styles.arrow_down} />
-                                <motion.ul key="dropdown" variants={dropdown} animate={toggle ? "vissible" : "hidden"} initial="hidden" className={styles.dropdown}>
+                    <Images src={logo} objectFit="contain" layout='responsive' className={styles.image}/>
+            </figure>
+                <div className={styles.btn_group}>
+                <motion.button className={styles.btn} onTap={() => setToggle(!toggle)} onHoverStart={() => setToggle(true)} onHoverEnd={() => setToggle(false)}> Courses <FaAngleDown className={styles.arrow_down} />
+                            <motion.ul key="dropdown" variants={dropdown} animate={toggle ? "vissible" : "hidden"}              initial="hidden" className={styles.dropdown}>
                                 <motion.li variants={fadeIn}><FaAngleRight className={styles.arrow_right}/> Web Development</motion.li>
                                 <motion.li variants={fadeIn}><FaAngleRight className={styles.arrow_right}/>Digital Marketing</motion.li>
                                 <motion.li variants={fadeIn}><FaAngleRight className={styles.arrow_right}/>Data Science</motion.li>
                             </motion.ul>
-                    </motion.li>
-                    </ul>
-                </nav>
-                <button className={styles.login__btn}>Login</button>
+                </motion.button>
+                <button className={styles.btn}>Login</button>
+                </div>
         </header>
     )
 }

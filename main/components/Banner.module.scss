@@ -4,48 +4,46 @@
 .container {
   position: relative;
   width: 100%;
-  padding: 1.2rem 2rem 4rem 2rem;
+  padding: 1rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin-top: 10rem;
-  @include flex_layout(center, null);
+  @include flex_layout(null, null);
   .banner_info {
-    padding: 2rem 10rem;
+    padding: 2rem 6rem;
     width: 50%;
     @media screen and (max-width: 768px) {
       width: 50%;
-      padding: 2rem;
+      padding: 0;
     }
     @include flex_layout(null, center, column);
     .title {
-      font-size: clamp(2.5rem, 4vw, 5vw);
-      color: $main;
+      font-size: clamp(2rem, 3vw, 5vw);
+      color: black;
       font-weight: bolder;
       padding-bottom: 3rem;
+      & > span {
+        color: red;
+      }
     }
     .static_text {
       position: relative;
-      font-size: 3rem;
       font-weight: bolder;
       width: max-content;
-      font-size: clamp(2rem, 3vw, 4vw);
+      font-size: clamp(2rem, 2.4vw, 4vw);
       .typewriter {
-        font-size: clamp(2rem, 3.5vw, 4vw);
+        font-size: clamp(2rem, 3vw, 4vw);
         padding: 2rem 0;
-        color: $orange;
+        color: red;
         width: 100%;
         @media screen and (max-width: 768px) {
-          min-height: 10rem;
           white-space: pre-line;
+          min-height: 8rem;
         }
       }
     }
   }
   .banner__img {
-    @media screen and (max-width: 768px) {
-      // display: none;
-      width: 100%;
-    }
     position: relative;
     width: 50%;
   }

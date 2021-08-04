@@ -6,9 +6,9 @@ import { motion } from 'framer-motion';
 
 
 const phrases = [
-    "Full Stack Web \n development",
-    "Digital Marketing",
-    "Data Science"
+    "Full Stack Web \n development.",
+    "Digital Marketing.",
+    "Data Science."
 ]
 
 function Banner() {
@@ -17,15 +17,16 @@ function Banner() {
     return (
         <section className={styles.container}>
                     <div className={styles.banner_info}>
-                <h1 className={styles.title}>Study Now <br /> and Pay Later!</h1>
+                <h1 className={styles.title}>Study Now <span className={styles.red}>and</span> <br /> Pay Later<span className={styles.red}>&nbsp; !</span></h1>
                 <div className={styles.static_text}>We offer, courses in
                     <p className={styles.typewriter}>
                         <Typewriter
+                            onInit={t=>t.changeDeleteSpeed(1).changeDelay(0.4)}
                             options={{
                                 strings: phrases,
                                 autoStart: true,
                                 loop: true,
-                        }}
+                                }}
                         />
                     </p>
                 </div>
