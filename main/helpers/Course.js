@@ -29,7 +29,7 @@ export const COURSE_DATA = [
         id: 3,
         heading: "Digital Marketing",
         altText: "Digital Marketing",
-        imgSrc: fscc,
+        imgSrc: fswd,
         title: "Full Stack Digital Marketing",
         description: "Build Complete Web and Hybrid Mobile Solutions. Master front-end web, hybrid mobile app and server-side development in three comprehensive courses",
         classes: "8+ classes",

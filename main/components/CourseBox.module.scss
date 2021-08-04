@@ -1,64 +1,71 @@
 @import "../../styles/config/utilities";
 @import "../../styles/config/variable";
 
-.wrapper {
-  @include flex_layout(center, null, column);
+.course_box {
   position: relative;
-  width: 35rem;
-  position: relative;
-  overflow: hidden;
+  width: 37rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.8rem;
   margin: 0 auto;
-  .heading {
-    font-size: 1.8rem;
-    padding: 1rem 0.4rem;
-    margin-bottom: 2rem;
-    border-bottom: 0.4rem solid #ccc;
+  transition: {
+    property: border;
+    duration: 0.4s;
+  }
+  &::before {
+    content: "";
+    border-radius: 0.8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
+    height: 100%;
+    box-shadow: 0 0 2rem rgba(black, 0.35);
+    opacity: 0;
+    transition: {
+      property: opacity;
+      duration: 0.4s;
+    }
   }
   &:hover {
-    .heading {
-      border-bottom: 0.4rem solid $main;
-      color: $main;
+    border: 0.1rem solid transparent;
+    &::before {
+      opacity: 1;
     }
   }
-  .course_box {
-    width: 100%;
-    border: 0.05rem solid #ccc;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 0.5rem rgba(black, 0.15);
+  .course_image {
+    position: relative;
+    border-radius: 0.8rem 0.8rem 0 0;
     overflow: hidden;
-    .course_image {
-      width: 100%;
+    width: 100%;
+    height: 25rem;
+  }
+  .info_box {
+    @include flex_layout(null, null, column);
+    padding: 3rem 2rem;
+    .title {
+      font-size: 1.8rem;
+      color: black;
     }
-    .info_box {
-      @include flex_layout(null, null, column);
-      padding: 3rem 2rem;
-      .title {
-        font-size: 1.8rem;
-        color: black;
+    .review {
+      @include flex_layout(center, null);
+      margin: 1.5rem 0;
+      font-size: 1.4rem;
+      .stars {
+        margin-right: 0.5rem;
+        color: red;
+        font-size: 2rem;
       }
-      .review {
+    }
+    .desc {
+      font-size: 1.5rem;
+      color: rgba(black, 0.65);
+      margin: 0.5rem 0 1.5rem 0;
+      line-height: 1.8;
+      & > span {
         @include flex_layout(center, null);
-        margin: 1.5rem 0;
-        font-size: 1.4rem;
-        .stars {
-          margin-right: 0.5rem;
-          color: red;
+        .hourglass {
+          margin-right: 0.8rem;
           font-size: 2rem;
-        }
-      }
-      .desc {
-        font-size: 1.5rem;
-        color: rgba(black, 0.65);
-        margin: 0.5rem 0 1.5rem 0;
-        line-height: 1.8;
-        & > span {
-          @include flex_layout(center, null);
-          .hourglass {
-            margin-right: 0.8rem;
-            font-size: 2rem;
-          }
         }
       }
     }

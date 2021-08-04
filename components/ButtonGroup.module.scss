@@ -1,9 +1,20 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
 .left__arow,
 .right__arow {
   border: none;
   background-color: transparent;
-  padding: 0.2rem 0.3rem;
+  padding: 0.2rem;
   cursor: pointer;
+  &[data-color="true"] {
+    .arrow {
+      color: $main;
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
   .arrow {
     border-radius: 50%;
     &:hover {

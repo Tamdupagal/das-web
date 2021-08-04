@@ -10,7 +10,7 @@
 .header {
   position: relative;
   @include flex_layout(center, null);
-  padding: 0 1.5rem;
+  padding: 0 4rem;
   height: 10rem;
   width: 100%;
   position: fixed;
@@ -20,16 +20,20 @@
   z-index: 999;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-shadow: 0.3rem 0 2rem 0.1rem rgba(black, 0.1);
+  transition: {
+    property: padding;
+    duration: 0.3s;
+  }
   .logo {
     position: relative;
-    width: 18rem;
+    width: 15rem;
     height: max-content;
-    padding: 0.8rem 0;
   }
   .menu {
     display: none;
     font-size: 3.2rem;
-    color: $orange;
+    color: $main;
     cursor: pointer;
   }
   @media screen and (max-width: 1115px) {
@@ -40,7 +44,7 @@
   }
   .login__btn {
     border: 0.25rem solid $orange;
-    border-radius: 5rem;
+    border-radius: 0.3rem;
     padding: 1.2rem 3.5rem;
     font-size: 1.7rem;
     font-weight: bold;
@@ -79,9 +83,12 @@
           top: 100%;
           left: 0;
           background-color: white;
+
           width: max-content;
           padding: 0;
           overflow: hidden;
+          border-radius: 0 0 1rem 1rem;
+          box-shadow: 0.3rem 0 2rem 0.1rem rgba(black, 0.15);
           & > li {
             list-style: none;
             padding: 1rem 2rem;
@@ -90,11 +97,11 @@
               padding: 2rem 2rem;
             }
             font-size: 1.5rem;
+            color: $main;
             @include flex_layout(center, null);
             .arrow_right {
               margin-right: 1rem;
               font-size: 2rem;
-              color: $orange;
             }
           }
         }

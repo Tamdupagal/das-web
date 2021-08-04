@@ -10,7 +10,7 @@ function AboutProgram() {
             <h1 className={styles.main_heading}>About Us</h1>
             <div className={styles.wrapper}>
                 <figure className={styles.image}>
-                    <Image src={about} objectFit="contain" placeholder="blur" alt="" />
+                    <Image src={about} objectFit="contain" layout='responsive' alt="About Us" />
                 </figure>
                 <p className={styles.about}>
                     We are Digital Aided School a team of Young professionals who beliece in quality education and the lastest technolodgy. Learning is never-ending but learning what is required to keep body and soul together is principal, Learning through technology where the resources are unlimited makes it more merrymaking

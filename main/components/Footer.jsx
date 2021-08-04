@@ -11,14 +11,6 @@ function Footer() {
                 <Image src={logo} width={200} height={100} alt="digital aided school" objectFit="contain"/>
             </figure>
             <main className={styles.wrapper}>
-                <p className={styles.text}>We all have thought of providing additonal information to our kids at some point of time.</p>
-                <ul className={styles.ul}><span>Important Links</span> 
-                    <li><Link href="#"><a className={styles.link}>Home</a></Link></li>
-                    <li><Link href="#"><a className={styles.link}>Courses</a></Link></li>
-                    <li><Link href="#"><a className={styles.link}>For Schools</a></Link></li>
-                    <li><Link href="#"><a className={styles.link}>For Business</a></Link></li>
-                    <li><Link href="#"><a className={styles.link}>Login</a></Link></li>
-                </ul>
                 <ul className={styles.ul}><span>Contact Us</span>
                     <li>India</li>
                     <li><address>Spectrum Tower, 5th, Chincholi Bunder Road, Mindspace, Malad West, Mumbai Maharastra 400064</address> </li>

@@ -3,13 +3,15 @@ import Images from 'next/image'
 import Link from 'next/link'
 import logo from '../assets/das.webp'
 import { FaAngleDown, FaBars, FaTimes, FaAngleRight} from 'react-icons/fa'
-import { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import {useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 
 
 function Header() {
 
     const [toggle, setToggle] = useState(false)
+
+    const headerRef = useRef()
 
     const dropdown = {
         hidden: {
@@ -46,7 +48,7 @@ function Header() {
     }
 
     return (
-        <header className={styles.header}>
+        <header className={styles.header} ref={headerRef}>
                 <figure className={styles.logo}>
                 <Images src={logo} objectFit="contain" layout='responsive' className={styles.image}/>
                 </figure>
@@ -62,7 +64,6 @@ function Header() {
                     </ul>
                 </nav>
                 <button className={styles.login__btn}>Login</button>
-            {/* <FaBars className={styles.menu} onClick={() => setToggleNav(true)}/> */}
         </header>
     )
 }

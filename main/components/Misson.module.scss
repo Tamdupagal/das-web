@@ -14,55 +14,71 @@ $lightBlue: rgba($main, 0.7);
     padding: 5rem 0;
   }
   .mission__box {
-    width: 100%;
-    @include flex_layout(center, null);
-    padding: 2rem 5rem;
-    .image {
-      position: relative;
-      width: 50%;
-      margin-right: 3rem;
-    }
-    .footer_text {
-      width: 50%;
-      font-size: 1.6rem;
-      text-align: justify;
-      line-height: 1.8;
-      color: $lightBlue;
-      font-weight: bolder;
-      padding: 5rem 2rem;
-      &:not(:last-child) {
-        margin-bottom: 4rem;
-      }
-      & > strong {
-        color: $orange;
-        font-size: 1.8rem;
-      }
-      & > ul {
-        &:not(:last-child) {
-          margin-bottom: 2rem;
-        }
-        & > strong {
-          display: block;
-          margin-bottom: 0.5rem;
-          color: $orange;
-        }
-        & > li {
-          margin-left: 3rem;
-          margin-bottom: 0.5rem;
-        }
-      }
-    }
+    position: relative;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0;
+    place-content: center;
+    margin: 0 auto;
     @media screen and (max-width: 768px) {
-      @include flex_layout(center, null, column);
-      padding: 2rem 1rem;
-      .image,
-      .footer_text {
+      grid-template-columns: repeat(1, 1fr);
+      width: 100%;
+    }
+    .box {
+      position: relative;
+      @include flex_layout(null, null);
+      padding: 5rem 4rem;
+      min-height: 25rem;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        margin: 0;
+        height: 100%;
+        border-radius: 0.4rem;
+        box-shadow: 0 0 2rem rgba(black, 0.15);
+        opacity: 0;
+        transition: {
+          property: opacity;
+          duration: 0.4s;
+        }
       }
-      .image {
-        margin-bottom: 3rem;
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
       }
+      & > figure {
+        position: relative;
+        width: 23rem;
+        margin-right: 3rem;
+        height: max-content;
+      }
+      & > p {
+        font-size: 1.6rem;
+        text-align: justify;
+        line-height: 1.8;
+        color: $main;
+        font-weight: bolder;
+        & > strong {
+          color: $orange;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    @include flex_layout(center, null, column);
+    padding: 2rem 1rem;
+    .image,
+    .footer_text {
+      width: 100%;
+      margin: 0;
+    }
+    .image {
+      margin-bottom: 3rem;
     }
   }
 }

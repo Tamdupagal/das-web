@@ -1,5 +1,4 @@
 import styles from './Courses.module.scss';
-import Button from './Button'
 import { COURSE_DATA } from '../helpers/Course';
 import CourseBox from './CourseBox';
 import Slider from 'react-slick';
@@ -57,9 +56,8 @@ function Courses() {
                         })}
                 </Slider>
                 {isBtnEnabled && <div className={styles.slider__btn}>
-               <ButtonGroup prev={sliderRef.current.slickPrev} next={sliderRef.current.slickNext} pause={sliderRef.current.slickPause} play={sliderRef.current.slickPlay}/></div>}
+               <ButtonGroup prev={sliderRef.current.slickPrev} next={sliderRef.current.slickNext} pause={sliderRef.current.slickPause} play={sliderRef.current.slickPlay} isOrange/></div>}
             </div>
-            <Button style={{alignSelf: 'center'}}>View All Courses</Button>
         </section>
     )
 }

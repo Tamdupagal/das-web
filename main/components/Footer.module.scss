@@ -5,8 +5,8 @@ $lightBlue: rgba($main, 0.7);
 
 .footer {
   @include flex_layout(null, null, column);
-  border-radius: 2.7rem 2.7rem 0 0;
-  border: 0.1rem solid #ccc;
+  border-radius: 5rem 5rem 0 0;
+  box-shadow: -0.1rem 0 0.5rem rgba(black, 0.15);
   overflow: hidden;
   padding: 2rem 8rem;
   margin-top: 4rem;

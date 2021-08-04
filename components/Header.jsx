@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image'
-import Logo from '../assets/logo.svg';
+import Logo from '../main/assets/das.webp';
 import { motion, AnimateSharedLayout, m, AnimatePresence } from 'framer-motion'
 import {Link} from 'react-scroll'
 import { useRouter } from 'next/router'

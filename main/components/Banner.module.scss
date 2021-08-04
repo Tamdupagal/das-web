@@ -4,51 +4,49 @@
 .container {
   position: relative;
   width: 100%;
-  padding: 1.2rem 2rem 1.7rem 2rem;
+  padding: 1.2rem 2rem 4rem 2rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: rgba(#ccc, 0.26);
   margin-top: 10rem;
+  @include flex_layout(center, null);
   .banner_info {
-    padding: 2rem 0;
-    width: 100%;
+    padding: 2rem 10rem;
+    width: 50%;
     @media screen and (max-width: 768px) {
-      width: 100%;
+      width: 50%;
+      padding: 2rem;
     }
     @include flex_layout(null, center, column);
     .title {
-      font-size: clamp(2.5rem, 2.6vw, 4vw);
+      font-size: clamp(2.5rem, 4vw, 5vw);
       color: $main;
       font-weight: bolder;
-      text-align: center;
+      padding-bottom: 3rem;
     }
-    .desc {
+    .static_text {
       position: relative;
-      margin: 2rem 0;
-      text-align: center;
-      border: 1px solid red;
+      font-size: 3rem;
+      font-weight: bolder;
       width: max-content;
-      .phrase {
-        position: absolute;
-        top: 0;
-        display: inline-block;
-        border: 1px solid red;
-        font-size: 2rem;
-        overflow: hidden;
-        white-space: nowrap;
-        color: $main;
-        font-weight: bolder;
-        text-align: center;
+      font-size: clamp(2rem, 3vw, 4vw);
+      .typewriter {
+        font-size: clamp(2rem, 3.5vw, 4vw);
+        padding: 2rem 0;
+        color: $orange;
+        width: 100%;
+        @media screen and (max-width: 768px) {
+          min-height: 10rem;
+          white-space: pre-line;
+        }
       }
     }
-    .banner_btn {
-      color: white;
-      padding: 1rem 1.5rem;
-      background-color: $orange;
-      border-radius: 0.4rem;
-      width: max-content;
-      font-weight: bolder;
-      font-size: 1.6rem;
+  }
+  .banner__img {
+    @media screen and (max-width: 768px) {
+      // display: none;
+      width: 100%;
     }
+    position: relative;
+    width: 50%;
   }
 }
