@@ -18,13 +18,11 @@ function Header() {
             scale: 0,
             originX: 0,
             originY: 0,
-            borderTop: "0.25rem solid #ffffff",
             opacity: 0,
         },
         vissible: {
             scale: 1,
             opacity: 1,
-            borderTop: "0.25rem solid #fd7e14",
             transition: {
                 type: "tween",
                 staggerChildren: 0.05,

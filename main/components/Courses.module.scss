@@ -4,20 +4,21 @@
 .container {
   position: relative;
   width: 100%;
-  padding: 6rem 0;
+  padding: 5rem 0;
   @include flex_layout(center, null, column);
-  border-radius: 5rem;
-
+  background-color: white;
+  background-color: $main;
   .main_title {
-    font-size: 2.7rem;
-    color: $main;
+    font-size: 3.5rem;
+    color: $primary;
     align-self: center;
-    padding-bottom: 2.5rem;
+    padding: 1rem 0;
+    border-bottom: 0.5rem solid $primary;
   }
   .carousel__box {
     position: relative;
     width: 100%;
-    padding: 1rem 5rem;
+    padding: 2rem 5rem;
     overflow: hidden;
     .card__wrapper {
       padding: 2rem 0;

@@ -9,9 +9,9 @@
   cursor: pointer;
   &[data-color="true"] {
     .arrow {
-      color: $main;
+      color: $primary;
       &:hover {
-        color: $orange;
+        color: $primary;
       }
     }
   }

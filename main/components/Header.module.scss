@@ -4,13 +4,13 @@
 .header {
   position: relative;
   @include flex_layout(center, space-between);
-  padding: 0 4rem;
-  height: 10rem;
+  padding: 0 2rem;
+  height: 9.5rem;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: white;
+  background-color: $primary;
   z-index: 999;
   box-shadow: 0.3rem 0 2rem 0.1rem rgba(black, 0.1);
   .logo {
@@ -20,9 +20,9 @@
   }
   @media screen and (max-width: 1115px) {
     @include flex_layout(center, null);
-    .menu {
-      display: block;
-    }
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0 1rem;
   }
   .btn_group {
     display: inline-flex;
@@ -39,10 +39,13 @@
       font-weight: bold;
       cursor: pointer;
       justify-self: flex-end;
+      color: white;
+      color: $main;
+      border-color: $main;
       &:last-child {
+        border-color: $red;
+        color: $red;
         margin-left: 1rem;
-        color: $main;
-        border-color: $main;
       }
       @include flex_layout();
       .arrow_down {
@@ -56,7 +59,7 @@
   .dropdown {
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0;
     background-color: white;
     width: max-content;
     padding: 0;

@@ -9,6 +9,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin-top: 10rem;
   @include flex_layout(null, null);
+  background-color: #fffbf0;
   .banner_info {
     padding: 2rem 6rem;
     width: 50%;
@@ -23,7 +24,7 @@
       font-weight: bolder;
       padding-bottom: 3rem;
       & > span {
-        color: red;
+        color: $orange;
       }
     }
     .static_text {
@@ -34,7 +35,7 @@
       .typewriter {
         font-size: clamp(2rem, 3vw, 4vw);
         padding: 2rem 0;
-        color: red;
+        color: $main;
         width: 100%;
         @media screen and (max-width: 768px) {
           white-space: pre-line;

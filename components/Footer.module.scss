@@ -7,6 +7,10 @@
   text-align: center;
   width: 80%;
   margin: 0 auto;
+  .logo {
+    position: relative;
+    min-width: 20rem;
+  }
   .footer__navigation {
     @include flex_layout();
     padding: 3rem 0;

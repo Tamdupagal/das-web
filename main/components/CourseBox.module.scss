@@ -3,7 +3,7 @@
 
 .course_box {
   position: relative;
-  width: 37rem;
+  width: 40rem;
   border: 0.1rem solid #ccc;
   border-radius: 0.8rem;
   margin: 0 auto;
@@ -11,16 +11,17 @@
     property: border;
     duration: 0.4s;
   }
-  background-color: white;
+  background-color: $primary;
   &::before {
     content: "";
     border-radius: 0.8rem;
     position: absolute;
     top: 0;
+    z-index: -1;
     left: 0;
     width: 100%;
     height: 100%;
-    box-shadow: 0 0 2rem rgba(black, 0.35);
+    box-shadow: 0 0 2rem rgba(black, 0.15);
     opacity: 0;
     transition: {
       property: opacity;
@@ -34,11 +35,11 @@
     }
   }
   .course_image {
-    position: relative;
+    // position: relative;
     border-radius: 0.8rem 0.8rem 0 0;
     overflow: hidden;
-    width: 100%;
-    padding: 0.4rem;
+    padding: 0 1rem;
+    max-height: max-content;
   }
   .info_box {
     @include flex_layout(null, null, column);
@@ -46,6 +47,9 @@
     .title {
       font-size: 1.8rem;
       color: black;
+    }
+    .btn_link {
+      font-size: 2rem;
     }
     .review {
       @include flex_layout(center, null);

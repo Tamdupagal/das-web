@@ -1,19 +1,14 @@
 import styles from './Footer.module.scss';
-import logo from '../assets/das.webp'
 import Link from 'next/link'
-import { FaAppStore, FaEnvelope, FaGooglePlay, FaInstagram, FaLinkedinIn, FaPhone, FaTwitter, FaYoutube } from 'react-icons/fa';
-import Image from 'next/image';
+import { FaEnvelope, FaInstagram, FaLinkedinIn, FaPhone, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 function Footer() {
     return (
         <footer className={styles.footer}>
-            <figure className={styles.logo}>
-                <Image src={logo} width={200} height={100} alt="digital aided school" objectFit="contain"/>
-            </figure>
-            <main className={styles.wrapper}>
+            <div className={styles.wrapper}>
                 <ul className={styles.ul}><span>Contact Us</span>
                     <li>India</li>
-                    <li><address>Spectrum Tower, 5th, Chincholi Bunder Road, Mindspace, Malad West, Mumbai Maharastra 400064</address> </li>
+                    <li>Spectrum Tower, 5th, Chincholi Bunder Road, <br /> Mindspace, Malad West, <br /> Mumbai Maharastra 400064 <br /> <br /></li>
                     <li><FaPhone className={styles.icon} /> +91 7304360502</li>
                     <li>United Kingdom</li>
                     <li><FaPhone className={styles.icon}/> +44 7405888449</li>
@@ -30,34 +25,7 @@ function Footer() {
                         <FaYoutube className={styles.social} />
                     <FaTwitter className={styles.social}/></li>
                 </ul>
-                <ul className={styles.ul}><span>Mobile</span>
-                    <li><FaGooglePlay className={styles.store} />
-                    <FaAppStore className={styles.store}/></li>
-                </ul>
-            </main>
-            <div className={styles.footer_text}>
-                <span>With our Association you will gain</span>
-                <ul>
-                    <strong>Ouality Outcome</strong>
-                    <li>Learning Life and technology</li>
-                    <li>Digitally Aided Support</li>
-                </ul>
-                <ul>
-                    <strong>State of the Art Technology</strong>
-                    <li>Latest Tech</li>
-                    <li>User Friendly</li>
-                </ul>
-                <ul>
-                    <strong>Achievement Driven Support</strong>
-                    <li>Endless support till Achievement</li>
-                    <li>Deadlines</li>
-                </ul>
             </div>
-             <p className={styles.footer_text}>
-                <span>Payment</span>
-                Digital Aided School offers you multiple payment methods. Payment gateway partners use secure encryption technology to keep your transaction details
-                confidential at all times. You may use Internet Banking. Wallet and QR Support to make your purchase.
-            </p>
         </footer>
     )
 }
