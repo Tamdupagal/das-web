@@ -4,16 +4,28 @@
 .container {
   position: relative;
   width: 100%;
-  padding: 5rem 0;
+  padding: 8rem 0;
   @include flex_layout(center, null, column);
   background-color: white;
   background-color: $main;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 98%;
+    width: 100%;
+    height: 13rem;
+    z-index: 1;
+    left: 0;
+    background-image: url(../assets/bg1.svg);
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: cover;
+  }
   .main_title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: $primary;
     align-self: center;
     padding: 1rem 0;
-    border-bottom: 0.5rem solid $primary;
   }
   .carousel__box {
     position: relative;

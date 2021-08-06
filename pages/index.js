@@ -9,13 +9,11 @@ import Association from '../main/components/Association';
 export default function Home() {
   return (
     <main>
-      <Header/>
       <MainBanner/>
       <Courses />
       <Misson />
       <AboutProgram />
       <Association/>
-      <Footer/>
     </main>
   )
 }

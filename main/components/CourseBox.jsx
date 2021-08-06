@@ -7,11 +7,10 @@ import Button from './Button';
 
 function CourseBox(props) {
 
-    console.log(props.path)
     return (
                         <div className={styles.course_box}>
                             <figure className={styles.course_image}>
-                    <Image src={props.imgSrc} width={300} height={200} objectFit="contain" alt={props.alt}/>
+                    <Image src={props.imgSrc} width={200} height={150} objectFit="contain" alt={props.alt}/>
                             </figure>
                             <div className={styles.info_box}>
                                 <h1 className={styles.title}>{props.heading}</h1>

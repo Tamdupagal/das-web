@@ -1,67 +1,106 @@
 @import "../../styles/config/utilities";
 @import "../../styles/config/variable";
 
+.ul {
+  position: relative;
+  font-weight: bolder;
+  padding: 2rem 0;
+  @include flex_layout(center, null);
+  border-bottom: 0.2rem solid $primary;
+  @media screen and (max-width: 768px) {
+    @include flex_layout(flex-start, null, column);
+    width: 100%;
+  }
+  &:nth-child(2) {
+    align-self: flex-end;
+  }
+  &:last-child {
+    align-self: flex-end;
+    border: none;
+  }
+  & > span {
+    display: inline-block;
+    font-size: 1.8rem;
+    padding-right: 2rem;
+    color: $primary;
+  }
+  & > li {
+    list-style: none;
+    font-size: 1.5rem;
+    color: rgba($primary, 0.9);
+    padding: 0.8rem 3rem;
+    &:not(:last-child) {
+      border-right: 0.2rem solid $primary;
+    }
+    @media screen and (max-width: 768px) {
+      border: none !important;
+      width: max-content;
+      padding: 0.8rem 0;
+    }
+    .icon {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+    .social {
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+      font-size: 2.5rem;
+    }
+  }
+}
 .footer {
   position: relative;
   width: 100%;
-  @include flex_layout();
+  @include flex_layout(null, center);
+  background-color: $main;
+  padding: 5rem 2rem;
+  flex-wrap: wrap;
+  @media screen and (max-width: 768px) {
+    @include flex_layout(null, null, column);
+  }
   .wrapper {
     position: relative;
-    display: grid;
-    padding: 5rem;
-    height: 100%;
-    grid-template-columns: repeat(3, minmax(30rem, 30rem));
-    grid-gap: 4rem 5rem;
-    border-radius: 5rem 5rem 0 0;
-    width: 100%;
-    background-color: $main;
-    place-content: center;
-    @media screen and (max-width: 1024px) {
-      grid-template-columns: repeat(2, minmax(10rem, 30rem));
-    }
+    @include flex_layout(center, null, column);
+    width: max-content;
     @media screen and (max-width: 768px) {
-      grid-template-columns: repeat(1, minmax(10rem, 1fr));
-      place-content: start;
-      border-radius: 0;
-      padding: 2rem 2rem;
-      .ul {
-        border-bottom: 0.2rem solid $primary;
-        padding: 3rem 0;
-        width: 100%;
-      }
-    }
-    .ul {
-      position: relative;
+      @include flex_layout(null, null, column);
       width: 100%;
-      font-weight: bolder;
-      & > span {
-        display: inline-block;
-        font-size: 1.8rem;
-        color: $primary;
-        margin-bottom: 1rem;
-      }
-      & > li {
-        list-style: none;
-        font-size: 1.4rem;
-        color: $primary;
-        line-height: 2;
-        .icon {
-          font-size: 1.5rem;
-          margin-right: 1rem;
-        }
-        .social,
-        .store {
-          margin-right: 1rem;
-          font-size: 2.5rem;
-        }
-        @include flex_layout(center, null);
-        &:not(:last-child) {
-          margin-bottom: 0.7rem;
-        }
-        .link {
-          font-size: 1.4rem;
-          color: $primary;
-        }
+    }
+  }
+}
+.address {
+  position: relative;
+  padding: 0.5rem 4rem;
+  border-left: 0.2rem solid $primary;
+  margin-left: 4rem;
+  min-width: 40rem;
+  @media screen and (max-width: 768px) {
+    border: none;
+    border-top: 0.2rem solid $primary;
+    padding: 0.5rem 0;
+    margin: 0;
+    width: 100%;
+  }
+  & > ul {
+    @include flex_layout(null, null, column);
+    & > span {
+      display: inline-block;
+      font-size: 1.8rem;
+      padding: 2rem 0;
+      color: $primary;
+      font-weight: bold;
+    }
+    & > li {
+      list-style: none;
+      font-size: 1.4rem;
+      color: rgba($primary, 0.9);
+      font-weight: bold;
+      @include flex_layout(center, null);
+      line-height: 2;
+      .icon {
+        font-size: 2rem;
+        margin-right: 2rem;
       }
     }
   }

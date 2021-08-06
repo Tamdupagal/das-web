@@ -5,6 +5,7 @@ import logo from '../assets/das.webp'
 import { FaAngleDown, FaBars, FaTimes, FaAngleRight} from 'react-icons/fa'
 import {useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import {useRouter} from 'next/router'
 
 
 function Header() {
@@ -12,6 +13,8 @@ function Header() {
     const [toggle, setToggle] = useState(false)
 
     const headerRef = useRef()
+
+    const router = useRouter()
 
     const dropdown = {
         hidden: {
@@ -47,15 +50,15 @@ function Header() {
 
     return (
         <header className={styles.header} ref={headerRef}>
-                <figure className={styles.logo}>
+            <figure className={styles.logo} onClick={()=>router.push('/')}>
                     <Images src={logo} objectFit="contain" layout='responsive' className={styles.image}/>
             </figure>
                 <div className={styles.btn_group}>
                 <motion.button className={styles.btn} onTap={() => setToggle(!toggle)} onHoverStart={() => setToggle(true)} onHoverEnd={() => setToggle(false)}> Courses <FaAngleDown className={styles.arrow_down} />
                             <motion.ul key="dropdown" variants={dropdown} animate={toggle ? "vissible" : "hidden"}              initial="hidden" className={styles.dropdown}>
-                                <motion.li variants={fadeIn}><FaAngleRight className={styles.arrow_right}/> Web Development</motion.li>
-                                <motion.li variants={fadeIn}><FaAngleRight className={styles.arrow_right}/>Digital Marketing</motion.li>
-                                <motion.li variants={fadeIn}><FaAngleRight className={styles.arrow_right}/>Data Science</motion.li>
+                                <motion.li variants={fadeIn} onClick={()=>router.push('/digital-marketing')}><FaAngleRight className={styles.arrow_right}/>Digital Marketing</motion.li>
+                                <motion.li variants={fadeIn} onClick={()=>router.push('/web-development')}><FaAngleRight className={styles.arrow_right}/> Web Development</motion.li>
+                                <motion.li variants={fadeIn} onClick={()=>router.push('/data-science')}><FaAngleRight className={styles.arrow_right}/>Data Science</motion.li>
                             </motion.ul>
                 </motion.button>
                 <button className={styles.btn}>Login</button>

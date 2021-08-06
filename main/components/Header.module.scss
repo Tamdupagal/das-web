@@ -17,6 +17,7 @@
     position: relative;
     width: 15rem;
     height: max-content;
+    cursor: pointer;
   }
   @media screen and (max-width: 1115px) {
     @include flex_layout(center, null);
@@ -43,8 +44,8 @@
       color: $main;
       border-color: $main;
       &:last-child {
-        border-color: $red;
-        color: $red;
+        border-color: $orange;
+        color: $orange;
         margin-left: 1rem;
       }
       @include flex_layout();
@@ -58,13 +59,13 @@
 
   .dropdown {
     position: absolute;
-    top: 100%;
+    top: 110%;
     right: 0;
     background-color: white;
     width: max-content;
     padding: 0;
     overflow: hidden;
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 0.3rem;
     box-shadow: 0.3rem 0 2rem 0.1rem rgba(black, 0.15);
     & > li {
       list-style: none;

@@ -20,23 +20,30 @@
     padding: 3rem 0;
     & > figure {
       position: relative;
-      width: 40%;
+      width: 50%;
+      padding: 4rem;
+      margin-right: 3rem;
     }
     .desc {
-      width: 50%;
-      padding: 0 5rem;
+      width: 40%;
+      padding: 3rem;
       font-size: 1.7rem;
       font-weight: bold;
-      color: $main;
+      color: $primary;
       line-height: 1.8;
+      background-color: $main;
+      border-radius: 1.5rem;
+      background-image: url(../../assets/patternBG.png);
+      background-repeat: repeat;
+      background-size: contain;
       @media screen and (max-width: 768px) {
         width: 100%;
-        padding: 0;
+        padding: 3rem 2rem;
       }
     }
     @media screen and (max-width: 768px) {
       @include flex_layout(center, null, column);
-      padding: 2rem 2.5rem;
+      padding: 2rem 0.5rem;
       & > figure,
       .about {
         width: 100%;

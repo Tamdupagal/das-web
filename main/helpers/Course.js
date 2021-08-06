@@ -8,6 +8,17 @@ import course3 from '../assets/data_pro.svg';
 export const COURSE_DATA = [
     {
         id: 1,
+        heading: "Digital Marketing",
+        altText: "Digital Marketing",
+        imgSrc: course3,
+        title: "Full Stack Digital Marketing",
+        description: "Build Complete Web and Hybrid Mobile Solutions. Master front-end web, hybrid mobile app and server-side development in three comprehensive courses",
+        classes: "8+ classes",
+        btnText: "Find Out More",
+        path: "digital-marketing"
+    },
+    {
+        id: 3,
         heading: "Backend & Fullstack Development",
         altText: "Backend & Fullstack Development",
         imgSrc: course1,
@@ -27,17 +38,6 @@ export const COURSE_DATA = [
         classes: "10+ classes",
         btnText: "Find Out More",
         path: "data-science"
-    },
-    {
-        id: 3,
-        heading: "Digital Marketing",
-        altText: "Digital Marketing",
-        imgSrc: course3,
-        title: "Full Stack Digital Marketing",
-        description: "Build Complete Web and Hybrid Mobile Solutions. Master front-end web, hybrid mobile app and server-side development in three comprehensive courses",
-        classes: "8+ classes",
-        btnText: "Find Out More",
-        path: "digital-marketing"
     },
     
 ]
