@@ -13,7 +13,7 @@ function CourseBox(props) {
                     <Image src={props.imgSrc} width={200} height={150} objectFit="contain" alt={props.alt}/>
                             </figure>
                             <div className={styles.info_box}>
-                                <h1 className={styles.title}>{props.heading}</h1>
+                                <h1 className={styles.title}>{props.title}</h1>
                                 <div className={styles.review}>
                                         <FaStar className={styles.stars}/>
                                         <FaStar className={styles.stars}/>

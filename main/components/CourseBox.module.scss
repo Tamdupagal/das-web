@@ -66,8 +66,10 @@
     .desc {
       font-size: 1.5rem;
       color: rgba(black, 0.65);
+      font-weight: bold;
       margin: 0.5rem 0 1.5rem 0;
       line-height: 1.8;
+      white-space: pre-line;
       & > span {
         @include flex_layout(center, null);
         .hourglass {

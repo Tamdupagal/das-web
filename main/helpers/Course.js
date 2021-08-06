@@ -11,8 +11,8 @@ export const COURSE_DATA = [
         heading: "Digital Marketing",
         altText: "Digital Marketing",
         imgSrc: course3,
-        title: "Full Stack Digital Marketing",
-        description: "Build Complete Web and Hybrid Mobile Solutions. Master front-end web, hybrid mobile app and server-side development in three comprehensive courses",
+        description: "6-month Program batch (1:8) \n 160+ Hours of Live online classes \n 300+ hours of offline training & project building.",
+        title: "MASTERS/PROFESSIONAL CERTIFICATION IN Fullstack Digital Marketing",
         classes: "8+ classes",
         btnText: "Find Out More",
         path: "digital-marketing"
@@ -22,8 +22,8 @@ export const COURSE_DATA = [
         heading: "Backend & Fullstack Development",
         altText: "Backend & Fullstack Development",
         imgSrc: course1,
-        title: "Full Stack Web Development",
-        description: "Build Complete Web and Hybrid Mobile Solutions. Master front-end web, hybrid mobile app and server-side development in three comprehensive courses",
+        description: "12-month Program batch (1:8) \n 320+ Hours of Live online classes \n 400+ hours of offline training & project building.",
+        title: "MASTERS/PROFESSIONAL CERTIFICATION IN Fullstack & Backend Development",
         classes: "12+ classes",
         btnText: "Find Out More",
         path: "web-development"
@@ -33,8 +33,8 @@ export const COURSE_DATA = [
         heading: "Data Science",
         altText: "Data Science",
         imgSrc: course2,
-        title: "Full Stack angular development",
-        description: "Build Complete Web and Hybrid Mobile Solutions. Master front-end web, hybrid mobile app and server-side development in three comprehensive courses",
+        description: "12-month Program batch (1:8) \n 320+ Hours of Live online classes \n 300+ hours of offline training & project building.",
+        title: "MASTERS/PROFESSIONAL CERTIFICATION IN Data science ",
         classes: "10+ classes",
         btnText: "Find Out More",
         path: "data-science"

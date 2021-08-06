@@ -22,7 +22,13 @@ function Courses() {
         touchMove: true,
         swipeToSlide: true,
         draggable: true,
-        accessibility: true,
+      accessibility: true,
+      infinite: true,
+      pauseOnHover: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      pauseOnFocus: true,
+        
          responsive: [
         {
           breakpoint: 320,
@@ -34,7 +40,7 @@ function Courses() {
         },
         {
           breakpoint: 1024,
-          settings: { slidesToShow: 3}
+          settings: { slidesToShow: 2}
         }
       ]
     };
@@ -44,7 +50,15 @@ function Courses() {
     }, [])
     return (
         <section className={styles.container}>
-            <h1 className={styles.main_title}>Our Courses</h1>
+        <h1 className={styles.main_title}>Our Courses</h1>
+        <p className={styles.about__course}>
+            <span>About our course</span> 
+            The real STUDY FIRST PAY LATER programs
+            Worlds 1st Live online classes
+            Agency style cohort-based learning
+            1:8 collaborative Live project building academic experience.
+            16+ Live Real Life industry-standard projects.
+        </p>
              <div className={styles.carousel__box}>
                 <Slider {...settings} ref={sliderRef}>
                         {COURSE_DATA.map(item => {

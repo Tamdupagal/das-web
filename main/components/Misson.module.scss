@@ -6,12 +6,13 @@ $lightBlue: rgba($main, 0.7);
 .container {
   position: relative;
   width: 100%;
-  padding: 0 0.5rem;
+  padding: 0.5rem;
   .main_title {
     font-size: 3rem;
     color: $main;
     text-align: center;
-    padding: 5rem 0;
+    padding: 2rem 0;
+    margin-top: 8rem;
   }
   .mission__box {
     position: relative;
@@ -30,6 +31,10 @@ $lightBlue: rgba($main, 0.7);
       @include flex_layout(null, null);
       padding: 5rem 4rem;
       min-height: 25rem;
+      transition: {
+        property: transform;
+        duration: 0.2s;
+      }
       &::before {
         content: "";
         position: absolute;
@@ -46,6 +51,7 @@ $lightBlue: rgba($main, 0.7);
         }
       }
       &:hover {
+        transform: scale(1.03);
         &::before {
           opacity: 1;
         }
