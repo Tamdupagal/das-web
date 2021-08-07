@@ -12,7 +12,7 @@ function Footer() {
                     <li><Link href="#"><a className={styles.link}>Privacy Policy</a></Link></li>
                     <li><Link href="#"><a className={styles.link}>Customer Feedback</a></Link></li>
                 </ul>
-                    <ul className={styles.ul}>
+                    <ul className={styles.ul}><span>Contact Us</span>
                         <li><FaPhone className={styles.icon} /> +91 7304360502</li>
                         <li><FaPhone className={styles.icon}/> +44 7405888449</li>
                         <li><FaEnvelope className={styles.icon}/> hello@digitalaidedschool.com</li>
@@ -24,7 +24,7 @@ function Footer() {
                     </ul>
             </div>
             <div className={styles.address}>
-                <ul><span>Contact Us</span>
+                <ul><span>Our Address</span>
                     <li>India</li>
                     <li>Spectrum Tower, 5th, Chincholi Bunder Road, <br /> Mindspace, Malad West, <br /> Mumbai Maharastra 400064 </li>
                 </ul>

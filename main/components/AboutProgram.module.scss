@@ -32,10 +32,22 @@
       color: $primary;
       line-height: 1.8;
       background-color: $main;
-      border-radius: 1.5rem;
+      border-radius: 1rem;
       background-image: url(../../assets/patternBG.png);
       background-repeat: repeat;
       background-size: contain;
+      text-align: justify;
+      box-shadow: 0 0 0.3rem 0.2rem rgba(black, 0.4);
+      .quote {
+        display: inline-block;
+        color: "primary";
+        font-size: 4rem;
+        margin-right: 1rem;
+        &:last-child {
+          margin-left: 2rem;
+          margin-bottom: -1.5rem;
+        }
+      }
       @media screen and (max-width: 768px) {
         width: 100%;
         padding: 3rem 2rem;

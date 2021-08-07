@@ -6,7 +6,7 @@
   width: 100%;
   padding: 1rem;
   margin-top: 10rem;
-  @include flex_layout(null, null);
+  @include flex_layout(null, center);
   background-color: $primary;
   &::before {
     content: "";
@@ -22,11 +22,11 @@
     background-size: cover;
   }
   .banner_info {
-    padding: 2rem 6rem;
+    padding: 2rem;
     width: 50%;
     @media screen and (max-width: 768px) {
-      width: 50%;
-      padding: 0;
+      width: 100%;
+      padding: 2rem;
     }
     @include flex_layout(null, center, column);
     .title {
@@ -34,9 +34,6 @@
       color: black;
       font-weight: bolder;
       padding-bottom: 3rem;
-      & > span {
-        color: $orange;
-      }
     }
     .static_text {
       position: relative;
@@ -57,6 +54,9 @@
   }
   .banner__img {
     position: relative;
-    width: 50%;
+    width: 40%;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 }

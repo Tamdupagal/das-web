@@ -5,8 +5,9 @@
   position: relative;
   font-weight: bolder;
   padding: 2rem 0;
-  @include flex_layout(center, null);
-  border-bottom: 0.2rem solid $primary;
+  @include flex_layout(center, flex-end);
+  width: 100%;
+  border-bottom: 0.2rem solid $main;
   @media screen and (max-width: 768px) {
     @include flex_layout(flex-start, null, column);
     width: 100%;
@@ -17,20 +18,24 @@
   &:last-child {
     align-self: flex-end;
     border: none;
+    width: max-content;
   }
   & > span {
     display: inline-block;
     font-size: 1.8rem;
     padding-right: 2rem;
-    color: $primary;
+    color: $main;
   }
   & > li {
     list-style: none;
     font-size: 1.5rem;
-    color: rgba($primary, 0.9);
+    color: rgba($main, 0.9);
     padding: 0.8rem 3rem;
+    &:hover {
+      color: $orange;
+    }
     &:not(:last-child) {
-      border-right: 0.2rem solid $primary;
+      border-right: 0.2rem solid $main;
     }
     @media screen and (max-width: 768px) {
       border: none !important;
@@ -40,6 +45,7 @@
     .icon {
       font-size: 1.5rem;
       margin-right: 1rem;
+      color: $main !important;
     }
     .social {
       &:not(:last-child) {
@@ -53,12 +59,13 @@
   position: relative;
   width: 100%;
   @include flex_layout(null, center);
-  background-color: $main;
+  background-color: $primary;
   padding: 5rem 2rem;
   flex-wrap: wrap;
   @media screen and (max-width: 768px) {
     @include flex_layout(null, null, column);
   }
+  border-top: 0.2rem solid $main;
   .wrapper {
     position: relative;
     @include flex_layout(center, null, column);
@@ -72,12 +79,12 @@
 .address {
   position: relative;
   padding: 0.5rem 4rem;
-  border-left: 0.2rem solid $primary;
+  border-left: 0.2rem solid $main;
   margin-left: 4rem;
   min-width: 40rem;
   @media screen and (max-width: 768px) {
     border: none;
-    border-top: 0.2rem solid $primary;
+    border-top: 0.2rem solid $main;
     padding: 0.5rem 0;
     margin: 0;
     width: 100%;
@@ -88,13 +95,13 @@
       display: inline-block;
       font-size: 1.8rem;
       padding: 2rem 0;
-      color: $primary;
+      color: $main;
       font-weight: bold;
     }
     & > li {
       list-style: none;
       font-size: 1.4rem;
-      color: rgba($primary, 0.9);
+      color: rgba($main, 0.9);
       font-weight: bold;
       @include flex_layout(center, null);
       line-height: 2;
