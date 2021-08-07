@@ -8,10 +8,6 @@
   @include flex_layout(center, flex-end);
   width: 100%;
   border-bottom: 0.2rem solid $main;
-  @media screen and (max-width: 768px) {
-    @include flex_layout(flex-start, null, column);
-    width: 100%;
-  }
   &:nth-child(2) {
     align-self: flex-end;
   }
@@ -19,6 +15,13 @@
     align-self: flex-end;
     border: none;
     width: max-content;
+  }
+  @media screen and (max-width: 768px) {
+    @include flex_layout(flex-start, null, column);
+    width: 100%;
+    &:last-child {
+      align-self: flex-start;
+    }
   }
   & > span {
     display: inline-block;
@@ -64,6 +67,7 @@
   flex-wrap: wrap;
   @media screen and (max-width: 768px) {
     @include flex_layout(null, null, column);
+    padding: 1rem 2rem;
   }
   border-top: 0.2rem solid $main;
   .wrapper {
@@ -71,6 +75,7 @@
     @include flex_layout(center, null, column);
     width: max-content;
     @media screen and (max-width: 768px) {
+      order: 2;
       @include flex_layout(null, null, column);
       width: 100%;
     }
@@ -83,9 +88,11 @@
   margin-left: 4rem;
   min-width: 40rem;
   @media screen and (max-width: 768px) {
+    order: 1;
     border: none;
-    border-top: 0.2rem solid $main;
+    border-bottom: 0.2rem solid $main;
     padding: 0.5rem 0;
+    padding-bottom: 2rem;
     margin: 0;
     width: 100%;
   }

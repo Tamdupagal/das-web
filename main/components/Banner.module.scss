@@ -11,9 +11,9 @@
   &::before {
     content: "";
     position: absolute;
-    top: 100%;
+    top: 98%;
     width: 100%;
-    height: 14rem;
+    height: 15rem;
     z-index: 1;
     left: 0;
     background-image: url(../assets/bg.svg);
@@ -24,31 +24,29 @@
   .banner_info {
     padding: 2rem;
     width: 50%;
+    @include flex_layout(null, center, column);
     @media screen and (max-width: 768px) {
+      @include flex_layout(center, center, column);
       width: 100%;
       padding: 2rem;
+      text-align: center;
     }
-    @include flex_layout(null, center, column);
     .title {
-      font-size: clamp(2rem, 3vw, 5vw);
+      font-size: clamp(4rem, 3vw, 5vw);
       color: black;
-      font-weight: bolder;
-      padding-bottom: 3rem;
+      font-weight: bold;
+      padding-bottom: 2rem;
     }
     .static_text {
       position: relative;
-      font-weight: bolder;
+      font-weight: bold;
       width: max-content;
       font-size: clamp(2rem, 2.4vw, 4vw);
       .typewriter {
-        font-size: clamp(2rem, 3vw, 4vw);
+        font-size: clamp(3rem, 3vw, 5vw);
         padding: 2rem 0;
         color: $main;
         width: 100%;
-        @media screen and (max-width: 768px) {
-          white-space: pre-line;
-          min-height: 8rem;
-        }
       }
     }
   }
