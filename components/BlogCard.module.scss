@@ -4,10 +4,11 @@
 .card {
   position: relative;
   width: 35rem;
-  height: max-content;
+  min-height: 40rem;
   @include flex_layout(null, null, column);
   border: 0.1rem solid #e4e4e4;
   border-radius: 1rem;
+  padding: 3rem;
   transition: {
     property: border;
     duration: 0.4s;
@@ -34,30 +35,16 @@
       opacity: 1;
     }
   }
-  & > figure {
-    position: relative;
-    width: 100%;
-    height: max-content;
-    border-radius: 1rem 1rem 0 0;
-    overflow: hidden;
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
   }
-  .blog__details {
-    padding: 3rem;
-    .title {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 3rem;
-    }
-    .blog__author {
-      width: 100%;
-      @include flex_layout(center, space-between);
-      .name {
-        font-size: 1.65rem;
-        color: red;
-      }
-      .date {
-        font-size: 1.6rem;
-      }
-    }
+  .desc {
+    width: 100%;
+    font-size: 1.6rem;
+    // white-space: pre-line;
+    line-height: 1.9;
+    color: rgba(black, 0.9);
   }
 }

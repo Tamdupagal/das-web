@@ -9,7 +9,8 @@ function CoreFeature() {
         <section className={styles.container}>
             <div className={styles.content__box}>
                 <div className={styles.section__header}>
-                    <SectionHeader slogan="CORE FEATURES" bigHeading="Smart Jackpots that you may love this anytime & anywhere"/>
+                    <SectionHeader slogan="CORE FEATURES" text="MASTERS/PROFESSIONAL CERTIFICATION IN
+Fullstack Digital Marketing"/>
                 </div>
                 <div className={styles.feature__box}>
                     <FeatureDetails text={DATA().coreFeature.description} btnText={DATA().coreFeature.buttonText}/>

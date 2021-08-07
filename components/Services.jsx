@@ -15,7 +15,7 @@ const data = [
     altText: 'Fast Performance',
     title: 'Fast Performance',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Understand DM Basics and setup and run campaigns on 7+ tools.',
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const data = [
     altText: 'Partnership deal',
     title: 'Partnership deal',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Build, run, analyze and optimize Search and Social Media Campaigns.',
     },]
 
 
@@ -60,7 +60,8 @@ function Services() {
             </figure>
             <div className={styles.content__box}>
                 <div className={styles.service__header}>
-                    <SectionHeader slogan="OUR SERVICES" bigHeading="Business Goals Achieved with Design" />
+                    <SectionHeader slogan="ACHIEVEMENT" text="Create content &
+                    viral marketing strategies through Organic Reach and Brand awarenesscd" />
                 </div>
                 {data.map(item => {
                     return (
@@ -91,6 +92,7 @@ function Services() {
                         </motion.iframe>
                         <FaTimes className={styles.close__btn} onClick={() => setModalOpen(false)} />
                     </motion.div>
+                    
                 }
             </AnimatePresence>
             

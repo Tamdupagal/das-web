@@ -46,7 +46,7 @@ function Blog() {
     return (
         <section className={styles.container}>
             <div className={styles.section__header}>
-                <SectionHeader slogan="OUR BLOG" text="Explore our products for your business solution"/>
+                <SectionHeader slogan="WHAT YOU WILL LEARN" text="Glimpse of our all-new updated training curriculum with 50+ modules"/>
             </div>
             <div className={styles.carousel__box}>
                 <Slider {...settings} ref={sliderRef}>

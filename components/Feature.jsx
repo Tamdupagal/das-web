@@ -8,7 +8,7 @@ function Feature() {
     return (
         <section className={styles.container}>
             <div className={styles.section__header}>
-                <SectionHeader slogan={"WHATS THE FUNCTION"} text={"Meet the feature of product"}/>
+                <SectionHeader slogan="WHATS WILL YOU LEARN" text="Highlights of the programs"/>
             </div>
             <div className={styles.feature__box}>
                 {DATA().feature.map((item) => {

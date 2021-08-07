@@ -26,33 +26,24 @@ function Subscribe() {
                         <Image src={chat} alt="Chat communication" width={150} objectFit="contain"/>
                     </figure>
                     <h1 className={styles.social__title}>
-                        Join the Community
+                        Interview Ready
                     </h1>
-                    <p className={styles.desc} data-color="black">
-                        Lorem ipsum dolor sit <br /> amet consectetur adipisicing<br /> elit sed  eiusmod tempor.
-                    </p>
                 </div>
                 <div className={styles.social__card}>
                     <figure>
                         <Image src={community} alt="Chat communication" width={150} objectFit="contain"/>
                     </figure>
                     <h1 className={styles.social__title}>
-                        Chat Communication
+                        Job Ready
                     </h1>
-                    <p className={styles.desc} data-color="black">
-                        Lorem ipsum dolor sit <br /> amet consectetur adipisicing<br /> elit sed  eiusmod tempor.
-                    </p>
                 </div>
                 <div className={styles.social__card}>
                     <figure>
                         <Image src={github} alt="Chat communication" width={150} objectFit="contain"/>
                     </figure>
                     <h1 className={styles.social__title}>
-                        Github Access
+                        Industry Ready
                     </h1>
-                    <p className={styles.desc} data-color="black">
-                       Lorem ipsum dolor sit <br /> amet consectetur adipisicing<br /> elit sed  eiusmod tempor.
-                    </p>
                 </div>
             </div>
         </section>

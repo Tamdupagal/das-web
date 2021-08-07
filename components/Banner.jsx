@@ -24,9 +24,13 @@ function Banner() {
     return (
         <section className={styles.container} id="home">
             <motion.div variants={FadeIn} animate="vissible" initial="initial" className={styles.content__box}>
-                <h1 className={styles.heading}>Top Quality Digital Products to explore</h1>
-                <p className={styles.desc}>Get your blood tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.</p>
-                <button className={styles.banner__btn}>Explore</button>
+                <h1 className={styles.heading}>STUDY FIRST PAY LATER
+                            FULL STACK DIGITAL MARKETING PROGRAM</h1>
+                <p className={styles.desc}>Performance Marketing 
+Organic Reach
+Brand Awareness
+Growth Hacking</p>
+                <button className={styles.banner__btn}>Study First Pay Later</button>
             </motion.div>
             <figure className={styles.banner__img}>
                 <Image src={BannerImg} alt="banner thumb" width={800} quality={0} objectFit="contain" />

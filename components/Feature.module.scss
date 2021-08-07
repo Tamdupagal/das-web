@@ -21,7 +21,6 @@
     grid-gap: 5rem 10rem;
     .feature {
       @include flex_layout(null, null, column);
-      text-align: justify;
       @media screen and (max-width: 768px) {
         text-align: center !important;
       }
