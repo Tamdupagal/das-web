@@ -17,7 +17,7 @@ function Misson() {
                             <Image src={mission1} alt="Productive work" objectFit="contain" layout="responsive"/>
                         </figure>
                         <p>
-                            <strong>To Create</strong> a productive work culture in which our employees happily and whole-heartedly contribute to our goal of making the world a place where every individual thrives together with the usage of technology readily available.
+                            <strong>To Create</strong> a productive work culture in which every individual happily and whole-heartedly contributes to our goal of making the world a place where every individual thrives together with the usage of technology readily available.
                         </p>
                     </div>
                     <div className={styles.box}>
@@ -41,7 +41,7 @@ function Misson() {
                             <Image src={mission4} alt="Important skills" objectFit="contain" layout="responsive"/>
                         </figure>
                         <p>
-                            <strong>To deliver</strong> important skills and values by using available technology and resources and aid by providing a platform for their growth at a fairly accessible price/cost.
+                            <strong>To deliver</strong> outstanding skills and values by using available technology and resources and aid by providing a platform for their growth at a reasonably accessible price/cost.
                         </p>
                     </div>
             </div>

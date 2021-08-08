@@ -50,14 +50,17 @@ function Courses() {
     }, [])
     return (
         <section className={styles.container}>
-        <h1 className={styles.main_title}>Our Courses</h1>
+        <h1 className={styles.main_title}>About our course</h1>
         <p className={styles.about__course}>
-            <span>About our course</span> 
-            The real STUDY FIRST PAY LATER programs
-            Worlds 1st Live online classes
-            Agency style cohort-based learning
-            1:8 collaborative Live project building academic experience.
-            16+ Live Real Life industry-standard projects.
+          The real STUDY FIRST PAY LATER programs.
+          <br />
+          Worlds 1st Live online classes
+          <br />
+          Agency style cohort-based learning
+          <br />
+          1:8 collaborative Live project building academic experience.
+          <br />
+          Live Real Life industry-standard projects.
         </p>
              <div className={styles.carousel__box}>
                 <Slider {...settings} ref={sliderRef}>

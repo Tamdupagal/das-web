@@ -11,11 +11,6 @@
   &:nth-child(2) {
     align-self: flex-end;
   }
-  &:last-child {
-    align-self: flex-end;
-    border: none;
-    width: max-content;
-  }
   @media screen and (max-width: 768px) {
     @include flex_layout(flex-start, null, column);
     width: 100%;
@@ -34,8 +29,13 @@
     font-size: 1.5rem;
     color: rgba($main, 0.9);
     padding: 0.8rem 3rem;
+    transition: {
+      property: color, transform;
+      duration: 0.2s;
+    }
     &:hover {
       color: $orange;
+      transform: scale(1.03);
     }
     &:not(:last-child) {
       border-right: 0.2rem solid $main;
@@ -52,9 +52,18 @@
     }
     .social {
       &:not(:last-child) {
-        margin-right: 1.5rem;
+        margin-right: 1rem;
       }
       font-size: 2.5rem;
+    }
+  }
+  &:last-child {
+    align-self: flex-end;
+    border: none;
+    width: max-content;
+    & > li {
+      border: none;
+      padding: 1rem 1.5rem;
     }
   }
 }

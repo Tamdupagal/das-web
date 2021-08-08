@@ -35,7 +35,7 @@
       font-size: clamp(4rem, 3vw, 5vw);
       color: black;
       font-weight: bold;
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
     }
     .static_text {
       position: relative;
@@ -44,7 +44,7 @@
       font-size: clamp(2rem, 2.4vw, 4vw);
       .typewriter {
         font-size: clamp(3rem, 3vw, 5vw);
-        padding: 2rem 0;
+        padding: 1rem 0;
         color: $main;
         width: 100%;
       }

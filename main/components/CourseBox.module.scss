@@ -47,8 +47,15 @@
     @include flex_layout(null, null, column);
     padding: 3rem 2rem;
     .title {
+      font-size: 1.2rem;
+      color: rgba(black, 0.65);
+      letter-spacing: 0.1rem;
+      padding-bottom: 1rem;
+    }
+    .heading {
       font-size: 1.8rem;
       color: black;
+      padding: 1rem 0;
     }
     .btn_link {
       font-size: 2rem;

@@ -18,20 +18,10 @@ function Header() {
 
     const dropdown = {
         hidden: {
-            scale: 0,
-            originX: 0,
-            originY: 0,
             opacity: 0,
         },
         vissible: {
-            scale: 1,
             opacity: 1,
-            transition: {
-                type: "tween",
-                staggerChildren: 0.05,
-                delayChildren: 0.3,
-                duration: 0.3,
-            },
         },
 
         
@@ -55,7 +45,12 @@ function Header() {
             </figure>
                 <div className={styles.btn_group}>
                 <motion.button className={styles.btn} onTap={() => setToggle(!toggle)} onHoverStart={() => setToggle(true)} onHoverEnd={() => setToggle(false)}> Courses <FaAngleDown className={styles.arrow_down} />
-                            <motion.ul key="dropdown" variants={dropdown} animate={toggle ? "vissible" : "hidden"}              initial="hidden" className={styles.dropdown}>
+                    <motion.ul key="dropdown" transition={{
+                        type: "tween",
+                        staggerChildren: 0.05,
+                        delayChildren: 0.15,
+                        duration: 0.3,
+                    }} variants={dropdown} animate={toggle ? "vissible" : "hidden"}              initial="hidden" className={styles.dropdown}>
                                 <motion.li variants={fadeIn} onClick={()=>router.push('/digital-marketing')}><FaAngleRight className={styles.arrow_right}/>Digital Marketing</motion.li>
                                 <motion.li variants={fadeIn} onClick={()=>router.push('/web-development')}><FaAngleRight className={styles.arrow_right}/> Web Development</motion.li>
                                 <motion.li variants={fadeIn} onClick={()=>router.push('/data-science')}><FaAngleRight className={styles.arrow_right}/>Data Science</motion.li>

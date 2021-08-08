@@ -10,23 +10,24 @@ function CourseBox(props) {
     return (
                         <div className={styles.course_box}>
                             <figure className={styles.course_image}>
-                    <Image src={props.imgSrc} width={200} height={150} objectFit="contain" alt={props.alt}/>
+                    <Image src={props.imgSrc} width={180} height={150} objectFit="contain" alt={props.alt}/>
                             </figure>
                             <div className={styles.info_box}>
-                                <h1 className={styles.title}>{props.title}</h1>
-                                <div className={styles.review}>
+                                <h3 className={styles.title}>{props.title}</h3>
+                                <h1 className={styles.heading}>{props.heading}</h1>
+                                {/* <div className={styles.review}>
                                         <FaStar className={styles.stars}/>
                                         <FaStar className={styles.stars}/>
                                         <FaStar className={styles.stars}/>
                                         <FaStar className={styles.stars}/>
                                         <FaStar className={styles.stars} />
                                         4.8 (95 reviews)
-                                </div>
+                                </div> */}
                                 <p className={styles.desc}>
                                     {props.description}
                                     <br/>
                                     <br />
-                                    <span><FaHourglassHalf className={styles.hourglass} />{props.classes}</span>
+                                    <span>{props.classes}</span>
                                 </p>
                                 <Button href={"/"+props.path}>{props.btnText}</Button>
                             </div>

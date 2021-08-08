@@ -15,10 +15,11 @@ function AboutProgram() {
                         <figure>
                             <Image src={about} layout='responsive' objectFit="contain" alt="Young Professional"/>
                         </figure>
-                        <p className={styles.desc}><FaQuoteLeft className={styles.quote}/> We are Digital Aided School a team of Young professionals who beliece in quality education and the lastest technolodgy. Learning is never-ending but learning what is required to keep body and soul together is principal, Learning through technology where the resources are unlimited makes it more merrymaking
+                        <p className={styles.desc}><FaQuoteLeft className={styles.quote}/> We are Digital Aided School team of Young professionals who believe in quality education and the latest technology. Learning is never-ending but learning what is required to keep body and soul together is principal, Learning through technology where the resources are unlimited makes it more merrymaking
                             <br />
                             <br />
-                            We have the perfect & feasible solutuon when it comes to EDUCATION & TECHNOLOGY. We have DIGITAL in our name (pun intended)
+                            We have the perfect & feasible solutions when it comes to EDUCATION & TECHNOLOGY. We have DIGITAL in our name (pun intended)
+
                             <br />
                             <br />
                             For EDUCATION solutions, TECHNOLOGY solutions & DIGITAL solutions allow us to help with our plethora of band-aids as per your needs and requirements.<FaQuoteRight className={styles.quote}/></p>

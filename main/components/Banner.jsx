@@ -13,12 +13,11 @@ const phrases = [
 
 function Banner() {
 
-
     return (
         <section className={styles.container}>
                     <div className={styles.banner_info}>
                 <h1 className={styles.title}>Study Now <span className={styles.red}>and</span> <br /> Pay Later<span className={styles.red}>&nbsp; !</span></h1>
-                <div className={styles.static_text}>We offer, courses in
+                <div className={styles.static_text}>Courses in
                     <p className={styles.typewriter}>
                         <Typewriter
                             onInit={t=>t.changeDeleteSpeed(1).changeDelay(0.4)}
