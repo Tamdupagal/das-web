@@ -10,6 +10,7 @@ import Subscribe from '../components/Subscribe'
 import Team from '../components/Team'
 import Testimonial from '../components/Testimonial'
 import WorkFlow from '../components/WorkFlow'
+import { DATA } from '../helpers/Data'
 
 
 export default function Home() {
@@ -21,11 +22,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner />
-      <Feature />
+      <Feature data={DATA().feature} />
       <Services />
       <QualityFeature />
       <CoreFeature />
-      <Feature />
+      <Feature data={DATA().growth} />
       <WorkFlow />
       <Package />
       <Team />

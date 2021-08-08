@@ -6,14 +6,14 @@ import { DATA } from '../helpers/Data';
 
 
 
-function Feature() {
+function Feature({data}) {
     return (
         <section className={styles.container}>
             <div className={styles.section__header}>
-                <SectionHeader text="Key Principles of growth"/>
+                <SectionHeader text="HIGHLIGHTS OF THE PROGRAM"/>
             </div>
             <div className={styles.feature__box}>
-                {DATA().growth.map((item) => {
+                {data.map((item) => {
                     return (
                         <div className={styles.feature} key={item.id}>
                         <FeatureDetails {...item}/>
