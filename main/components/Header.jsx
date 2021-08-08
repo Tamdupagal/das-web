@@ -3,7 +3,7 @@ import Images from 'next/image'
 import Link from 'next/link'
 import logo from '../assets/das.webp'
 import { FaAngleDown, FaBars, FaTimes, FaAngleRight} from 'react-icons/fa'
-import {useRef, useState } from 'react';
+import {useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import {useRouter} from 'next/router'
 
@@ -37,6 +37,23 @@ function Header() {
             opacity: 1
         }
     }
+
+    const classToggle = () => {
+        if (window.scrollY >= 5) {
+                headerRef.current.classList.add(styles.active);
+                return
+        } else {
+            if(!headerRef.current.classList.contains(styles.active)) return
+            headerRef.current.classList.remove(styles.active);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', classToggle)
+        return  ()=> {
+            window.removeEventListener('scroll', classToggle)
+        }
+    }, [])
 
     return (
         <header className={styles.header} ref={headerRef}>

@@ -8,7 +8,7 @@ function WorkFlow() {
     return (
         <section className={styles.container}>
             <div className={styles.section__header}>
-                <SectionHeader isWhite slogan="WHATS THE FUNCTION" text="Let’s see how it works"/>
+                <SectionHeader isWhite slogan="ADMISSION PROCESS" text="Let’s see how it works"/>
             </div>
             <div className={styles.content__box}>
                 {WORKFLOW_DATA().map(item => {

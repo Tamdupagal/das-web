@@ -50,10 +50,11 @@
   }
   .card__box {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 35rem));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 40rem));
     grid-gap: 3rem;
     place-content: center;
     padding: 6rem 0;
     overflow: hidden;
+    border: 1px soldid red;
   }
 }

@@ -15,11 +15,12 @@
   @media screen and (max-width: 768px) {
     @include flex_layout(center, null, column);
     background-size: 70%;
+    padding: 10rem 2rem;
     background-position: 140% 100%;
   }
   .section__img {
     position: relative;
-    width: 50%;
+    width: 40%;
     background-image: url(../assets/core-feature.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -36,7 +37,7 @@
   }
   .content__box {
     position: relative;
-    width: 35%;
+    width: 50%;
     @include flex_layout(null, null, column);
     padding: 1rem;
     @media screen and (max-width: 768px) {

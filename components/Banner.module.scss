@@ -2,34 +2,40 @@
 @import "../styles/config/variable";
 
 .container {
-  margin-top: 19rem;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
   position: relative;
-  background-image: url("../assets/shape-left.png"),
-    url("../assets/shape-right.png");
-  background-position: 0 50%, 100% 60%;
-  background-repeat: no-repeat;
-  background-size: 35%, 35%;
   width: 100%;
-  @include flex_layout(center, center, column);
+  @media (max-width: 768px) {
+    padding: 0;
+    padding-top: 7rem;
+  }
+  @include flex_layout(center, center);
   .content__box {
-    @include flex_layout(center, null, column);
+    @include flex_layout(null, null, column);
     position: relative;
-    width: 40%;
+    width: 50%;
     min-width: 45rem;
-    margin-bottom: 3rem;
-    text-align: center;
+    padding: 5rem;
+    text-align: justify;
     .heading {
-      font-size: clamp(1rem, -0.875rem + 8.333vw, 3.5rem);
+      font-size: clamp(1rem, -0.875rem + 8.333vw, 3rem);
       font-weight: bolder;
-      color: black;
+      color: $main;
     }
     .desc {
-      font-size: 1.8rem;
-      color: rgba(black, 1);
-      padding: 4rem 3rem;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: rgba($dark, 0.7);
+      padding: 3rem 0;
+      line-height: 1.8;
+      letter-spacing: 0.05rem;
+      word-spacing: 0.1rem;
+      text-align: justify;
     }
     .banner__btn {
-      background-color: $red;
+      display: inline;
+      background-color: $orange;
       padding: 1.5rem 3rem;
       color: white;
       cursor: pointer;
@@ -38,12 +44,28 @@
       border-radius: 3rem;
       border: none;
       font-weight: bolder;
-    }
-    .banner__img {
-      position: relative;
-      width: 100%;
-      height: max-content;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      word-spacing: 0.15rem;
       border: 1px solid red;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 5rem 2rem;
+      .heading,
+      .desc,
+      .banner__btn {
+        text-align: center !important;
+        margin: 0 auto;
+      }
+    }
+  }
+  .banner__img {
+    position: relative;
+    width: 50%;
+    height: max-content;
+    @media (max-width: 768px) {
+      display: none !important;
     }
   }
 }

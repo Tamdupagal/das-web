@@ -8,10 +8,10 @@ function QualityFeature() {
     return (
         <section className={styles.container} id='features'>
             <div className={styles.section__header}>
-                <SectionHeader slogan="QUALITY FEATURES" text="Amazing useful features"/>
+                <SectionHeader text="WHATS WILL YOU LEARN"/>
             </div>
             <div className={styles.features}>
-                {DATA().feature.map(item => {
+                {DATA().learning.map(item => {
                     return (
                         <div className={styles.feature} key={item.id}>
                             <FeatureDetails {...item}/>

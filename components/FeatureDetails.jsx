@@ -3,12 +3,12 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import styles from './FeatureDetails.module.scss';
 
-function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, isWhite=false, pattern}) {
+function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, isWhite=false, pattern, description}) {
     
     return (
         <>
             {altText && <figure className={styles.feature__img}>
-                <Image src={imgSrc} alt={altText} width={100} objectFit="contain" />
+                <Image src={imgSrc} alt={altText} layout="responsive"/>
             </figure>}
             {showIcon && <div className={styles.workflow__icon}>
                 <span>{"0" + id}</span>
@@ -28,6 +28,9 @@ function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, i
                 </h1>}
                 {text && <p className={styles.description}>
                     {text}
+                </p>}
+                {description && <p className={styles.text}>
+                    {description}
                 </p>}
                 {btnText && <button className={styles.feature__btn}>{btnText}</button>}
             </div>

@@ -81,8 +81,11 @@
   .social {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
-    grid-gap: 2rem 4rem;
+    grid-gap: 5rem 4rem;
     place-content: center;
+    @media (max-width: 768px) {
+      grid-gap: 5rem 0;
+    }
     padding: 2rem 0;
     .social__card {
       position: relative;
@@ -91,7 +94,7 @@
         margin-bottom: 1rem;
       }
       .social__title {
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: bold;
         padding: 1rem 0;
       }

@@ -3,7 +3,7 @@
 
 .card {
   position: relative;
-  width: 33rem;
+  width: 100%;
   min-height: 50rem;
   padding: 4rem 3rem;
   @include flex_layout(null, null, column);

@@ -15,6 +15,7 @@
   @media screen and (max-width: 768px) {
     @include flex_layout(center, null, column);
     background-image: none;
+    padding: 10rem 2rem;
   }
   .service__img {
     position: relative;
@@ -79,6 +80,7 @@
     padding: 1rem;
     @media screen and (max-width: 768px) {
       width: 100%;
+      padding: 1rem 0;
     }
     .service__header {
       margin-bottom: 4rem;

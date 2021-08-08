@@ -3,7 +3,7 @@
 
 .title {
   font-size: 1.55rem;
-  color: $red;
+  color: $orange;
   font-weight: bold;
   margin-bottom: 1.5rem;
   letter-spacing: 0.3rem;
@@ -13,12 +13,13 @@
 }
 .heading,
 .big__heading {
-  font-size: 3.1rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: black;
+  color: $main;
   &[data-white="true"] {
     color: white;
   }
+  white-space: pre-line;
 }
 .big__heading {
   font-size: 4rem;

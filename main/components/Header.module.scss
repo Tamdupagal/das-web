@@ -4,7 +4,7 @@
 .header {
   position: relative;
   @include flex_layout(center, space-between);
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   height: max-content;
   width: 100%;
   position: fixed;
@@ -12,7 +12,31 @@
   left: 0;
   background-color: $primary;
   z-index: 999;
-  box-shadow: 0.3rem 0 2rem 0.1rem rgba(black, 0.1);
+  transition: {
+    property: padding;
+    duration: 0.3s;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0.3rem 0 2rem 0.1rem rgba(black, 0.1);
+    opacity: 0;
+    transition: {
+      property: opacity;
+      duration: 0.3s;
+    }
+  }
+  &.active {
+    padding: 0 2rem;
+    &::before {
+      opacity: 1;
+    }
+  }
   .logo {
     position: relative;
     width: 14rem;
@@ -21,9 +45,6 @@
   }
   @media screen and (max-width: 1115px) {
     @include flex_layout(center, null);
-  }
-  @media screen and (max-width: 768px) {
-    padding: 0 1rem;
   }
   .btn_group {
     display: inline-flex;

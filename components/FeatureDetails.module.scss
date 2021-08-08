@@ -2,8 +2,13 @@
 @import "../styles/config/variable";
 
 .feature__img {
-  min-width: 10rem;
-  margin-right: 1.5rem;
+  position: relative;
+  width: 10rem;
+  max-width: 10rem;
+  height: 10rem;
+  overflow: hidden;
+  margin-right: 0.5rem;
+  object-fit: cover;
 }
 .workflow__icon {
   width: max-content;
@@ -46,16 +51,23 @@
   }
   .title {
     font-size: 1.8rem;
-    color: black;
+    color: $dark;
     font-weight: bolder;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
-  .description {
-    font-size: 1.55rem;
-    text-align: inherit;
+  .description,
+  .text {
+    font-size: 1.5rem;
+    text-align: start;
     font-weight: 500;
-    color: rgba(black, 0.8);
+    color: rgba($dark, 0.7);
+    font-weight: bold;
     line-height: 1.8;
+    word-spacing: 0.2rem;
+    white-space: pre-line;
+  }
+  .text {
+    text-align: justify;
   }
   .feature__btn {
     display: inline-block;

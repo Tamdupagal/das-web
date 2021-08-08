@@ -1,38 +1,29 @@
 
-import ArrowOdd from '../assets/arrowOdd.svg';
-import ArrowEven from '../assets/arrowEven.svg';
+
 
 export const WORKFLOW_DATA = () => {
     return [
   {
     id: 1,
-    title: 'Set disbursement Instructions',
-    text:
-                'Get your blood tests delivered at home collect a sample from the your blood tests.',
+    title: 'Register for the Program.',
     pattern: "odd",
     showIcon: true,
   },
   {
     id: 2,
-    title: 'Assembly retrieves funds from your account',
-    text:
-          'Get your blood tests delivered at home collect a sample from the your blood tests.',
+    title: 'Attend a call from DM specialist.',
     pattern: "even",
     showIcon: true,
   },
   {
     id: 3,
-    title: 'Assembly initiates disbursement',
-    text:
-          'Get your blood tests delivered at home collect a sample from the your blood tests.',
+    title: 'Sign-up for the program after the initial contact.',
       pattern: "odd",
     showIcon: true,
   },
   {
     id: 4,
-    title: 'Customer receives funds payment',
-    text:
-          'Get your blood tests delivered at home collect a sample from the your blood tests.',
+    title: 'Start learning & building your DM career.',
     pattern: false,
     showIcon: true,
   },

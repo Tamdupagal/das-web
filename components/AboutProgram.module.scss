@@ -16,6 +16,9 @@
     position: relative;
     width: 70%;
     @include flex_layout(null, null);
+    @media (max-width: 768px) {
+      width: 100%;
+    }
     .image {
       position: relative;
       width: 50%;

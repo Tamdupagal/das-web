@@ -51,10 +51,10 @@
     }
   }
   .banner__img {
+    @media screen and (max-width: 768px) {
+      display: none !important;
+    }
     position: relative;
     width: 40%;
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
   }
 }

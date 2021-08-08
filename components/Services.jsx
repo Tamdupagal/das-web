@@ -12,18 +12,18 @@ const data = [
   {
     id: 1,
     imgSrc: Performance,
-    altText: 'Fast Performance',
-    title: 'Fast Performance',
+    altText: 'Understanding DM',
+    title: 'Understanding DM',
     text:
-      'Understand DM Basics and setup and run campaigns on 7+ tools.',
+      'Understand DM Basics\nDomain-specific Research & development',
   },
   {
     id: 2,
     imgSrc: Partnership,
-    altText: 'Partnership deal',
-    title: 'Partnership deal',
+    altText: 'State of the art DM',
+    title: 'State of the art DM',
     text:
-      'Build, run, analyze and optimize Search and Social Media Campaigns.',
+      'Build, run, analyze and optimize Search and SM Campaigns\nSetup and run industry-relevant DM campaigns',
     },]
 
 
@@ -60,8 +60,9 @@ function Services() {
             </figure>
             <div className={styles.content__box}>
                 <div className={styles.service__header}>
-                    <SectionHeader slogan="ACHIEVEMENT" text="Create content &
-                    viral marketing strategies through Organic Reach and Brand awarenesscd" />
+                    <SectionHeader slogan="ACHIEVEMENT" text="Be Industry ready
+Come up with new ideas for DM 
+Identified & solve DM problems for companies " />
                 </div>
                 {data.map(item => {
                     return (
