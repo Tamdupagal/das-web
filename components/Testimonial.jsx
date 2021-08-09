@@ -22,7 +22,12 @@ function Testimonial() {
         touchMove: true,
         swipeToSlide: true,
         draggable: true,
-        accessibility: true,
+      accessibility: true,
+        infinite: true,
+      pauseOnHover: true,
+      autoplay: true,
+      autoplaySpeed: 5500,
+      pauseOnFocus: true,
          responsive: [
         {
           breakpoint: 320,

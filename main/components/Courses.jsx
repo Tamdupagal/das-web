@@ -13,7 +13,7 @@ function Courses() {
 
     const settings = {
          dots: false,
-         speed: 400,
+         speed: 1000,
          slidesToShow: 3,
          slidesToScroll: 1,
          arrows: false,
@@ -26,7 +26,7 @@ function Courses() {
       infinite: true,
       pauseOnHover: true,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 5500,
       pauseOnFocus: true,
         
          responsive: [

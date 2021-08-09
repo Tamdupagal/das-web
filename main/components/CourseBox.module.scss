@@ -51,11 +51,18 @@
       color: rgba(black, 0.65);
       letter-spacing: 0.1rem;
       padding-bottom: 1rem;
+      white-space: pre-line;
+      text-align: center;
     }
     .heading {
       font-size: 1.8rem;
       color: black;
       padding: 1rem 0;
+      text-align: center;
+    }
+    .btn_wrapper {
+      display: grid;
+      place-items: center;
     }
     .btn_link {
       font-size: 2rem;

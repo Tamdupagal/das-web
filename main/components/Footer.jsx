@@ -1,6 +1,6 @@
 import styles from './Footer.module.scss';
 import Link from 'next/link'
-import { FaEnvelope, FaInstagram, FaLinkedinIn, FaPhone, FaTwitter, FaYoutube, FaAngleRight, FaFacebook} from 'react-icons/fa';
+import { FaEnvelope, FaInstagram, FaLinkedinIn, FaPhone, FaTwitter, FaYoutube, FaAngleRight, FaFacebook, FaHeart} from 'react-icons/fa';
 
 function Footer() {
     return (
@@ -18,12 +18,12 @@ function Footer() {
                         <li><FaEnvelope className={styles.icon}/> hello@digitalaidedschool.com</li>
                     </ul>
                     <ul className={styles.ul}>
-                    <li><FaInstagram className={styles.social} /></li>
+                    {/* <li><FaInstagram className={styles.social} /></li> */}
                        <li> <FaLinkedinIn className={styles.social} /></li>
                          <li>   <FaYoutube className={styles.social} /></li>
                       <li>  <FaTwitter className={styles.social} /></li>
                       <li>  <FaFacebook className={styles.social} /></li>
-                    </ul>
+                </ul>
             </div>
             <div className={styles.address}>
                 <ul><span>Our Address</span>
@@ -33,6 +33,7 @@ function Footer() {
                     <li>61 Bridge Street, Kington HR5 3DJ</li>
                 </ul>
             </div>
+            <p className={styles.copyright}>Made with <FaHeart className={styles.heart}/> by DIGITAL AIDED SCHOOL. All rights reserved.</p>
         </footer>
     )
 }

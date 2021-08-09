@@ -5,33 +5,56 @@
   position: relative;
   width: 100%;
   @include flex_layout(center, null, column);
+  background-color: $main;
+  padding: 3rem 0;
+  padding-bottom: 6rem;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    transform: translateY(-100%);
+    width: 100%;
+    height: 15rem;
+    z-index: 1;
+    left: 0;
+    background-image: url(../assets/bg3.svg);
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: cover;
+  }
   .heading {
-    color: $main;
+    color: $primary;
     font-size: 3rem;
     text-align: center;
+    padding-bottom: 4rem;
   }
   .wrapper {
     position: relative;
     width: 80%;
-    @include flex_layout(center, null);
-    padding: 5rem 0;
+    @include flex_layout(center, center);
+    padding: 8rem 0;
     .img {
       order: 2;
-      width: 50%;
+      width: 60%;
       position: relative;
     }
     .footer_text {
       position: relative;
-      width: 50%;
+      width: 40%;
       font-size: 1.8rem;
-      text-align: justify;
       color: $main;
       font-weight: bolder;
       padding: 0 2rem;
       padding: 4rem 0;
       order: 1;
+      padding: 2rem;
+      background-color: $primary;
+      border-radius: 1rem;
+      margin-right: 10rem;
+      box-shadow: 0 0 0.5rem 0.4rem rgba(black, 0.2);
       & > strong {
-        color: $orange;
+        color: $main;
+        border: 1px solid red;
       }
       & > ul {
         &:not(:last-child) {
@@ -46,8 +69,9 @@
           margin-left: 3rem;
           margin-bottom: 0.8rem;
           @include flex_layout(center, null);
+          color: $main;
           .check {
-            color: #a6d108;
+            color: $orange;
             font-size: 1.8rem;
             margin-right: 1rem;
           }
@@ -59,7 +83,19 @@
       padding: 0 2rem;
       @include flex_layout(center, null, column);
       .footer_text {
-        width: 100%;
+        width: max-content;
+        margin: 0 auto;
+        ul {
+          text-align: center;
+        }
+        li {
+          @include flex_layout(center, center);
+          margin: 0 !important;
+          margin-bottom: 0.8rem !important;
+          .check {
+            display: none;
+          }
+        }
       }
       .img {
         display: none;

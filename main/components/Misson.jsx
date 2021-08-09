@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import about from '../assets/about_the_program.png'
 import mission1 from '../assets/podium.png';
 import mission2 from '../assets/struggle.png';
 import mission3 from '../assets/idea.png';

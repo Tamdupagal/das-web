@@ -4,7 +4,7 @@
 .container {
   position: relative;
   width: 100%;
-  padding: 8rem 0;
+  padding: 1rem 0;
   @include flex_layout(center, null, column);
   background-color: white;
   background-color: $main;
@@ -17,6 +17,21 @@
     z-index: 1;
     left: 0;
     background-image: url(../assets/bg1.svg);
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: cover;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    transform: translateY(-100%);
+    width: 100%;
+    z-index: -1;
+    height: 15rem;
+    z-index: 1;
+    left: 0;
+    background-image: url(../assets/bg3.svg);
     background-repeat: no-repeat;
     background-position: 0%;
     background-size: cover;
@@ -42,6 +57,7 @@
     white-space: pre-line;
     box-shadow: -0.5rem -0.5rem 0.2rem rgba(black, 0.2),
       0.5rem 0.5rem 0.2rem rgba(black, 0.2);
+    text-align: center;
     @media screen and (max-width: 768px) {
       width: 95%;
     }

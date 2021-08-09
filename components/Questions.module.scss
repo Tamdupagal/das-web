@@ -5,34 +5,34 @@
   position: relative;
   width: 100%;
   @include flex_layout(center, null, column);
-  padding: 3rem 0;
-  background-color: $main;
+  padding: 5rem 0 10rem 0;
+  background-color: $primary;
+  border-bottom: 0.2rem solid $main;
   .main_heading {
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
     font-size: 2.5rem;
-    color: $white;
+    color: $main;
     align-self: center;
     text-align: center;
   }
   .wrapper {
     @include flex_layout(null, null, column);
-    padding: 0 1rem;
+    border-radius: 1rem;
     width: 80%;
     @media screen and (max-width: 768px) {
       width: 100%;
+      padding: 0 2rem;
     }
     .accordian {
-      background-color: white;
-      border-radius: 0.5rem;
+      border-bottom: 0.2rem solid $main;
+      padding: 2rem 0;
       overflow: hidden;
-      &:not(:last-child) {
-        margin-bottom: 1.5rem;
-      }
       & > p {
         width: 100%;
-        padding: 2rem 3rem;
+        padding: 1rem 0;
         font-size: 1.5rem;
         font-weight: 600;
+        color: $main;
         @include flex_layout(center, space-between);
         .plus {
           color: $main;

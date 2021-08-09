@@ -13,7 +13,7 @@ function Blog() {
 
     const settings = {
          dots: false,
-         speed: 400,
+         speed: 1000,
          slidesToShow: 3,
          slidesToScroll: 1,
          arrows: false,
@@ -22,7 +22,12 @@ function Blog() {
         touchMove: true,
         swipeToSlide: true,
         draggable: true,
-        accessibility: true,
+      accessibility: true,
+        infinite: true,
+      pauseOnHover: true,
+      autoplay: true,
+      autoplaySpeed: 5500,
+      pauseOnFocus: true,
          responsive: [
         {
           breakpoint: 320,

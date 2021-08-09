@@ -10,6 +10,7 @@ import Subscribe from '../components/Subscribe'
 import Team from '../components/Team'
 import Testimonial from '../components/Testimonial'
 import WorkFlow from '../components/WorkFlow'
+import Question from '../components/Questions'
 import { DATA } from '../helpers/Data'
 
 
@@ -33,6 +34,7 @@ export default function Home() {
       <Testimonial />
       <Blog />
       <Subscribe />
+      <Question/>
     </main>
   )
 }

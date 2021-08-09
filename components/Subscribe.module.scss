@@ -83,6 +83,7 @@
     grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
     grid-gap: 5rem 4rem;
     place-content: center;
+    padding-bottom: 8rem;
     @media (max-width: 768px) {
       grid-gap: 5rem 0;
     }

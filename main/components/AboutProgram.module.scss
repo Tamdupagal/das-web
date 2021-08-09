@@ -6,7 +6,7 @@
   width: 100%;
   @include flex_layout(center, null, column);
   padding: 0 0.5rem;
-  margin-bottom: 5rem;
+  padding-bottom: 15rem;
   .main_heading {
     font-size: 3rem;
     color: $main;

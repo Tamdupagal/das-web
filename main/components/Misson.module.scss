@@ -58,9 +58,10 @@ $lightBlue: rgba($main, 0.7);
       }
       & > figure {
         position: relative;
-        width: 23rem;
         margin-right: 3rem;
+        min-width: 7rem;
         height: max-content;
+        max-width: 15rem;
       }
       & > p {
         font-size: 1.6rem;

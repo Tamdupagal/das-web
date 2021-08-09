@@ -3,12 +3,10 @@
 
 .feature__img {
   position: relative;
-  width: 10rem;
+  min-width: 10rem;
   max-width: 10rem;
-  height: 10rem;
   overflow: hidden;
   margin-right: 0.5rem;
-  object-fit: cover;
 }
 .workflow__icon {
   width: max-content;
