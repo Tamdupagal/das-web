@@ -21,7 +21,7 @@
     grid-gap: 4rem 5rem;
     place-content: center;
     @media screen and (max-width: 1024px) {
-      grid-template-columns: repeat(3, 35rem);
+      grid-template-columns: repeat(2, 35rem);
     }
     @media screen and (max-width: 768px) {
       grid-template-columns: repeat(1, 35rem);

@@ -59,11 +59,18 @@
       background-color: transparent;
       letter-spacing: 0.03rem;
       font-weight: bold;
-      cursor: pointer;
+      cursor: default;
       justify-self: flex-end;
       color: white;
       color: $main;
       border-color: $main;
+      user-select: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
       &:last-child {
         border-color: $orange;
         color: $orange;
@@ -86,8 +93,14 @@
     width: max-content;
     padding: 1rem 0;
     overflow: hidden;
-    border-radius: 0.3rem;
+    border-radius: 1rem;
     box-shadow: 0 0 0.6rem 0.5rem rgba(black, 0.1);
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     & > li {
       list-style: none;
       padding: 1rem 2rem;

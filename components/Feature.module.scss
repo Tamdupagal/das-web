@@ -22,8 +22,9 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(20rem, 1fr));
     grid-gap: 5rem 10rem;
+    place-content: center;
     @media screen and (max-width: 1024px) {
-      grid-template-columns: repeat(3, minmax(20rem, 1fr));
+      grid-template-columns: repeat(2, minmax(20rem, 40rem));
       padding: 0 2rem;
     }
     @media screen and (max-width: 768px) {

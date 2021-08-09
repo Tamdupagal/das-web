@@ -38,8 +38,8 @@ function Testimonial() {
           settings: { slidesToShow: 1}
         },
         {
-          breakpoint: 1024,
-          settings: { slidesToShow: 3}
+          breakpoint: 1025,
+          settings: { slidesToShow: 2}
         }
       ]
     };
