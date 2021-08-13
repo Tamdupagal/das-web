@@ -2,6 +2,10 @@ import Performance from '../assets/key-feature/performance.svg';
 import Partnership from '../assets/key-feature/partnership.svg';
 import Subscription from '../assets/key-feature/subscription.svg';
 import Support from '../assets/key-feature/support.svg';
+import what from '../main/assets/What.png'
+import when from '../main/assets/When.png'
+import where from '../main/assets/Where.png'
+import who from '../main/assets/Who.png'
 
 export const DATA = () => {
     return (
@@ -88,32 +92,17 @@ export const DATA = () => {
                         'Create and manage paid campaigns.\nBuild, run, analyze and optimize paid campaigns',
                 },
             ],
-            /*          Who?
-                        Customer acquisition and nurture growth strategies
-
-                        What?
-                        Mindshare and awareness throughout the funnel
-
-                        When?
-                        Short-term and long-term campaigns and initiatives
-
-                        Where?
-                        Targeting broad and niche audiences
-
-                        How?
-                        Advertising media strategies for creative development
-                */
             growth: [
                 {
                     id: 1,
-                    imgSrc: Performance,
+                    imgSrc: who,
                     altText: 'Who?',
                     title: 'Who?',
                     text: "Customer acquisition and nurture growth strategies.",
                 },
                 {
                     id: 2,
-                    imgSrc: Partnership,
+                    imgSrc: what,
                     altText: 'What?',
                     title: 'What?',
                      text:
@@ -121,7 +110,7 @@ export const DATA = () => {
                 },
                 {
                     id: 3,
-                    imgSrc: Subscription,
+                    imgSrc: when,
                     altText: 'When?',
                     title: 'When?',
                     text:
@@ -129,7 +118,7 @@ export const DATA = () => {
                 },
                 {
                     id: 4,
-                    imgSrc: Support,
+                    imgSrc: where,
                     altText: 'Where?',
                     title: 'Where?',
                     text:
@@ -137,7 +126,7 @@ export const DATA = () => {
                 },
                 {
                     id: 5,
-                    imgSrc: Support,
+                    imgSrc: who,
                     altText: 'How?',
                     title: 'how?',
                     text:

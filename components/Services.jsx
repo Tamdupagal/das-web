@@ -53,11 +53,7 @@ function Services() {
 
     return (
         <section className={styles.container}>
-            <figure className={styles.service__img}>
-                <div area-label="play video button" className={styles.play__btn} onClick={()=>setModalOpen(true)}>
-                    <FaPlay area-label="play video button" className={styles.play__btn__arow} />
-                </div>
-            </figure>
+            <figure className={styles.service__img}/>
             <div className={styles.content__box}>
                 <div className={styles.service__header}>
                     <SectionHeader slogan="ACHIEVEMENT" text="Be Industry ready
@@ -71,32 +67,7 @@ Identified & solve DM problems for companies " />
                         </div>
                     )
                 })}
-            </div>
-                    <AnimatePresence>
-                {isVideoModalOpen &&
-                    <motion.div
-                         variants={IFRAME()}
-                            transition={
-                                {
-                                type: "spring",
-                                bounce: 0.4
-                                }
-                            }
-                            animate="vissible"
-                            initial="hidden"
-                            exit="exit"
-                            className={styles.iframe__container}
-                        >
-                    <motion.iframe
-                            className={styles.iframe}
-                            src="https://www.youtube.com/embed/rtgbaKBhdkk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                        </motion.iframe>
-                        <FaTimes className={styles.close__btn} onClick={() => setModalOpen(false)} />
-                    </motion.div>
-                    
-                }
-            </AnimatePresence>
-            
+            </div>            
         </section >
     )
 }

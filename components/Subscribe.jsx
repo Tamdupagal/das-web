@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import chat from '../assets/widget/chat.svg';
-import community from '../assets/widget/community.svg';
-import github from '../assets/widget/github.svg';
+import chat from '../main/assets/Job-Ready.png';
+import community from '../main/assets/Industry-Ready.png';
+import github from '../main/assets/Interview-Ready.png';
 import styles from './Subscribe.module.scss';
 
 function Subscribe() {
@@ -11,7 +11,7 @@ function Subscribe() {
             <div className={styles.social}>
                 <div className={styles.social__card}>
                     <figure>
-                        <Image src={chat} alt="Chat communication" width={150} objectFit="contain"/>
+                        <Image src={chat} alt="Chat communication" layout="responsive"/>
                     </figure>
                     <h1 className={styles.social__title}>
                         Interview Ready
@@ -19,7 +19,7 @@ function Subscribe() {
                 </div>
                 <div className={styles.social__card}>
                     <figure>
-                        <Image src={community} alt="Chat communication" width={150} objectFit="contain"/>
+                        <Image src={community} alt="Chat communication" layout="responsive" />
                     </figure>
                     <h1 className={styles.social__title}>
                         Job Ready
@@ -27,7 +27,7 @@ function Subscribe() {
                 </div>
                 <div className={styles.social__card}>
                     <figure>
-                        <Image src={github} alt="Chat communication" width={150} objectFit="contain"/>
+                        <Image src={github} alt="Chat communication" layout="responsive" />
                     </figure>
                     <h1 className={styles.social__title}>
                         Industry Ready

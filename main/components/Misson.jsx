@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
-import mission1 from '../assets/podium.png';
-import mission2 from '../assets/struggle.png';
-import mission3 from '../assets/idea.png';
-import mission4 from '../assets/competence.png';
+import mission1 from '../assets/productive.png';
+import mission2 from '../assets/knowledge.png';
+import mission3 from '../assets/elevate.png';
+import mission4 from '../assets/achievement.png';
 import styles from './Misson.module.scss';
 
 function Misson() {

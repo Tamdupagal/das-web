@@ -1,9 +1,7 @@
-import fswd from '../assets/fullstack_web_development.jpg'
-import fsawd from '../assets/fullstack_angular_web_development.jpg'
-import fscc from '../assets/fullstack_cloud_computing.jpg'
-import course1 from '../assets/pie.svg';
-import course2 from '../assets/progressive.svg';
-import course3 from '../assets/data_pro.svg';
+
+import course1 from '../assets/fsbd.png';
+import course2 from '../assets/data_pro.svg';
+import course3 from '../assets/fsdm.png';
 
 export const COURSE_DATA = [
     {
