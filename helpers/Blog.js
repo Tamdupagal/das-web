@@ -16,7 +16,7 @@ export const BLOG_DATA = [
     {
         id: 3,
         title: 'Month 3',
-        text: "Web Analytics \nEcommerce Marketing\nFacebook Marketing \nFacebook Marketplace listing I\nnstagram Marketing \nLinkedIn Marketing \nTwitter Marketing \nYoutube Marketing \nWhatsApp Marketing \nPPC \nLead Generation Remarketing \nGoogle AdSense \nBlogs \nAffiliate Marketing"
+        text: "Web Analytics \nEcommerce Marketing\nFacebook Marketing \nFacebook Marketplace listing \nInstagram Marketing \nLinkedIn Marketing \nTwitter Marketing \nYoutube Marketing \nWhatsApp Marketing \nPPC \nLead Generation Remarketing \nGoogle AdSense \nBlogs \nAffiliate Marketing"
 
     },
     {

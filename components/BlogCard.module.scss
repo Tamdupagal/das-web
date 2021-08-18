@@ -11,12 +11,12 @@
   padding: 3rem;
   transition: {
     property: border, transform;
-    duration: 0.4s;
+    duration: 0.2s;
   }
   margin: 0 auto;
 
   &:hover {
-    transform: translateY(-1rem);
+    transform: scale(1.05);
   }
   .title {
     font-size: 2rem;

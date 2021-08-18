@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
-import BannerImg from "../assets/banner-thumb.png";
+import BannerImg from "../assets/lms.png";
 import styles from './Banner.module.scss';
 
 const FadeIn = {
@@ -47,7 +47,7 @@ The next batch starts Mid August</p>
                 <button className={styles.banner__btn}>STUDY first Pay Later</button>
             </motion.div>
             <figure className={styles.banner__img}>
-                <Image src={BannerImg} alt="banner thumb" width={800} quality={0} objectFit="contain" />
+                <Image src={BannerImg} alt="banner thumb" layout="responsive"/>
             </figure>
         </section>
     )
