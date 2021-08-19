@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 import styles from './Services.module.scss';
 import SectionHeader from './SectionHeader';
 import FeatureDetails from './FeatureDetails';
-import Performance from '../assets/key-feature/performance.svg';
-import Partnership from '../assets/key-feature/partnership.svg';
-import { AnimatePresence, motion } from 'framer-motion'
-import { FaPlay, FaTimes } from 'react-icons/fa'
+import Performance from '../main/assets/Understanding-DM.svg';
+import Partnership from '../main/assets/art.svg';
+
 
 
 const data = [

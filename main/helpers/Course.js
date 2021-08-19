@@ -1,7 +1,7 @@
 
-import course1 from '../assets/fsbd.png';
-import course2 from '../assets/data_pro.svg';
-import course3 from '../assets/fsdm.png';
+import course1 from '../assets/FullStack-Digital-Marketing.svg';
+import course2 from '../assets/fsbd.svg';
+import course3 from '../assets/Data-Science.svg';
 
 export const COURSE_DATA = [
     {

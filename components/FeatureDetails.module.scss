@@ -6,7 +6,8 @@
   min-width: 10rem;
   max-width: 10rem;
   overflow: hidden;
-  margin-right: 0.5rem;
+  margin-right: 3rem;
+  margin-bottom: 2rem;
 }
 .workflow__icon {
   width: max-content;
@@ -41,6 +42,7 @@
   }
 }
 .feature__details {
+  padding-left: 0.3rem;
   &[data-white="true"] {
     .title,
     .description {
@@ -56,9 +58,8 @@
   .description,
   .text {
     font-size: 1.5rem;
-    text-align: start;
     font-weight: 500;
-    color: rgba($dark, 0.7);
+    color: rgba($dark, 0.8);
     font-weight: bold;
     line-height: 1.8;
     word-spacing: 0.2rem;
@@ -69,7 +70,7 @@
   }
   .feature__btn {
     display: inline-block;
-    background-color: $red;
+    background-color: $orange;
     padding: 1.5rem 3rem;
     color: white;
     font-size: 1.6rem;

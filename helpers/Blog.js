@@ -11,7 +11,7 @@ export const BLOG_DATA = [
     {
         id: 2,
         title: 'Month 2',
-        text: "Organic Branding\nSEO\nContent Marketing\nViral Marketing\nEngagement Campaign\nEmail Marketing\nLocal Digital Marketing\nStrategy & Planning\nSocial Media campaign planning \nOnline Brand Reputation Management \n SEM &SMM",
+        text: "Organic Branding\nSEO\nContent Marketing\nViral Marketing\nEngagement Campaign\nEmail Marketing\nLocal Digital Marketing\nStrategy & Planning\nSocial Media campaign planning \nOnline Brand Reputation Management \n SEM & SMM",
     },
     {
         id: 3,

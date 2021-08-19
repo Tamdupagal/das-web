@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { FaCheckCircle } from 'react-icons/fa'
-import about from '../assets/about_the_program.png'
+import about from '../assets/With-Association.svg'
 import styles from './Association.module.scss';
 
 function Association() {

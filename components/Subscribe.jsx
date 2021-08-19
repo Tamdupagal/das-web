@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import chat from '../main/assets/Job-Ready.png';
-import community from '../main/assets/Industry-Ready.png';
-import github from '../main/assets/Interview-Ready.png';
+import chat from '../main/assets/Job-Ready.svg';
+import community from '../main/assets/Industry-Ready.svg';
+import github from '../main/assets/Interview-Ready.svg';
 import styles from './Subscribe.module.scss';
 
 function Subscribe() {

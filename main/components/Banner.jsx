@@ -1,6 +1,7 @@
 import styles from './Banner.module.scss';
 import Image from 'next/image'
-import bannerImg from '../assets/blogging.svg'
+// import bannerImg from '../assets/blogging.svg'
+import bannerImg from '../assets/studying.svg'
 import Typewriter from 'typewriter-effect';
 import Button from  '../../components/Button'
 import { motion } from 'framer-motion';

@@ -4,13 +4,9 @@
 .container {
   position: relative;
   width: 100%;
-  height: auto;
-  padding: 10rem 6rem;
+  height: 100%;
+  padding: 5rem 3rem;
   @include flex_layout(center, center);
-  background-image: url(../assets/shape-pattern2.png);
-  background-position: 105% 100%;
-  background-repeat: no-repeat;
-  background-size: 30%;
   overflow: hidden;
   @media screen and (max-width: 768px) {
     @include flex_layout(center, null, column);
@@ -20,11 +16,13 @@
   }
   .section__img {
     position: relative;
-    width: 40%;
-    background-image: url(../assets/core-feature.png);
+    width: 50%;
+    height: 100%;
+    background-image: url(../main/assets/studyFirst.svg);
     background-repeat: no-repeat;
-    background-size: contain;
-    margin-left: 5rem;
+    background-size: cover;
+    margin-left: -3rem;
+    margin-right: 3rem;
     @media screen and (max-width: 768px) {
       width: 100%;
       margin: 0;

@@ -1,11 +1,16 @@
-import Performance from '../assets/key-feature/performance.svg';
-import Partnership from '../assets/key-feature/partnership.svg';
-import Subscription from '../assets/key-feature/subscription.svg';
-import Support from '../assets/key-feature/support.svg';
-import what from '../main/assets/What.png'
-import when from '../main/assets/When.png'
-import where from '../main/assets/Where.png'
-import who from '../main/assets/Who.png'
+import liveclass from '../main/assets/Live-Online-Class-01.svg';
+import learn from '../main/assets/Learning-01.svg';
+import certify from '../main/assets/Certifications.svg';
+import what from '../main/assets/What.svg'
+import when from '../main/assets/When.svg'
+import where from '../main/assets/Where.svg'
+import who from '../main/assets/Who.svg'
+import Dmbasics from '../main/assets/Digital-Marketing-Basics-01.svg'
+import Ba from '../main/assets/Brand-Awareness.svg'
+import or from '../main/assets/Growth-Marketing.svg'
+import gm from '../main/assets/Organic-Reach-01.svg'
+import sm from '../main/assets/Social-Media-Management.svg'
+import pm from '../main/assets/Project-01.svg'
 
 export const DATA = () => {
     return (
@@ -13,14 +18,14 @@ export const DATA = () => {
             feature: [
                 {
                     id: 1,
-                    imgSrc: Performance,
+                    imgSrc: liveclass,
                     altText: 'Live online classes',
                     title: 'Live online classes',
                     text: "150+ Hours of Live online classes\n300+ hours of offline training ",
                 },
                 {
                     id: 2,
-                    imgSrc: Partnership,
+                    imgSrc: learn,
                     altText: 'Learning',
                     title: 'Learning',
                      text:
@@ -28,7 +33,7 @@ export const DATA = () => {
                 },
                 {
                     id: 3,
-                    imgSrc: Subscription,
+                    imgSrc: pm,
                     altText: 'Project',
                     title: 'Project',
                     text:
@@ -36,7 +41,7 @@ export const DATA = () => {
                 },
                 {
                     id: 4,
-                    imgSrc: Support,
+                    imgSrc: certify,
                     altText: 'Certifications',
                     title: 'Certifications',
                     text:
@@ -46,14 +51,14 @@ export const DATA = () => {
             learning: [
                 {
                     id: 1,
-                    imgSrc: Performance,
+                    imgSrc: Dmbasics,
                     altText: 'DM Basics ',
                     title: 'DM Basics ',
                     text: "Learn Digital Marketing from Basics.\nIndustry-specific R&D ",
                 },
                 {
                     id: 2,
-                    imgSrc: Partnership,
+                    imgSrc: Ba,
                     altText: 'Brand Awareness',
                     title: 'Brand Awareness',
                      text:
@@ -61,7 +66,7 @@ export const DATA = () => {
                 },
                 {
                     id: 3,
-                    imgSrc: Subscription,
+                    imgSrc: gm,
                     altText: 'Growth/Demand Marketing',
                     title: 'Growth/Demand Marketing',
                     text:
@@ -69,7 +74,7 @@ export const DATA = () => {
                 },
                 {
                     id: 4,
-                    imgSrc: Support,
+                    imgSrc: or,
                     altText: 'Organic Reach',
                     title: 'Organic Reach',
                     text:
@@ -77,7 +82,7 @@ export const DATA = () => {
                 },
                 {
                     id: 5,
-                    imgSrc: Support,
+                    imgSrc: sm,
                     altText: 'Social Media Management',
                     title: 'Social Media Management',
                     text:
@@ -85,7 +90,7 @@ export const DATA = () => {
                 },
                 {
                     id: 6,
-                    imgSrc: Support,
+                    imgSrc: pm,
                     altText: 'Performance Marketing',
                     title: 'Performance Marketing',
                     text:

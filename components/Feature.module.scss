@@ -6,7 +6,7 @@
   width: 100%;
   height: max-content;
   padding: 1rem 0.5rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   @include flex_layout(center, null, column);
   @media (max-width: 768px) {
     margin: 0;
@@ -18,10 +18,10 @@
   .feature__box {
     position: relative;
     width: 100%;
-    padding: 0 10rem;
+    padding: 0 3rem;
     display: grid;
     grid-template-columns: repeat(4, minmax(20rem, 1fr));
-    grid-gap: 5rem 10rem;
+    grid-gap: 5rem 7rem;
     place-content: center;
     @media screen and (max-width: 1024px) {
       grid-template-columns: repeat(2, minmax(20rem, 40rem));

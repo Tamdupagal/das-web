@@ -5,25 +5,22 @@
   position: relative;
   width: 100%;
   height: auto;
-  padding: 10rem 6rem;
   @include flex_layout(center, center);
-  background-image: url(../assets/shape-pattern1.png);
-  background-position: -4% 100%;
-  background-repeat: no-repeat;
-  background-size: 30%;
   overflow: hidden;
   @media screen and (max-width: 768px) {
     @include flex_layout(center, null, column);
     background-image: none;
-    padding: 10rem 2rem;
+    padding: 4rem 3rem;
   }
   .service__img {
     position: relative;
     width: 50%;
-    background-image: url(../assets/service-thumb.png);
+    // background-image: url(../assets/service-thumb.png);
+    background-image: url(../main/assets/Studying.svg);
     background-repeat: no-repeat;
-    background-size: contain;
-    margin-right: 5rem;
+    background-size: cover;
+    margin-right: 10rem;
+    margin-left: -5rem;
     @media screen and (max-width: 768px) {
       width: 100%;
       margin-right: 0;
@@ -75,7 +72,7 @@
   }
   .content__box {
     position: relative;
-    width: 35%;
+    width: 50%;
     @include flex_layout(null, null, column);
     padding: 1rem;
     @media screen and (max-width: 768px) {
