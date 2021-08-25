@@ -1,14 +1,14 @@
 
 import course1 from '../assets/FullStack-Digital-Marketing.svg';
-import course2 from '../assets/fsbd.svg';
-import course3 from '../assets/Data-Science.svg';
+import course2 from '../assets/courses/fsbd1.svg';
+import course3 from '../assets/courses/Data-Science1.svg';
 
 export const COURSE_DATA = [
     {
         id: 1,
         heading: "Digital Marketing",
         altText: "Digital Marketing",
-        imgSrc: course3,
+        imgSrc: course1,
         description: "6-month Program batch (1:8) \n 160+ Hours of Live online classes \n 300+ hours of offline training & project building.",
         title: "MASTERS/PROFESSIONAL CERTIFICATION\nIN",
         heading: "Fullstack Digital Marketing",
@@ -17,10 +17,10 @@ export const COURSE_DATA = [
         path: "digital-marketing"
     },
     {
-        id: 3,
+        id: 2,
         heading: "Backend & Fullstack Development",
         altText: "Backend & Fullstack Development",
-        imgSrc: course1,
+        imgSrc: course2,
         description: "12-month Program batch (1:8) \n 320+ Hours of Live online classes \n 400+ hours of offline training & project building.",
         title: "MASTERS/PROFESSIONAL CERTIFICATION\nIN ",
         heading: "Fullstack & Backend Development",
@@ -29,10 +29,10 @@ export const COURSE_DATA = [
         path: "web-development"
     },    
     {
-        id: 2,
+        id: 3,
         heading: "Data Science",
         altText: "Data Science",
-        imgSrc: course2,
+        imgSrc: course3,
         description: "12-month Program batch (1:8) \n 320+ Hours of Live online classes \n 300+ hours of offline training & project building.",
         title: "MASTERS/PROFESSIONAL CERTIFICATION \nIN ",
         heading: "Data science ",

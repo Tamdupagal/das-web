@@ -2,7 +2,8 @@ import styles from './Header.module.scss';
 import Images from 'next/image'
 import Link from 'next/link'
 import logo from '../assets/das.webp'
-import { FaAngleDown, FaBars, FaTimes, FaAngleRight} from 'react-icons/fa'
+import Login from '../../components/Login'
+import { FaAngleDown, FaBars, FaTimes, FaAngleRight, FaLastfmSquare} from 'react-icons/fa'
 import {useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import {useRouter} from 'next/router'
@@ -11,6 +12,16 @@ import {useRouter} from 'next/router'
 function Header() {
 
     const [toggle, setToggle] = useState(false)
+    const [popup, setPopup] = useState(false)
+
+    // useEffect(() => {
+    //     document.addEventListener("mousedown",() => {
+    //         setPopup(false);
+    //     })
+    //     // return () => {
+    //     //     cleanup
+    //     // }
+    // });
 
     const headerRef = useRef()
 
@@ -73,8 +84,9 @@ function Header() {
                                 <motion.li variants={fadeIn} onClick={()=>router.push('/data-science')}><FaAngleRight className={styles.arrow_right}/>Data Science</motion.li>
                             </motion.ul>
                 </motion.button>
-                <button className={styles.btn}>Login</button>
+                <button className={styles.btn} onClick={ () => setPopup(true) }>Login</button>
                 </div>
+                <Login trigger={popup} setTrigger={setPopup}/>
         </header>
     )
 }

@@ -1,5 +1,6 @@
 import '../styles/globals.scss'
 import "slick-carousel/slick/slick.css";
+import "../components/Login_Register.scss";
 import "slick-carousel/slick/slick-theme.css";
 import Header from '../main/components/Header';
 import Footer from '../main/components/Footer';

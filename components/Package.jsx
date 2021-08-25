@@ -71,7 +71,7 @@ function Package() {
                 <motion.div layout className={styles.package__button}>
                      <AnimatePresence>
                             {selectedPlan[0] ? <motion.button key="btn" layout layoutId="planBtn" transition={btn_transition} className={styles.button}>Monthly Plan</motion.button> : <span onClick={()=>setSelectedPlan({0 : true})} className={styles.dummy}>Monthly Plan</span >}
-                           {selectedPlan[1] ? <motion.button key="btn" layout layoutId="planBtn" transition={btn_transition} className={styles.button}>Annual Plan</motion.button> : <span onClick={() => setSelectedPlan({ 1: true })} className={styles.dummy}>Annual Plan</span >}
+                           {selectedPlan[1] ? <motion.button key="btn" layout layoutId="planBtn" transition={btn_transition} className={styles.button}>SFPL</motion.button> : <span onClick={() => setSelectedPlan({ 1: true })} className={styles.dummy}>SFPL</span >}
                     </AnimatePresence>
                 </motion.div>
             </AnimateSharedLayout>

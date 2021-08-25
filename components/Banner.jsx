@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import React from 'react';
-import BannerImg from "../assets/lms.png";
+import BannerImg from "../assets/banner-thumb.png";
 import styles from './Banner.module.scss';
+import Register from './Register'
 
 const FadeIn = {
     initial: {
@@ -21,6 +23,22 @@ const FadeIn = {
 }
 
 function Banner() {
+
+    const [popup, setPopup] = useState(false);
+
+    // let menuRef = useRef();
+
+    // useEffect(() => {
+    //     document.addEventListener("mousedown", (event) => {
+    //         if(!menuRef.target.contains(event.target)){
+    //             setPopup(false);
+    //         }
+    //     })
+    //     // return () => {
+    //     //     cleanup
+    //     // }
+    // }, [popup])
+
     return (
         <section className={styles.container} id="home">
             <motion.div variants={FadeIn} animate="vissible" initial="initial" className={styles.content__box}>
@@ -44,13 +62,17 @@ function Banner() {
                     Weekend batch [Saturday-Sunday(3.5hours/class)]
                     <br />
 The next batch starts Mid August</p>
-                <button className={styles.banner__btn}>STUDY first Pay Later</button>
+                <button className={styles.banner__btn} onClick={ () => setPopup(true) }>STUDY first Pay Later</button>
             </motion.div>
+            <Register trigger={popup} setTrigger={setPopup}/>
             <figure className={styles.banner__img}>
-                <Image src={BannerImg} alt="banner thumb" layout="responsive"/>
+                <Image src={BannerImg} alt="banner thumb" width={800} quality={0} objectFit="contain" />
             </figure>
         </section>
     )
 }
 
 export default Banner
+
+
+//ref={menuRef}
