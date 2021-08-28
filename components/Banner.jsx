@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import React from 'react';
-import BannerImg from "../assets/banner-thumb.png";
+import BannerImg from "../assets/lms.png";
 import styles from './Banner.module.scss';
 import Register from './Register'
 

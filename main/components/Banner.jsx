@@ -8,7 +8,7 @@ import Button from  '../../components/Button'
 import { motion } from 'framer-motion';
 import Display from './Display';
 import AdminLogin from './AdminLogin';
-
+import Register from '../../components/Register'
 
 const phrases = [
     "Full Stack Web \n development.",
@@ -40,7 +40,9 @@ function Banner() {
             <figure className={styles.banner__img}>
                 <Image src={bannerImg} alt="study first pay later" objectFit="contain" layout="responsive"/>
             </figure>
-            <Display trigger={popup} setTrigger={setPopup}/>
+            <Register trigger={popup} setTrigger={setPopup}/>
+
+            {/* <Display trigger={popup} setTrigger={setPopup}/> */}
             {/* <AdminLogin trigger={popup} setTrigger={setPopup}/> */}
         </section>
     )

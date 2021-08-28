@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './AboutUs.module.scss';
-import about from '../assets/aboutUs.svg'
+import about from '../assets/About-Us-01.svg'
 import {FaQuoteLeft, FaQuoteRight} from 'react-icons/fa'
 
 

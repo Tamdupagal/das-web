@@ -3,11 +3,13 @@ import { useState } from "react";
 // import { useForm } from 'react-hook-form';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import {useRouter} from 'next/router'
 
 const Register = (props) => {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
+  const router = useRouter()
 
   // const[fullNameErr, setFullNameErr] = useState('');
 
@@ -37,14 +39,22 @@ const Register = (props) => {
       redirect: "follow",
     };
 
-    fetch("http://localhost:4000/api/sendmail", requestOptions)
+    fetch("http://localhost:3000/api/sendmail", requestOptions)
       .then((response) => response.text())
       .then((result) => {
         console.log(result)
-        alert('Register Ho gaya')
       })
       .catch((error) => console.log("error", error));
-    //
+
+
+      fetch("http://localhost:3000/api/register", requestOptions)
+      .then((response) => response.text())
+      .then((result) => {
+        console.log(result)
+      })
+      .catch((error) => console.log("error", error));
+
+    
   }
 
   // const formValidation= () => {
@@ -126,7 +136,7 @@ const Register = (props) => {
             required
           />
           <br />
-          <button type="submit" className="btn" id="submit">
+          <button type="submit" className="btn" id="submit" onClick={()=>router.push('/')}>
             Submit
           </button>
         </form>
