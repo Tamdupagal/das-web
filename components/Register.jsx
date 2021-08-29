@@ -39,15 +39,15 @@ const Register = (props) => {
       redirect: "follow",
     };
 
-    fetch("http://localhost:3000/api/sendmail", requestOptions)
-      .then((response) => response.text())
-      .then((result) => {
-        console.log(result)
-      })
-      .catch((error) => console.log("error", error));
+    // fetch("http://localhost:4000/api/sendmail", requestOptions)
+    //   .then((response) => response.text())
+    //   .then((result) => {
+    //     console.log(result)
+    //   })
+    //   .catch((error) => console.log("error", error));
 
 
-      fetch("http://localhost:3000/api/register", requestOptions)
+      fetch("http://localhost:4000/api/register", requestOptions)
       .then((response) => response.text())
       .then((result) => {
         console.log(result)

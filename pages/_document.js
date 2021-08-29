@@ -8,9 +8,13 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
+        {/* <Head>
           <link rel="shortcut icon" href="/static/favicon.png" />
-        </Head>
+        </Head> */}
+        <Head>
+        
+        <link rel="icon" href="/favicon.png" />
+</Head>
         <body>
           <Main />
           <NextScript />

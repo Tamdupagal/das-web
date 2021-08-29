@@ -123,12 +123,9 @@ function AdminLogin(props){
     fetch("http://localhost:4000/api/adminLogin", requestOptions)
       .then((response) => response.text())
       .then((result) => {
-        console.log("hi")
-        // setDisplay(true)
-        // alert('ghjdfs')
-        })
+        console.log(result)
+      })
       .catch((error) => console.log("error", error));
-
 
   }
 
