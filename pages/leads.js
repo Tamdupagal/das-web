@@ -33,7 +33,7 @@ function Leads() {
     
         return (
           <div>
-                <Table data={data} columns={COLUMNS}/>
+                
           </div>
         )
 
