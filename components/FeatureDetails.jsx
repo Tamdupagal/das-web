@@ -31,8 +31,8 @@ function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, l
                 </h1>}
                 {text instanceof Array ? text?.length && 
                     <ul className={styles.description}>
-                        {text.map(phrase => {
-                            return <li className={styles.phrase}><Dot className={styles.dot} />{phrase}</li>
+                        {text.map((phrase, index) => {
+                            return <li key={index} className={styles.phrase}><Dot className={styles.dot} />{phrase}</li>
                         })}
                     </ul> : <p className={styles.text}>{text}</p>}
                 {description && <p className={styles.text}>
