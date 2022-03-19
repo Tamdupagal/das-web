@@ -19,6 +19,7 @@
     width: 100%;
     object-fit: cover;
     margin-bottom: 1rem;
+    max-height: 20rem;
   }
   .info_box {
     @include flex_layout(null, null, column);

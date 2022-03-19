@@ -24,13 +24,12 @@ const COLUMNS = [
     },
 ]
 
-function leads() {
+function Leads() {
 
     const { state: { leads: data } } = useContext(AppContext)
 
     
     
-    console.log("Inside leads -----> ", data)
     
         return (
           <div>
@@ -41,6 +40,6 @@ function leads() {
 }
 
 
-leads.withoutHeader = true;
+Leads.withoutHeader = true;
 
-export default withLoader({ Component: leads })
+export default withLoader({ Component: Leads })

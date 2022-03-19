@@ -1,6 +1,6 @@
-import course1 from '../assets/fdm.svg';
-import course2 from '../assets/fsbd.svg';
-import course3 from '../assets/ds.svg';
+import course2 from '../assets/fswd.jpg'
+import course1 from '../assets/dm.png'
+import course3 from '../assets/ds.png'
 
 export const COURSE_DATA = [
     {
