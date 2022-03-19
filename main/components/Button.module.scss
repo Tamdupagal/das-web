@@ -1,0 +1,20 @@
+@import "../../styles/config/utilities";
+@import "../../styles/config/variable";
+
+.button {
+  background-color: $main;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 5rem;
+  padding: 1rem 2rem;
+  width: max-content;
+  cursor: pointer;
+  transition : {
+    property: transform;
+    duration: 0.05s;
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}

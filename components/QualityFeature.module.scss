@@ -1,0 +1,26 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.container {
+  margin-top: 10rem;
+  .section__header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(30rem, 50rem));
+    grid-gap: 5rem;
+    padding: 1rem;
+    place-content: center;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, minmax(30rem, 50rem));
+    }
+    .feature {
+      padding: 4rem;
+      @include flex_layout(null, null);
+      border-radius: 1rem;
+      box-shadow: 0 0 2rem rgba(black, 0.1);
+    }
+  }
+}

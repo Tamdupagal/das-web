@@ -1,0 +1,33 @@
+@import "../styles/config/utilities";
+
+.loader__overlay {
+  position: fixed;
+  top: 0;
+  @include flex_layout(center, center);
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 9999;
+}
+// .loader__overlay_after_open {
+//   background-color: rgba(black, 0.05);
+// }
+// .loader__overlay_before_close {
+//   background-color: transparent;
+// }
+.loader__content {
+  background-color: white;
+  position: relative;
+  min-width: 12rem;
+  min-height: 12rem;
+  box-shadow: 0 0 0.5rem rgba(black, 0.1);
+  border-radius: 0.5rem;
+  @include flex_layout(center, center);
+}
+// .loader__content_after_open {
+//   transform: translate(0);
+// }
+// .loader__content_before_close {
+//   transform: translate(-100%);
+// }

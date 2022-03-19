@@ -1,0 +1,86 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.card {
+  position: relative;
+  width: 40rem;
+  min-height: 40rem;
+  padding: 4rem 3rem;
+  @include flex_layout(null, null, column);
+  border: 0.1rem solid #e4e4e4;
+  border-radius: 1rem;
+  margin: 0 auto;
+  &::before {
+    content: "";
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 2.2rem rgba(black, 0.25);
+    opacity: 0;
+    transition: {
+      property: opacity;
+      duration: 0.2s;
+    }
+  }
+
+  .review__star {
+    @include flex_layout(center, null);
+    margin-bottom: 1rem;
+    & > li {
+      position: relative;
+      list-style: none;
+      position: relative;
+      margin-right: 0.8rem;
+      color: red;
+      &[data-color="false"] {
+        color: rgba(gray, 0.4);
+      }
+      .star {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .title {
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  .desc {
+    font-size: 1.6rem;
+    color: rgba(black, 0.9);
+    padding: 1.5rem 0;
+    text-align: justify;
+    line-height: 1.8;
+    height: 25rem;
+    max-height: 25rem;
+    overflow: scroll;
+  }
+  .author__box {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    margin-top: 2rem;
+    & > figure {
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 6rem;
+      height: 6rem;
+      margin-right: 1.7rem;
+    }
+    .author__about {
+      .author__name {
+        font-size: 1.65rem;
+        font-weight: bold;
+        margin-bottom: 0.6rem;
+      }
+      .author__designation {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: rgba(red, 0.6);
+      }
+    }
+  }
+}

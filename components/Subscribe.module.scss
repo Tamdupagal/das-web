@@ -1,0 +1,108 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.desc {
+  font-size: 1.7rem;
+  color: rgba(white, 0.98);
+  padding: 2.5rem 0 6rem 0;
+  line-height: 1.6;
+  &[data-color="black"] {
+    color: rgba(black, 0.8);
+    padding: 1rem 0 1rem 0;
+    font-size: 1.6rem;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  padding: 5rem 0;
+  .subcribe__box {
+    position: relative;
+    background-color: $main;
+    padding: 7rem 2rem;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 0.8rem;
+    margin-bottom: 4rem;
+    @media screen and (max-width: 768px) {
+      width: 95%;
+    }
+    .title {
+      font-size: 3.5rem;
+      color: white;
+    }
+    .input {
+      position: relative;
+      width: 50%;
+      height: 7rem;
+      border-radius: 5rem;
+      background-color: white;
+      padding: 0.5rem;
+      margin: 0 auto;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+      & > input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        padding-left: 4rem;
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          color: black;
+          font-size: 1.6rem;
+        }
+      }
+      & > button {
+        position: relative;
+        border: none;
+        height: 100%;
+        display: grid;
+        padding: 0 3.5rem;
+        place-items: center;
+        background-color: $main;
+        color: white;
+        font-size: 1.6rem;
+        border-radius: 5rem;
+        margin-left: auto;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .social {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
+    grid-gap: 5rem 4rem;
+    place-content: center;
+    padding-bottom: 8rem;
+    @media (max-width: 768px) {
+      grid-gap: 5rem 0;
+    }
+    padding: 2rem 0;
+    .social__card {
+      position: relative;
+      text-align: center;
+
+      & > figure {
+        display: inline-block;
+        position: relative;
+        min-width: 10rem;
+        max-width: 10rem;
+      }
+      .social__title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        padding: 1rem 0;
+      }
+    }
+  }
+}

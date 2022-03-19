@@ -1,0 +1,127 @@
+@import "../../styles/config/utilities";
+@import "../../styles/config/variable";
+
+.header {
+  position: relative;
+  @include flex_layout(center, space-between);
+  padding: 0 4rem;
+  border-bottom: 0.1rem solid rgba($gray, 0.1);
+  width: 100%;
+  height: 8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 999;
+  transition: {
+    property: padding;
+    duration: 0.3s;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0.3rem 0 2rem 0.1rem rgba(black, 0.1);
+    opacity: 0;
+    transition: {
+      property: opacity;
+      duration: 0.3s;
+    }
+  }
+  &.active {
+    padding: 0 2rem;
+    &::before {
+      opacity: 1;
+    }
+  }
+  .logo {
+    position: relative;
+    width: 14rem;
+    height: max-content;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 1115px) {
+    @include flex_layout(center, null);
+  }
+  .btn_group {
+    position: relative;
+    height: 100%;
+    @include flex_layout(center);
+    .btn {
+      position: relative;
+      padding: 2rem 0;
+      height: 100%;
+      font-size: 1.8rem;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      margin-right: 2.5rem;
+      color: $main;
+      padding: 0 1rem;
+      &:first-child {
+        color: $orange;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0.01rem;
+        width: 100%;
+        height: 100%;
+      }
+      &:hover:nth-child(3) {
+        & > .dropdown {
+          visibility: visible;
+        }
+      }
+      @include flex_layout();
+      .arrow_down {
+        font-size: 1.7rem;
+        color: black;
+        margin-left: 0.3rem;
+      }
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    visibility: hidden;
+    top: 101%;
+    right: 0;
+    background-color: white;
+    width: max-content;
+    overflow: hidden;
+    user-select: none;
+    box-shadow: -0.1rem 0.2rem 1rem rgba(black, 0.1);
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    & > li {
+      list-style: none;
+      padding: 1.5rem 2rem;
+      &:hover {
+        background-color: $main;
+        color: $primary;
+      }
+      font-size: 1.5rem;
+      color: $main;
+      @include flex_layout(center, null);
+      .arrow_right {
+        margin-right: 1rem;
+        font-size: 2rem;
+      }
+    }
+  }
+}

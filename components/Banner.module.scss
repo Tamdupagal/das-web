@@ -1,0 +1,90 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.container {
+  padding: 0 5rem;
+  margin: 10rem 0;
+  margin-top: 15rem;
+  position: relative;
+  width: 100%;
+  @media (max-width: 768px) {
+    padding: 0;
+    padding-top: 7rem;
+  }
+  @include flex_layout(center, center);
+  .content__box {
+    @include flex_layout(null, null, column);
+    box-shadow: 0 0 1rem rgba(black, 0.1);
+    position: relative;
+    width: 50%;
+    margin-right: 4rem;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 3rem;
+    .heading {
+      font-size: clamp(1rem, -0.875rem + 8.333vw, 3rem);
+      font-weight: bolder;
+      color: $main;
+    }
+    .desc {
+      & > span {
+        display: inline-block;
+        text-transform: uppercase;
+        color: $orange;
+        font-size: 2rem;
+        padding: 2.5rem 0;
+      }
+      & > h2 {
+        font-size: 2rem;
+        padding-bottom: 2.5rem;
+      }
+      & > ul {
+        li {
+          font-size: 1.5rem;
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+          }
+          @include flex_layout(center, null);
+          .dot {
+            color: $main;
+            margin-right: 1rem;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    .banner__btn {
+      display: inline;
+      background-color: $orange;
+      padding: 1.5rem 3rem;
+      color: white;
+      cursor: pointer;
+      font-size: 1.6rem;
+      width: max-content;
+      border-radius: 0.5rem;
+      border: none;
+      font-weight: bold;
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 5rem 2rem;
+      .heading,
+      .desc,
+      .banner__btn {
+        text-align: center !important;
+        margin: 0 auto;
+      }
+    }
+  }
+  .banner__img {
+    position: relative;
+    width: 60%;
+    border-radius: 2rem;
+    overflow: hidden;
+    object-fit: cover;
+    @media (max-width: 768px) {
+      display: none !important;
+    }
+  }
+}

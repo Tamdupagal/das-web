@@ -1,0 +1,107 @@
+@import "../../styles/config/utilities";
+@import "../../styles/config/variable";
+
+.container {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 10rem;
+  @include flex_layout(center, center);
+  background-color: white;
+  .banner_info {
+    padding: 2rem 4rem;
+    @include flex_layout(null, center, column);
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      padding: 9rem 2rem;
+      height: max-content;
+    }
+    .title {
+      font-size: 3.3rem;
+      text-transform: uppercase;
+      color: $main;
+      font-weight: bolder;
+    }
+    .desc {
+      font-size: 1.8rem;
+      padding: 2.5rem 0;
+      text-align: justify;
+      color: rgba(black, 0.6);
+    }
+    // .typewriter {
+    //   font-size: clamp(3rem, 3vw, 5vw);
+    //   font-variant: small-caps;
+    //   padding: 1rem 0;
+    //   color: $orange;
+    //   width: 100%;
+    //   font-weight: bolder;
+    // }
+  }
+  .banner__img {
+    position: relative;
+    @media screen and (max-width: 768px) {
+      display: none !important;
+    }
+    top: 3rem;
+    z-index: 2;
+    position: relative;
+    flex: 0.7;
+  }
+}
+
+.button {
+  background-color: $orange;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 0.4rem;
+  padding: 1.1rem 2.5rem;
+  width: max-content;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition : {
+    property: transform, box-shadow;
+    duration: 0.01s;
+  }
+  &:hover {
+    transform: translate(0.1rem, -0.1rem);
+    box-shadow: -0.1rem 0.2rem 0.3rem rgba(black, 0.2);
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2000;
+  @include flex_layout(center, center);
+}
+.overlay_after_open {
+  // background-color: rgba(black, 0.05);
+}
+.overlay_before_close {
+  // background-color: transparent;
+}
+.content {
+  position: relative;
+  width: max-content;
+  border-radius: 1rem;
+  background-color: white;
+  transform: scale(0.99) translateY(-5%);
+  box-shadow: 0 0 2rem rgba(black, 0.1);
+  transition: {
+    property: transform;
+    duration: 0.15s;
+  }
+  overflow: hidden;
+  height: max-content;
+}
+.content_after_open {
+  // opacity: 1;
+  transform: scale(1) translateY(0);
+}
+.content_before_close {
+  // opacity: 0;
+}

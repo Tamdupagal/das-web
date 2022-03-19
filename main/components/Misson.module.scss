@@ -1,0 +1,73 @@
+@import "../../styles/config/utilities";
+@import "../../styles/config/variable";
+
+.container {
+  position: relative;
+  width: 100%;
+  padding: 0.5rem;
+  .main_title {
+    font-size: 3rem;
+    color: $main;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .mission__box {
+    position: relative;
+    width: 100%;
+    padding: 4rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+    place-content: center;
+    margin: 0 auto;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 2rem;
+    }
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+    .box {
+      position: relative;
+      @include flex_layout(center, null);
+      padding: 1rem 4rem;
+      min-height: 25rem;
+      background-color: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 1rem rgba(black, 0.1);
+
+      & > figure {
+        position: relative;
+        margin-right: 3rem;
+        object-fit: cover;
+        min-width: 15rem;
+        border: 0.1rem solid rgba(black, 0.2);
+        padding: 2rem;
+        border-radius: 1rem;
+      }
+      & > p {
+        font-size: 1.6rem;
+        text-align: justify;
+        line-height: 1.8;
+        color: $main;
+        font-weight: bolder;
+        & > strong {
+          color: $orange;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    @include flex_layout(center, null, column);
+    padding: 2rem 1rem;
+    .image,
+    .footer_text {
+      width: 100%;
+      margin: 0;
+    }
+    .image {
+      margin-bottom: 3rem;
+    }
+  }
+}

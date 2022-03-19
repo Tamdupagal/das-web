@@ -1,0 +1,93 @@
+@use "./config/toast";
+@use "sass:math";
+@import "../styles/config/variable";
+@import "react-toastify/dist/ReactToastify.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+@mixin flex_layout($align: center, $justify: center, $direction: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  position: relative;
+  background-color: white;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 47%;
+  }
+}
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 42%;
+  }
+}
+@media screen and (max-width: 350px) {
+  html {
+    font-size: 38%;
+  }
+}
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 35%;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.comming_soon {
+  font-size: 3rem;
+  width: 100vw;
+  padding: 14rem 0;
+  display: grid;
+  place-items: center;
+  color: $orange;
+  font-weight: bolder;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 5rem;
+}
+
+// Notification Component Styling ______________________________
+
+.notification {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.3rem;
+  color: rgba(black, 0.6);
+  padding: 1rem;
+}

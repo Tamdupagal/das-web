@@ -1,0 +1,52 @@
+@import "../../styles/config/utilities";
+@import "../../styles/config/variable";
+
+.course_box {
+  position: relative;
+  width: 35rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.8rem;
+  margin: 0 auto;
+  transition: {
+    property: border;
+    duration: 0.4s;
+  }
+  background-color: white;
+  .course_image {
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  .info_box {
+    @include flex_layout(null, null, column);
+    padding: 3rem 2rem;
+    .title {
+      font-size: 1.2rem;
+      color: $main;
+      letter-spacing: 0.1rem;
+      padding-bottom: 1rem;
+      white-space: pre-line;
+      text-align: center;
+    }
+    .heading {
+      font-size: 1.8rem;
+      color: $orange;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    .btn_wrapper {
+      display: grid;
+      place-items: center;
+    }
+    .desc {
+      font-size: 1.5rem;
+      color: rgba(black, 0.65);
+      font-weight: bold;
+      line-height: 1.8;
+      margin: 2.5rem 0;
+    }
+  }
+}
