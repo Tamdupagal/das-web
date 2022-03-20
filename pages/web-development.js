@@ -54,7 +54,7 @@ function development() {
       <Services data={data}/>
       <QualityFeature data={DATA().learning.web} />
       <CoreFeature data={DATA().coreFeature.web.description} btnText={DATA().coreFeature.web.buttonText}/>
-      <Feature data={DATA().growth}/>
+      <Feature data={DATA().growth.web} no={true}/>
       <WorkFlow />
       <Package data={packageData} />
     </div>

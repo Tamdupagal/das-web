@@ -10,7 +10,12 @@ import { AppContext } from '../AppContext';
 
 function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, leftMargin = false, isWhite = false, pattern, description, style, offset }) {
     
-    const { setToggleLoginForm } = useContext(AppContext);
+    const { setToggleLoginForm, setIsAdmin } = useContext(AppContext);
+
+    const handleForm = function () {
+        setIsAdmin(false);
+        setToggleLoginForm(true);
+    }
         
     return (
         <>
@@ -42,10 +47,11 @@ function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, l
                 {description && <p className={styles.text}>
                     {description}
                 </p>}
-                {btnText && <button onClick={()=>setToggleLoginForm(true)} className={styles.feature__btn}>{btnText}</button>}
+                {btnText && <button onClick={handleForm} className={styles.feature__btn}>{btnText}</button>}
             </div>
         </>
     )
 }
+
 
 export default FeatureDetails

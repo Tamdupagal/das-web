@@ -14,7 +14,8 @@ import { HiKey } from 'react-icons/hi'
 import logo from '../assets/das.webp';
 import Image from 'next/image'
 import withLoader from '../../HOC/withLoader';
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router';
+import {CgClose} from 'react-icons/cg';
 
 
 
@@ -106,14 +107,13 @@ function Form() {
         <form
             onSubmit={handleSubmit(handleLeadsForm, handleFormError)}
                 className={styles.feedback__form}>
-                <h1 className={styles.form__title}>{isAdmin ? " Sign In " : " Leads Form "}</h1>
                     <div className={styles.form__area}>
                     {!isAdmin && <div className={styles.form__input}>
-                        <label htmlFor="username">Username</label>
+                        <label htmlFor="username">Name</label>
                         <div tabIndex={0} className={styles.input__box}>
                             <FaUserAlt className={styles.icon} />
                             <input
-                                type="username" name="username" placeholder='Username' {...register("username")} value={details.username} onChange={(e) => setDetails(prev => ({ ...prev, username: e.target.value }))} />
+                                type="username" name="username" placeholder='Name' {...register("username")} value={details.username} onChange={(e) => setDetails(prev => ({ ...prev, username: e.target.value }))} />
                         </div>
                     </div>}
                     <div className={styles.form__input}>
@@ -150,10 +150,6 @@ function Form() {
                             <input onClick={handleCheckBox} data-item={'Web Development'} type="checkbox"/>
                                 <p>Web Development</p>
                             </div>
-                            <div className={styles.checkbox} >
-                            <input onClick={handleCheckBox} data-item={'Data Science'} type="checkbox"/>
-                                <p>Data Science</p>
-                            </div>
                         </div>}
             </div>
             <div className={styles.button__wrapper}>
@@ -167,6 +163,7 @@ function Form() {
                     <Image src={logo} objectFit="fill"  alt="Digital Aided School" /> 
                 </figure>
                 <h1 className={styles.panel__title}>Digital Aided School</h1>
+                <CgClose onClick={()=>setToggleLoginForm(false)} className={styles.close__btn__cross}/>
             </div>
         </div>
         )

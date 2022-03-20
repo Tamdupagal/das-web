@@ -30,7 +30,13 @@ const FadeIn = {
 
 function Banner({ data }) {
     
-    const {setToggleLoginForm} = useContext(AppContext)
+    const { setToggleLoginForm, setIsAdmin} = useContext(AppContext)
+    
+
+    const handleForm = function () {
+        setIsAdmin(false);
+        setToggleLoginForm(true);
+    }
 
 
     return (
@@ -54,7 +60,7 @@ function Banner({ data }) {
                             <li><Dot className={styles.dot}/> The next batch starts Mid August</li>
                     </ul>
                 </p>
-                <button onClick={()=>setToggleLoginForm(true)} className={styles.banner__btn}>Study first Pay later</button>
+                <button onClick={handleForm} className={styles.banner__btn}>Study first Pay later</button>
             </motion.div>
             <figure className={styles.banner__img}>
                 <Image src={BannerImg} alt="banner thumb"  objectFit="fill" />

@@ -148,47 +148,91 @@ export const DATA = () => {
                 },
             ],
             } ,
-            growth: [
-                {
-                    id: 1,
-                    imgSrc: who,
-                    altText: 'Who?',
-                    title: 'Who?',
-                    text: "Customer acquisition and nurture growth strategies.",
-                },
-                {
-                    id: 2,
-                    imgSrc: what,
-                    altText: 'What?',
-                    title: 'What?',
-                     text:
-                        'Mindshare and awareness throughout the funnel.',
-                },
-                {
-                    id: 3,
-                    imgSrc: when,
-                    altText: 'When?',
-                    title: 'When?',
-                    text:
-                        'Short-term and long-term campaigns and initiatives.',
-                },
-                {
-                    id: 4,
-                    imgSrc: where,
-                    altText: 'Where?',
-                    title: 'Where?',
-                    text:
-                        'Targeting broad and niche audiences.',
-                },
-                {
-                    id: 5,
-                    imgSrc: how,
-                    altText: 'How?',
-                    title: 'How?',
-                    text:
-                        'Advertising media strategies for creative development.',
-                },
-            ],
+            growth: {
+                dm: [
+                    {
+                        id: 1,
+                        imgSrc: who,
+                        altText: 'Who?',
+                        title: 'Who?',
+                        text: "Customer acquisition and nurture growth strategies.",
+                    },
+                    {
+                        id: 2,
+                        imgSrc: what,
+                        altText: 'What?',
+                        title: 'What?',
+                        text:
+                            'Mindshare and awareness throughout the funnel.',
+                    },
+                    {
+                        id: 3,
+                        imgSrc: when,
+                        altText: 'When?',
+                        title: 'When?',
+                        text:
+                            'Short-term and long-term campaigns and initiatives.',
+                    },
+                    {
+                        id: 4,
+                        imgSrc: where,
+                        altText: 'Where?',
+                        title: 'Where?',
+                        text:
+                            'Targeting broad and niche audiences.',
+                    },
+                    {
+                        id: 5,
+                        imgSrc: how,
+                        altText: 'How?',
+                        title: 'How?',
+                        text:
+                            'Advertising media strategies for creative development.',
+                    },
+                ],
+                web: [
+                    {
+                        id: 1,
+                        imgSrc: who,
+                        altText: 'Who?',
+                        title: 'Who?',
+                        text: "Anbody Who wants to learn developing TECH.",
+                    },
+                    {
+                        id: 2,
+                        imgSrc: what,
+                        altText: 'What?',
+                        title: 'What?',
+                        text:
+                            'Create and develop lastest tech app & softwares.',
+                    },
+                    {
+                        id: 3,
+                        imgSrc: when,
+                        altText: 'When?',
+                        title: 'When?',
+                        text:
+                            'Short term & long term learning & Upskill.',
+                    },
+                    {
+                        id: 4,
+                        imgSrc: where,
+                        altText: 'Where?',
+                        title: 'Where?',
+                        text:
+                            'Edtech,Fintech,SaaS,etc.',
+                    },
+                    {
+                        id: 5,
+                        imgSrc: how,
+                        altText: 'How?',
+                        title: 'How?',
+                        text:
+                            'With Lastest state of the art tech.',
+                    },
+                ]
+
+            },
             coreFeature: {
                 web: {
                     description: "MASTERS/PROFESSIONAL CERTIFICATION IN\nFullstack SOftware/Web application Developer\nDigital aided school's certification course gives you anextensive, comprehensive & advanced knowledge of the all-important tech domains and includes real-world projects and practical simulations for gaining domain experience.\nYou’ll learn all tools real project experience and authentic Pro simulations to make you industry-ready. After successful completion of this 12 months program, you will receive a certificate from DIGITAL AIDED SCHOOL stating that you possess the expertise, authenticate your abilities to create TECH.",

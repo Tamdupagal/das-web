@@ -10,11 +10,14 @@ import { AppContext } from '../../AppContext';
 function Header() {
 
 
-    const {setIsAdmin, setToggleLoginForm} = useContext(AppContext)
+    const { setIsAdmin, setToggleLoginForm } = useContext(AppContext)
+    
 
     const headerRef = useRef()
 
     const router = useRouter()
+
+
 
     const handleAdminLogin = function () {
         setIsAdmin(true)
@@ -44,8 +47,8 @@ function Header() {
                     <Images src={logo} objectFit="contain" layout='responsive' className={styles.image}/>
             </figure>
             <ul className={styles.btn_group}>
-                    <li className={styles.btn}> <span>Courses <FaAngleDown className={styles.arrow_down} /></span> 
-                        <ul className={styles.dropdown}>
+                <li className={styles.btn}> <span>Courses <FaAngleDown className={styles.arrow_down} /></span> 
+                        <ul  className={styles.dropdown}>
                                     <li onClick={()=>router.push('/digital-marketing')}>  <FaAngleRight className={styles.arrow_right}/>Digital Marketing</li>
                                     <li onClick={()=>router.push('/web-development')}><FaAngleRight className={styles.arrow_right}/> Web Development</li>
                         </ul>

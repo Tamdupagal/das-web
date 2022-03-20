@@ -42,6 +42,7 @@
 }
 .feature__details {
   @include flex_layout(null, null, column);
+
   .title {
     font-size: 1.8rem;
     color: $orange;
@@ -52,6 +53,7 @@
     }
   }
   .description {
+    width: 100%;
     font-size: 2rem;
     .phrase {
       @include flex_layout(center, null);

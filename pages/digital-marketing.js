@@ -54,7 +54,7 @@ export default function Home() {
       <Services data={data}/>
       <QualityFeature data={DATA().learning.dm}/>
       <CoreFeature data={DATA().coreFeature.dm.description} btnText={DATA().coreFeature.dm.buttonText}/>
-      <Feature data={DATA().growth}/>
+      <Feature data={DATA().growth.dm} no={true}/>
       <WorkFlow />
       <Package data={packageData} />
       <Blog />

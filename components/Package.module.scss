@@ -5,7 +5,7 @@
   position: relative;
   width: 100%;
   margin: 10rem 0;
-  @include flex_layout(null, center, column);
+  @include flex_layout(center, center, column);
   @media screen and (max-width: 768px) {
     padding: 2rem;
     margin: 5rem 0;
@@ -23,40 +23,23 @@
     text-align: center;
     margin-bottom: 5rem;
   }
-  .package__button {
-    position: relative;
-    padding: 1.5rem;
-    width: max-content;
-    align-items: center;
-    background-color: #f7f8fb;
+  .button {
     background-color: $main;
-    border-radius: 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 0.4rem;
+    padding: 1.1rem 2.5rem;
+    width: max-content;
+    border: none;
+    cursor: pointer;
     font-weight: bold;
-    margin: 0 auto;
-    .button,
-    .dummy {
-      position: relative;
-      border: none;
-      font-size: 1.5rem;
-      padding: 1.5rem 2.5rem;
-      border-radius: 0.4rem;
-      background-color: $primary;
-      box-shadow: 0 0 0.8rem rgba(black, 0.1);
-      font-size: bold;
-      letter-spacing: 0.05rem;
-      cursor: pointer;
-      &:not(:last-child) {
-        margin-right: 0.5rem;
-      }
+    transition : {
+      property: transform, box-shadow;
+      duration: 0.01s;
     }
-    .button {
-      z-index: 2;
-    }
-    .dummy {
-      background-color: transparent;
-      color: $primary;
-      box-shadow: none;
-      z-index: 1;
+    &:hover {
+      transform: translate(0.1rem, -0.1rem);
+      box-shadow: -0.1rem 0.2rem 0.3rem rgba(black, 0.2);
     }
   }
   .card__box {

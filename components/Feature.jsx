@@ -5,13 +5,13 @@ import styles from './Feature.module.scss';
 import { DATA } from '../helpers/Data';
 
 
-function Feature({ data }) {
+function Feature({ data, no}) {
     
     const style = {
     display: "flex",
     flexDirection : "column",
-    alignItems: "flex-start",
-    marginLeft : '4rem',
+    alignItems: no ? "center": "flex-start",
+    marginLeft : no ? "0" : '4rem',
 }
 
     return (
