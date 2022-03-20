@@ -15,7 +15,6 @@ import logo from '../assets/das.webp';
 import Image from 'next/image'
 import withLoader from '../../HOC/withLoader';
 import {useRouter} from 'next/router'
-import { useEffect } from 'react';
 
 
 
@@ -158,8 +157,8 @@ function Form() {
                         </div>}
             </div>
             <div className={styles.button__wrapper}>
-                <button onClick={handleCloseForm} type="button" className={styles.close__btn}>back</button>
                 <button type="submit" className={styles.form__submit__btn}>Submit</button>
+                <button onClick={handleCloseForm} type="button" className={styles.close__btn}>back</button>
             </div>
         </form>
         
@@ -168,7 +167,6 @@ function Form() {
                     <Image src={logo} objectFit="fill"  alt="Digital Aided School" /> 
                 </figure>
                 <h1 className={styles.panel__title}>Digital Aided School</h1>
-                <p>Enter your personal details and start journey with us.</p>
             </div>
         </div>
         )

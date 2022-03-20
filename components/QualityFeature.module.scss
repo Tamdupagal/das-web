@@ -3,6 +3,9 @@
 
 .container {
   margin-top: 10rem;
+  @media screen and (max-width: 768px) {
+    margin-top: 6rem;
+  }
   .section__header {
     text-align: center;
     margin-bottom: 5rem;
@@ -15,6 +18,7 @@
     place-content: center;
     @media screen and (max-width: 768px) {
       grid-template-columns: repeat(1, minmax(30rem, 50rem));
+      grid-gap: 2rem;
     }
     .feature {
       padding: 4rem;

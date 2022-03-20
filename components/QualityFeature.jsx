@@ -8,6 +8,7 @@ const style = {
     display: "flex",
     flexDirection : "column",
     alignItems: "flex-start",
+    marginLeft: "4rem",
 }
 
 function QualityFeature({data}) {

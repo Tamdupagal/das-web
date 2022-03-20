@@ -10,7 +10,8 @@ import FeatureDetails from './FeatureDetails';
 const style = {
     display: "flex",
     flexDirection : "column",
-    alignItems : "flex-start",
+    alignItems: "flex-start",
+    marginLeft: "4rem",
 }
 
 function Services({ data }) {

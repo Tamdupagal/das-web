@@ -11,12 +11,18 @@
   background-image: url(../assets/wave1.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  @media screen and (max-width: 768px) {
+    padding-top: 15rem;
+  }
   .heading {
     color: $primary;
     font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 4rem;
+    @media screen and (max-width: 768px) {
+      font-size: 2.5rem;
+    }
   }
   .wrapper {
     position: relative;
@@ -71,10 +77,10 @@
     }
     @media screen and (max-width: 768px) {
       width: 100%;
-      padding: 0 2rem;
       @include flex_layout(center, null, column);
+      padding: 0;
       .footer_text {
-        width: max-content;
+        width: 95%;
         margin: 0 auto;
         ul {
           text-align: center;

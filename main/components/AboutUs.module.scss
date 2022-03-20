@@ -46,19 +46,19 @@
       }
       @media screen and (max-width: 768px) {
         width: 100%;
-        padding: 3rem 2rem;
+        padding: 1rem;
       }
     }
     @media screen and (max-width: 768px) {
       @include flex_layout(center, null, column);
-      padding: 2rem 0.5rem;
+      padding: 0;
       & > figure,
       .about {
         width: 100%;
         margin: 0;
       }
       & > figure {
-        margin-bottom: 6rem;
+        margin-bottom: 1rem;
       }
     }
   }

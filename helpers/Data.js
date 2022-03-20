@@ -4,7 +4,7 @@ import certify from '../main/assets/Certifications.svg';
 import what from '../main/assets/What.svg'
 import when from '../main/assets/When.svg'
 import where from '../main/assets/Where.svg'
-import who from '../main/assets/Who.svg'
+import who from '../main/assets/girl.jpg'
 import how from '../main/assets/How.svg'
 import Dmbasics from '../main/assets/Digital-Marketing-Basics-01.svg'
 import Ba from '../main/assets/Brand-Awareness.svg'

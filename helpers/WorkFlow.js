@@ -21,11 +21,11 @@ export const WORKFLOW_DATA = () => {
       pattern: "odd",
     showIcon: true,
   },
-  {
-    id: 4,
-    title: 'Start learning & building your DM career.',
-    pattern: false,
-    showIcon: true,
-  },
+  // {
+  //   id: 4,
+  //   title: 'Start learning & building your DM career.',
+  //   pattern: false,
+  //   showIcon: true,
+  // },
 ];
 }

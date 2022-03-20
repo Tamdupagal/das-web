@@ -2,14 +2,15 @@
 @import "../styles/config/variable";
 
 .container {
+  position: relative;
   padding: 0 5rem;
   margin: 10rem 0;
-  margin-top: 15rem;
-  position: relative;
   width: 100%;
+
   @media (max-width: 768px) {
-    padding: 0;
-    padding-top: 7rem;
+    padding: 1rem;
+    margin-top: 12rem;
+    margin-bottom: 4rem;
   }
   @include flex_layout(center, center);
   .content__box {
@@ -20,7 +21,7 @@
     margin-right: 4rem;
     background-color: white;
     border-radius: 2rem;
-    padding: 3rem;
+    padding: 2rem;
     .heading {
       font-size: clamp(1rem, -0.875rem + 8.333vw, 3rem);
       font-weight: bolder;
@@ -32,11 +33,11 @@
         text-transform: uppercase;
         color: $orange;
         font-size: 2rem;
-        padding: 2.5rem 0;
+        padding: 2rem 0;
       }
       & > h2 {
         font-size: 2rem;
-        padding-bottom: 2.5rem;
+        padding-bottom: 2rem;
       }
       & > ul {
         li {
@@ -54,26 +55,34 @@
       }
     }
     .banner__btn {
-      display: inline;
       background-color: $orange;
-      padding: 1.5rem 3rem;
       color: white;
-      cursor: pointer;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
+      border-radius: 0.4rem;
+      padding: 1.1rem 2.5rem;
       width: max-content;
-      border-radius: 0.5rem;
       border: none;
+      cursor: pointer;
       font-weight: bold;
-      margin-top: 2.5rem;
+      transition : {
+        property: transform, box-shadow;
+        duration: 0.01s;
+      }
+      margin-top: 2rem;
+      &:hover {
+        transform: translate(0.1rem, -0.1rem);
+        box-shadow: -0.1rem 0.2rem 0.3rem rgba(black, 0.2);
+      }
     }
     @media (max-width: 768px) {
       width: 100%;
-      padding: 5rem 2rem;
+      padding: 2rem;
+      margin: 0;
       .heading,
       .desc,
       .banner__btn {
-        text-align: center !important;
         margin: 0 auto;
+        margin-top: 2.5rem;
       }
     }
   }

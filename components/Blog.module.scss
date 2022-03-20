@@ -14,6 +14,9 @@
     width: 100%;
     padding: 2rem 10rem;
     overflow: hidden;
+    @media screen and (max-width: 768px) {
+      padding: 2rem 4.5rem;
+    }
     .card__wrapper {
       position: relative;
       padding: 2rem;
@@ -26,6 +29,9 @@
       top: 50%;
       left: 0%;
       right: 0%;
+      @media screen and (max-width: 768px) {
+        padding: 0 1rem;
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-import { default as MainBanner } from '../main/components/Banner';
+import Banner from '../main/components/Banner';
 import Courses from '../main/components/Courses';
 import Misson from '../main/components/Misson'
 import Association from '../main/components/Association';
@@ -12,9 +12,8 @@ export default function Home() {
         <title>Digital Aided School</title>
         <link rel="icon" href="/favicon.png" />
 </Head>
-
       <main>
-        <MainBanner/>
+        <Banner/>
         <Courses />
         <Misson />
         <AboutUs />

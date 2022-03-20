@@ -5,6 +5,7 @@ import mission2 from '../assets/knowledge.png';
 import mission3 from '../assets/Elevate.svg';
 import mission4 from '../assets/achievement.svg';
 import styles from './Misson.module.scss';
+import certify from '../assets/Certifications.svg';
 
 function Misson() {
     return (
@@ -37,7 +38,7 @@ function Misson() {
                     </div>
                     <div className={styles.box}>
                         <figure>
-                            <Image src={mission4} alt="Important skills" objectFit="contain" layout="responsive"/>
+                            <Image src={certify} alt="Important skills" objectFit="contain" layout="responsive"/>
                         </figure>
                         <p>
                             <strong>To deliver</strong> outstanding skills and values by using available technology and resources and aid by providing a platform for their growth at a reasonably accessible price/cost.

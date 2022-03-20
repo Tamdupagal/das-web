@@ -5,7 +5,7 @@ import styles from './withLoader.module.scss';
 import { AppContext } from '../AppContext';
 
 
-Modal.setAppElement('#modal');
+Modal.setAppElement('#loader');
 
 function withLoader({ Component, type = "bars", options = { height: 70, width: 70, color: "#005778" } }) {
   

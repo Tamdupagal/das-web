@@ -29,11 +29,13 @@
     }
     @media screen and (max-width: 768px) {
       grid-template-columns: repeat(2, minmax(20rem, 1fr));
-      padding: 0 2rem;
+      padding: 0 1rem;
+      grid-gap: 2rem;
     }
     @media screen and (max-width: 640px) {
       grid-template-columns: repeat(1, minmax(20rem, 1fr));
-      padding: 0 2rem;
+      grid-gap: 2rem;
+      padding: 0 0.5rem;
     }
     .feature {
       padding: 2rem;

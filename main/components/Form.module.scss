@@ -14,23 +14,28 @@
 .form__wrapper {
   position: relative;
   height: 100%;
+  width: max-content;
   overflow: hidden;
   @include flex_layout(center);
+  border-radius: 1rem;
+  box-shadow: 0 0 15rem rgba(black, 0.2);
+  overflow: hidden;
   .overlay__panel {
     position: relative;
-    background-image: url(../assets/login_img1.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 40rem;
     height: 100%;
     min-height: 60rem;
     padding: 2rem 2rem;
     overflow: hidden;
+    background-color: white;
     @include flex_layout(center, center, column);
     transition: {
       property: transform;
       duration: 0.3s;
       timing-function: ease-out;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
     }
     & > .logo {
       max-width: 25rem;
@@ -62,6 +67,10 @@
     border-radius: 1rem;
     overflow: hidden;
     @include flex_layout(null, null, column);
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      min-height: 100vh;
+    }
     .form__title {
       color: rgba(black, 0.6);
       text-align: center;
@@ -166,6 +175,7 @@
         border-radius: 0.4rem;
         font-weight: bold;
         font-size: 1.5rem;
+        margin-right: 1.5rem;
         cursor: pointer;
         transition: {
           property: transform;
@@ -178,7 +188,7 @@
           border: 0.3rem solid $main;
           color: black;
           background-color: $white;
-          margin-right: 1.5rem;
+          margin-right: 0;
         }
       }
     }

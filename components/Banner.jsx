@@ -1,10 +1,16 @@
 import { motion } from 'framer-motion';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
 import Image from 'next/image';
 import React from 'react';
 import BannerImg from "../assets/lms.png";
 import styles from './Banner.module.scss';
 import { GoPrimitiveDot as Dot } from "react-icons/go"
+import { AppContext } from '../AppContext';
+import withForm from '../HOC/withForm';
+
+
+
+
 
 const FadeIn = {
     initial: {
@@ -22,7 +28,9 @@ const FadeIn = {
     }
 }
 
-function Banner() {
+function Banner({ data }) {
+    
+    const {setToggleLoginForm} = useContext(AppContext)
 
 
     return (
@@ -30,9 +38,8 @@ function Banner() {
             <motion.div variants={FadeIn} animate="vissible" initial="initial" className={styles.content__box}>
                 <h1 className={styles.heading}>Learn First, Pay Later !</h1>
                 <p className={styles.desc}> 
-                    <span>MASTERS/PROFESSIONAL CERTIFICATION IN 
-                        Fullstack Digital Marketing</span> 
-                     <h2>(6-month Program)</h2>
+                    <span>{data.title}</span> 
+                    <h2>{data.program}</h2>
                     <ul>
                             <li><Dot className={styles.dot}/> Worlds 1st Live online classes </li>
                             <li><Dot className={styles.dot}/> Agency style cohort-based learning  </li>
@@ -47,7 +54,7 @@ function Banner() {
                             <li><Dot className={styles.dot}/> The next batch starts Mid August</li>
                     </ul>
                 </p>
-                <button className={styles.banner__btn}>Proceed</button>
+                <button onClick={()=>setToggleLoginForm(true)} className={styles.banner__btn}>Study first Pay later</button>
             </motion.div>
             <figure className={styles.banner__img}>
                 <Image src={BannerImg} alt="banner thumb"  objectFit="fill" />
@@ -57,6 +64,5 @@ function Banner() {
 }
 
 export default Banner
+    
 
-
-//ref={menuRef}

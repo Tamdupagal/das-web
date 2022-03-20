@@ -9,6 +9,9 @@
   background-image: url(../assets/wave2.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  @media screen and (max-width: 768px) {
+    padding: 15rem 0;
+  }
   .main_title {
     font-size: 3rem;
     color: $primary;

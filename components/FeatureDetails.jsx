@@ -1,12 +1,16 @@
 import Image from 'next/image';
-import React from 'react'
+import React, { useContext } from 'react'
 import {motion} from 'framer-motion'
 import styles from './FeatureDetails.module.scss';
 import { GoPrimitiveDot as Dot } from "react-icons/go";
 import { useEffect } from 'react';
+import withForm from '../HOC/withForm';
+import { AppContext } from '../AppContext';
 
 
-function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, leftMargin=false, isWhite = false, pattern, description, style, offset}) {
+function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, leftMargin = false, isWhite = false, pattern, description, style, offset }) {
+    
+    const { setToggleLoginForm } = useContext(AppContext);
         
     return (
         <>
@@ -38,10 +42,10 @@ function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, l
                 {description && <p className={styles.text}>
                     {description}
                 </p>}
-                {btnText && <button className={styles.feature__btn}>{btnText}</button>}
+                {btnText && <button onClick={()=>setToggleLoginForm(true)} className={styles.feature__btn}>{btnText}</button>}
             </div>
         </>
     )
 }
 
-export default React.memo(FeatureDetails);
+export default FeatureDetails

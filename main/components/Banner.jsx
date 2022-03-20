@@ -6,9 +6,8 @@ import Form from './Form';
 import styles from './Banner.module.scss';
 import { useContext } from 'react';
 import { AppContext } from '../../AppContext';
+import withForm from '../../HOC/withForm';
 
-
-Modal.setAppElement('#modal');
 
 const phrases = [
     "Full Stack Web \n development.",
@@ -18,8 +17,8 @@ const phrases = [
 
 function Banner() {
 
-    const { toggleLoginForm, setToggleLoginForm, setIsAdmin } = useContext(AppContext)
-    
+    const { setToggleLoginForm, setIsAdmin } = useContext(AppContext)
+        
     const handleForm = function () {
         setIsAdmin(false);
         setToggleLoginForm(true);
@@ -46,17 +45,8 @@ function Banner() {
                 <p className={styles.desc}>From Basics to Advance, learn all that is <br/>
                     all about Any Course. Get up-to-date <br/>
                     lectures from our industry experts.</p>
-                <button className ={styles.button} onClick={handleForm}>Get Started</button>
+                <button className ={styles.button} onClick={handleForm}>Study now and pay later</button>
             </div>
-            
-            <Modal 
-                isOpen={toggleLoginForm}
-                contentLabel="Form Modal"
-                className={{ base: styles.content, afterOpen: styles.content_after_open, beforeClose: styles.content_before_close}}
-                overlayClassName={{ base: styles.overlay, afterOpen: styles.overlay_after_open, beforeClose: styles.overlay_before_close }}
-            >
-                <Form/>
-            </Modal>
         </section>
     )
 }

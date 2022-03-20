@@ -7,7 +7,13 @@ import { DATA } from '../helpers/Data';
 
 function Feature({ data }) {
     
-    
+    const style = {
+    display: "flex",
+    flexDirection : "column",
+    alignItems: "flex-start",
+    marginLeft : '4rem',
+}
+
     return (
         <section className={styles.container}>
             <div className={styles.section__header}>
@@ -17,7 +23,7 @@ function Feature({ data }) {
                 {data.map((item) => {
                     return (
                         <div  className={styles.feature} key={item.id}>
-                            <FeatureDetails {...item}/>
+                            <FeatureDetails style={style} {...item}/>
                         </div>
                     )
                 })}

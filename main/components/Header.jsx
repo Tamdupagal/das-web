@@ -44,17 +44,13 @@ function Header() {
                     <Images src={logo} objectFit="contain" layout='responsive' className={styles.image}/>
             </figure>
             <ul className={styles.btn_group}>
-                    <li onClick={()=>router.push('/')} className={styles.btn}>Home</li>
-                    <li className={styles.btn}>About Us</li>
-                    <li className={styles.btn}> Courses <FaAngleDown className={styles.arrow_down} />
+                    <li className={styles.btn}> <span>Courses <FaAngleDown className={styles.arrow_down} /></span> 
                         <ul className={styles.dropdown}>
-                                    <li onClick={()=>router.push('/digital-marketing')}><FaAngleRight className={styles.arrow_right}/>Digital Marketing</li>
+                                    <li onClick={()=>router.push('/digital-marketing')}>  <FaAngleRight className={styles.arrow_right}/>Digital Marketing</li>
                                     <li onClick={()=>router.push('/web-development')}><FaAngleRight className={styles.arrow_right}/> Web Development</li>
-                                    <li onClick={()=>router.push('/data-science')}><FaAngleRight className={styles.arrow_right}/>Data Science</li>
                         </ul>
                     </li>
-                    <li onClick={handleAdminLogin} className={styles.btn}>Login</li>               
-                    <li className={styles.btn}>Sign Up</li>               
+                    <li onClick={handleAdminLogin} className={styles.btn}><span>Login</span></li>               
                 </ul>
         </header>
     )
