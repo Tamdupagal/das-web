@@ -39,6 +39,8 @@ const data = [
 ]
 
 
+const packageData = "With Study first pay later,scholarship & EMI options, your payment can be Pay as you like or pay as you go.\n\n Total fee: Rs 1.5L inclusive of GST."
+
 export default function Home() {
   return (
     <div>
@@ -54,7 +56,7 @@ export default function Home() {
       <CoreFeature data={DATA().coreFeature.dm.description} btnText={DATA().coreFeature.dm.buttonText}/>
       <Feature data={DATA().growth}/>
       <WorkFlow />
-      <Package />
+      <Package data={packageData} />
       <Blog />
     </div>
   )

@@ -15,9 +15,7 @@ const FormWrapper = function () {
 
   
   const { toggleLoginForm } = useContext(AppContext)
-  
-  console.log(toggleLoginForm)
-  
+    
   return (
      toggleLoginForm ? <div className='modal'><Form /> </div> : null  
   )

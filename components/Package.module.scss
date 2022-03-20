@@ -11,10 +11,13 @@
     margin: 5rem 0;
   }
   .price__desc {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
+    word-spacing: 0.5rem;
     padding: 4rem 0;
     color: $main;
+    white-space: pre-line;
+    font-weight: bold;
   }
   .section__header {
     text-align: center;

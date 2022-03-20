@@ -9,7 +9,7 @@ import SectionHeader from './SectionHeader';
 
 
 
-function Package() {
+function Package({data}) {
     const { monthly, annual } = PACKAGE_DATA();
 
     const [selectedPlan, setSelectedPlan] = useState({
@@ -45,22 +45,7 @@ function Package() {
         duration: 0.4
     }
 
-    const plan_variant = (i) => {
-        return {
-            hidden: {
-                x: '-30rem',
-                opacity: 0,
-            },
-            vissible: {
-                x: 0,
-                opacity: 1,
-                transition: {
-                    delay: 0.05 * i,
-                    when: "beforeChildren",
-                },
-            },
-        }
-    }
+
 
     return (
         <section className={styles.container} id='pricing'>
@@ -74,8 +59,7 @@ function Package() {
                     </AnimatePresence>
                 </motion.div>
             </AnimateSharedLayout>
-           <p className={styles.price__desc}>With Study first pay later,scholarship & EMI options, your payment can be Pay as you like or pay as you go.
-<br/> <br/> Total fee: Rs 1.5L inclusive of GST.</p>
+            <p className={styles.price__desc}>{data}</p>
         </section>
     )
 }
