@@ -17,10 +17,11 @@
       @include flex_layout(center, center, column);
     }
     .title {
-      font-size: 3.3rem;
+      font-size: 3rem;
       text-transform: uppercase;
       color: $main;
       font-weight: bolder;
+      padding-bottom: 2rem;
     }
     .desc {
       font-size: 1.8rem;
@@ -28,24 +29,25 @@
       text-align: justify;
       color: rgba(black, 0.6);
     }
-    // .typewriter {
-    //   font-size: clamp(3rem, 3vw, 5vw);
-    //   font-variant: small-caps;
-    //   padding: 1rem 0;
-    //   color: $orange;
-    //   width: 100%;
-    //   font-weight: bolder;
-    // }
+    .typewriter {
+      font-size: 5rem;
+      font-variant: small-caps;
+      color: $orange;
+      width: 100%;
+      white-space: pre-line;
+      font-weight: bold;
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+    }
   }
   .banner__img {
     position: relative;
     @media screen and (max-width: 768px) {
       display: none !important;
     }
-    top: 3rem;
-    z-index: 2;
     position: relative;
-    flex: 0.7;
+    flex: 0.6;
   }
 }
 
