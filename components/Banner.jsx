@@ -55,7 +55,7 @@ function Banner({ data }) {
                     <ul>
                             <li><Dot className={styles.dot}/> Weekday batch [Monday-Friday (1.5hours/class)] </li>
                             <li><Dot className={styles.dot}/> Weekend batch [Saturday-Sunday(3.5hours/class)]</li>
-                            <li><Dot className={styles.dot}/> The next batch starts Mid August</li>
+                            <li><Dot className={styles.dot}/> The next batch starts April 2022</li>
                     </ul>
                 </div>
                 <button onClick={handleForm} className={styles.banner__btn}>Study first Pay later</button>
