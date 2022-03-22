@@ -45,35 +45,28 @@ export const leadForm = async (dispatch, formData, setOtp, toast) => {
 export const adminLogin = async (dispatch, formData,router, toast) => {
         dispatch({ type: ADMIN_LOGIN_REQUEST })
     try {
-                const response = await axios.post(`Admin/login`, formData)
-        const { auth, data, token = null} = response.data
+        const response = await axios.post(`Admin/login`, formData)
+        const { auth, data, status, token = null} = response.data
                 if (!token) {
                     dispatch({ type: ADMIN_LOGIN_FAIL })
                     toast.error(<Notification>{data}</Notification>)
                     return
-                }
+        }
+        
                 dispatch({ type: ADMIN_LOGIN_SUCCESS, payload: { auth, token } })
                 toast.success(<Notification>Signed in Successfully!</Notification>)
                 router.push("/Dashboard")
                 
     } catch (err) {
         dispatch({ type: ADMIN_LOGIN_FAIL })
-        if (err instanceof NetworkError) {
-            toast.error(<Notification>{err.response.data.message}</Notification>)
-            return;
-        }
-        toast.error(<Notification>{err.data}</Notification>)
+        toast.error(<Notification>{err.data || err.response.data.message}</Notification>)
         }        
 }
 
 export const fetchLead = async (dispatch, token, toast) => {
         dispatch({ type: FETCH_LEADS_REQUEST })
     try {
-        const { data } = await axios.get(`Admin/Dashboard/leads`, {
-                    headers: {
-                        authToken: token
-                    }
-        })
+        const { data } = await axios.get(`Admin/Dashboard/leads`, {headers: { authToken: token }})
                 dispatch({ type: FETCH_LEADS_SUCCESS, payload : data })
             } catch (err) {
                 dispatch({ type: FETCH_LEADS_FAIL })

@@ -91,6 +91,27 @@ a {
   }
 }
 
+.button {
+  background-color: $main;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 0.4rem;
+  padding: 1.1rem 2.5rem;
+  width: max-content;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition : {
+    property: transform, box-shadow;
+    duration: 0.01s;
+  }
+  margin-top: 1rem;
+  margin-left: 1rem;
+  &:hover {
+    transform: translate(0.1rem, -0.1rem);
+    box-shadow: -0.1rem 0.2rem 0.3rem rgba(black, 0.2);
+  }
+}
 .loader {
   @include flex_layout(center, center);
   position: fixed;

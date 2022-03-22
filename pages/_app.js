@@ -38,7 +38,7 @@ const LoaderWrapper = function () {
 function MyApp({ Component, pageProps }) {
   
 
-  if (Component.withLayout === true) {
+  if (Component.withoutLayout === true) {
     return (
       <AppContextProvider>
         <Component {...pageProps} />

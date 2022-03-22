@@ -1,16 +1,13 @@
-import React, { useContext, useMemo } from 'react'
+import React, { useMemo } from 'react'
 import { useTable } from 'react-table'
-// import { AppContext } from '../AppContext'
-import mock_data from '../helpers/tableData.json'
 import styles from './Table.module.scss';
 
 
-function Table({ data, columns }) {
+function Table({ data, column }) {
 
-    // const {theme} = useContext(AppContext)
-
-    const col = useMemo(() => columns, [columns]);
-    const leads = useMemo(() => data, []);
+    const col = useMemo(() => column, [column]);
+  const leads = useMemo(() => data, [data]);
+  
     const {
         headerGroups,
         rows,
