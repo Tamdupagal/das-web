@@ -79,10 +79,35 @@ a {
 
 .modal {
   position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   @include flex_layout();
   z-index: 9999;
+  @media screen and (max-width: 768px) {
+    @include flex_layout(null);
+  }
+}
+
+.loader {
+  @include flex_layout(center, center);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background-color: white;
+  min-width: 12rem;
+  min-height: 12rem;
+  box-shadow: 0 0 20rem rgba(black, 0.25);
+  border-radius: 0.5rem;
+  z-index: 10000;
+}
+
+.tweak {
+  margin-left: 4rem;
+  text-align: center;
+  border: 3px solid red;
 }

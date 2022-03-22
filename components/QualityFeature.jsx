@@ -4,14 +4,7 @@ import SectionHeader from './SectionHeader';
 import styles from './QualityFeature.module.scss';
 
 
-const style = {
-    display: "flex",
-    flexDirection : "column",
-    alignItems: "flex-start",
-    marginLeft: "4rem",
-}
-
-function QualityFeature({data}) {
+function QualityFeature({data, className}) {
     return (
         <section className={styles.container} id='features'>
             <div className={styles.section__header}>
@@ -21,7 +14,7 @@ function QualityFeature({data}) {
                 {data.map(item => {
                     return (
                         <div className={styles.feature} key={item.id}>
-                            <FeatureDetails style={style} {...item} offset={true} leftMargin={true}/>
+                            <FeatureDetails  {...item} className={className}/>
                         </div>
                     )
                 })}

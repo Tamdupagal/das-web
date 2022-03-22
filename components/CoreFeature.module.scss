@@ -12,7 +12,7 @@
   @media screen and (max-width: 768px) {
     @include flex_layout(center, null, column);
     background-size: 70%;
-    padding: 2rem;
+    padding: 1rem;
     margin: 6rem 0;
     background-position: 140% 100%;
   }

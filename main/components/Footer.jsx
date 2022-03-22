@@ -18,11 +18,10 @@ function Footer() {
                         <li><FaEnvelope className={styles.icon}/> hello@digitalaidedschool.com</li>
                     </ul>
                     <ul className={styles.ul}>
-                    {/* <li><FaInstagram className={styles.social} /></li> */}
-                       <li> <FaLinkedinIn className={styles.social} /></li>
-                         <li>   <FaYoutube className={styles.social} /></li>
-                      <li>  <FaTwitter className={styles.social} /></li>
-                      <li>  <FaFacebook className={styles.social} /></li>
+                      <li> <Link href="#"><a><FaLinkedinIn className={styles.social}/></a></Link></li>
+                      <li> <Link href="#"><a><FaYoutube className={styles.social} /></a></Link></li>
+                      <li> <Link href="#"><a><FaTwitter className={styles.social} /></a></Link> </li>
+                      <li> <Link href="#"><a><FaFacebook className={styles.social} /></a></Link> </li>
                 </ul>
             </div>
             <div className={styles.address}>

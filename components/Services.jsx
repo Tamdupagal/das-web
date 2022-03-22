@@ -5,16 +5,7 @@ import FeatureDetails from './FeatureDetails';
 
 
 
-
-    
-const style = {
-    display: "flex",
-    flexDirection : "column",
-    alignItems: "flex-start",
-    marginLeft: "4rem",
-}
-
-function Services({ data }) {
+function Services({ data, className}) {
     
 
     return (
@@ -29,7 +20,7 @@ Identified & solve DM problems for companies " />
                 {data.map(item => {
                     return (
                         <div className={styles.feature__box} key={item.id}>
-                            <FeatureDetails {...item} style={style}  offset={true}/>
+                            <FeatureDetails {...item} className={className}/>
                         </div>
                     )
                 })}

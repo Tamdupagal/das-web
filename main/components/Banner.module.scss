@@ -10,6 +10,7 @@
   background-color: white;
   .banner_info {
     padding: 2rem 4rem;
+    // min-height:
     @include flex_layout(null, center, column);
     @media screen and (max-width: 768px) {
       width: 100%;
@@ -23,17 +24,14 @@
       font-weight: bolder;
       padding-bottom: 2rem;
     }
-    .desc {
-      font-size: 1.8rem;
-      padding: 2.5rem 0;
-      text-align: justify;
-      color: rgba(black, 0.6);
-    }
+
     .typewriter {
+      text-transform: capitalize;
       font-size: 5rem;
       font-variant: small-caps;
       color: $orange;
       width: 100%;
+      min-height: 14rem;
       white-space: pre-line;
       font-weight: bold;
       @media screen and (max-width: 768px) {
@@ -65,6 +63,7 @@
     property: transform, box-shadow;
     duration: 0.01s;
   }
+  margin-top: 3rem;
   &:hover {
     transform: translate(0.1rem, -0.1rem);
     box-shadow: -0.1rem 0.2rem 0.3rem rgba(black, 0.2);

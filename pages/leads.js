@@ -42,4 +42,4 @@ function Leads() {
 
 Leads.withoutHeader = true;
 
-export default withLoader({ Component: Leads })
+export default withLoader({ Component : Leads } )

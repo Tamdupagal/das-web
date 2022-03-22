@@ -3,24 +3,24 @@ import React, { useContext } from 'react'
 import {motion} from 'framer-motion'
 import styles from './FeatureDetails.module.scss';
 import { GoPrimitiveDot as Dot } from "react-icons/go";
-import { useEffect } from 'react';
-import withForm from '../HOC/withForm';
+
 import { AppContext } from '../AppContext';
 
 
-function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, leftMargin = false, isWhite = false, pattern, description, style, offset }) {
+function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, pattern, description, className}) {
     
     const { setToggleLoginForm, setIsAdmin } = useContext(AppContext);
 
     const handleForm = function () {
+
         setIsAdmin(false);
         setToggleLoginForm(true);
-    }
-        
+    }        
+
     return (
         <>
             {altText && <figure className={styles.feature__img}>
-                <Image src={imgSrc} alt={altText} layout="responsive"/>
+                <Image src={imgSrc} alt={altText} layout="responsive" />
             </figure>}
             {showIcon && <div className={styles.workflow__icon}>
                 <span>{"0" + id}</span>
@@ -34,8 +34,8 @@ function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, l
                         <path d="M181.219 39.4976C181.219 39.4976 200.334 45.024 202.156 38.763C203.978 32.5019 202.611 26.0275 196.694 17.1575" stroke="#C2CBDE" strokeWidth="2" strokeDasharray="4 4"/>
                     </motion.svg>}
             </div>}
-            <div className={styles.feature__details} data-margin={offset} style={style} data-white={isWhite}>
-                {title && <h1 data-white={isWhite} className={styles.title}>
+            <div data-for={className} className={styles.feature__details}>
+                {title && <h1 className={styles.title}>
                     {title}
                 </h1>}
                 {text instanceof Array ? text?.length && 
@@ -54,4 +54,4 @@ function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, l
 }
 
 
-export default FeatureDetails
+export default React.memo(FeatureDetails)

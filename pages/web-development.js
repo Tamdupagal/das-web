@@ -6,8 +6,6 @@ import QualityFeature from "../components/QualityFeature";
 import CoreFeature from "../components/CoreFeature";
 import WorkFlow from "../components/WorkFlow";
 import Package from "../components/Package";
-import Testimonial from "../components/Testimonial";
-import Blog from "../components/Blog";
 import { DATA } from "../helpers/Data";
 import Performance from '../main/assets/art.svg';
 import Partnership from '../main/assets/art.svg';
@@ -50,11 +48,11 @@ function development() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Banner data={bannerData}/>
-      <Feature data={DATA().feature} />
-      <Services data={data}/>
-      <QualityFeature data={DATA().learning.web} />
+      <Feature className="feature" data={DATA().feature} />
+      <Services className="services" data={data}/>
+      <QualityFeature className="quality" data={DATA().learning.web} />
       <CoreFeature data={DATA().coreFeature.web.description} btnText={DATA().coreFeature.web.buttonText}/>
-      <Feature data={DATA().growth.web} no={true}/>
+      <Feature className="growth" data={DATA().growth.web}/>
       <WorkFlow />
       <Package data={packageData} />
     </div>

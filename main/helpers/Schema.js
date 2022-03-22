@@ -14,6 +14,7 @@ export const LOGIN_FORM_SCHEMA = (isAdmin) => {
    return yup.object().shape({
         username: yup.string().min(4).max(14).required("Username is required!"),
         email: yup.string().email().required("Email is required!"),
+        qualification: yup.string().required("Qualification is required!"),
         number: yup.string().required("Number is required!").matches(phoneRegExp, 'Number is not valid'),
     })
 }

@@ -28,16 +28,15 @@
   }
   & > li {
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: rgba($main, 0.9);
-    padding: 0.8rem 3rem;
+    padding: 0.8rem 2.5rem;
     transition: {
-      property: color, transform;
-      duration: 0.2s;
+      property: color;
+      duration: 0.08s;
     }
     &:hover {
       color: $orange;
-      transform: scale(1.03);
     }
     &:not(:last-child) {
       border-right: 0.2rem solid $main;
@@ -58,6 +57,7 @@
       color: $main !important;
     }
     .social {
+      cursor: pointer;
       &:not(:last-child) {
         margin-right: 1rem;
       }

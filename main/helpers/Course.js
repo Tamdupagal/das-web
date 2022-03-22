@@ -27,17 +27,17 @@ export const COURSE_DATA = [
         btnText: "Find Out More",
         path: "web-development"
     },    
-    {
-        id: 3,
-        heading: "Data Science",
-        altText: "Data Science",
-        imgSrc: course3,
-        description: "12-month Program batch (1:8) \n 320+ Hours of Live online classes \n 300+ hours of offline training & project building.",
-        title: "MASTERS/PROFESSIONAL CERTIFICATION \nIN ",
-        heading: "Data science ",
-        classes: "200+ Live online classes (1.5hour/class)",
-        btnText: "Find Out More",
-        path: "data-science"
-    },
+    // {
+    //     id: 3,
+    //     heading: "Data Science",
+    //     altText: "Data Science",
+    //     imgSrc: course3,
+    //     description: "12-month Program batch (1:8) \n 320+ Hours of Live online classes \n 300+ hours of offline training & project building.",
+    //     title: "MASTERS/PROFESSIONAL CERTIFICATION \nIN ",
+    //     heading: "Data science ",
+    //     classes: "200+ Live online classes (1.5hour/class)",
+    //     btnText: "Find Out More",
+    //     path: "data-science"
+    // },
     
 ]

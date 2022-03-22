@@ -1,50 +1,59 @@
 // import jwt_decode from "jwt-decode";
 import React, {createContext,useReducer, useState} from "react";
-import { ADMIN_LOGIN_FAIL, ADMIN_LOGIN_REQUEST, ADMIN_LOGIN_SUCCESS, FETCH_LEADS_FAIL, FETCH_LEADS_REQUEST, FETCH_LEADS_SUCCESS, LEAD_FORM_FAIL, LEAD_FORM_REQUEST, LEAD_FORM_SUCCESS } from "./main/action/actionType";
+import { ADMIN_LOGIN_FAIL, ADMIN_LOGIN_REQUEST, ADMIN_LOGIN_SUCCESS, FETCH_LEADS_FAIL, FETCH_LEADS_REQUEST, FETCH_LEADS_SUCCESS, LEAD_FORM_FAIL, LEAD_FORM_REQUEST, LEAD_FORM_SUCCESS, OTP_FAIL, OTP_REQUEST, OTP_SUCCESS } from "./main/action/actionType";
 const AppContext = createContext({});
 
 
 const initialState = {
+    isLoading: false,
     lead: {
         data: null,
-        isLoading: false,
     },
     admin: {
         token: null,
         auth : false,
-        isLoading: false,
     },
     leads: {
         data: null,
-        isLoading: false,
     },
+    otp: {
+        message: null,
+    }
 }
 
 const reducer = (state, {type, payload})=>{
     console.log(type);
     switch (type){
         case LEAD_FORM_REQUEST:
-            return {...state, lead : {...state.lead, isLoading : true}}
+            return {...state, isLoading : true}
         case LEAD_FORM_SUCCESS:
-            return { ...state, lead: { ...state.lead,  data : payload, isLoading: false } }
+            return { ...state,  isLoading: false, lead: { ...state.lead,  data : payload } }
         case LEAD_FORM_FAIL:
-            return { ...state, lead: { ...state.lead, isLoading: false } }
+            return { ...state, isLoading: false }
         
         
         case ADMIN_LOGIN_REQUEST:
-            return {...state, admin : {...state.admin, isLoading : true}}
+            return {...state, isLoading : true}
         case ADMIN_LOGIN_SUCCESS:
-            return { ...state, admin: { ...state.admin, auth : payload.auth, token : payload.token, isLoading: false } }
+            return { ...state, isLoading: false, admin: { ...state.admin, auth : payload.auth, token : payload.token} }
         case ADMIN_LOGIN_FAIL:
-            return { ...state, admin: { ...state.admin, isLoading: false } }
+            return {...state, isLoading : false}
         
         
         case FETCH_LEADS_REQUEST:
-            return {...state, leads : {...state.leads, isLoading : true}}
+            return {...state, isLoading : true}
         case FETCH_LEADS_SUCCESS:
-            return { ...state, leads: { ...state.leads, data : payload.data, isLoading: false } }
+            return { ...state, isLoading: false, leads: { ...state.leads, data : payload.data } }
         case FETCH_LEADS_FAIL:
-            return { ...state, leads: { ...state.leads, isLoading: false } }
+            return {...state, isLoading : false}
+        
+        
+        case OTP_REQUEST:
+            return {...state, isLoading : true}
+        case OTP_SUCCESS:
+            return { ...state, isLoading: false, otp: { ...state.otp, message : payload.message} }
+        case OTP_FAIL:
+            return {...state, isLoading : false}
         
         default:
             return state;

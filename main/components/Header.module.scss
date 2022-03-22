@@ -14,29 +14,12 @@
   background-color: white;
   z-index: 999;
   transition: {
-    property: padding;
+    property: opacity;
     duration: 0.3s;
   }
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0.3rem 0 2rem 0.1rem rgba(black, 0.1);
-    opacity: 0;
-    transition: {
-      property: opacity;
-      duration: 0.3s;
-    }
-  }
   &.active {
-    padding: 0 2rem;
-    &::before {
-      opacity: 1;
-    }
+    box-shadow: 0.3rem 0 2rem 0.1rem rgba(black, 0.1);
+    opacity: 1;
   }
   .logo {
     position: relative;
@@ -65,10 +48,12 @@
       color: $main;
       padding: 0 1rem;
       & > span {
+        z-index: 2;
         @include flex_layout();
         padding: 1rem 2.5rem;
         border-radius: 5rem;
         border: 0.2rem solid $main;
+        cursor: pointer;
         &:last-child {
           border: 0.2rem solid $orange;
           color: $orange;
@@ -89,23 +74,22 @@
         width: 100%;
         height: 100%;
       }
-      &:hover:first-child {
-        & > .dropdown {
-          visibility: visible;
-        }
-      }
+      // &:hover:first-child {
+      //   & > .dropdown {
+      //     visibility: visible;
+      //   }
+      // }
       @include flex_layout();
       .arrow_down {
         font-size: 1.7rem;
         color: black;
-        margin-left: 0.3rem;
+        margin-left: 0.8rem;
       }
     }
   }
 
   .dropdown {
     position: absolute;
-    visibility: hidden;
     top: 101%;
     right: 0;
     background-color: white;

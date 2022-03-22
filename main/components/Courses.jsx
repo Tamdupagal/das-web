@@ -6,6 +6,7 @@ import ButtonGroup from '../../components/ButtonGroup';
 import { useEffect, useRef, useState } from 'react';
 
 
+
 function Courses() {
 
     const sliderRef = useRef()
@@ -14,7 +15,7 @@ function Courses() {
     const settings = {
          dots: false,
          speed: 1000,
-         slidesToShow: 3,
+         slidesToShow: 2,
          slidesToScroll: 1,
          arrows: false,
         easing: "ease-out",
@@ -28,8 +29,7 @@ function Courses() {
       autoplay: true,
       autoplaySpeed: 5500,
       pauseOnFocus: true,
-        
-         responsive: [
+      responsive: [
         {
           breakpoint: 320,
           settings: { slidesToShow: 1}

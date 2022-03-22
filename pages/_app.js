@@ -5,6 +5,7 @@ import {AppContext, AppContextProvider } from '../AppContext';
 import '../styles/globals.scss'
 import { useContext } from 'react';
 import Form from '../main/components/Form';
+import ReactLoading from 'react-loading';
 
 
 
@@ -22,11 +23,22 @@ const FormWrapper = function () {
 
 }
 
+const LoaderWrapper = function () {
+  
+  const {state: {isLoading}} = useContext(AppContext)
+
+  return (
+    isLoading? 
+      <div className='loader'><ReactLoading type="bars" height={70} width={70} color="#005778"   /></div> : null
+  )
+
+}
+
 
 function MyApp({ Component, pageProps }) {
   
 
-  if (Component.withoutHeader === true) {
+  if (Component.withLayout === true) {
     return (
       <AppContextProvider>
         <Component {...pageProps} />
@@ -40,7 +52,8 @@ function MyApp({ Component, pageProps }) {
       <Header />
         <Component {...pageProps} />
       <Footer />
-      <FormWrapper/>
+      <FormWrapper />
+      <LoaderWrapper/>
     </AppContextProvider>
   )
 }

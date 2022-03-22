@@ -15,7 +15,17 @@ function Header() {
 
     const headerRef = useRef()
 
+
+    const [toggleDropDown, setToggleDropDown] = useState(false)
+
     const router = useRouter()
+
+
+
+    const handleDropDown = (toggle) => {
+        setToggleDropDown(toggle)
+    } 
+    
 
 
 
@@ -47,11 +57,19 @@ function Header() {
                     <Images src={logo} objectFit="contain" layout='responsive' className={styles.image}/>
             </figure>
             <ul className={styles.btn_group}>
-                <li className={styles.btn}> <span>Courses <FaAngleDown className={styles.arrow_down} /></span> 
-                        <ul  className={styles.dropdown}>
-                                    <li onClick={()=>router.push('/digital-marketing')}>  <FaAngleRight className={styles.arrow_right}/>Digital Marketing</li>
-                                    <li onClick={()=>router.push('/web-development')}><FaAngleRight className={styles.arrow_right}/> Web Development</li>
-                        </ul>
+                <li onPointerLeave={() => handleDropDown(false)} onPointerEnter={() => handleDropDown(true)} className={styles.btn}> <span  >Courses <FaAngleDown className={styles.arrow_down} /></span> 
+                    {toggleDropDown && <ul className={styles.dropdown}>
+                        <li onClick={() => {
+                            router.push('/digital-marketing')
+                            setToggleDropDown(false)
+                        }
+                    }>  <FaAngleRight className={styles.arrow_right} />Digital Marketing</li>
+                        <li onClick={() => {
+                            router.push('/web-development')
+                            setToggleDropDown(false)
+                        }
+                        }><FaAngleRight className={styles.arrow_right} /> Web Development</li>
+                    </ul>}
                     </li>
                     <li onClick={handleAdminLogin} className={styles.btn}><span>Login</span></li>               
                 </ul>

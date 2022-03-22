@@ -19,32 +19,23 @@
     position: relative;
     width: 100%;
     padding: 0 3rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap: 5rem;
-    place-content: center;
-    @media screen and (max-width: 1024px) {
-      grid-template-columns: repeat(2, minmax(20rem, 40rem));
-      padding: 0 2rem;
-    }
+    @include flex_layout();
+    flex-wrap: wrap;
+    gap: 2rem;
     @media screen and (max-width: 768px) {
-      grid-template-columns: repeat(2, minmax(20rem, 1fr));
       padding: 0 1rem;
-      grid-gap: 2rem;
-    }
-    @media screen and (max-width: 640px) {
-      grid-template-columns: repeat(1, minmax(20rem, 1fr));
-      grid-gap: 2rem;
-      padding: 0 0.5rem;
     }
     .feature {
+      flex-grow: 1;
+      max-width: 28rem;
       padding: 2rem;
       background-color: white;
       border-radius: 1rem;
-      box-shadow: 0 0 1.3rem rgba(black, 0.1);
+      box-shadow: 0 0 1rem rgba(black, 0.1);
       @include flex_layout(center, center, column);
       @media screen and (max-width: 768px) {
         @include flex_layout(null, null);
+        max-width: 100%;
       }
     }
   }

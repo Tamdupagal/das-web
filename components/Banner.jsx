@@ -1,12 +1,10 @@
-import { motion } from 'framer-motion';
-import { useState, useEffect, useRef, useContext } from 'react';
+import {useContext } from 'react';
 import Image from 'next/image';
 import React from 'react';
 import BannerImg from "../assets/lms.png";
 import styles from './Banner.module.scss';
 import { GoPrimitiveDot as Dot } from "react-icons/go"
 import { AppContext } from '../AppContext';
-import withForm from '../HOC/withForm';
 
 
 
@@ -41,9 +39,9 @@ function Banner({ data }) {
 
     return (
         <section className={styles.container} id="home">
-            <motion.div variants={FadeIn} animate="vissible" initial="initial" className={styles.content__box}>
+            <div variants={FadeIn} animate="vissible" initial="initial" className={styles.content__box}>
                 <h1 className={styles.heading}>Learn First, Pay Later !</h1>
-                <p className={styles.desc}> 
+                <div className={styles.desc}> 
                     <span>{data.title}</span> 
                     <h2>{data.program}</h2>
                     <ul>
@@ -59,9 +57,9 @@ function Banner({ data }) {
                             <li><Dot className={styles.dot}/> Weekend batch [Saturday-Sunday(3.5hours/class)]</li>
                             <li><Dot className={styles.dot}/> The next batch starts Mid August</li>
                     </ul>
-                </p>
+                </div>
                 <button onClick={handleForm} className={styles.banner__btn}>Study first Pay later</button>
-            </motion.div>
+            </div>
             <figure className={styles.banner__img}>
                 <Image src={BannerImg} alt="banner thumb"  objectFit="fill" />
             </figure>

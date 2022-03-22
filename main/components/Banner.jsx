@@ -39,9 +39,6 @@ export default function Banner() {
                             }}
                         />
                 </div>
-                <p className={styles.desc}>From Basics to Advance, learn all that is <br/>
-                    all about Any Course. Get up-to-date <br/>
-                    lectures from our industry experts.</p>
                 <button className ={styles.button} onClick={handleForm}>Study now and pay later</button>
             </div>
         </section>

@@ -56,7 +56,7 @@ function Package({ data }) {
             <div className={styles.section__header}>
                 <SectionHeader slogan="PRICING PLAN" text="Choose your pricing policy"/>
             </div>
-                    <button onClick={handleForm} layout layoutId="planBtn" transition={btn_transition} className={styles.button}>STUDY FIRST PAY LATER</button> 
+                    <button onClick={handleForm} className={styles.button}>STUDY FIRST PAY LATER</button> 
             <p className={styles.price__desc}>{data}</p>
         </section>
     )

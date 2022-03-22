@@ -11,20 +11,20 @@
     margin-bottom: 5rem;
   }
   .features {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(30rem, 50rem));
-    grid-gap: 5rem;
-    padding: 1rem;
-    place-content: center;
+    padding: 2rem;
+    @include flex_layout();
+    flex-wrap: wrap;
+    gap: 2rem;
     @media screen and (max-width: 768px) {
-      grid-template-columns: repeat(1, minmax(30rem, 50rem));
-      grid-gap: 2rem;
+      padding: 1rem;
     }
     .feature {
+      flex-grow: 1;
+      max-width: 50rem;
       padding: 4rem;
       @include flex_layout(null, null);
       border-radius: 1rem;
-      box-shadow: 0 0 2rem rgba(black, 0.1);
+      box-shadow: 0 0 1rem rgba(black, 0.1);
     }
   }
 }

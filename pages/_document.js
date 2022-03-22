@@ -16,17 +16,12 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        {/* <Head>
-          <link rel="shortcut icon" href="/static/favicon.png" />
-        </Head> */}
         <Head>
           <link rel="icon" href="/favicon.png" />
         </Head>
         <body>
           <Main />
           <NextScript />
-          {/* <div id='modal'></div> */}
-          <div id='loader'></div>
         </body>
       </Html>
     )

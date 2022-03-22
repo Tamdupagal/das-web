@@ -17,6 +17,7 @@
     color: $primary;
     align-self: center;
     padding: 1rem 0;
+    text-transform: capitalize;
   }
   .about__course {
     position: relative;
@@ -40,9 +41,12 @@
   }
   .carousel__box {
     position: relative;
-    width: 100%;
+    width: 70%;
     padding: 2rem 5rem;
     overflow: hidden;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
     .card__wrapper {
       padding: 2rem 0;
     }

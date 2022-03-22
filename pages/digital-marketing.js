@@ -50,11 +50,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Banner data={bannerData}/>
-      <Feature data={DATA().feature} />
-      <Services data={data}/>
-      <QualityFeature data={DATA().learning.dm}/>
+      <Feature className="feature" data={DATA().feature} />
+      <Services className='services' data={data}/>
+      <QualityFeature className="quality" data={DATA().learning.dm}/>
       <CoreFeature data={DATA().coreFeature.dm.description} btnText={DATA().coreFeature.dm.buttonText}/>
-      <Feature data={DATA().growth.dm} no={true}/>
+      <Feature className="growth" data={DATA().growth.dm}/>
       <WorkFlow />
       <Package data={packageData} />
       <Blog />

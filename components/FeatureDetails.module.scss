@@ -3,60 +3,53 @@
 
 .feature__img {
   position: relative;
-  min-width: 10rem;
-  max-width: 10rem;
+  min-width: 11rem;
+  max-width: 11rem;
   overflow: hidden;
   margin-bottom: 2rem;
+  object-fit: contain;
 }
-.workflow__icon {
-  width: max-content;
-  height: max-content;
-  @include flex_layout(center, null);
-  margin-bottom: 2.5rem;
-  & > span {
-    display: inline-block;
-    background-color: white;
-    color: #234582;
-    border-radius: 3rem;
-    font-size: 2.7rem;
-    width: 7rem;
-    height: 7rem;
-    font-weight: bolder;
-    display: grid;
-    place-items: center;
-    letter-spacing: 0.1rem;
-    margin-right: 1rem;
-  }
-  @media screen and (max-width: 768px) {
-    .arrow__odd,
-    .arrow__even {
-      display: none;
-    }
-  }
-  .arrow__odd {
-    transform: translateY(-1rem);
-  }
-  .arrow__even {
-    transform: translateY(1rem);
-  }
-}
+
 .feature__details {
   @include flex_layout(null, null, column);
+
+  &[data-for="feature"] {
+    .title {
+      text-align: center;
+    }
+    @media screen and (max-width: 768px) {
+      margin-left: 3rem;
+      text-align: left;
+      .title {
+        text-align: left;
+      }
+    }
+  }
+  &[data-for="quality"],
+  &[data-for="services"] {
+    margin-left: 3rem;
+    .title {
+      text-align: left;
+    }
+    @media screen and (max-width: 768px) {
+      text-align: left;
+      .title {
+        text-align: left;
+      }
+    }
+  }
 
   .title {
     font-size: 1.8rem;
     color: $orange;
     font-weight: bolder;
     margin-bottom: 1.5rem;
-    &[data-white="true"] {
-      color: white;
-    }
   }
   .description {
     width: 100%;
     font-size: 2rem;
     .phrase {
-      @include flex_layout(center, null);
+      @include flex_layout(null, null);
       font-size: 1.5rem;
       font-weight: 500;
       color: rgba($dark, 0.8);
@@ -70,8 +63,12 @@
     }
   }
   .text {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: rgba(black, 0.6);
+    font-weight: bold;
+    color: $main;
+    line-height: 1.6;
+    text-align: justify;
   }
   .feature__btn {
     background-color: $orange;
@@ -91,6 +88,16 @@
     &:hover {
       transform: translate(0.1rem, -0.1rem);
       box-shadow: -0.1rem 0.2rem 0.3rem rgba(black, 0.2);
+    }
+  }
+  &[data-for="growth"] {
+    text-align: center;
+    .text {
+      text-align: inherit;
+    }
+    @media screen and (max-width: 768px) {
+      margin-left: 2rem;
+      text-align: left;
     }
   }
 }
