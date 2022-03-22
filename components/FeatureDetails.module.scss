@@ -3,21 +3,23 @@
 
 .feature__img {
   position: relative;
-  min-width: 11rem;
-  max-width: 11rem;
-  overflow: hidden;
-  margin-bottom: 2rem;
-  object-fit: contain;
+  min-width: 10rem;
+  max-width: 10rem;
+  object-fit: fill;
 }
 
 .feature__details {
   @include flex_layout(null, null, column);
-
+  @media screen and (max-width: 768px) {
+    min-width: 30rem;
+  }
   &[data-for="feature"] {
+    margin-top: 2rem;
     .title {
       text-align: center;
     }
     @media screen and (max-width: 768px) {
+      margin-top: 0;
       margin-left: 3rem;
       text-align: left;
       .title {
@@ -28,6 +30,7 @@
   &[data-for="quality"],
   &[data-for="services"] {
     margin-left: 3rem;
+
     .title {
       text-align: left;
     }
@@ -91,11 +94,13 @@
     }
   }
   &[data-for="growth"] {
+    margin-top: 2rem;
     text-align: center;
     .text {
       text-align: inherit;
     }
     @media screen and (max-width: 768px) {
+      margin-top: 0;
       margin-left: 2rem;
       text-align: left;
     }

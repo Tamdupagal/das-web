@@ -18,7 +18,7 @@
   .feature__box {
     position: relative;
     width: 100%;
-    padding: 0 3rem;
+    padding: 0 2rem;
     @include flex_layout();
     flex-wrap: wrap;
     gap: 2rem;
@@ -27,7 +27,7 @@
     }
     .feature {
       flex-grow: 1;
-      max-width: 28rem;
+      width: 25rem;
       padding: 2rem;
       background-color: white;
       border-radius: 1rem;

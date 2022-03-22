@@ -8,8 +8,11 @@
   margin-bottom: 1rem;
   padding-left: 0.1rem;
   display: block;
-  color: rgba(black, 0.5);
+  color: rgba(black, 0.8);
   letter-spacing: 0.1rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 }
 
 .form__wrapper {
@@ -91,27 +94,6 @@
     .form__area {
       position: relative;
       height: 100%;
-      .checkbox_container {
-        padding: 2rem 0 2rem 0;
-        & > label {
-          @extend .labels;
-          padding: 0;
-          padding-bottom: 1.2rem;
-        }
-        & > .checkbox {
-          @include flex_layout(center, null);
-          margin-bottom: 2rem;
-          & > input[type="checkbox"] {
-            transform: scale(1.2);
-            margin-right: 1rem;
-          }
-          & > p {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: rgba(black, 0.5);
-          }
-        }
-      }
       .form__input {
         position: relative;
         margin-bottom: 3rem;

@@ -50,15 +50,13 @@
   .content__box {
     position: relative;
     width: 100%;
-    display: grid;
     @include flex_layout(null);
     flex-wrap: wrap;
-    grid-gap: 2rem;
-
+    grid-gap: 5rem 2rem;
     .workflow__box {
       flex-grow: 1;
       max-width: 30rem;
-      padding: 0 1.5rem;
+      padding: 0 2rem;
       .title {
         font-size: 1.6rem;
         line-height: 1.6;

@@ -57,7 +57,7 @@ function Header() {
                     <Images src={logo} objectFit="contain" layout='responsive' className={styles.image}/>
             </figure>
             <ul className={styles.btn_group}>
-                <li onPointerLeave={() => handleDropDown(false)} onPointerEnter={() => handleDropDown(true)} className={styles.btn}> <span  >Courses <FaAngleDown className={styles.arrow_down} /></span> 
+                <li onClick={()=>setToggleDropDown(!toggleDropDown)} className={styles.btn}> <span  >Courses <FaAngleDown className={styles.arrow_down} /></span> 
                     {toggleDropDown && <ul className={styles.dropdown}>
                         <li onClick={() => {
                             router.push('/digital-marketing')
