@@ -31,7 +31,7 @@ function Leads() {
 
     
 
-    if (!data?.data) return <button className="button" onClick={()=> router.push('/Dashboard')}>Back</button>
+    if (!data?.data?.length) return <button className="button" onClick={()=> router.push('/Dashboard')}>Back</button>
 
     const tableData = data.data.map(item => {
         return ({

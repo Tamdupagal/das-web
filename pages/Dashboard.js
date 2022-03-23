@@ -6,12 +6,12 @@ import {useRouter} from 'next/router'
 
 function Dashboard() {
 
-    const { dispatch, state: { admin: token } } = useContext(AppContext)
+    const { dispatch, state: { admin: token, leads : data} } = useContext(AppContext)
 
     const router = useRouter()
     
-    const handleLeads = async() => {
-        await fetchLead(dispatch, token.token, toast)
+    const handleLeads = async () => {
+        if(!data?.data?.length) await fetchLead(dispatch, token.token, toast)
         router.push('/leads')
     }
 

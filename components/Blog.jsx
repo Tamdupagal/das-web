@@ -13,11 +13,11 @@ function Blog() {
 
     const settings = {
          dots: false,
-         speed: 1000,
+         speed: 300,
          slidesToShow: 3,
          slidesToScroll: 1,
          arrows: false,
-        easing: "ease-out",
+        easing: "ease-in",
         swipe: true,
         touchMove: true,
         swipeToSlide: true,

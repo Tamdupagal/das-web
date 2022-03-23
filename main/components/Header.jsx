@@ -10,7 +10,7 @@ import { AppContext } from '../../AppContext';
 function Header() {
 
 
-    const { setIsAdmin, setToggleLoginForm } = useContext(AppContext)
+    const { setIsAdmin, setToggleLoginForm} = useContext(AppContext)
     
 
     const headerRef = useRef()
@@ -20,21 +20,13 @@ function Header() {
 
     const router = useRouter()
 
-
-
-    const handleDropDown = (toggle) => {
-        setToggleDropDown(toggle)
-    } 
-    
-
-
-
     const handleAdminLogin = function () {
         setIsAdmin(true)
         setToggleLoginForm(true)
     }
 
     const classToggle = () => {
+        if(!headerRef.current) return
         if (window.scrollY >= 5) {
                 headerRef.current.classList.add(styles.active);
                 return
@@ -70,8 +62,8 @@ function Header() {
                         }
                         }><FaAngleRight className={styles.arrow_right} /> Web Development</li>
                     </ul>}
-                    </li>
-                    <li onClick={handleAdminLogin} className={styles.btn}><span>Login</span></li>               
+                </li>
+                    <li onClick={handleAdminLogin} className={styles.btn}><span>Login</span></li>     
                 </ul>
         </header>
     )
