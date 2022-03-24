@@ -7,6 +7,7 @@ import { useContext, useEffect } from 'react'
 import Form from '../main/components/Form'
 import ReactLoading from 'react-loading'
 import Script from 'next/script'
+import { useRouter } from 'next/router'
 
 toast.configure()
 
@@ -33,6 +34,21 @@ const LoaderWrapper = function () {
 }
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter()
+
+  useEffect(() => {
+    import('react-facebook-pixel')
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init('636396230770083') // facebookPixelId
+        ReactPixel.pageView()
+
+        router.events.on('routeChangeComplete', () => {
+          ReactPixel.pageView()
+        })
+      })
+  }, [router.events])
+
   if (Component.withoutLayout === true) {
     return (
       <AppContextProvider>
