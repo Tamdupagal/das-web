@@ -23,7 +23,7 @@ function Misson() {
           </figure>
           <p>
             <strong>To Create</strong> a productive learning culture in which
-            every individual happily and whole-heartedly contributes to our goal
+            every individual happily and wholeheartedly contributes to our goal
             of making the world a place where every individual thrives together
             with the usage of technology readily available.
           </p>
@@ -68,8 +68,8 @@ function Misson() {
           </figure>
           <p>
             <strong>To Deliver</strong> outstanding skills and values by using
-            available technology and resources and aid by providing a platform
-            for their growth at a reasonably accessible price/cost.
+            available technology, resources and aid by providing a platform for
+            their growth at a reasonably accessible price/cost.
           </p>
         </div>
       </div>

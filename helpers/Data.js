@@ -297,12 +297,12 @@ export const DATA = () => {
     coreFeature: {
       web: {
         description:
-          "MASTERS/PROFESSIONAL CERTIFICATION IN\nFullstack SOftware/Web application Developer\nDigital aided school's certification course gives you anextensive, comprehensive & advanced knowledge of the all-important tech domains and includes real-world projects and practical simulations for gaining domain experience.\nYou’ll learn all tools real project experience and authentic Pro simulations to make you industry-ready. After successful completion of this 12 months program, you will receive a certificate from DIGITAL AIDED SCHOOL stating that you possess the expertise, authenticate your abilities to create TECH.",
+          "MASTERS/PROFESSIONAL CERTIFICATION IN\nFull-stack Software/Web application Developer\nDigital aided school's certification course gives you an extensive, comprehensive & advanced knowledge of the all-important tech domains and includes real-world projects and practical simulations for gaining domain experience.\nYou’ll learn all tools of real project experience and authentic Pro simulations to make you industry-ready. After successful completion of this 12 months program, you will receive a certificate from DIGITAL AIDED SCHOOL stating that you possess the expertise, authenticate your abilities to create TECH.",
         buttonText: 'Study First Pay Later',
       },
       dm: {
         description:
-          'Digital aided school DM certification course gives you anextensive, comprehensive & advanced knowledge of the all-important digital marketing domains and includes real-world projects and practical simulations for gaining domain experience. \n\n You’ll learn 40+ digital marketing tools real project experience and authentic Pro simulations to make you industry-ready. After successful completion of this 6 months program, you will receive a digital marketing certificate from DIGITAL AIDED SCHOOL stating that you possess the expertise of a Digital Marketing Specialist, authenticate your abilities to head digital marketing campaigns.',
+          'Digital aided school DM certification course gives you an extensive, comprehensive & advanced knowledge of the all-important digital marketing domains and includes real-world projects and practical simulations for gaining domain experience. \n\n You’ll learn 40+ digital marketing tools in real project experience and authentic Pro simulations to make you industry-ready. After successful completion of this 6 months program, you will receive a digital marketing certificate from DIGITAL AIDED SCHOOL stating that you possess the expertise of a Digital Marketing Specialist, authenticate your abilities to head digital marketing campaigns.',
         buttonText: 'Study First Pay Later',
       },
     },

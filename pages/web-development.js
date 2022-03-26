@@ -12,7 +12,7 @@ import Partnership from '../main/assets/art.svg'
 
 const bannerData = {
   title:
-    'MASTERS/PROFESSIONAL CERTIFICATION IN Fullstack SOFTWARE & WEP APPLICATION development.',
+    'MASTERS/PROFESSIONAL CERTIFICATION IN FULL-STACK SOFTWARE & WEB APPLICATION development.',
   program: '(12-month Program)',
 }
 

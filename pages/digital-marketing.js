@@ -12,7 +12,7 @@ import Performance from '../main/assets/art.svg'
 import Partnership from '../main/assets/art.svg'
 
 const bannerData = {
-  title: 'MASTERS/PROFESSIONAL CERTIFICATION IN Fullstack Digital Marketing',
+  title: 'MASTERS/PROFESSIONAL CERTIFICATION IN Full stack Digital Marketing',
   program: '(6-month Program)',
 }
 
