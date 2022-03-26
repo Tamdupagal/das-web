@@ -55,7 +55,7 @@ function Courses() {
         className={styles.about__course}
         style={{ marginTop: '5px', padding: '0px' }}
       >
-        World&apos;s 1st Live online classes Agency style cohort-based learning.
+        World&apos;s 1st Live online Agency style cohort-based learning classes.
       </p>
       <p
         className={styles.about__course}

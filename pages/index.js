@@ -1,23 +1,23 @@
-import Banner from '../main/components/Banner';
-import Courses from '../main/components/Courses';
+import Banner from '../main/components/Banner'
+import Courses from '../main/components/Courses'
 import Misson from '../main/components/Misson'
-import Association from '../main/components/Association';
-import  Head  from 'next/head';
-import AboutUs from '../main/components/AboutUs';
+import Association from '../main/components/Association'
+import Head from 'next/head'
+import AboutUs from '../main/components/AboutUs'
 
 export default function Home() {
   return (
     <div>
-    <Head>
+      <Head>
         <title>Digital Aided School</title>
-        <link rel="icon" href="/favicon.png" />
-</Head>
+        <link rel='icon' href='/favicon.png' />
+      </Head>
       <main>
-        <Banner/>
+        <Banner />
         <Courses />
         <Misson />
         <AboutUs />
-        <Association/>
+        <Association />
       </main>
     </div>
   )

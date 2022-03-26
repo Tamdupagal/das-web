@@ -44,7 +44,8 @@ function Banner({ data, checkBanner }) {
           <h2>{data.program}</h2>
           <ul>
             <li>
-              <Dot className={styles.dot} /> Worlds 1st Live online classes{' '}
+              <Dot className={styles.dot} /> World&apos;s 1st Live online
+              classes{' '}
             </li>
             <li>
               <Dot className={styles.dot} /> Agency style cohort-based learning{' '}
