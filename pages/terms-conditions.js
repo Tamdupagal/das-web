@@ -1,7 +1,3 @@
-import styled from 'styled-components'
-
-const Section = styled.section``
-
 const termsConditions = () => {
   return (
     <div style={{ marginTop: '80px' }}>
