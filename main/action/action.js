@@ -59,7 +59,7 @@ export const adminLogin = async (dispatch, formData,router, toast) => {
                 
     } catch (err) {
         dispatch({ type: ADMIN_LOGIN_FAIL })
-        toast.error(<Notification>{err.data || err.response.data.message}</Notification>)
+        toast.error(<Notification>{err.data || err.message || err.response?.data?.message }</Notification>)
         }        
 }
 
@@ -72,7 +72,7 @@ export const fetchLead = async (dispatch, token, toast) => {
     } catch (err) {
         console.log(err)
             dispatch({ type: FETCH_LEADS_FAIL })
-            toast.error(<Notification>{err.data || err.response.data.message || err}</Notification>)
+            toast.error(<Notification>{err.data || err.message|| err?.response?.data?.message || err}</Notification>)
         }        
 }
 
