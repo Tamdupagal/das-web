@@ -6,14 +6,19 @@ import styles from './Table.module.scss';
 function Table({ data, column }) {
 
 
+  
+  
   const [value, setValue] = useState({
     val: "sale",
     source : ""
   })
-
-    const col = useMemo(() => column, [column]);
+  
+  const col = useMemo(() => column, [column]);
   const leads = useMemo(() => data, [data]);
   
+  console.log("data===> ", leads)
+
+
     const {
         headerGroups,
         rows,
@@ -60,7 +65,7 @@ function Table({ data, column }) {
                     row.cells.map(cell =>
                     {
                       return (
-                        <td {...cell.getCellProps()}>{cell.render('Cell', {value , setValue}  ) }</td>
+                        <td {...cell.getCellProps()}>{cell.render('Cell' ) }</td>
                       )
                     })
                   }

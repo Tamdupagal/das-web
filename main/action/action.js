@@ -67,18 +67,12 @@ export const fetchLead = async (dispatch, token, toast) => {
         dispatch({ type: FETCH_LEADS_REQUEST })
     try {
         const response = await axios.get(`Admin/Dashboard/Leads`, { headers: { Authorization: token } })
-        const { status } = response.data
-        if (status != 200) {
-            console.log(response)
-            dispatch({ type: FETCH_LEADS_FAIL })
-            toast.error(<Notification>{response.data.message}</Notification>)
-            return
-        }
+        if (response.data.status != 200) throw response.data.message
             dispatch({ type: FETCH_LEADS_SUCCESS, payload : response.data.leads })
     } catch (err) {
         console.log(err)
             dispatch({ type: FETCH_LEADS_FAIL })
-            toast.error(<Notification>{err.data}</Notification>)
+            toast.error(<Notification>{err.data || err.response.data.message || err}</Notification>)
         }        
 }
 
