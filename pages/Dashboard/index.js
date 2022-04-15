@@ -7,7 +7,7 @@ function Dashboard() {
     
     return (
       <>
-            <button onClick={()=> router.push('/leads')}>Show Leads</button>
+            <button onClick={()=> router.push('Dashboard/leads')}>Show Leads</button>
             <button className="button" onClick={()=> router.push('/')}>Back</button>
       </>
   )

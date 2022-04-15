@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from 'react'
-import { AppContext } from '../AppContext';
-import Table from '../main/components/Table'
+import { AppContext } from '../../AppContext';
+import Table from '../../main/components/Table'
 import {MdModeEdit} from 'react-icons/md'
 import {RiDeleteBin6Fill} from 'react-icons/ri'
 import {useRouter} from 'next/router' 
-import { fetchLead } from '../main/action/action';
+import { fetchLead } from '../../main/action/action';
 import { toast } from 'react-toastify';
 
 

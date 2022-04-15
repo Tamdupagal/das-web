@@ -15,8 +15,6 @@ function Table({ data, column }) {
   
   const col = useMemo(() => column, [column]);
   const leads = useMemo(() => data, [data]);
-  
-  console.log("data===> ", leads)
 
 
     const {
