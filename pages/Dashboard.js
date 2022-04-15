@@ -1,23 +1,13 @@
-import React, { useContext } from 'react'
-import { AppContext } from '../AppContext'
-import { fetchLead } from '../main/action/action'
-import {toast} from 'react-toastify'
+import React from 'react'
 import {useRouter} from 'next/router'
 
 function Dashboard() {
 
-    const { dispatch, state: { admin: token, leads : data} } = useContext(AppContext)
-
-    const router = useRouter()
+  const router = useRouter()
     
-    const handleLeads = async () => {
-        if(!data?.data?.length) await fetchLead(dispatch, token.token, toast)
-        router.push('/leads')
-    }
-
     return (
       <>
-            <button onClick={handleLeads}>Show Leads</button>
+            <button onClick={()=> router.push('/leads')}>Show Leads</button>
             <button className="button" onClick={()=> router.push('/')}>Back</button>
       </>
   )

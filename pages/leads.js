@@ -1,52 +1,97 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { AppContext } from '../AppContext';
 import Table from '../main/components/Table'
+import {MdModeEdit} from 'react-icons/md'
+import {RiDeleteBin6Fill} from 'react-icons/ri'
 import {useRouter} from 'next/router' 
+import { fetchLead } from '../main/action/action';
+import { toast } from 'react-toastify';
 
 
-const COLUMNS = [
-    {
-        Header: 'Username',
-        accessor: 'userName',
-    },
-    {
-        Header: 'Number',
-        accessor: 'phoneNumber',
-    },
-    {
-        Header: 'Email',
-        accessor: 'email',
-    },
-    {
-        Header: 'Qualification',
-        accessor: 'qualification',
-    },
+
+
+const col  = [
+            {
+                Header: 'Username',
+                accessor: 'userName',
+            },
+            {
+                Header: 'Number',
+                accessor: 'phoneNumber',
+            },
+            {
+                Header: 'Email',
+                accessor: 'email',
+            },
+            {
+                Header: 'Qualification',
+                accessor: 'qualification',
+            },
+            {
+                Header: 'Action',
+                accessor: 'action',
+                Cell: props => {
+                    return (
+                        <div className="button__wraper">
+                            <button className='act__btn'><MdModeEdit className="button__icon" /> Edit</button>
+                            <button className='act__btn'><RiDeleteBin6Fill className="button__icon" /></button>
+                        </div>
+                    )
+                }
+            },
+            {
+                // onChange={(e) => setDetails(prev => ({ ...prev, qualification: e.target.value }))}
+                Header: 'Disposition',
+                accessor: 'disposition',
+                Cell: props => {
+                    // console.log(props)
+                    // console.log(props)
+                    return (
+                        <select  defaultValue="str" value="str"  name="qualification" id="qualification">
+                            <option value="10">Ringing</option>
+                            <option value="12">Call back</option>
+                            <option value="graduation">Not interested</option>
+                            <option value="graduation">Sale</option>
+                        </select>
+                    )
+                }
+            },
 ]
+        
+
+
+
+const getTableData = (data) => {
+    if (!data) return []
+    return data.map(item => {
+                return ({
+                    userName : item.userName,
+                    email : item.email,
+                    qualification : item.qualification,
+                    phoneNumber : item.phoneNumber,
+        })
+    })
+}
+
 
 function Leads() {
 
-    const { state: { leads: data } } = useContext(AppContext)
-
+    const { dispatch, state: { admin: token, leads : data} } = useContext(AppContext)
+   
     const router = useRouter()
-
     
+    useEffect(async () => {
+        await fetchLead(dispatch, token.token, toast)
+        console.log(data)
+    }, [])
 
-    if (!data?.data?.length) return <button className="button" onClick={()=> router.push('/Dashboard')}>Back</button>
-
-    const tableData = data.data.map(item => {
-        return ({
-            userName : item.userName,
-            email : item.email,
-            qualification : item.qualification,
-            phoneNumber : item.phoneNumber,
-        })
-    })
-        
-        return (
-          <div>
-                <Table data={tableData} column={COLUMNS} />
+            
+    return (
+        data?.data?.length ?
+            <div>
+                <Table data={getTableData(data.data)} column={col} />
                 <button className="button" onClick={()=> router.push('/Dashboard')}>Back</button>
-          </div>
+          </div> : null
         )
 
 }

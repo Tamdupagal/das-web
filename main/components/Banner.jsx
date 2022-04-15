@@ -18,7 +18,6 @@ export default function Banner() {
     const handleForm = function () {
         setIsAdmin(false);
         setToggleLoginForm(true);
-    
     }
 
 

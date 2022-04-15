@@ -10,7 +10,7 @@ const initialState = {
         data: null,
     },
     admin: {
-        token: null,
+        token: (typeof window !== 'undefined') ? sessionStorage.getItem('token') : null,
         auth : false,
     },
     leads: {
@@ -43,7 +43,7 @@ const reducer = (state, {type, payload})=>{
         case FETCH_LEADS_REQUEST:
             return {...state, isLoading : true}
         case FETCH_LEADS_SUCCESS:
-            return { ...state, isLoading: false, leads: { ...state.leads, data : payload.data } }
+            return { ...state, isLoading: false, leads: { ...state.leads, data : payload } }
         case FETCH_LEADS_FAIL:
             return {...state, isLoading : false}
         
