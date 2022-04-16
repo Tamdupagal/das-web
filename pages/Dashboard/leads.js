@@ -30,7 +30,7 @@ const col  = [
             {
                 Header: 'Disposition',
                 accessor: 'disposition',
-                Cell: props => {
+                Cell: function cell(props){
                     return (
                         <select   name="qualification" id="qualification">
                             <option value="10">Ringing</option>
@@ -44,7 +44,7 @@ const col  = [
             {
                 Header: 'Action',
                 accessor: 'action',
-                Cell: props => {
+                Cell: function cell(props){
                     return (
                         <div className="button__wraper">
                             <button className='act__btn'><MdModeEdit className="button__icon" /> Edit</button>
@@ -81,7 +81,7 @@ function Leads() {
 
 
     
-    useEffect(async () => {
+    useEffect(() => {
         if(data?.length) return
         fetchLead(dispatch, token, toast)
     }, [])
