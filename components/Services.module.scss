@@ -4,6 +4,7 @@
 .container {
   position: relative;
   width: 100%;
+  // background-color:#005778;
   @include flex_layout(center, center);
   overflow: hidden;
   margin-top: 10rem;
@@ -44,6 +45,9 @@
       margin-bottom: 4rem;
     }
     .feature__box {
+      border: 2px solid $orange;
+      padding: 1rem;
+      border-radius:2.5rem;
       @include flex_layout(null, null);
       &:not(:last-child) {
         margin-bottom: 5rem;

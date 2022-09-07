@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import bannerImg from '../assets/banner.svg'
+// import Image from 'next/image'
+// import bannerImg from '../assets/banner.svg'
 import Typewriter from 'typewriter-effect';
 import styles from './Banner.module.scss';
 import { useContext } from 'react';
@@ -7,8 +7,8 @@ import { AppContext } from '../../AppContext';
 
 
 const phrases = [
-    "Full Stack Web \n development.",
-    "Digital Marketing.",
+    "Game Development.",
+    "Web3 Courses.",
 ]
 
 export default function Banner() {
@@ -23,9 +23,7 @@ export default function Banner() {
 
     return (
         <section className={styles.container}>
-             <figure className={styles.banner__img}>
-                <Image src={bannerImg} alt="study first pay later" objectFit="contain" layout="responsive"/>
-            </figure>
+            
             <div className={styles.banner_info}>
                 <h1 className={styles.title}>Study now and pay later</h1>
                     <div className={styles.typewriter}>
@@ -37,6 +35,14 @@ export default function Banner() {
                                 loop: true,
                             }}
                         />
+                </div>
+                <div className={styles.para}>
+                <h1 className={styles.title2}>
+                Be a Fullstack Game Developer As Per Industry Standards.
+                </h1>
+                <h1 className={styles.title2}>
+                Portfolio & Interview Ready Program.
+                </h1>
                 </div>
                 <button className ={styles.button} onClick={handleForm}>Study now and pay later</button>
             </div>

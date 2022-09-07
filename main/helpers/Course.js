@@ -1,33 +1,33 @@
 import course2 from '../assets/fswd.jpg'
 import course1 from '../assets/dm.png'
-import course3 from '../assets/ds.png'
+// import course3 from '../assets/ds.png'
 
 export const COURSE_DATA = [
   {
     id: 1,
-    heading: 'Digital Marketing',
-    altText: 'Digital Marketing',
+    heading: 'Solid Foundation course(4 weeks)',
+    altText: 'Solid Foundation course(4 weeks)',
     imgSrc: course1,
     description:
-      '6-months Program (1:8) batch. \n 160+ hours of live online classes. \n (1.30hours/class) \n 300+ hours of training & project building.',
+      '30-days Program. \n 1.5 hour/class instructor-led classes. \n Live online everyday classes. \n 200+ hours of training & project building.',
     title: 'MASTERS/PROFESSIONAL CERTIFICATION\nIN',
-    heading: 'Fullstack Digital Marketing',
-    classes: '100+ Live online classes (1.5hour/class)',
+    heading: 'Solid Foundation course',
+    classes: '',
     btnText: 'Find Out More',
-    path: 'digital-marketing',
+    path: 'foundation-course',
   },
   {
     id: 2,
-    heading: 'Backend & Fullstack Development',
-    altText: 'Backend & Fullstack Development',
+    heading: 'Full-stack Game development',
+    altText: 'Fullstack Game development',
     imgSrc: course2,
     description:
-      '12-months Program (1:8) batch. \n 320+ hours of live online classes. \n (1.30hours/class) \n 400+ hours of training & project building.',
+      '6-months Program \n Live online classes. \n 500+ hours of training & project building. \n Portfolio - Interview Ready',
     title: 'MASTERS/PROFESSIONAL CERTIFICATION\nIN ',
-    heading: 'Fullstack & Backend Development',
-    classes: '200+ Live online classes (1.5hour/class)',
+    heading: 'Full-stack Game development',
+    classes: '',
     btnText: 'Find Out More',
-    path: 'web-development',
+    path: 'game-development',
   },
   // {
   //     id: 3,

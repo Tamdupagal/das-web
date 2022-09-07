@@ -3,29 +3,33 @@
 
 .container {
   position: relative;
-  padding: 0 5rem;
-  margin: 10rem 0;
+  padding: 5rem 0rem;
+  margin: 8rem 0;
   width: 100%;
 
   @media (max-width: 768px) {
     padding: 1rem;
     margin-top: 12rem;
     margin-bottom: 4rem;
+    // margin-left:1rem;
+    // margin-right: rem;
   }
   @include flex_layout(center, center);
   .content__box {
-    @include flex_layout(null, null, column);
+    @include flex_layout(center, null, column);
     box-shadow: 0 0 1rem rgba(black, 0.1);
     position: relative;
+    text-align: center;
     width: 50%;
-    margin-right: 4rem;
+    margin-right: 0rem;
     background-color: white;
     border-radius: 2rem;
-    padding: 2rem;
+    padding: 4rem 4rem 4rem 4rem ;
     .heading {
       font-size: clamp(1rem, -0.875rem + 8.333vw, 3rem);
       font-weight: bolder;
       color: $main;
+      text-align: center;
     }
     .desc {
       & > span {
@@ -34,6 +38,7 @@
         color: $orange;
         font-size: 2rem;
         padding: 2rem 0;
+        // text-align: center;
       }
       & > h2 {
         font-size: 2rem;
@@ -45,9 +50,10 @@
           &:not(:last-child) {
             margin-bottom: 1rem;
           }
-          @include flex_layout(center, null);
+          @include flex_layout(center, center);
           .dot {
             color: $main;
+            // text-align: center;
             margin-right: 1rem;
             font-size: 2rem;
           }
@@ -55,13 +61,13 @@
       }
     }
     .banner__btn {
-      background-color: $orange;
-      color: white;
+      background-color: white;
+      color: $orange;
       font-size: 1.5rem;
-      border-radius: 0.4rem;
+      border-radius: 2.5rem;
       padding: 1.1rem 2.5rem;
       width: max-content;
-      border: none;
+      border: 2px solid $orange;
       cursor: pointer;
       font-weight: bold;
       transition : {

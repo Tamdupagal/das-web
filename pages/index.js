@@ -3,7 +3,8 @@ import Courses from '../main/components/Courses'
 import Misson from '../main/components/Misson'
 import Association from '../main/components/Association'
 import Head from 'next/head'
-import AboutUs from '../main/components/AboutUs'
+import WorkFlow from '../components/WorkFlow'
+// import AboutUs from '../main/components/AboutUs'
 
 export default function Home() {
   return (
@@ -16,8 +17,8 @@ export default function Home() {
         <Banner />
         <Courses />
         <Misson />
-        <AboutUs />
         <Association />
+        <WorkFlow />
       </main>
     </div>
   )

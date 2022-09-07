@@ -2,7 +2,10 @@
 @import "../styles/config/variable";
 
 .container {
+  width: 100%;
   margin-top: 10rem;
+  position:relative;
+  
   @media screen and (max-width: 768px) {
     margin-top: 6rem;
   }
@@ -20,8 +23,9 @@
     }
     .feature {
       flex-grow: 1;
-      max-width: 50rem;
-      padding: 4rem;
+      max-width: 38rem;
+      padding: 3rem;
+      min-height: 20rem;
       @include flex_layout(null, null);
       border-radius: 1rem;
       box-shadow: 0 0 1rem rgba(black, 0.1);

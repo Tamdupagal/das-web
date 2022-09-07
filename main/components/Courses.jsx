@@ -53,19 +53,19 @@ function Courses() {
       </p>
       <p
         className={styles.about__course}
-        style={{ marginTop: '5px', padding: '0px' }}
+        style={{ marginTop: '3px', padding: '0px' }}
       >
-        World&apos;s 1st Live online Agency style cohort-based learning classes.
+        World&apos;s 1st Live online Agency style cohort-based learning.
       </p>
       <p
         className={styles.about__course}
-        style={{ marginTop: '5px', padding: '0px' }}
+        style={{ marginTop: '3px', padding: '0px' }}
       >
-        1:8 collaborative Live project building academic experience.
+      1:10 (batch) collaborative Live project building academic experience.
       </p>
       <p
         className={styles.about__course}
-        style={{ marginTop: '5px', padding: '0px' }}
+        style={{ marginTop: '3px', padding: '0px' }}
       >
         Live Real Life industry-standard projects.
       </p>

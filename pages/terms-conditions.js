@@ -1,6 +1,6 @@
 const termsConditions = () => {
   return (
-    <div style={{ marginTop: '80px' }}>
+    <div style={{ margin:'20px' ,paddingTop:'80px'}}>
       <h1 className='c10' id='h.gjdgxs' style={{ marginBottom: '10px' }}>
         <span className='c16'>Terms &amp; Conditions</span>
       </h1>

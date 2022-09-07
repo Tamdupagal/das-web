@@ -11,6 +11,7 @@
   background-image: url(../assets/wave1.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  // text-align: center;
   @media screen and (max-width: 768px) {
     padding-top: 15rem;
   }
@@ -27,11 +28,13 @@
   .wrapper {
     position: relative;
     width: 80%;
+    // padding-left: 0rem;
+    // padding-left: rem;
     @include flex_layout(center, center);
     padding: 3rem 8rem;
     .img {
       order: 2;
-      flex: 0.7;
+      flex: 1;
       position: relative;
     }
     .footer_text {
@@ -48,6 +51,7 @@
       background-color: white;
       border-radius: 1rem;
       margin-right: 10rem;
+      margin-left: 10rem;
       & > strong {
         color: $main;
         border: 1px solid red;

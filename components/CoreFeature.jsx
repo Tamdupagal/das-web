@@ -10,21 +10,20 @@ const style = {
     flexDirection : "column",
     alignItems: "flex-start",
 }
+// <figure className={styles.section__img}>
+// </figure>
 
-function CoreFeature({ data, btnText}) {
+function CoreFeature({ data, btnText,title}) {
     return (
         <section className={styles.container}>
             <div className={styles.content__box}>
                 <div className={styles.section__header}>
-                <SectionHeader slogan="ABOUT THE PROGRAM" text="MASTERS/PROFESSIONAL CERTIFICATION IN 
-Fullstack Digital Marketing"/>
+                <SectionHeader slogan="ABOUT THE PROGRAM" title={title}/>
                 </div>
                 <div className={styles.feature__box}>
                     <FeatureDetails style={style} description={data} btnText={btnText}/>
                 </div>
             </div>
-            <figure className={styles.section__img}>
-            </figure>
         </section>
     )
 }

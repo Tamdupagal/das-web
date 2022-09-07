@@ -5,13 +5,14 @@ import { FaHourglassHalf, FaStar } from 'react-icons/fa'
 import styles from './CourseBox.module.scss'
 import Button from './Button'
 import { motion } from 'framer-motion'
+// <figure className={styles.course_image}>
+//         <Image src={props.imgSrc} objectFit='fill' alt={props.alt} />
+//       </figure>
+
 
 function CourseBox(props) {
   return (
-    <div className={styles.course_box}>
-      <figure className={styles.course_image}>
-        <Image src={props.imgSrc} objectFit='fill' alt={props.alt} />
-      </figure>
+    <div className={styles.course_box}>  
       <div className={styles.info_box}>
         <h3 className={styles.title}>{props.title}</h3>
         <h1 className={styles.heading}>{props.heading}</h1>
@@ -31,7 +32,7 @@ function CourseBox(props) {
         </span>
         <div className={styles.btn_wrapper}>
           <Button
-            style={{ backgroundColor: 'orangered' }}
+            style={{ backgroundColor: 'white',color:'#F8801B',border:'2px solid #F8801B'}}
             href={'/' + props.path}
           >
             {props.btnText}
