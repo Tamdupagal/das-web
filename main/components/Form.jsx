@@ -46,6 +46,7 @@ const AdminForm = ({register, details, setDetails, errors}) => {
 }
 
 
+
 const LeadForm = ({register, details, setDetails, errors}) => {
     return (
         <>

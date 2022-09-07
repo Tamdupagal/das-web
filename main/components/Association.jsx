@@ -4,6 +4,9 @@ import { FaCheckCircle } from 'react-icons/fa'
 import about from '../assets/association.svg'
 import styles from './Association.module.scss';
 
+// <figure className={styles.img}>
+//     <Image src={about} layout="responsive" objectFit="contain" alt="Association"/>
+// </figure>
 function Association() {
     return (
         <section className={styles.container}>
@@ -11,9 +14,6 @@ function Association() {
                 With our Association you will gain
             </h1>
             <div className={styles.wrapper}>
-                <figure className={styles.img}>
-                    <Image src={about} layout="responsive" objectFit="contain" alt="Association"/>
-                </figure>
 
                 <div className={styles.footer_text}>
                         <ul>

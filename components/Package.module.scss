@@ -24,13 +24,13 @@
     margin-bottom: 5rem;
   }
   .button {
-    background-color: $main;
-    color: white;
+    background-color: white;
+    color: $main;
     font-size: 1.5rem;
-    border-radius: 0.4rem;
+    border-radius: 2.5rem;
     padding: 1.1rem 2.5rem;
     width: max-content;
-    border: none;
+    border: 2px solid $main;
     cursor: pointer;
     font-weight: bold;
     transition : {

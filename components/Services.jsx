@@ -5,17 +5,18 @@ import FeatureDetails from './FeatureDetails';
 
 
 
+// <figure className={styles.service__img}/>
 function Services({ data, className}) {
     
 
     return (
         <section className={styles.container}>
-            <figure className={styles.service__img}/>
             <div className={styles.content__box}>
                 <div className={styles.service__header}>
-                    <SectionHeader slogan="ACHIEVEMENT" text="Be Industry ready
-Come up with new ideas for DM 
-Identified & solve DM problems for companies " />
+                    <SectionHeader slogan="ACHIEVEMENT" text="Start getting Industry ready
+Identified & solve problems for companies 
+Build a strong foundation for the gaming industry.
+                    " />
                 </div>
                 {data.map(item => {
                     return (

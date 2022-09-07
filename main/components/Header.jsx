@@ -52,15 +52,15 @@ function Header() {
                 <li onClick={()=>setToggleDropDown(!toggleDropDown)} className={styles.btn}> <span  >Courses <FaAngleDown className={styles.arrow_down} /></span> 
                     {toggleDropDown && <ul className={styles.dropdown}>
                         <li onClick={() => {
-                            router.push('/digital-marketing')
+                            router.push('/foundation-course')
                             setToggleDropDown(false)
                         }
-                    }>  <FaAngleRight className={styles.arrow_right} />Digital Marketing</li>
+                    }>  <FaAngleRight className={styles.arrow_right} />Foundation Course</li>
                         <li onClick={() => {
-                            router.push('/web-development')
+                            router.push('/game-development')
                             setToggleDropDown(false)
                         }
-                        }><FaAngleRight className={styles.arrow_right} /> Web Development</li>
+                        }><FaAngleRight className={styles.arrow_right} /> Game Development</li>
                     </ul>}
                 </li>
                     <li onClick={handleAdminLogin} className={styles.btn}><span>Login</span></li>     

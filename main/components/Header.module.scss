@@ -33,6 +33,7 @@
   .btn_group {
     position: relative;
     height: 100%;
+    // border-radius:2.5rem;
     @include flex_layout(center);
     .btn {
       position: relative;
@@ -77,7 +78,7 @@
       @include flex_layout();
       .arrow_down {
         font-size: 1.7rem;
-        color: black;
+        color: $orange;
         margin-left: 0.8rem;
       }
     }
@@ -88,6 +89,7 @@
     top: 101%;
     right: 0;
     background-color: white;
+    border-radius :2.5rem;
     width: max-content;
     overflow: hidden;
     user-select: none;
@@ -100,6 +102,7 @@
     & > li {
       list-style: none;
       padding: 1.5rem 2rem;
+      border-radius:2.5rem;
 
       &:hover {
         background-color: $main;

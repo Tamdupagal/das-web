@@ -4,14 +4,14 @@
 .container {
   position: relative;
   width: 100%;
-  padding: 1rem;
+  padding-top:6rem;
   margin-top: 10rem;
   @include flex_layout(center, center);
   background-color: white;
   .banner_info {
     padding: 2rem 4rem;
     // min-height:
-    @include flex_layout(null, center, column);
+    @include flex_layout(center, center, column);
     @media screen and (max-width: 768px) {
       width: 100%;
       padding: 2rem;
@@ -23,18 +23,32 @@
       color: $main;
       font-weight: bolder;
       padding-bottom: 2rem;
+      text-align: center;
+      // background-color: $orange;
     }
 
     .typewriter {
       text-transform: capitalize;
-      font-size: 5rem;
+      font-size: 6rem;
+      text-align: center;
       font-variant: small-caps;
       color: $orange;
       width: 100%;
-      min-height: 14rem;
+      min-height: 9rem;
       white-space: pre-line;
       font-weight: bold;
       @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+    }
+    .para{
+      text-align: center;
+      min-height:3rem;
+      line-height: 4rem;
+      .title2{
+        font-size: 2.5rem;
+        color: $main;
+        text-transform: uppercase;
         text-align: center;
       }
     }
@@ -50,13 +64,14 @@
 }
 
 .button {
-  background-color: $orange;
-  color: white;
+  background-color: white;
+  color: $orange;
   font-size: 1.5rem;
-  border-radius: 0.4rem;
+  border-radius: 2.5rem;
+  text-align: center;
   padding: 1.1rem 2.5rem;
   width: max-content;
-  border: none;
+  border: 2px solid $orange;
   cursor: pointer;
   font-weight: bold;
   transition : {
