@@ -5,9 +5,6 @@ import { FaHourglassHalf, FaStar } from 'react-icons/fa'
 import styles from './CourseBox.module.scss'
 import Button from './Button'
 import { motion } from 'framer-motion'
-// <figure className={styles.course_image}>
-//         <Image src={props.imgSrc} objectFit='fill' alt={props.alt} />
-//       </figure>
 
 
 function CourseBox(props) {
@@ -31,8 +28,8 @@ function CourseBox(props) {
           {props.classes}
         </span>
         <div className={styles.btn_wrapper}>
-          <Button
-            style={{ backgroundColor: 'white',color:'#F8801B',border:'2px solid #F8801B'}}
+          <Button className={styles.btn}
+            // style={{ backgroundColor: 'white',color:'#005778',border:'1px solid #005778',borderRadius:'8px',fontSize:'13px' ,padding:'10px 30px 10px 30px'}}
             href={'/' + props.path}
           >
             {props.btnText}

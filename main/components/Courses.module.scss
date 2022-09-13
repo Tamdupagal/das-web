@@ -4,7 +4,7 @@
 .container {
   position: relative;
   width: 100%;
-  padding: 20rem 0;
+  padding: 20rem 0 10rem 0;
   @include flex_layout(center, null, column);
   background-image: url(../assets/wave2.svg);
   background-repeat: no-repeat;
@@ -13,21 +13,20 @@
     padding: 15rem 0;
   }
   .main_title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: $primary;
     align-self: center;
     padding: 1rem 0;
-    text-transform: capitalize;
+    text-transform: uppercase;
     padding-top: 1.5rem;
   }
   .about__course {
-    position: relative;
-    width: max-content;
     border-radius: 0.5rem;
-    font-size: 1.7rem;
-    line-height: 1.8;
-    font-weight: bolder;
-    padding: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 30px;
+    font-weight: 500;
+    padding: 1rem 0 3rem 0;
     color: white;
     word-spacing: 0.5rem;
     text-align: center;
@@ -37,14 +36,17 @@
     & > span {
       font-size: 2rem;
       color: $orange;
-      padding: 0 0.5rem;
+      padding: 0 1rem;
     }
   }
   .carousel__box {
     position: relative;
     width: 70%;
-    padding: 2rem 5rem;
+    padding: 2rem 8rem;
     overflow: hidden;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
     @media screen and (max-width: 768px) {
       width: 100%;
     }

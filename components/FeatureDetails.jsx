@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import {motion} from 'framer-motion'
 import styles from './FeatureDetails.module.scss';
 import { GoPrimitiveDot as Dot } from "react-icons/go";
-
+import Link from 'next/link';
 import { AppContext } from '../AppContext';
 
 
@@ -17,9 +17,6 @@ function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, p
         setToggleLoginForm(true);
     }        
 
-    // <Image src={imgSrc} alt={altText} layout="responsive" />
-    // {altText && <figure className={styles.feature__img}>
-    // </figure>}
     return (
         <>
         {showIcon && <div className={styles.workflow__icon}>
@@ -47,7 +44,9 @@ function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, p
                 {description && <p className={styles.text}>
                     {description}
                 </p>}
-                {btnText && <button onClick={handleForm} className={styles.feature__btn}>{btnText}</button>}
+                {btnText && <button className={styles.feature__btn}> <Link  href="https://wa.me/917304360502?text=I'm%20interested%20in%20your%20Game%20Development%20Course" >
+                <a target="_blank" className={styles.Link}>{btnText}</a> 
+                </Link></button>}
             </div>
         </>
     )

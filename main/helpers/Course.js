@@ -10,10 +10,10 @@ export const COURSE_DATA = [
     imgSrc: course1,
     description:
       '30-days Program. \n 1.5 hour/class instructor-led classes. \n Live online everyday classes. \n 200+ hours of training & project building.',
-    title: 'MASTERS/PROFESSIONAL CERTIFICATION\nIN',
+    title: 'MASTERS/PROFESSIONAL CERTIFICATION IN',
     heading: 'Solid Foundation course',
     classes: '',
-    btnText: 'Find Out More',
+    btnText: 'Pay As You Like',
     path: 'foundation-course',
   },
   {
@@ -23,10 +23,10 @@ export const COURSE_DATA = [
     imgSrc: course2,
     description:
       '6-months Program \n Live online classes. \n 500+ hours of training & project building. \n Portfolio - Interview Ready',
-    title: 'MASTERS/PROFESSIONAL CERTIFICATION\nIN ',
+    title: 'MASTERS/PROFESSIONAL CERTIFICATION IN ',
     heading: 'Full-stack Game development',
     classes: '',
-    btnText: 'Find Out More',
+    btnText: 'Learn First Pay Later',
     path: 'game-development',
   },
   // {

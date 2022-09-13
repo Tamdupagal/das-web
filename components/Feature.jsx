@@ -14,7 +14,7 @@ function Feature({ data, className }) {
           return (
             <div className={styles.feature} key={item.id}>
               <FeatureDetails {...item} className={className} />
-            </div>
+            </div> 
           )
         })}
       </div>

@@ -37,7 +37,7 @@ const data = [
 ]
 
 const packageData =
-  'STUDY FIRST PAY LATER.PAY ZERO TILL YOU LAND A JOB.\n\n Total fee: Rs 30000 inclusive of GST.'
+  'STUDY FIRST PAY LATER. PAY ZERO TILL YOU LAND A JOB.\n\n Total fee: Rs 30000 inclusive of GST.'
 
 export default function Home() {
   return (
@@ -52,12 +52,14 @@ export default function Home() {
       <Services className='services' data={data} />
       <QualityFeature className='quality' data={DATA().learning.dm} />
       <CoreFeature
-        data={DATA().coreFeature.dm.description}
+      title={DATA().coreFeature.dm.title}  
+      data={DATA().coreFeature.dm.description}
         btnText={DATA().coreFeature.dm.buttonText}
       />
       <Feature className='growth' data={DATA().growth.dm} />
       <WorkFlow />
       <Package data={packageData} />
+      <hr/>
       </div>
       )
     }

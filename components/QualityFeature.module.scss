@@ -3,8 +3,8 @@
 
 .container {
   width: 100%;
-  margin-top: 10rem;
   position:relative;
+  background-color:#fffef8;
   
   @media screen and (max-width: 768px) {
     margin-top: 6rem;
@@ -23,6 +23,7 @@
     }
     .feature {
       flex-grow: 1;
+      background-color: #fff;
       max-width: 38rem;
       padding: 3rem;
       min-height: 20rem;

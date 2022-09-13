@@ -4,7 +4,7 @@ import {responsive } from '../helpers/Package';
 import ButtonGroup from './ButtonGroup';
 import styles from './Package.module.scss';
 import SectionHeader from './SectionHeader';
-
+import Link from 'next/link';
 
 
 
@@ -56,7 +56,11 @@ function Package({ data }) {
             <div className={styles.section__header}>
                 <SectionHeader slogan="PRICING PLAN" text="Choose your pricing policy"/>
             </div>
-                    <button onClick={handleForm} className={styles.button}>STUDY FIRST PAY LATER</button> 
+                    <button  className={styles.button}>
+                    <Link  href="https://wa.me/917304360502?text=I'm%20interested%20in%20your%20Game%20Development%20Course" >
+                    <a target="_blank" className={styles.Link}>Study First Pay Later</a> 
+                    </Link>
+                    </button> 
             <p className={styles.price__desc}>{data}</p>
         </section>
     )

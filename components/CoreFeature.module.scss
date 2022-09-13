@@ -3,51 +3,36 @@
 
 .container {
   position: relative;
+  background-color:#fffef8;
   width: 100%;
   height: 100%;
   padding: 4rem 2rem;
-  margin-top: 10rem;
+  margin-top: 0rem;
+  padding-top: 10rem;
   @include flex_layout(null, center);
   overflow: hidden;
   @media screen and (max-width: 768px) {
     @include flex_layout(center, null, column);
-    background-size: 70%;
-    padding: 1rem;
     margin: 6rem 0;
     background-position: 140% 100%;
   }
-  .section__img {
-    position: relative;
-    height: max-content;
-    width: 50%;
-    background-image: url(../main/assets/studyFirst.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-left: 10rem;
-    @media screen and (max-width: 768px) {
-      width: 100%;
-      margin: 0;
-      margin-top: 3rem;
-    }
-    &::after {
-      content: "";
-      display: block;
-      padding-bottom: 92%;
-    }
-  }
+  
   .content__box {
     position: relative;
-    width: 50%;
+    width: 60%;
     @include flex_layout(null, null, column);
     padding: 1rem;
     @media screen and (max-width: 768px) {
-      width: 100%;
+      width: 80%;
       margin-bottom: 4rem;
     }
     .section__header {
       margin-bottom: 4rem;
     }
     .feature__box {
+      border: 1px solid #fd7e14;
+      border-radius: 8px;
+      padding: 3rem 3rem;
       @include flex_layout(null, null);
       &:not(:last-child) {
         margin-bottom: 5rem;

@@ -2,7 +2,11 @@
 @use 'sass:math';
 @import '../styles/config/variable';
 @import 'react-toastify/dist/ReactToastify.css';
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';
 
@@ -11,11 +15,12 @@
   align-items: $align;
   justify-content: $justify;
   flex-direction: $direction;
+  letter-spacing: 0.0025rem;
 }
 
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   width: 100%;
   position: relative;
   background-color: white;

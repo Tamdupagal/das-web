@@ -1,10 +1,8 @@
-// import Image from 'next/image'
-// import bannerImg from '../assets/banner.svg'
 import Typewriter from 'typewriter-effect';
 import styles from './Banner.module.scss';
 import { useContext } from 'react';
 import { AppContext } from '../../AppContext';
-
+import Link from 'next/link'
 
 const phrases = [
     "Game Development.",
@@ -25,7 +23,7 @@ export default function Banner() {
         <section className={styles.container}>
             
             <div className={styles.banner_info}>
-                <h1 className={styles.title}>Study now and pay later</h1>
+                <h1 className={styles.title}>Study Now and Pay later</h1>
                     <div className={styles.typewriter}>
                         <Typewriter
                             onInit={t=>t.changeDeleteSpeed(1).changeDelay(0.4)}
@@ -38,13 +36,14 @@ export default function Banner() {
                 </div>
                 <div className={styles.para}>
                 <h1 className={styles.title2}>
-                Be a Fullstack Game Developer As Per Industry Standards.
-                </h1>
-                <h1 className={styles.title2}>
-                Portfolio & Interview Ready Program.
+                Be a Fullstack Game Developer As Per Industry Standards Portfolio & Interview Ready Program.
                 </h1>
                 </div>
-                <button className ={styles.button} onClick={handleForm}>Study now and pay later</button>
+                <button className={styles.button}>
+                <Link  href="https://wa.me/917304360502?text=I'm%20interested%20in%20your%20Game%20Development%20Course" >
+                <a target="_blank" className={styles.Link}>Study now and pay later</a> 
+                </Link>
+                </button>
             </div>
         </section>
     )
