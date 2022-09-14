@@ -1,199 +1,115 @@
 @import "../../styles/config/utilities";
 @import "../../styles/config/variable";
 
-.ul {
-  position: relative;
-  font-weight: bolder;
-  padding: 2rem 0;
-  @include flex_layout(center, flex-end);
-  width: 100%;
-  &:nth-child(2) {
-    align-self: flex-end;
-  }
-  @media screen and (max-width: 768px) {
-    @include flex_layout(flex-start, null, column);
-    width: 100%;
-    border-bottom: 0.2rem solid $main;
-  }
-  @media screen and (max-width: 1024px) {
-    @include flex_layout(flex-start, null, column);
-    width: 100%;
-    border-bottom: 0.2rem solid $main;
-  }
-  & > span {
-    display: inline-block;
-    font-size: 1.8rem;
-    padding-right: 2rem;
-    color: $main;
-  }
-  & > li {
-    list-style: none;
-    font-size: 1.4rem;
-    color: rgba($main, 0.9);
-    padding: 0.8rem 2.5rem;
-    transition: {
-      property: color;
-      duration: 0.08s;
-    }
-    &:hover {
-      color: $orange;
-    }
-    &:not(:last-child) {
-      border-right: 0.2rem solid $main;
-    }
-    @media screen and (max-width: 768px) {
-      border: none !important;
-      width: max-content;
-      padding: 0.8rem 0;
-    }
-    @media screen and (max-width: 1024px) {
-      border: none !important;
-      width: max-content;
-      padding: 0.8rem 0;
-    }
-    .icon {
-      font-size: 1.5rem;
-      margin-right: 1rem;
-      color: $main !important;
-    }
-    .social {
-      cursor: pointer;
-      &:not(:last-child) {
-        margin-right: 1rem;
-      }
-      font-size: 2.5rem;
-    }
-  }
-  &:last-child {
-    align-self: flex-end;
-    border: none;
-    width: max-content;
-    padding: 2rem 0 0 !important;
-    & > li {
-      border: none;
-      padding: 0.5rem 1.5rem;
-    }
-    @media screen and (max-width: 768px) {
-      @include flex_layout(center, flex-end);
-      margin-bottom: 5rem;
-      align-self: flex-start;
-      & > li {
-        padding: 0;
-        &:not(:last-child) {
-          margin-right: 2rem;
-        }
-      }
-    }
-    @media screen and (max-width: 1024px) {
-      @include flex_layout(center, flex-end);
-      margin-bottom: 5rem;
-      align-self: flex-start;
-      & > li {
-        padding: 0;
-        &:not(:last-child) {
-          margin-right: 2rem;
-        }
-      }
-    }
-  }
+
+.footer{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color:#fffef8;
 }
-.footer {
-  position: relative;
-  width: 100%;
-  @include flex_layout(null, center);
-  background-color: white;
-  padding: 5rem 2rem;
-  flex-wrap: wrap;
-  border-top: 0.2rem solid $main;
-  .copyright {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: max-content;
-    padding: 1.2rem 0.5rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: $main;
-    @include flex_layout(center, center);
-    border-top: 0.2rem solid $main;
-    word-spacing: 0.4rem;
-    .heart {
-      display: block;
-      margin: 0 1rem;
-      font-size: 1.8rem;
-      color: red;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    @include flex_layout(null, null, column);
-    padding: 1rem 2rem;
-  }
-  @media screen and (max-width: 1024px) {
-    @include flex_layout(null, null, column);
-    padding: 1rem 2rem;
-  }
-  .wrapper {
-    position: relative;
-    margin-bottom: 5rem;
-    @include flex_layout(center, space-between, column);
-    width: max-content;
-    @media screen and (max-width: 768px) {
-      order: 2;
-      @include flex_layout(null, null, column);
-      width: 100%;
-    }
-    @media screen and (max-width: 1024px) {
-      order: 2;
-      @include flex_layout(null, null, column);
-      width: 100%;
-    }
-  }
+
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: left;
+  justify-content:space-between;
+  padding:5rem 10rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  background-color: #fffef8;
+
+b{
+  font-size:20px;
+  text-transform: uppercase;
+  font-weight:600;
+  color: #FD7E14;
 }
-.address {
-  position: relative;
-  padding: 0.5rem 4rem;
-  border-left: 0.2rem solid $main;
-  margin-left: 2.5rem;
-  min-width: 40rem;
-  margin-bottom: 5rem;
-  @media screen and (max-width: 768px) {
-    order: 1;
-    border: none;
-    border-bottom: 0.2rem solid $main;
-    padding: 0.5rem 0;
-    padding-bottom: 2rem;
-    margin: 0;
-    width: 100%;
-  }
-  @media screen and (max-width: 1024px) {
-    order: 1;
-    border: none;
-    padding: 0.5rem 0;
-    padding-bottom: 2rem;
-    margin: 0;
-    width: 100%;
-  }
-  & > ul {
-    @include flex_layout(null, null, column);
-    & > span {
-      display: inline-block;
-      font-size: 1.8rem;
-      color: $main;
-      font-weight: bold;
-      padding: 2rem 0 0.2rem 0;
+  
+  .ul1{
+    padding: 10px;
+    flex: 25%;
+    font-size:15px;
+    list-style-type: none;
+    border-right-style: solid;
+    border-right-color: #005778;
+    padding-left: 30px;
+    color: #005778;
+    width: 80%;
+
+    span{
+      padding-bottom: 1px;
     }
-    & > li {
-      list-style: none;
-      font-size: 1.4rem;
-      color: rgba($main, 0.9);
-      font-weight: bold;
-      @include flex_layout(center, null);
-      line-height: 2;
-      .icon {
-        font-size: 2rem;
-        margin-right: 2rem;
-      }
-    }
+
   }
+  .ul2{
+    padding: 10px;
+    flex: 25%;
+    font-size:15px;
+    list-style-type: none;
+    padding-left: 30px;
+    border-right-style: solid;
+    border-right-color: #005778 ;
+    color: #005778;
+    width: 80%;
+  }
+  .ul3{
+    padding: 10px;
+    flex: 25%;
+    font-size:15px;
+    padding-left: 30px;
+    list-style-type: none;
+    border-right-style: solid;
+    border-right-color: #005778;
+    width: 80%;
+    color: #005778;
+  }
+  .ul4{
+    width: 80%;
+    padding: 10px;
+    flex: 25%;
+    font-size:15px;
+    list-style-type: none;
+    padding-left: 30px;
+    color: #005778;
+}
+
+@media (max-width: 1024px) {
+  flex-direction: column;
+  border-right-style:solid;
+  border-right-color: #fff;
+    padding:5rem 4rem;
+    // border-style:none;
+    // display: none;
+}
+
+
+}
+.fot{
+
+  // line-height:110px;
+}
+.copyright{
+  font-size:20px;
+  font-weight: 600;
+  text-align:center;
+  color:#005778;
+  padding-bottom: 20px;
+
+  @media (max-width: 1024px) {
+    font-size:15px;
+  }
+
+
+  b{
+    color:#FD7E14;
+    
+  }
+  .heart{
+    
+    color:#FD7E14;
+  }
+
 }

@@ -1,26 +1,18 @@
 import Image from 'next/image'
 import React from 'react'
-import mission1 from '../assets/Productive-Work-Culture.svg'
-import mission2 from '../assets/knowledge.png'
-import mission3 from '../assets/Elevate.svg'
-import mission4 from '../assets/achievement.svg'
+// import mission1 from '../assets/Productive-Work-Culture.svg'
+// import mission2 from '../assets/knowledge.png'
+// import mission3 from '../assets/Elevate.svg'
+// import mission4 from '../assets/achievement.svg'
 import styles from './Misson.module.scss'
-import certify from '../assets/Certifications.svg'
+// import certify from '../assets/Certifications.svg'
 
 function Misson() {
   return (
     <section className={styles.container}>
-      <h1 className={styles.main_title}>Digital Aided School&apos;s Mission</h1>
+      <h1 className={styles.main_title}>Digital Aided School Mission</h1>
       <div className={styles.mission__box}>
         <div className={styles.box}>
-          <figure>
-            <Image
-              src={mission1}
-              alt='Productive work'
-              objectFit='contain'
-              layout='responsive'
-            />
-          </figure>
           <p>
             <strong>To Create</strong> a productive learning culture in which
             every individual happily and wholeheartedly contributes to our goal
@@ -29,14 +21,6 @@ function Misson() {
           </p>
         </div>
         <div className={styles.box}>
-          <figure>
-            <Image
-              src={mission2}
-              alt='Next generation'
-              objectFit='contain'
-              layout='responsive'
-            />
-          </figure>
           <p>
             <strong>To Elevate</strong> the thinking of the next generation by
             providing them with all the necessary tools and knowledge to enhance
@@ -44,28 +28,12 @@ function Misson() {
           </p>
         </div>
         <div className={styles.box}>
-          <figure>
-            <Image
-              src={mission3}
-              alt='Good knowledge'
-              objectFit='cover'
-              layout='responsive'
-            />
-          </figure>
           <p>
             <strong>To Make</strong> good knowledge and information available to
             all while using available technology or developing a new one.
           </p>
         </div>
         <div className={styles.box}>
-          <figure>
-            <Image
-              src={certify}
-              alt='Important skills'
-              objectFit='contain'
-              layout='responsive'
-            />
-          </figure>
           <p>
             <strong>To Deliver</strong> outstanding skills and values by using
             available technology, resources and aid by providing a platform for

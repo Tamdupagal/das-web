@@ -16,8 +16,8 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
-        <ul className={styles.ul}>
-          <span>Policies</span>
+        <ul className={styles.ul1}>
+          <span><b>Policies</b></span>
           <li>
             <Link href='/terms-conditions'>
               <a className={styles.link}>Terms & Conditions</a>
@@ -39,69 +39,68 @@ function Footer() {
             </Link>
           </li>
         </ul>
-        <ul className={styles.ul}>
-          <span>Contact Us</span>
+        <span className="vertical-line"></span>
+        <ul className={styles.ul2}>
+        <span><b>Contact Us</b></span>
           <li>
             <FaPhone className={styles.icon} /> +91 7304360502
-          </li>
-          <li>
-            <FaPhone className={styles.icon} /> +44 7405888449
           </li>
           <li>
             <FaEnvelope className={styles.icon} /> hello@digitalaidedschool.com
           </li>
         </ul>
-        <ul className={styles.ul}>
+        <span className="vertical-line"></span>
+        <ul className={styles.ul3}>
+        <span><b>Social Media</b></span>
           <li>
             {' '}
-            <Link href='#'>
+            <Link href='https://www.linkedin.com/company/digital-aided-school/'>
               <a>
-                <FaLinkedinIn className={styles.social} />
+                <FaLinkedinIn className={styles.social} /> LinkedIn
               </a>
             </Link>
           </li>
           <li>
-            {' '}
-            <Link href='#'>
-              <a>
-                <FaYoutube className={styles.social} />
-              </a>
-            </Link>
+          {' '}
+          <Link href='https://www.instagram.com/digitalaidedschool/'>
+          <a>
+          <FaInstagram className={styles.social} /> Instagram
+          </a>
+          </Link>
           </li>
           <li>
-            {' '}
-            <Link href='#'>
-              <a>
-                <FaTwitter className={styles.social} />
-              </a>
-            </Link>{' '}
+          {' '}
+          <Link href='https://twitter.com/DigiAidedSchool'>
+          <a>
+          <FaTwitter className={styles.social} /> Twitter
+          </a>
+          </Link>{' '}
           </li>
           <li>
-            {' '}
-            <Link href='#'>
-              <a>
-                <FaFacebook className={styles.social} />
-              </a>
-            </Link>{' '}
+          {' '}
+          <Link href='https://m.facebook.com/digitalaidedschool'>
+          <a>
+          <FaFacebook className={styles.social} /> Facebook
+          </a>
+          </Link>{' '}
           </li>
-        </ul>
-      </div>
-      <div className={styles.address}>
-        <ul>
-          <span>Our Address</span>
-          <li>India</li>
-          <li>
-            Spectrum Tower, 5th, Chincholi Bunder Road, <br /> Mindspace, Malad
-            West, <br /> Mumbai Maharastra 400064{' '}
-          </li>
-          <li className={styles.uk}>UK</li>
-          <li>61 Bridge Street, Kington HR5 3DJ</li>
-        </ul>
-      </div>
-      <p className={styles.copyright}>
-        Made with <FaHeart className={styles.heart} /> by DIGITAL AIDED SCHOOL.
-        All rights reserved.
-      </p>
+          </ul>
+          <span className="vertical-line"></span>
+        <ul className={styles.ul4}>
+        <span><b>Our Address</b></span>
+        <li>India</li>
+        <li>
+            Spectrum Tower, 5th, Chincholi Bunder Road, Mindspace, Malad
+            West, Mumbai Maharastra 400064{' '}
+          </li> 
+          </ul>
+          </div>
+          <div className={styles.fot}>
+          <div className={styles.copyright}>
+          <p>Made with <FaHeart className={styles.heart} /> by <b>DIGITAL AIDED SCHOOL </b> All rights reserved.
+          </p>
+          </div>
+          </div>
     </footer>
   )
 }

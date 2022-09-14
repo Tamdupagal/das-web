@@ -5,7 +5,7 @@
   position: relative;
   width: 35rem;
   border: 0.1rem solid #ccc;
-  border-radius: 0.8rem;
+  border-radius: 1.2rem;
   margin: 0 auto;
   transition: {
     property: border;
@@ -23,14 +23,18 @@
   }
   .info_box {
     @include flex_layout(null, null, column);
-    padding: 3rem 2rem;
+    padding: 3rem 3rem;
     .title {
-      font-size: 1.2rem;
+      font-size: 15px;
       color: $main;
       letter-spacing: 0.1rem;
-      padding-bottom: 1rem;
+      // padding: 0 0 2rem rem;
       white-space: pre-line;
       text-align: center;
+      @media screen and (max-width: 768px) {
+        font-size:12px;
+        
+      }
     }
     .heading {
       font-size: 1.8rem;
@@ -42,12 +46,22 @@
       display: grid;
       place-items: center;
       padding-top: 2rem;
+     
+      .btn{
+
+        @media screen and (max-width: 768px){
+          font-size:13px;
+          
+        }
+      }
+    
     }
     .desc {
       font-size: 1.5rem;
       color: rgba(black, 0.65);
-      font-weight: bold;
-      line-height: 1.8;
+      font-weight: 400;
+      line-height: 1.4;
+      font-style: normal;
       margin: 2.5rem 0;
     }
   }

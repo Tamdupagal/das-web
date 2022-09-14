@@ -4,32 +4,35 @@
 .container {
   position: relative;
   padding: 5rem 0rem;
-  margin: 8rem 0;
+  // margin: 8rem 0;
+  padding-top: 13rem;
   width: 100%;
+  background: #FFFEF8;
 
   @media (max-width: 768px) {
     padding: 1rem;
-    margin-top: 12rem;
+    margin-top: 14rem;
     margin-bottom: 4rem;
-    // margin-left:1rem;
-    // margin-right: rem;
+  
   }
   @include flex_layout(center, center);
   .content__box {
+    margin-top: 3rem;
     @include flex_layout(center, null, column);
     box-shadow: 0 0 1rem rgba(black, 0.1);
     position: relative;
+    width: 80%;
     text-align: center;
-    width: 50%;
     margin-right: 0rem;
     background-color: white;
-    border-radius: 2rem;
-    padding: 4rem 4rem 4rem 4rem ;
+    border-radius: 16px;
+    padding: 6rem 4rem 6rem 4rem ;
     .heading {
       font-size: clamp(1rem, -0.875rem + 8.333vw, 3rem);
       font-weight: bolder;
       color: $main;
       text-align: center;
+      text-transform: uppercase;
     }
     .desc {
       & > span {
@@ -38,38 +41,54 @@
         color: $orange;
         font-size: 2rem;
         padding: 2rem 0;
-        // text-align: center;
+        font-weight: 600;
+    
       }
       & > h2 {
         font-size: 2rem;
         padding-bottom: 2rem;
+        text-align:center;
+        color:#005778;
+        font-weight: 500;
       }
       & > ul {
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-start;
+        text-align: left;
+
         li {
           font-size: 1.5rem;
+          text-align: left;
+          color:#005778;
           &:not(:last-child) {
             margin-bottom: 1rem;
+            text-align: left;
           }
-          @include flex_layout(center, center);
+          @include flex_layout(center, null);
           .dot {
             color: $main;
-            // text-align: center;
             margin-right: 1rem;
+            text-align: left;
             font-size: 2rem;
           }
+        }
+        .dev{
+          text-align:left;
+         
         }
       }
     }
     .banner__btn {
-      background-color: white;
-      color: $orange;
+      background-color: #fd7e14;
+      color: white;
       font-size: 1.5rem;
-      border-radius: 2.5rem;
-      padding: 1.1rem 2.5rem;
+      border-radius: 0.5rem;
+      padding: 1.1rem 5rem;
       width: max-content;
-      border: 2px solid $orange;
+      border: 1px solid $orange;
       cursor: pointer;
-      font-weight: bold;
+      font-weight: 600;
       transition : {
         property: transform, box-shadow;
         duration: 0.01s;
@@ -77,7 +96,10 @@
       margin-top: 2rem;
       &:hover {
         transform: translate(0.1rem, -0.1rem);
-        box-shadow: -0.1rem 0.2rem 0.3rem rgba(black, 0.2);
+        box-shadow: -0.1rem 0.2rem 0.3rem rgba(rgb(11, 11, 11), 0.2);
+        transition-duration: 0.1s;
+        background-color: #005877 ;
+        border: 2px solid #005877;
       }
     }
     @media (max-width: 768px) {

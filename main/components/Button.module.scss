@@ -2,19 +2,25 @@
 @import "../../styles/config/variable";
 
 .button {
-  background-color: $main;
-  color: white;
+  background-color: #fffef8;
+  color: #005877;
   font-size: 1.5rem;
-  font-weight: bold;
-  border-radius: 5rem;
+  font-weight: 500;
+  border-radius: 8px;
   padding: 1rem 2rem;
   width: max-content;
-  cursor: pointer;
-  transition : {
-    property: transform;
-    duration: 0.05s;
-  }
+  border: 1px solid #005877;
+  // cursor: grab;
+ 
+}
+.button:hover{
+  transform: translate(0.1rem, -0.1rem);
+  box-shadow: -0.1rem 0.2rem 0.3rem rgba(rgb(11, 11, 11), 0.2);
+  transition-duration: 0.1s;
+  // background-color: #005877 ;
+  color: #fd7e14;
+  border: 1px solid #fd7e14;
   &:active {
-    transform: scale(0.98);
+    transform: scale(1);
   }
 }

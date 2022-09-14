@@ -11,7 +11,7 @@ export const WORKFLOW_DATA = () => {
   },
   {
     id: 2,
-    title: 'Attend a call from DM specialist.',
+    title: 'Attend a call from GD specialist.',
     pattern: "even",
     showIcon: true,
   },
@@ -23,7 +23,7 @@ export const WORKFLOW_DATA = () => {
   },
   {
     id: 4,
-    title: 'Start learning & building your DM career.',
+    title: 'Start learning & building your Game Development career.',
     pattern: false,
     showIcon: true,
   },

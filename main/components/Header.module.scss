@@ -1,98 +1,198 @@
 @import "../../styles/config/utilities";
 @import "../../styles/config/variable";
 
-.header {
-  position: relative;
-  @include flex_layout(center, space-between);
-  padding: 0 2rem;
-  border-bottom: 0.1rem solid rgba($gray, 0.1);
+
+.header{
+  border-bottom: 2px solid #E9E9E9;
+  padding: 0 3rem;
   width: 100%;
-  height: 8rem;
+  height: 8.7rem;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: white;
+  background: #FFFEF8;
   z-index: 999;
-  transition: {
-    property: opacity;
-    duration: 0.3s;
-  }
-  &.active {
-    box-shadow: 0.3rem 0 2rem 0.1rem rgba(black, 0.1);
-    opacity: 1;
-  }
-  .logo {
-    position: relative;
-    width: 14rem;
-    height: max-content;
-    cursor: pointer;
-  }
-  @media screen and (max-width: 1115px) {
-    @include flex_layout(center, null);
-  }
-  .btn_group {
-    position: relative;
-    height: 100%;
-    // border-radius:2.5rem;
-    @include flex_layout(center);
-    .btn {
-      position: relative;
-      padding: 2rem 0;
-      height: 100%;
-      font-size: 1.8rem;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      -webkit-tap-highlight-color: transparent;
-      color: $main;
-      padding: 0 1rem;
-      & > span {
-        @include flex_layout();
-        z-index: 2;
-        padding: 1rem 2.5rem;
-        border-radius: 5rem;
-        border: 0.2rem solid $main;
-        cursor: pointer;
-        &:last-child {
-          border: 0.2rem solid $orange;
-          color: $orange;
-        }
-      }
-      @media screen and (max-width: 768px) {
-        padding: 0;
-        margin-right: 2rem;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0.01rem;
-        width: 100%;
-        height: 100%;
-      }
-      @include flex_layout();
-      .arrow_down {
-        font-size: 1.7rem;
-        color: $orange;
-        margin-left: 0.8rem;
-      }
-    }
+  font-size: 20px;
+  list-style-type: none;
+}
+.logo {
+  position: relative;
+  line-height:40px;
+  width: 12rem;
+  height: max-content;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 22px;
+  height: 4px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #FD7E14;
+  border: none;
+}
+
+.navmenu {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.navitem {
+  margin-left: 3rem;
+  list-style-type: none;
+}
+.navitem:hover{
+  color: #FD7E14;
+}
+
+.navlink{
+  font-size: 20px;
+  font-weight: 600;
+  color: #005778;
+  text-transform: capitalize;
+  letter-spacing: 0.005rem;
+}
+
+.navlink:hover{
+  color: #FD7E14;
+  
+}
+
+
+@media only screen and (max-width: 800px) {
+  .navmenu {
+      position: fixed;
+      left: -100%;
+      top: 7rem;
+      flex-direction: column;
+      background-color: #FFFEF8;
+      width: 100%;
+      line-height: 30px;
+      border-radius: 4px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
+      padding: 10rem 1rem;
+      list-style-type: none;
   }
 
+  .navmenu.active {
+      left: 0;
+  }
+
+  .navitem {
+      margin: 0rem;
+      padding:20px
+  }
+
+  .hamburger {
+      display:block;
+      cursor: pointer;
+      border:none !important;
+      background-color:#FFFEF8;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      -webkit-transform: translateY(8px) rotate(45deg);
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      -webkit-transform: translateY(-8px) rotate(-45deg);
+      transform: translateY(-8px) rotate(-45deg);
+  }
+
+
+
+
+
+  
+}
+.header{
+  // @include flex_layout(center);
+
+  .btn {
+    position: relative;
+    letter-spacing: 0.005rem;
+    padding: 2rem 0;
+    height: 100%;
+    font-size: 20px;
+    font-weight:600;
+    color: #005778;
+    // padding: 0rem 0rem;
+    & > span {
+      // @include flex_layout();
+      z-index: 2;
+      cursor: pointer;
+      letter-spacing: 0.005rem;
+    }
+    @media screen and (max-width: 768px) {
+
+      padding: 1rem;
+      font-size:20px;
+      color: #005778;
+
+    }
+    &:last-child {
+      padding:0 10px;
+    }
+    &::after {
+      top: 0;
+      left: 0.01rem;
+      width: 100%;
+      height: 100%;
+    }
+    @include flex_layout();
+    .arrow_down {
+      font-size: 20px;
+      color: #FD7E14;
+      }
+  }
+  .btn:hover{
+    color: #FD7E14;
+    // content: '';
+    // display: block;
+    // width: 0;
+    // height: 2px;
+    // background: #000;
+    // transition: width .3s;
+  }
+  // .btn:hover::after{
+  //   // width: 100%;
+  // }
+
+
+  
   .dropdown {
     position: absolute;
     top: 101%;
     right: 0;
     background-color: white;
-    border-radius :2.5rem;
+    border-radius :1rem;
     width: max-content;
     overflow: hidden;
     user-select: none;
+    z-index: 999;
     box-shadow: -0.1rem 0.2rem 1rem rgba(black, 0.1);
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -100,10 +200,9 @@
     -ms-user-select: none;
     user-select: none;
     & > li {
-      list-style: none;
-      padding: 1.5rem 2rem;
-      border-radius:2.5rem;
-
+      list-style-type: none;
+      padding: 0.4rem 2rem;
+      
       &:hover {
         background-color: $main;
         color: $primary;
@@ -118,3 +217,31 @@
     }
   }
 }
+
+
+.bttn{
+  padding: 10px 40px;
+  border:none !important;
+  background-color:#FD7E14;
+  color:white !important;
+  border-radius:8px;
+  cursor: pointer;
+  list-style-type: none;
+//  display:flex;
+  // align-items: center;
+  margin:1rem 1rem;
+
+}
+.bttn:hover {
+  transform: translate(0.1rem, -0.1rem);
+  box-shadow: -0.1rem 0.2rem 0.3rem rgba(rgb(11, 11, 11), 0.2);
+  transition-duration: 0.1s;
+  background-color: #005877 ;
+  border: 2px solid #005877;
+}
+
+
+
+
+
+

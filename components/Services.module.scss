@@ -4,10 +4,11 @@
 .container {
   position: relative;
   width: 100%;
-  // background-color:#005778;
+  background-color:#fffef8;
+  
   @include flex_layout(center, center);
   overflow: hidden;
-  margin-top: 10rem;
+  padding-top: 8rem;
   @media screen and (max-width: 768px) {
     @include flex_layout(center, null, column);
     background-image: none;
@@ -42,12 +43,70 @@
       padding: 1rem;
     }
     .service__header {
-      margin-bottom: 4rem;
+      // margin-bottom: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 20px;
+    
+      .sec{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 20px;
+        line-height:3rem;
+        gap:6rem;
+        padding:5rem 5rem;
+        @media screen and (max-width: 768px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          font-size: 20px;
+          line-height:3rem;
+          gap:4rem;
+
+        }
+        h5{
+          font-size:19px;
+          color:#fd7e14;
+          font-weight:600;
+
+          @media screen and (max-width: 768px) {
+            font-size:16px;
+            
+          }
+
+        }
+        li{
+          font-size:15px;
+          font-weight: 500;
+          padding-left: 10px;
+          color: #656565;
+          // list-style-size:40px;
+          @media screen and (max-width: 768px) {
+            font-size:14px;
+            
+          }
+
+        }
+        .divi{
+          border:1px solid #fd7e14;
+          border-radius: 8px;
+          padding: 3rem 6rem;
+
+
+
+        }
+      }
     }
     .feature__box {
       border: 2px solid $orange;
       padding: 1rem;
-      border-radius:2.5rem;
+      border-radius:16px;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap:3rem;
       @include flex_layout(null, null);
       &:not(:last-child) {
         margin-bottom: 5rem;

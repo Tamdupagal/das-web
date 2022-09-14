@@ -1,10 +1,9 @@
 import { useContext } from 'react'
-import Image from 'next/image'
 import React from 'react'
-import BannerImg from '../assets/lms.png'
 import styles from './Banner.module.scss'
 import { GoPrimitiveDot as Dot } from 'react-icons/go'
 import { AppContext } from '../AppContext'
+import Link from 'next/link'
 
 const FadeIn = {
   initial: {
@@ -21,20 +20,6 @@ const FadeIn = {
     },
   },
 }
-
-// <ul>
-//             <li>
-//               <Dot className={styles.dot} /> Weekday batch [Monday-Friday
-//               (1.5hours/class)]{' '}
-//             </li>
-//             <li>
-//               <Dot className={styles.dot} /> Weekend batch
-//               [Saturday-Sunday(3.5hours/class)]
-//             </li>
-//             {/* <li>
-//                 <Dot className={styles.dot} /> The next batch starts April 2022
-//               </li> */}
-//           </ul>
 
 function Banner({ data, checkBanner }) {
   const { setToggleLoginForm, setIsAdmin } = useContext(AppContext)
@@ -57,41 +42,43 @@ function Banner({ data, checkBanner }) {
           <span>{data.title}</span>
           <h2>{data.program}</h2>
           <ul>
-            <li>
-              <Dot className={styles.dot} /> Live online classes{' '}
-            </li>
-            <li>
-              <Dot className={styles.dot} /> Agency style cohort-based learning{' '}
-            </li>
-            <li>
-              <Dot className={styles.dot} /> 1:10 collaborative Live project
-              building academic experience{' '}
-            </li>
-            <li>
-              <Dot className={styles.dot} /> 3+ Live projects
-            </li>
-            <li>
-              <Dot className={styles.dot} />
-              1.5 hour/class instructor-led classes.
-            </li>
-            <li>
-              <Dot className={styles.dot} />
-              200+ hours of training & project building.
-            </li>
+          <div clasName={styles.dev}>
+          <li>
+          <Dot className={styles.dot} /> Live online classes{' '}
+          </li>
+          <li>
+          <Dot className={styles.dot} /> Agency style cohort-based learning{' '}
+          </li>
+          <li>
+          <Dot className={styles.dot} /> 1:10 collaborative Live project
+          building academic experience{' '}
+          </li>
+          </div>
+          <div>
+          <li>
+          <Dot className={styles.dot} /> 3+ Live projects
+          </li>
+          <li>
+          <Dot className={styles.dot} />
+          1.5 hour/class instructor-led classes.
+          </li>
+          <li>
+          <Dot className={styles.dot} />
+          200+ hours of training & project building.
+          </li>
+          </div>
             </ul>
             <span>Batches</span>
-            <ul>
-            <li>
-              <Dot className={styles.dot} />
+            </div>
+              <p style={{textAlign: 'center' ,fontSize:'16px',color:'#005778'}}>
               The next batch starts Monday 26 September 2022
-
-            </li>
-            </ul>
-          
-        </div>
-        <button onClick={handleForm} className={styles.banner__btn}>
-          Register Now
-        </button>
+              </p>
+              
+              <button className={styles.banner__btn}>
+              <Link  href="https://wa.me/917304360502?text=I'm%20interested%20in%20your%20Game%20Development%20Course" >
+              <a target="_blank" className={styles.Link}>Register now</a> 
+              </Link>
+              </button>
         <p style={{ fontSize: '15px', marginTop: '10px' }}>
         </p>
       </div>

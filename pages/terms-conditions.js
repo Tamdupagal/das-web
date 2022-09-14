@@ -1,3 +1,6 @@
+import styles from '../styles/Privacy.module.scss'
+
+
 const termsConditions = () => {
   return (
     <div style={{ margin:'20px' ,paddingTop:'80px'}}>

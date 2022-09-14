@@ -1,5 +1,5 @@
 import React from 'react'
-import { DATA } from '../helpers/Data'
+// import { DATA } from '../helpers/Data'
 import styles from './CoreFeature.module.scss'
 import FeatureDetails from './FeatureDetails'
 import SectionHeader from './SectionHeader'
@@ -10,8 +10,6 @@ const style = {
     flexDirection : "column",
     alignItems: "flex-start",
 }
-// <figure className={styles.section__img}>
-// </figure>
 
 function CoreFeature({ data, btnText,title}) {
     return (

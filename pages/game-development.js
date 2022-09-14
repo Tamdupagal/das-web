@@ -40,7 +40,7 @@ const data = [
 ]
 
 const packageData =
-  'STUDY FIRST PAY LATER.PAY ZERO TILL YOU LAND A JOB.\n\n Total fee: Rs 2.99L inclusive of GST.'
+  'STUDY FIRST PAY LATER. PAY ZERO TILL YOU LAND A JOB.\n\n Total fee: Rs 2.99L inclusive of GST.'
 
 function development() {
   return (
@@ -62,6 +62,7 @@ function development() {
       <Feature className='growth' data={DATA().growth.web} />
       <WorkFlow />
       <Package data={packageData} />
+      <hr/>
     </div>
   )
 }

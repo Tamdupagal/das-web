@@ -4,12 +4,16 @@
 .container {
   position: relative;
   width: 100%;
-  padding: 0.5rem;
+  // padding-top: 2rem;
+  background-color: #FFFEF8;
+  padding: 0.5rem 0.5rem 7rem 0.5rem;
   .main_title {
     font-size: 3rem;
     color: $main;
     text-align: center;
-    padding: 2rem 0;
+    padding: 7rem 0;
+    font-weight: 600;
+    text-transform: uppercase;
   }
   .mission__box {
     position: relative;
@@ -32,12 +36,13 @@
       @include flex_layout(center, null);
       padding: 1rem 4rem;
       min-height: 25rem;
-      background-color: white;
-      border-radius: 0.5rem;
+      background-color: #FEFEFE;
+      border-radius: 1.2rem;
       box-shadow: 0 0 1rem rgba(black, 0.1);
       @media screen and (max-width: 1024px) {
         padding: 2rem;
-      }
+        // width: 80%;
+        margin: 0px 20px      }
       & > figure {
         position: relative;
         margin-right: 3rem;
@@ -48,11 +53,11 @@
         border-radius: 1rem;
       }
       & > p {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         text-align: justify;
         line-height: 1.8;
         color: $main;
-        font-weight: bolder;
+        font-weight: 600;
         & > strong {
           color: $orange;
           font-size: 1.8rem;

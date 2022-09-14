@@ -4,9 +4,9 @@
 .container {
   position: relative;
   width: 100%;
+  background-color:#fffef8;
   height: max-content;
-  padding: 1rem 0.5rem;
-  margin-bottom: 5rem;
+  padding: 5rem 0.5rem;
   @include flex_layout(center, null, column);
   @media (max-width: 768px) {
     margin: 0;
@@ -18,6 +18,7 @@
   .feature__box {
     position: relative;
     width: 70%;
+    color:#005778;
     padding: 2rem 2rem 2rem 2rem;
     @include flex_layout();
     flex-wrap: wrap;
@@ -30,6 +31,7 @@
       width: 25rem;
       padding: 2rem;
       background-color: white;
+      color:#005778;
       border-radius: 1rem;
       box-shadow: 0 0 1rem rgba(black, 0.1);
       @include flex_layout(center, center, column);

@@ -4,41 +4,45 @@
 .container {
   position: relative;
   width: 100%;
-  padding-top:6rem;
+  padding-top:11rem;
   margin-top: 10rem;
   @include flex_layout(center, center);
-  background-color: white;
+  background-color: #FFFEF8;
   .banner_info {
     padding: 2rem 4rem;
-    // min-height:
     @include flex_layout(center, center, column);
     @media screen and (max-width: 768px) {
       width: 100%;
       padding: 2rem;
       @include flex_layout(center, center, column);
+
     }
     .title {
-      font-size: 3rem;
+      font-size: 2.5rem;
       text-transform: uppercase;
-      color: $main;
-      font-weight: bolder;
+      color: #005877;
       padding-bottom: 2rem;
       text-align: center;
-      // background-color: $orange;
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        font-size:2.3rem;
+      }
+      
     }
 
     .typewriter {
-      text-transform: capitalize;
-      font-size: 6rem;
+      font-size: 60px;
       text-align: center;
-      font-variant: small-caps;
+      text-transform: uppercase;
       color: $orange;
       width: 100%;
       min-height: 9rem;
       white-space: pre-line;
-      font-weight: bold;
+      font-weight: 700;
+      cursor: grab;
       @media screen and (max-width: 768px) {
         text-align: center;
+        font-size:32px;
       }
     }
     .para{
@@ -46,8 +50,9 @@
       min-height:3rem;
       line-height: 4rem;
       .title2{
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         color: $main;
+        font-weight:600;
         text-transform: uppercase;
         text-align: center;
       }
@@ -64,16 +69,26 @@
 }
 
 .button {
-  background-color: white;
-  color: $orange;
-  font-size: 1.5rem;
-  border-radius: 2.5rem;
+  background-color: #FD7E14;
+  color: white;
+  font-size: 20px;
+  border-radius: 1rem;
   text-align: center;
-  padding: 1.1rem 2.5rem;
+  padding:10px 30px;
   width: max-content;
   border: 2px solid $orange;
   cursor: pointer;
-  font-weight: bold;
+  letter-spacing: 0.005rem;
+  font-weight: 600;
+  @media screen and (max-width: 768px) {
+    font-size:15px;
+    
+  }
+  
+
+
+
+
   transition : {
     property: transform, box-shadow;
     duration: 0.01s;
@@ -81,6 +96,10 @@
   margin-top: 3rem;
   &:hover {
     transform: translate(0.1rem, -0.1rem);
-    box-shadow: -0.1rem 0.2rem 0.3rem rgba(black, 0.2);
+    box-shadow: -0.1rem 0.2rem 0.3rem rgba(rgb(11, 11, 11), 0.2);
+    transition-duration: 0.1s;
+    background-color: #005877 ;
+    border: 2px solid #005877;
   }
 }
+

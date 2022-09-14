@@ -3,11 +3,11 @@
 
 .title {
   font-size: 2rem;
-  color: $orange;
-  font-weight: bold;
+  color: #005778;
+  font-weight: 700;
   text-align: center;
   margin-bottom: 3rem;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
   &[data-white="true"] {
     color: white;
   }
@@ -15,14 +15,24 @@
 
 .heading {
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.0025rem;
   color: $main;
   &[data-white="true"] {
     color: white;
   }
   white-space: pre-line;
+}
+.heading1{
+  text-align: center;
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 0.0025rem;
+  color: $main;
+  &[data-white="true"] {
+    color: white;
+  }
 }
 
 .heading,

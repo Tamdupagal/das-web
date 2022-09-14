@@ -3,8 +3,10 @@
 
 .container {
   position: relative;
+  background-color:#fffef8;
   width: 100%;
-  margin: 10rem 0;
+  // margin: 10rem 0;
+  padding-top: 10rem;
   @include flex_layout(center, center, column);
   @media screen and (max-width: 768px) {
     padding: 2rem;
@@ -15,7 +17,7 @@
     text-align: center;
     word-spacing: 0.5rem;
     padding: 4rem 0;
-    color: $main;
+    color: #fd7e14;
     white-space: pre-line;
     font-weight: bold;
   }
@@ -24,22 +26,26 @@
     margin-bottom: 5rem;
   }
   .button {
-    background-color: white;
+    background-color: #fffef8;
     color: $main;
-    font-size: 1.5rem;
-    border-radius: 2.5rem;
+    font-size: 17px;
+    border-radius: 8px;
     padding: 1.1rem 2.5rem;
     width: max-content;
-    border: 2px solid $main;
+    border: 1px solid $main;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 500;
     transition : {
       property: transform, box-shadow;
       duration: 0.01s;
     }
     &:hover {
       transform: translate(0.1rem, -0.1rem);
-      box-shadow: -0.1rem 0.2rem 0.3rem rgba(black, 0.2);
+      box-shadow: -0.1rem 0.2rem 0.3rem rgba(rgb(11, 11, 11), 0.2);
+      transition-duration: 0.1s;
+      // background-color: #fd7e14 ;
+      color:#FD7E14;
+      border: 2px solid #fd7e14;
     }
   }
   .card__box {

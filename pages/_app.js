@@ -8,6 +8,9 @@ import Form from '../main/components/Form'
 import ReactLoading from 'react-loading'
 import Script from 'next/script'
 import { useRouter } from 'next/router'
+// import {ThemeProvider} from 'next-themes'
+
+
 
 toast.configure()
 
@@ -59,14 +62,16 @@ function MyApp({ Component, pageProps }) {
   }
 
   return (
+    // <ThemeProvider enableSystem={true} attribute="class" >
     <AppContextProvider>
-      <Header />
-      
-      <Component {...pageProps} />
-      <Footer />
-      <FormWrapper />
-      <LoaderWrapper />
+    <Header />
+    
+    <Component {...pageProps} />
+    <Footer />
+    <FormWrapper />
+    <LoaderWrapper />
     </AppContextProvider>
+    // </ThemeProvider>
   )
 }
 

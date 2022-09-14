@@ -1,6 +1,10 @@
+import styles from '../styles/Privacy.module.scss'
+
 function PrivacyPolicy() {
   return (
-    <section style={{ padding: '10px', marginTop: '80px' }}>
+    
+    <section>
+    <div className={styles.container} style={{ padding: '10px 20px', marginTop: '80px', fontSize: '15px',backgroundColor: '#fffef8'}}>
       <p className='c1'>
         <span className='c7 c4'>Digital Aided School </span>
       </p>
@@ -506,6 +510,7 @@ function PrivacyPolicy() {
       <p className='c5 c10'>
         <span className='c7 c15'></span>
       </p>
+      </div>
     </section>
   )
 }

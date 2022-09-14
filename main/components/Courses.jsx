@@ -48,26 +48,10 @@ function Courses() {
   return (
     <section className={styles.container}>
       <h1 className={styles.main_title}>About our course</h1>
-      <p className={styles.about__course} style={{ paddingBottom: '0px' }}>
-        The real <span>STUDY FIRST PAY LATER programs.</span>
-      </p>
-      <p
-        className={styles.about__course}
-        style={{ marginTop: '3px', padding: '0px' }}
-      >
-        World&apos;s 1st Live online Agency style cohort-based learning.
-      </p>
-      <p
-        className={styles.about__course}
-        style={{ marginTop: '3px', padding: '0px' }}
-      >
-      1:10 (batch) collaborative Live project building academic experience.
-      </p>
-      <p
-        className={styles.about__course}
-        style={{ marginTop: '3px', padding: '0px' }}
-      >
-        Live Real Life industry-standard projects.
+      <p className={styles.about__course}>
+        The real <span>STUDY FIRST PAY LATER programs.</span>World&apos;s 1st Live online Agency style<br/>
+       cohort-based learning.  1:10 (batch) collaborative Live project building academic experience. Live Real Life<br/>
+        industry-standard projects.
       </p>
       <div className={styles.carousel__box}>
         <Slider {...settings} ref={sliderRef}>
