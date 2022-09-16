@@ -79,9 +79,10 @@
         }
         li{
           font-size:15px;
-          font-weight: 500;
+          font-weight: 400;
           padding-left: 10px;
-          color: #656565;
+          list-style-type:none;
+          color: #005778;
           // list-style-size:40px;
           @media screen and (max-width: 768px) {
             font-size:14px;

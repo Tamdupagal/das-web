@@ -1,5 +1,8 @@
 import styles from './Footer.module.scss'
 import Link from 'next/link'
+import Image from 'next/image';
+import joy from '../../assets/joy.png'
+
 import {
   FaEnvelope,
   FaInstagram,
@@ -10,6 +13,7 @@ import {
   FaAngleRight,
   FaFacebook,
   FaHeart,
+  FaGamepad,
 } from 'react-icons/fa'
 
 function Footer() {
@@ -18,6 +22,11 @@ function Footer() {
       <div className={styles.wrapper}>
         <ul className={styles.ul1}>
           <span><b>Policies</b></span>
+          <li>
+            <Link href='/about'>
+              <a className={styles.link}>About Us</a>
+            </Link>
+          </li>
           <li>
             <Link href='/terms-conditions'>
               <a className={styles.link}>Terms & Conditions</a>
@@ -39,7 +48,7 @@ function Footer() {
             </Link>
           </li>
         </ul>
-        <span className="vertical-line"></span>
+        <hr/>
         <ul className={styles.ul2}>
         <span><b>Contact Us</b></span>
           <li>
@@ -49,7 +58,7 @@ function Footer() {
             <FaEnvelope className={styles.icon} /> hello@digitalaidedschool.com
           </li>
         </ul>
-        <span className="vertical-line"></span>
+        <hr/>
         <ul className={styles.ul3}>
         <span><b>Social Media</b></span>
           <li>
@@ -85,7 +94,7 @@ function Footer() {
           </Link>{' '}
           </li>
           </ul>
-          <span className="vertical-line"></span>
+          <hr/>
         <ul className={styles.ul4}>
         <span><b>Our Address</b></span>
         <li>India</li>
@@ -94,10 +103,11 @@ function Footer() {
             West, Mumbai Maharastra 400064{' '}
           </li> 
           </ul>
+          <hr/>
           </div>
           <div className={styles.fot}>
           <div className={styles.copyright}>
-          <p>Made with <FaHeart className={styles.heart} /> by <b>DIGITAL AIDED SCHOOL </b> All rights reserved.
+          <p>Made with <FaGamepad className={styles.heart} /> by <b>DIGITAL AIDED SCHOOL </b> All rights reserved.
           </p>
           </div>
           </div>

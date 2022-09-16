@@ -11,7 +11,7 @@ function Services({ data, className}) {
         <section className={styles.container}>
             <div className={styles.content__box}>
                 <div className={styles.service__header}>
-                    <SectionHeader slogan="ACHIEVEMENT" text="Start getting Industry ready Identified & solve problems for companies 
+                    <SectionHeader slogan="OBJECTIVES" text="Start getting Industry ready Identified & solve problems for companies 
 Build a strong foundation for the gaming industry." />
 <div className={styles.sec}>
                 <div className={styles.divi}>

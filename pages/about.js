@@ -16,20 +16,19 @@ function AboutUs() {
   <h1 className={styles.main_heading}>About Us</h1>
       <article className={styles.about}>
         <p className={styles.desc}>
-          <FaQuoteLeft className={styles.quote} /> We are Digital Aided School
-          team of Young professionals who believe in quality education and the
-          latest technology. Learning is never-ending but learning what is
-          required to keep body and soul together is principal, learning through
-          technology where the resources are unlimited makes it more merrymaking
+          <FaQuoteLeft className={styles.quote} /> We are Digital Aided School, a team of passionate tech geeks and enthusiasts who
+          believe in quality education for all. We love solving problems and addressing the
+          existing pain points in the current system.
+          
           <br />
           <br />
-          We have the perfect & feasible solutions when it comes to EDUCATION &
-          TECHNOLOGY. We have DIGITAL in our name (pun intended)
+          We provide Education & Technology related solutions tailor-made to cater to the
+existing challenges with the goal of Digitally enabling and aiding people.
+
           <br />
           <br />
-          For EDUCATION solutions, TECHNOLOGY solutions & DIGITAL solutions
-          allow us to help with our plethora of band-aids as per your needs and
-          requirements.
+          Integrating Tech with Education to work on a plethora of products helping various
+people with their needs and requirements
           <FaQuoteRight className={styles.quote} />
           </p>
           </article>

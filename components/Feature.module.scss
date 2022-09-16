@@ -12,13 +12,14 @@
     margin: 0;
   }
   .section__header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 6.5rem;
   }
   .feature__box {
     position: relative;
     width: 70%;
     color:#005778;
+    // text-align: justify;
     padding: 2rem 2rem 2rem 2rem;
     @include flex_layout();
     flex-wrap: wrap;
@@ -29,6 +30,8 @@
     .feature {
       flex-grow: 1;
       width: 25rem;
+      max-height: 50rem;
+      min-height: 20rem;
       padding: 2rem;
       background-color: white;
       color:#005778;

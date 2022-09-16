@@ -40,7 +40,7 @@
         text-transform: uppercase;
         color: $orange;
         font-size: 2rem;
-        padding: 2rem 0;
+        padding: 2rem 2rem;
         font-weight: 600;
     
       }
@@ -56,10 +56,12 @@
         flex-direction: row;
         justify-content:flex-start;
         text-align: left;
+        padding: 10px;
 
         li {
           font-size: 1.5rem;
           text-align: left;
+          padding-left:10px ;
           color:#005778;
           &:not(:last-child) {
             margin-bottom: 1rem;
@@ -71,11 +73,12 @@
             margin-right: 1rem;
             text-align: left;
             font-size: 2rem;
+            // padding: 5px;
           }
         }
         .dev{
           text-align:left;
-         
+          // padding: 80px;
         }
       }
     }
@@ -88,6 +91,7 @@
       width: max-content;
       border: 1px solid $orange;
       cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
       font-weight: 600;
       transition : {
         property: transform, box-shadow;

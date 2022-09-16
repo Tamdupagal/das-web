@@ -1,34 +1,47 @@
+import img1 from '../assets/games.jpg'
+import img2 from '../assets/game2.png'
+import img3 from '../assets/game3.jpg'
+
 
 export const BLOG_DATA = [
     {
         id: 1,
-        title: 'Month 1',
-        text: "Introduction to Digital Marketing \n Digital Marketing Platforms & tools \nResume Building\nPersonal Branding\nSocial Media Management\nMarket Research & Development",
+        title: 'UpComing Launch Events',
+        imgSrc: img1,
+        td:"18-sep-2022",
+        text: "The launch events is on 18-sep-22 everyone can register yourself and learn our Game Development and get free scholarship 100% ",
     },
     {
         id: 2,
-        title: 'Month 2',
-        text: "Organic Branding\nSEO\nContent Marketing\nViral Marketing\nEngagement Campaign\nEmail Marketing\nLocal Digital Marketing\nStrategy & Planning\nSocial Media campaign planning \nOnline Brand Reputation Management \n SEM & SMM",
+        title: 'UpComing Launch Events',
+        imgSrc: img2,
+        td:"26-sep-2022",
+        text: "The launch events is on 18-sep-22 everyone can register yourself and get free scholarship 100%",
     },
     {
         id: 3,
-        title: 'Month 3',
-        text: "Web Analytics \nEcommerce Marketing\nFacebook Marketing \nFacebook Marketplace listing \nInstagram Marketing \nLinkedIn Marketing \nTwitter Marketing \nYoutube Marketing \nWhatsApp Marketing \nPPC \nLead Generation Remarketing \nGoogle AdSense \nBlogs \nAffiliate Marketing"
+        title: 'Game Development',
+        imgSrc: img3,
+        td:"18-sep-2022",
+        text: "The launch events is on 18-sep-22 everyone can register yourself and get free scholarship 100% "
 
     },
-    {
-        id: 4,
-        title: 'Month 4',
-        text: "Organic Brand Awareness \nGrowth Hacking \nPerformance Management \nLive Project \nMasters Certification \nInternship Interview Ready",
-    },
-    {
-        id: 5,
-        title: 'Month 5',
-        text: "4+ Live  Real-life Industry Projects \nOrganic Brand Awareness \nLive Campaigns  \nGrowth Hacking \nLive Campaigns  \nPerformance Management \nLive Campaigns Reach \nLive Campaigns Engagement \nLive campaigns content Marketing \nLive campaign \nLive Social Media Management.",
-    },
-    {
-        id: 6,
-        title: 'Month 6',
-        text: "Final Live Project \nProfessional Certification \nIndustry Ready \nInterview Ready \nHero Style Interview preparation.",
-    },
+    // {
+    //     id: 4,
+    //     title: 'Month 4',
+    //     imgSrc: img1,
+    //     td:"18-sep-2022",
+    //     text: "Organic Brand Awareness \nGrowth Hacking \nPerformance Management \nLive Project \nMasters Certification",
+    // },
+    // {
+    //     id: 5,
+    //     title: 'Month 5',
+        
+    //     text: "4+ Live  Real-life Industry Projects \nOrganic Brand Awareness \nLive Campaigns  \nGrowth Hacking \nLive Campaigns  \nPerformance Management \nLive Campaigns Reach \nLive Campaigns Engagement \nLive campaigns content Marketing \nLive campaign \nLive Social Media Management.",
+    // },
+    // {
+    //     id: 6,
+    //     title: 'Month 6',
+    //     text: "Final Live Project \nProfessional Certification \nIndustry Ready \nInterview Ready \nHero Style Interview preparation.",
+    // },
 ]

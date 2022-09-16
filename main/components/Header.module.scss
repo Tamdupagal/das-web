@@ -139,16 +139,14 @@
     font-size: 20px;
     font-weight:600;
     color: #005778;
-    // padding: 0rem 0rem;
     & > span {
-      // @include flex_layout();
       z-index: 2;
       cursor: pointer;
       letter-spacing: 0.005rem;
     }
     @media screen and (max-width: 768px) {
 
-      padding: 1rem;
+      padding: 1.4rem;
       font-size:20px;
       color: #005778;
 
@@ -168,19 +166,7 @@
       color: #FD7E14;
       }
   }
-  .btn:hover{
-    color: #FD7E14;
-    // content: '';
-    // display: block;
-    // width: 0;
-    // height: 2px;
-    // background: #000;
-    // transition: width .3s;
-  }
-  // .btn:hover::after{
-  //   // width: 100%;
-  // }
-
+  
 
   
   .dropdown {
@@ -201,11 +187,12 @@
     user-select: none;
     & > li {
       list-style-type: none;
-      padding: 0.4rem 2rem;
+      padding: 1rem 2rem;
       
       &:hover {
         background-color: $main;
         color: $primary;
+        // display: block;
       }
       font-size: 1.5rem;
       color: $main;
@@ -220,16 +207,16 @@
 
 
 .bttn{
-  padding: 10px 40px;
+  padding: 10px 25px;
   border:none !important;
   background-color:#FD7E14;
+  text-transform: uppercase;
   color:white !important;
   border-radius:8px;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
   list-style-type: none;
-//  display:flex;
-  // align-items: center;
-  margin:1rem 1rem;
+  margin:0rem 1rem;
 
 }
 .bttn:hover {

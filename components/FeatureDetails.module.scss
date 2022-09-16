@@ -10,6 +10,7 @@
   }
   &[data-for="feature"] {
     margin-top: 2rem;
+    // margin-left:0rem ;
     .title {
       text-align: center;
     }
@@ -24,7 +25,7 @@
   }
   &[data-for="quality"],
   &[data-for="services"] {
-    margin-left: 3rem;
+    margin-left: 0.5rem;
 
     .title {
       text-align: left;
@@ -69,15 +70,16 @@
     text-align: justify;
   }
   .feature__btn {
-    background-color:#fffef8;
-    color: #005877;
+    background-color:#fd7e14;
+    color: white;
     font-size: 17px;
     margin-top: 4rem;
     border-radius: 8px;
     padding: 1.1rem 2.5rem;
     width: max-content;
-    border: 1px solid #005877;
+    border: none;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
     font-weight: 500;
     transition : {
       property: transform, box-shadow;
@@ -87,13 +89,15 @@
       transform: translate(0.1rem, -0.1rem);
       box-shadow: -0.1rem 0.2rem 0.3rem rgba(rgb(11, 11, 11), 0.2);
       transition-duration: 0.1s;
-      color:#FD7E14;
-      border: 2px solid #fd7e14;
+      color:white;
+      background-color:#005778;
+      // border: 2px solid #fd7e14;
     }
   }
   &[data-for="growth"] {
     margin-top: 2rem;
-    text-align: center;
+    padding:10px;
+    text-align: justify;
     .text {
       text-align: inherit;
     }
