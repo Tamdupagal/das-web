@@ -4,13 +4,11 @@
 .container {
   position: relative;
   width: 100%;
-  padding: 20rem 0 10rem 0;
-  @include flex_layout(center, null, column);
-  background-image: url(../assets/wave2.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   @media screen and (max-width: 768px) {
-    padding: 15rem 0;
+
   }
   .main_title {
     font-size: 2.5rem;
@@ -42,7 +40,10 @@
       font-weight: 600;
     }
   }
-  .carousel__box {
+  
+  
+}
+.carousel__box {
     position: relative;
     width: 70%;
     padding: 2rem 8rem;
@@ -65,4 +66,5 @@
       right: 0%;
     }
   }
-}
+
+

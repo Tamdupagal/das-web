@@ -8,10 +8,7 @@
   height: 100%;
   padding: 3rem 0;
   padding-top: 20rem;
-  background-image: url(../assets/wave1.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  // text-align: left;
+  text-align: left;
   @media screen and (max-width: 768px) {
     padding-top: 15rem;
   }
@@ -29,7 +26,9 @@
   .wrapper {
     position: relative;
     width: 80%;
-    @include flex_layout(center, center);
+    border-radius: 8px;
+    box-shadow: 0 0 1rem rgba(black, 0.1);
+    @include flex_layout(null, center);
     display: flex;
     .footer_text {
       position: relative;
@@ -37,11 +36,12 @@
       font-size: 17px;
       color: $main;
       font-weight: 500;
-      padding:4rem 4rem;
+      padding:4rem 4rem 4rem 2rem;
       background-color: white;
       border-radius: 1rem;
       .check{
         font-size:15px;
+        color: #fd7e14;
       }
      @media screen and (max-width: 768px) {
       display: flex;
@@ -57,9 +57,7 @@
       }
       & > ul {
         &:not(:last-child) {
-          margin-bottom: 3.5rem;
-          // text-align: left;
-        }
+                }
         & > strong {
           display: inline-block;
           padding: 1rem 0;
@@ -73,15 +71,15 @@
           @include flex_layout(center, null,row);
           color: $main;
           .check {
-            color: #fd7e14;
-            font-size: 3rem;
+            color: #005778;
+            font-size: 2.5rem;
             margin-right: 1.5rem;
           }
         }
       }
     }
     @media screen and (max-width: 768px) {
-      width: 100%;
+      width: 90%;
       
       @include flex_layout(center, null, column);
       padding: 0;

@@ -32,8 +32,7 @@
       white-space: pre-line;
       text-align: center;
       @media screen and (max-width: 768px) {
-        font-size:12px;
-        
+        font-size:12px;   
       }
     }
     .heading {
@@ -46,16 +45,12 @@
       display: grid;
       place-items: center;
       padding-top: 2rem;
-     
       .btn{
-
         @media screen and (max-width: 768px){
           font-size:13px;
-          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-          
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
         }
       }
-    
     }
     .desc {
       font-size: 1.5rem;

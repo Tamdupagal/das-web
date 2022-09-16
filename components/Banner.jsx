@@ -54,7 +54,7 @@ function Banner({ data, checkBanner }) {
           building academic experience{' '}
           </li>
           </div>
-          <div>
+          <div clasName={styles.dev}>
           <li>
           <Dot className={styles.dot} /> 3+ Live projects
           </li>
@@ -76,7 +76,7 @@ function Banner({ data, checkBanner }) {
               
               <button className={styles.banner__btn}>
               <Link  href="https://wa.me/917304360502?text=I'm%20interested%20in%20your%20Game%20Development%20Course" >
-              <a target="_blank" className={styles.Link}>Register now</a> 
+              <a target="_blank" className={styles.Link}>STUDY FIRST PAY LATER</a> 
               </Link>
               </button>
         <p style={{ fontSize: '15px', marginTop: '10px' }}>

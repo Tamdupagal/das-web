@@ -222,35 +222,35 @@ export const DATA = () => {
           imgSrc: who,
           altText: 'Who?',
           title: 'Who?',
-          text: 'Customer acquisition and nurture growth strategies.',
+          text: 'World-Class Experienced Faculty from Digital Aided School',
         },
         {
           id: 2,
           imgSrc: what,
           altText: 'What?',
           title: 'What?',
-          text: 'Mindshare and awareness throughout the funnel.',
+          text: 'Teaching Foundation of Game Development & Full-Stack Game Development to a point where a student is industry ready and can get placed easily',
         },
         {
           id: 3,
           imgSrc: when,
           altText: 'When?',
           title: 'When?',
-          text: 'Short-term and long-term campaigns and initiatives.',
+          text: 'Multiple batches in a week with 1.5 hrs long classes offering time flexibility. Time commitment of at least 3-4 hours total daily is required, including classes',
         },
         {
           id: 4,
           imgSrc: where,
           altText: 'Where?',
           title: 'Where?',
-          text: 'Targeting broad and niche audiences.',
+          text: 'Through Digital Aided School, virtually in a physical classroom-like environment.',
         },
         {
           id: 5,
           imgSrc: how,
           altText: 'How?',
           title: 'How?',
-          text: 'Advertising media strategies for creative development.',
+          text: 'Industry-level guided projects, Internship & Placement opportunities at top firms, Placement guidance & mentorship, Up to 100% Scholarships, Study First Pay Later',
         },
       ],
       web: [
@@ -295,14 +295,14 @@ export const DATA = () => {
       web: {
         title:'MASTERS IN FULL-STACK Game Development.',
         description:
-          "Digital aided school's certification course gives you an extensive, comprehensive & advanced knowledge of the all-important tech domains and includes real-world projects and practical simulations for gaining domain experience.\nYou’ll learn all tools of real project experience and authentic Pro simulations to make you industry-ready. After successful completion of this 12 months program, you will receive a certificate from DIGITAL AIDED SCHOOL stating that you possess the expertise, authenticate your abilities to create TECH.",
-        buttonText: 'Study First Pay Later',
+        "The Full-Stack Game Development course gives you an extensive & comprehensive introduction to advanced knowledge of the all-important gaming domains. You will be introduced to and taught many essential software and programming languages Game Developers use. Besides informative lectures, the course includes an introduction to real-world projects and practical simulations for gaining domain experience. You’ll learn all tools in gaming experience and authentic Pro simulations to make you industry-ready. After successful completion of this 6 months program, you will receive a certificate from DIGITAL AIDED SCHOOL stating that you possess the expertise and authenticate your abilities to create TECH and certifying that you are placement ready",
+        buttonText: 'STUDY FIRST PAY LATER',
       },
       dm: {
         title:'MASTER Solid foundation Game Development Program',
         description:
-          'Solid Foundation course gives you an extensive, comprehensive & introduction to advanced knowledge of the all-important gaming domains. \n\n It includes an introduction to real-world projects and practical simulations for gaining domain experience. You’ll learn all tools in gaming experience and authentic Pro simulations to make you industry-ready. After successfully completing this 30 days program, you will understand & learn all basics of being an awesome game developer.',
-        buttonText: 'Study First Pay Later',
+          'Solid Foundation course gives you an extensive & comprehensive introduction to advanced knowledge of the all-important gaming domains. You will be introduced to and taught many essential software and programming languages Game Developers use. Besides informative lectures, the course includes an introduction to real-world projects and practical simulations for gaining domain experience. You’ll learn all tools in gaming experience and authentic Pro simulations to make you industry-ready. After successfully completing this 30 days program, you will understand & learn all basics of being an amazing game developer.',
+        buttonText: 'STUDY FIRST PAY LATER',
       },
     },
   }

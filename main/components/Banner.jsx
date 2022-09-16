@@ -36,7 +36,7 @@ export default function Banner() {
                 </div>
                 <div className={styles.para}>
                 <h1 className={styles.title2}>
-                Be a Fullstack Game Developer As Per Industry Standards Portfolio & Interview Ready Program.
+                Be a Fullstack Game Developer As Per Industry Standards<br/> Portfolio & Interview Ready Program.
                 </h1>
                 </div>
                 <button className={styles.button}>

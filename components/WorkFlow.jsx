@@ -33,7 +33,7 @@ function WorkFlow() {
                 })}
             </div>
         </section>
-    )
+    ) 
 }
 
 export default WorkFlow

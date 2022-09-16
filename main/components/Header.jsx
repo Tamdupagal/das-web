@@ -90,9 +90,22 @@ function Header() {
     //         </ul>
     // </header>
 
-      // <li className={styles.navitem}>
-            // <RenderThemeChange/>
-            // </li>
+//     <li className={styles.navitem}>
+//     <Link href='/'>
+//       <a className={isOpen === false ? 
+//                  styles.navlink : styles.navlink+' '+styles.active}
+//                  onClick={openMenu}>Home</a>
+//      </Link>
+//  </li>
+//  <li className={styles.navitem}>
+//      <Link href='/about'>
+//        <a className={isOpen === false ? 
+//                  styles.navlink : styles.navlink+' '+styles.active}
+//                  onClick={openMenu}>About us</a>
+//      </Link>
+//  </li>
+
+
     return (
         <header className={styles.header}>
         <nav className={styles.navbar}>
@@ -101,45 +114,38 @@ function Header() {
             </figure>
         <ul className={isOpen === false ? 
                 styles.navmenu : styles.navmenu +' '+ styles.active}>
+          
+                
+
+                
             <li className={styles.navitem}>
-               <Link href='/'>
-                 <a className={isOpen === false ? 
-                            styles.navlink : styles.navlink+' '+styles.active}
-                            onClick={openMenu}>Home</a>
-                </Link>
-            </li>
+            <li onClick={()=>setToggleDropDown(!toggleDropDown)} className={styles.btn}> <span  >Courses <FaAngleDown className={styles.arrow_down} /></span> 
+            {toggleDropDown && <ul className={styles.dropdown}>
+               <li onClick={() => {
+                   router.push('/foundation-course')
+                   setToggleDropDown(false)
+               }
+           }>  <FaAngleRight className={styles.arrow_right} />Foundation Course</li>
+           <li onClick={() => {
+               router.push('/game-development')
+                   setToggleDropDown(false)
+               }
+               }><FaAngleRight className={styles.arrow_right} /> Game Development</li>
+               </ul>}
+               </li>
+            </li> 
+
+
+
             <li className={styles.navitem}>
-                <Link href='/about'>
-                  <a className={isOpen === false ? 
-                            styles.navlink : styles.navlink+' '+styles.active}
-                            onClick={openMenu}>About us</a>
-                </Link>
-            </li>
-            <li className={styles.navitem}>
-             <li onClick={()=>setToggleDropDown(!toggleDropDown)} className={styles.btn}> <span  >Courses <FaAngleDown className={styles.arrow_down} /></span> 
-             {toggleDropDown && <ul className={styles.dropdown}>
-                <li onClick={() => {
-                    router.push('/foundation-course')
-                    setToggleDropDown(false)
-                }
-            }>  <FaAngleRight className={styles.arrow_right} />Foundation Course</li>
-            <li onClick={() => {
-                router.push('/game-development')
-                    setToggleDropDown(false)
-                }
-                }><FaAngleRight className={styles.arrow_right} /> Game Development</li>
-                </ul>}
-                </li>
-                </li>
-            <li className={styles.navitem}>
-            <li onClick={()=>setToggleSocial(!toggleSocial)} className={styles.btn}> <span> Social <FaAngleDown className={styles.arrow_down} /></span> 
+            <li onClick={()=>setToggleSocial(!toggleSocial)} className={styles.btn}> <span>Social<FaAngleDown className={styles.arrow_down} /></span> 
             {toggleSocial && <ul className={styles.dropdown}>
                <li onClick={() => {
                    router.push('/events')
                    setToggleSocial(false)
                }
            }>  <FaAngleRight className={styles.arrow_right} />Events</li>
-           <li onClick={() => { router.push('/faq')
+           <li onClick={() => { router.push('/frequently-asked-question')
             setToggleSocial(false)}
                }><FaAngleRight className={styles.arrow_right} /> FAQ</li>
                </ul>}
@@ -150,7 +156,7 @@ function Header() {
                 <Link href="https://wa.me/917304360502?text=I'm%20interested%20in%20your%20Game%20Development%20Course">
                 <button className={styles.bttn} >
                 <a target="_blank" style={{color:'white', padding:'0 2px',letterSpacing:'1px'}} className={isOpen === false ? styles.navlink : styles.navlink+' '+styles.active}
-                onClick={openMenu}><FaUser style={{fontSize:'16px'}}/>&nbsp;Login</a>
+                onClick={openMenu}><FaUser style={{fontSize:'16px'}}/>&nbsp;Job Hunt</a>
                 </button>
                 </Link>
             </li>
