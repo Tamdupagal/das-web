@@ -1,5 +1,5 @@
 import React from 'react'
-import CardGrid from '../main/components/CardGrid'
+// import CardGrid from '../main/components/CardGrid'
 import Blog from '../components/Blog';
 import Head from 'next/head'
 
