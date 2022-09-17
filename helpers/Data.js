@@ -103,10 +103,10 @@ export const DATA = () => {
         {
           id: 2,
           imgSrc: Ba,
-          altText: 'Introduction Unity Engine ',
-          title: 'Introduction Unity Engine ',
+          altText: 'Introduction Unity Engine',
+          title: 'Introduction Unity Engine',
           text: [
-            'A cross-platform used for developing games and consoles. ',
+            'A cross-platform used for developing games and consoles.',
             'Learn to develop games using Unity Engine.',
           ],
         },
@@ -116,18 +116,18 @@ export const DATA = () => {
           altText: 'Introduction to Web 3 gaming',
           title: 'Introduction to Web 3 gaming ',
           text: [
-            'Web 3.0 is supposed to be the next big evolution for the internet and gaming.            ',
+            'Web 3.0 is supposed to be the next big evolution for the internet and gaming.',
             'Learn to develop games (web 3)',
           ],
         },
         {
           id: 4,
           imgSrc: or,
-          altText: 'Introduction 3D games with audiovisual effects.          ',
-          title: 'Introduction 3D games with audiovisual effects.          ',
+          altText: 'Introduction 3D games with audiovisual effects.',
+          title: 'Introduction 3D games with audiovisual effects.',
           text: [
-            'Developing games using unity framework, unity canvas, and games objects (3D).            ',
-            'Develop multiplayer games.            ',
+            'Developing games using unity framework, unity canvas,and games objects(3D).',
+            'Develop multiplayer games.',
           ],
         },
         {
@@ -136,7 +136,7 @@ export const DATA = () => {
           altText: 'Gaming Industry.',
           title: 'Gaming Industry.',
           text: [
-            'Understand the gaming industry ',
+            'Understand the gaming industry',
             'Career Planning.',
           ],
         },

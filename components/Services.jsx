@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styles from './Services.module.scss';
 import SectionHeader from './SectionHeader';
 import FeatureDetails from './FeatureDetails';
+import { GoPrimitiveDot as Dot } from 'react-icons/go'
 
 
 function Services({ data, className}) {

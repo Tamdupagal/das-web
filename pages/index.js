@@ -23,7 +23,6 @@ export default function Home() {
         <Misson />
         <Association />
         <WorkFlow />
-        <Blog/>
       </main>
     </div>
   )

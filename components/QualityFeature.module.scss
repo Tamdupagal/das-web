@@ -5,9 +5,10 @@
   width: 100%;
   position:relative;
   background-color:#fffef8;
+  padding-top: 5rem;
   
   @media screen and (max-width: 768px) {
-    margin-top: 6rem;
+    padding-top: 6rem;
   }
   .section__header {
     text-align: center;
@@ -31,5 +32,9 @@
       border-radius: 1rem;
       box-shadow: 0 0 1rem rgba(black, 0.1);
     }
+  }
+  .feature:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition:0.2s;
   }
 }

@@ -3,27 +3,25 @@
 
 
 .container {
-    padding: 15px;
-    // border: 1px solid #fd7e14;
     width: 100%;
     @include flex_layout(center, center);
-
-    
-    
+     
     .box{
         width:100%;
         text-align:left;
+        border-radius:8px;
         
     }
 
     .title{
         font-size:17px;
-        color: #fd7e14;
+        color: #005778;
         padding:5px;
     };
     .desc{
-        font-size:14px;
-        color: #005778;padding:10px;
+        font-size:1.5rem;
+        color: #fd7e14;
+        padding:10px;
         font-weight:500
     }
 }

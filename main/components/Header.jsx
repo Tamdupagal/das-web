@@ -11,30 +11,60 @@ import {useTheme} from 'next-themes';
 
 
 function Header() {
-    const {systemTheme,theme,setTheme} = useTheme();
-    const RenderThemeChange =() =>{
-        const currentTheme = theme =='system' ? systemTheme : theme;
+    // const {systemTheme,theme,setTheme} = useTheme();
+    // const RenderThemeChange =() =>{
+    //     const currentTheme = theme =='system' ? systemTheme : theme;
 
-        if (currentTheme == 'dark'){
-            return(
-                <FaSun className="icon" role='button' onClick={() => setTheme('light')} />
-            )
-        }
-        else {
-            return(
-                <FaMoon className="icon" role="button" onClick={() => setTheme('dark')} />
-            )
-        }
-    }
+    //     if (currentTheme == 'dark'){
+    //         return(
+    //             <FaSun className="icon" role='button' onClick={() => setTheme('light')} />
+    //         )
+    //     }
+    //     else {
+    //         return(
+    //             <FaMoon className="icon" role="button" onClick={() => setTheme('dark')} />
+    //         )
+    //     }
+    // }
 
     const { setIsAdmin, setToggleLoginForm} = useContext(AppContext)
     
 
     const headerRef = useRef()
+    const btnRef = useRef();
+    const btnRef1 = useRef();
+    const headRef = useRef();
 
 
     const [toggleDropDown, setToggleDropDown] = useState(false)
     const [toggleSocial, setToggleSocial] = useState(false)
+
+    useEffect(()=>{
+
+        const closeDropDown = e =>{
+        
+            if (e.path[0] !== btnRef.current){
+                setToggleDropDown(false);
+            }
+        }
+
+        document.body.addEventListener('click', closeDropDown);
+        return () => document.body.removeEventListener('click', closeDropDown);
+    },[]);
+    
+    
+
+
+    useEffect(()=>{
+        const closeDropDown1 = e =>{
+            if (e.path[0] !== btnRef1.current){
+                setToggleSocial(false);
+            }
+        }
+
+        document.body.addEventListener('click', closeDropDown1);
+        return () => document.body.removeEventListener('click', closeDropDown1);
+    },[]);
 
     const router = useRouter()
 
@@ -55,6 +85,7 @@ function Header() {
     }
 
     useEffect(() => {
+        setToggleDropDown(false)
         window.addEventListener('scroll', classToggle)
         return  ()=> {
             window.removeEventListener('scroll', classToggle)
@@ -63,49 +94,6 @@ function Header() {
     const [isOpen,setIsOpen] = useState(false);
     const openMenu= ()=> setIsOpen(!isOpen);
 
-
-    // <header className={styles.header} ref={headerRef}>
-    //     <figure className={styles.logo} onClick={()=>router.push('/')}>
-    //             <Images src={logo} objectFit="contain" layout='responsive' className={styles.image}/>
-    //     </figure>
-    //     <ul className={styles.btn_group}>
-    //     <li onClick={()=>router.push('/')} className={styles.btn}><span>Home</span></li>
-    //     <li onClick={handleAdminLogin} className={styles.btn}><span>About us</span></li>
-    //     <li onClick={handleAdminLogin} className={styles.btn}><span>Social</span></li>
-    //         <li onClick={()=>setToggleDropDown(!toggleDropDown)} className={styles.btn}> <span  >Courses <FaAngleDown className={styles.arrow_down} /></span> 
-    //             {toggleDropDown && <ul className={styles.dropdown}>
-    //                 <li onClick={() => {
-    //                     router.push('/foundation-course')
-    //                     setToggleDropDown(false)
-    //                 }
-    //             }>  <FaAngleRight className={styles.arrow_right} />Foundation Course</li>
-    //                 <li onClick={() => {
-    //                     router.push('/game-development')
-    //                     setToggleDropDown(false)
-    //                 }
-    //                 }><FaAngleRight className={styles.arrow_right} /> Game Development</li>
-    //             </ul>} 
-    //         </li>
-    //             <li onClick={handleAdminLogin} className={styles.btn}><span>Login</span></li>     
-    //         </ul>
-    // </header>
-
-//     <li className={styles.navitem}>
-//     <Link href='/'>
-//       <a className={isOpen === false ? 
-//                  styles.navlink : styles.navlink+' '+styles.active}
-//                  onClick={openMenu}>Home</a>
-//      </Link>
-//  </li>
-//  <li className={styles.navitem}>
-//      <Link href='/about'>
-//        <a className={isOpen === false ? 
-//                  styles.navlink : styles.navlink+' '+styles.active}
-//                  onClick={openMenu}>About us</a>
-//      </Link>
-//  </li>
-
-
     return (
         <header className={styles.header}>
         <nav className={styles.navbar}>
@@ -113,44 +101,43 @@ function Header() {
                     <Images src={logo} objectFit="contain" layout='responsive' className={styles.image}/>
             </figure>
         <ul className={isOpen === false ? 
-                styles.navmenu : styles.navmenu +' '+ styles.active}>
-          
-                
-
-                
+                styles.navmenu : styles.navmenu +' '+ styles.active}>    
             <li className={styles.navitem}>
-            <li onClick={()=>setToggleDropDown(!toggleDropDown)} className={styles.btn}> <span  >Courses <FaAngleDown className={styles.arrow_down} /></span> 
+            <button ref={btnRef}  onClick={()=>setToggleDropDown(!toggleDropDown)} className={styles.btn}>Courses<FaAngleDown className={styles.arrow_down}/>
             {toggleDropDown && <ul className={styles.dropdown}>
                <li onClick={() => {
                    router.push('/foundation-course')
                    setToggleDropDown(false)
+                   setIsOpen(false)
                }
            }>  <FaAngleRight className={styles.arrow_right} />Foundation Course</li>
            <li onClick={() => {
                router.push('/game-development')
                    setToggleDropDown(false)
+                   setIsOpen(false)
                }
                }><FaAngleRight className={styles.arrow_right} /> Game Development</li>
                </ul>}
-               </li>
+               </button>
             </li> 
 
-
-
             <li className={styles.navitem}>
-            <li onClick={()=>setToggleSocial(!toggleSocial)} className={styles.btn}> <span>Social<FaAngleDown className={styles.arrow_down} /></span> 
+            <button ref={btnRef1} onClick={()=> {setToggleSocial(!toggleSocial)}} className={styles.btn}>Social<FaAngleDown className={styles.arrow_down}/>
             {toggleSocial && <ul className={styles.dropdown}>
                <li onClick={() => {
                    router.push('/events')
                    setToggleSocial(false)
+                   setIsOpen(false)
                }
            }>  <FaAngleRight className={styles.arrow_right} />Events</li>
            <li onClick={() => { router.push('/frequently-asked-question')
-            setToggleSocial(false)}
+            setToggleSocial(false)
+            setIsOpen(false)
+        }
                }><FaAngleRight className={styles.arrow_right} /> FAQ</li>
                </ul>}
 
-               </li>
+               </button>
             </li>
             <li className={styles.navitem}>
                 <Link href="https://wa.me/917304360502?text=I'm%20interested%20in%20your%20Game%20Development%20Course">

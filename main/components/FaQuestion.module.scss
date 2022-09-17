@@ -7,9 +7,15 @@
     margin:auto;
     background-color: #FFFEF8;
     padding: 3rem 0.5rem 7rem 0.5rem;
-    border: 2px solid #fd7e14;
-    border-radius:8px;
+    // border: 2px solid #fd7e14;
+    // border-radius:8px;
+    border:none;
     text-align: left;
+
+    @media screen and (max-width:768px) {
+        width: 90%;
+        
+    }
     
 
 }
