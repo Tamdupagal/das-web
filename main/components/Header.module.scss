@@ -14,6 +14,7 @@
   z-index: 999;
   font-size: 20px;
   list-style-type: none;
+
 }
 .logo {
   position: relative;
@@ -21,13 +22,14 @@
   width: 12rem;
   height: max-content;
   cursor: pointer;
+ 
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 1rem 0rem;
 }
 
 .hamburger {
@@ -56,6 +58,7 @@
 .navitem {
   margin-left: 3rem;
   list-style-type: none;
+  // padding: 0rem 1rem;
 }
 .navitem:hover{
   color: #FD7E14;
@@ -128,17 +131,20 @@
 
   
 }
-.header{
   // @include flex_layout(center);
 
   .btn {
     position: relative;
     letter-spacing: 0.005rem;
-    padding: 2rem 0;
+    cursor: pointer;
+    border:none;
+    background-color: #FFFEF8;
+    display:none;
+    padding: 2rem 0rem;
     height: 100%;
     font-size: 20px;
     font-weight:600;
-    color: #005778;
+    color: #FD7E14;
     & > span {
       z-index: 2;
       cursor: pointer;
@@ -152,13 +158,14 @@
 
     }
     &:last-child {
-      padding:0 10px;
+      padding:0 0px;
     }
     &::after {
       top: 0;
       left: 0.01rem;
       width: 100%;
       height: 100%;
+      // content: "";
     }
     @include flex_layout();
     .arrow_down {
@@ -166,12 +173,24 @@
       color: #FD7E14;
       }
   }
-  
 
+  .btn:hover{
+    border-bottom: red;
+    color: #005778;
+    padding: 0.3rem 0rem;
+      border-bottom-style: solid;
+    border-bottom-color: #005778;
+    transition: .1s;
+    
+.arrow_down{
+  color:#005778
+}
+
+  }
   
   .dropdown {
     position: absolute;
-    top: 101%;
+    top: 130%;
     right: 0;
     background-color: white;
     border-radius :1rem;
@@ -187,12 +206,12 @@
     user-select: none;
     & > li {
       list-style-type: none;
-      padding: 1rem 2rem;
+      padding: 1.5rem 2rem;
+      cursor: pointer;
       
       &:hover {
         background-color: $main;
         color: $primary;
-        // display: block;
       }
       font-size: 1.5rem;
       color: $main;
@@ -203,11 +222,10 @@
       }
     }
   }
-}
 
 
 .bttn{
-  padding: 10px 25px;
+  padding: 10px 20px;
   border:none !important;
   background-color:#FD7E14;
   text-transform: uppercase;

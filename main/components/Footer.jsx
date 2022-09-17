@@ -54,7 +54,7 @@ function Footer() {
           <li>
             <FaPhone className={styles.icon} /> +91 7304360502
           </li>
-          <li>
+          <li className={styles.smalll}>
             <FaEnvelope className={styles.icon} /> hello@digitalaidedschool.com
           </li>
         </ul>

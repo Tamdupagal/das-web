@@ -29,7 +29,6 @@ function CourseBox(props) {
         </span>
         <div className={styles.btn_wrapper}>
           <Button className={styles.btn}
-            // style={{ backgroundColor: 'white',color:'#005778',border:'1px solid #005778',borderRadius:'8px',fontSize:'13px' ,padding:'10px 30px 10px 30px'}}
             href={'/' + props.path}
           >
             {props.btnText}

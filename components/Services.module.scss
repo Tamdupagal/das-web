@@ -13,7 +13,7 @@
     @include flex_layout(center, null, column);
     background-image: none;
     padding: 0;
-    margin-top: 6rem;
+    padding-top: 6rem;
   }
   .service__img {
     position: relative;
@@ -80,8 +80,8 @@
         li{
           font-size:15px;
           font-weight: 400;
-          padding-left: 10px;
-          list-style-type:none;
+          // padding-left: 10px;
+          // list-style-type:none;
           color: #005778;
           // list-style-size:40px;
           @media screen and (max-width: 768px) {
@@ -90,6 +90,10 @@
           }
 
         }
+        li::marker{
+          font-size:2rem;
+
+        };
         .divi{
           border:1px solid #fd7e14;
           border-radius: 8px;

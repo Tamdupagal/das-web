@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './FaqData.module.scss'
 import { GoPrimitiveDot as Dot } from 'react-icons/go'
+import Accordion from './Accordion'
 
 
 export default function FaqData(props) {
@@ -8,10 +9,7 @@ export default function FaqData(props) {
     <div>
     <section className={styles.container}>
     <div className={styles.box}>
-    <h1 className={styles.title}><Dot className={styles.dot} /> {props.title}</h1>
-    <p className={styles.desc}>
-    {props.desc}
-    </p>
+    <Accordion title={props.title} content={props.desc} />
     </div>
     </section>
     

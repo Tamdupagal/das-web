@@ -10,7 +10,8 @@
   @include flex_layout(center, center, column);
   @media screen and (max-width: 768px) {
     padding: 2rem;
-    margin: 5rem 0;
+    // margin: 5rem 0;
+    padding: 5rem 0;
   }
   .price__desc {
     font-size: 1.8rem;

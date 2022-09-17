@@ -44,8 +44,12 @@ b{
     }
 
 
-    span{
+    span,b{
       padding-bottom: 1px;
+      @media  screen and (max-width: 768px){
+        font-size:2.5rem;
+        
+      }
     }
 
   }
@@ -61,8 +65,24 @@ b{
     width: 80%;
     @media screen and (max-width: 768px){
       border: none;
-      
     }
+    span,b{
+      padding-bottom: 1px;
+      @media  screen and (max-width: 768px){
+        font-size:2.5rem;
+        
+      }
+    }
+    &:last-child {
+      @media  screen and (max-width: 768px){
+      // font-size: 1rem;
+      }
+    }
+    .smalll{
+      font-size:1.6rem;
+      text-align:justify;
+    }
+
   }
   .ul3{
     padding: 10px;
@@ -78,6 +98,13 @@ b{
       border: none;
       
     }
+    span,b{
+      padding-bottom: 1px;
+      @media  screen and (max-width: 768px){
+        font-size:2.5rem;
+        
+      }
+    }
   }
   .ul4{
     width: 80%;
@@ -90,6 +117,13 @@ b{
     @media screen and (max-width: 768px){
       border: none;
       
+    }
+    span,b{
+      padding-bottom: 1px;
+      @media  screen and (max-width: 768px){
+        font-size:2.5rem;
+        
+      }
     }
 }
 
@@ -120,7 +154,6 @@ b{
 .fot{
 width: 80%;
 margin: auto;
-}
 .copyright{
   font-size:20px;
   font-weight: 600;
@@ -139,8 +172,9 @@ margin: auto;
   }
   .heart{
     color:#FD7E14;
-    font-size:2rem;
+    font-size:2.5rem;
     
   }
-
+  
+}
 }

@@ -72,6 +72,18 @@
           font-weight:700;
           }
       }
+      .title3{
+        font-size: 1.5rem;
+        color: $orange;
+        font-weight:800;
+        text-transform: uppercase;
+        text-align: center;
+        @media screen and (max-width: 415px) {
+          // min-height:6rem;
+          font-size:1.5rem;
+          font-weight:800;
+          }
+      }
     }
     
   }
@@ -103,11 +115,6 @@
     font-size:10px;
     
   }
-  
-
-
-
-
   transition : {
     property: transform, box-shadow;
     duration: 0.01s;
