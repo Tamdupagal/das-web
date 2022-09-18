@@ -229,7 +229,7 @@ export const DATA = () => {
           imgSrc: what,
           altText: 'What?',
           title: 'What?',
-          text: 'Teaching Foundation of Game Development & Full-Stack Game Development to a point where a student is industry ready and can get placed easily',
+          text: 'Teaching Foundation of Game Development & Full-Stack Game Development to a point where the student is industry ready and can get placed easily',
         },
         {
           id: 3,
