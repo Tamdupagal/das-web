@@ -1,31 +1,14 @@
 import styles from './Header.module.scss';
 import Images from 'next/image'
 import logo from '../assets/das.webp'
-import { FaAngleDown, FaBars, FaTimes, FaAngleRight, FaLastfmSquare,FaUser,FaSun,FaMoon} from 'react-icons/fa'
+import { FaAngleDown, FaAngleRight,} from 'react-icons/fa'
+import {GiGameConsole} from 'react-icons/gi'
 import {useContext, useEffect, useRef, useState } from 'react';
 import {useRouter} from 'next/router'
 import { AppContext } from '../../AppContext';
 import Link from 'next/link'
-// import { useState } from "react";
-import {useTheme} from 'next-themes';
-
 
 function Header() {
-    // const {systemTheme,theme,setTheme} = useTheme();
-    // const RenderThemeChange =() =>{
-    //     const currentTheme = theme =='system' ? systemTheme : theme;
-
-    //     if (currentTheme == 'dark'){
-    //         return(
-    //             <FaSun className="icon" role='button' onClick={() => setTheme('light')} />
-    //         )
-    //     }
-    //     else {
-    //         return(
-    //             <FaMoon className="icon" role="button" onClick={() => setTheme('dark')} />
-    //         )
-    //     }
-    // }
 
     const { setIsAdmin, setToggleLoginForm} = useContext(AppContext)
     
@@ -140,10 +123,10 @@ function Header() {
                </button>
             </li>
             <li className={styles.navitem}>
-                <Link href="https://wa.me/917304360502?text=I'm%20interested%20in%20your%20Game%20Development%20Course">
-                <button className={styles.bttn} >
+                <Link href="https://wa.me/917304360502?text=I'm%20interested%20in%20Game%20Development%20Career%20Course">
+                <button className={styles.bttn}>
                 <a target="_blank" style={{color:'white', padding:'0 2px',letterSpacing:'1px'}} className={isOpen === false ? styles.navlink : styles.navlink+' '+styles.active}
-                onClick={openMenu}><FaUser style={{fontSize:'16px'}}/>&nbsp;Job Hunt</a>
+                onClick={openMenu}><GiGameConsole style={{fontSize:'16px'}}/>&nbsp;Game Dev Careers</a>
                 </button>
                 </Link>
             </li>

@@ -14,6 +14,7 @@ import Partnership from '../main/assets/art.svg'
 const bannerData = {
   title: 'MASTER Solid foundation Game Development Program',
   program: '(30-days Program)',
+  text:"I'm interested in your Game Development"
 }
 
 const data = [
@@ -21,7 +22,7 @@ const data = [
     id: 1,
     imgSrc: Performance,
     altText: 'Understanding DM',
-    title: 'Understanding Programming & Logic    ',
+    title: 'Understanding Programming & Logic',
     text: ['Understand Basics C++ & C#    ', 'Creative & Problem solving     '],
   },
   {

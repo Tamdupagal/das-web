@@ -8,22 +8,22 @@ export const BLOG_DATA = [
         id: 1,
         title: 'UpComing Launch Events',
         imgSrc: img1,
-        td:"18-sep-2022",
-        text: "The launch events is on 18-sep-22 everyone can register yourself and learn our Game Development and get free scholarship 100% ",
+        td:"21-sep-2022",
+        text: "The launch events will be on 21-sep-22 everyone can register yourself and learn our Game Development and get free scholarship 100% ",
     },
     {
         id: 2,
         title: 'UpComing Launch Events',
         imgSrc: img2,
         td:"26-sep-2022",
-        text: "The launch events is on 18-sep-22 everyone can register yourself and get free scholarship 100%",
+        text: "The Game events will be on 26-sep-22 everyone can register yourself and get free scholarship 100%",
     },
     {
         id: 3,
         title: 'Game Development',
         imgSrc: img3,
-        td:"18-sep-2022",
-        text: "The launch events is on 18-sep-22 everyone can register yourself and get free scholarship 100% "
+        td:"22-sep-2022",
+        text: "The launch events will be on 22-sep-22 everyone can register yourself and get free scholarship 100% "
 
     },
     // {
