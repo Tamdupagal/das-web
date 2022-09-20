@@ -1,14 +1,24 @@
-import styles from '../styles/Privacy.module.scss'
+// import styles from '../styles/Privacy.module.scss'
+import Head from 'next/head'
+
 
 
 const termsConditions = () => {
   return (
-    <div style={{ margin:'20px' ,paddingTop:'80px'}}>
-      <h1 className='c10' id='h.gjdgxs' style={{ marginBottom: '10px' }}>
-        <span className='c16'>Terms &amp; Conditions</span>
+<div>
+      <Head>
+        <title>Terms-Condition | Digitalaidedschool</title>
+        <meta name="keywords" content="Full Stack Game Development | game develeopment careers | Game development career | game designing | games development | games development classes in Mumbai | games development classes in Pune | games development classes in Delhi | game development courses near me | game development classes | game development training | best game development courses | best game development courses in India | video game development courses | video game development courses in India | online game development courses in Mumbai | online game development courses in Pune | online game development courses | online game development courses near me | game development classes near me | online game development courses in India | learn game development online | skillshare game development"/>
+        <meta name='description' content='For terms and conditions visit our page.' />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel='icon' href='/favicon.png' />
+      </Head>
+<div style={{ margin:'20px' ,paddingTop:'80px'}}>
+<h1 className='c10' id='h.gjdgxs' style={{ marginBottom: '10px' }}>
+<span className='c16'>Terms &amp; Conditions</span>
       </h1>
-      <p className='' style={{ marginBottom: '10px' }}>
-        <span className='c15'>
+      <p className='c1' style={{ marginBottom: '10px' }}>
+        <span className='c7 c8'>
           By using this website, Digital Aided School.com
           (&ldquo;Website&rdquo;), and the services provided by Digital Aided
           School, you are agreeing to be bound by the following Terms and
@@ -49,7 +59,7 @@ const termsConditions = () => {
           license you may not:
         </span>
       </p>
-      <ul className='c11 lst-kix_list_1-0 start'>
+      <ul className='c7 c8 lst-kix_list_1-0'>
         <li className='c5 li-bullet-0'>
           <span className='c2'>modify or copy the materials;</span>
         </li>
@@ -71,7 +81,7 @@ const termsConditions = () => {
             materials; or
           </span>
         </li>
-        <li className='c13 li-bullet-0'>
+        <li className='c5 li-bullet-0'>
           <span className='c2'>
             transfer the materials to another person or&quot;mirror&quot; the
             materials on any other server.
@@ -192,6 +202,7 @@ const termsConditions = () => {
       <p className='c12'>
         <span className='c3'></span>
       </p>
+    </div>
     </div>
   )
 }
