@@ -84,7 +84,8 @@ function Header() {
                     <Images src={logo} objectFit="contain" layout='responsive' className={styles.image}/>
             </figure>
         <ul className={isOpen === false ? 
-                styles.navmenu : styles.navmenu +' '+ styles.active}>    
+                styles.navmenu : styles.navmenu +' '+ styles.active}>  
+                  
             <li className={styles.navitem}>
             <button ref={btnRef}  onClick={()=>setToggleDropDown(!toggleDropDown)} className={styles.btn}>Courses<FaAngleDown className={styles.arrow_down}/>
             {toggleDropDown && <ul className={styles.dropdown}>
