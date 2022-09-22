@@ -33,7 +33,7 @@ function Footer() {
             </Link>
           </li>
           <li>
-            <Link href='#'>
+            <Link href='refund-policy'>
               <a className={styles.link}>Refund Policy</a>
             </Link>
           </li>
