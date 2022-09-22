@@ -49,8 +49,8 @@ function Courses() {
     <section className={styles.container}>
       <h1 className={styles.main_title}>About our course</h1>
       <p className={styles.about__course}>
-        The real <span>STUDY FIRST PAY LATER programs.</span>World&apos;s 1st Live online Agency style<br/>
-       cohort-based learning.  1:10 (batch) collaborative Live project building academic experience. Live Real Life<br/>
+        The real <span>STUDY FIRST PAY LATER programs.<br/></span>World&apos;s 1st Live online classes
+       cohort-based learning.<br/>  1:10 (batch) collaborative Live project building academic experience.<br/> Live Real Life
         industry-standard projects.
       </p>
       <div className={styles.carousel__box}>

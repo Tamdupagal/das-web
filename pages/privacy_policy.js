@@ -1,6 +1,5 @@
 import styles from '../styles/Privacy.module.scss'
 import Head from 'next/head'
-import Facebookpixel from '../main/pixel/Facebook/pixel'
 
 
 
@@ -12,11 +11,11 @@ function PrivacyPolicy({name}) {
         <title>Privacy Policy | Digitalaidedschool </title>
         <meta name="keywords" content="Full Stack Game Development | game develeopment careers | Game development career | game designing | games development | games development classes in Mumbai | games development classes in Pune | games development classes in Delhi | game development courses near me | game development classes | game development training | best game development courses | best game development courses in India | video game development courses | video game development courses in India | online game development courses in Mumbai | online game development courses in Pune | online game development courses | online game development courses near me | game development classes near me | online game development courses in India | learn game development online | skillshare game development"/>
         <meta name='description' content='To get the more information of Privacy Policy, visit here.' />
-        {name="Facebookpixel" && <Facebookpixel/>}
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel='icon' href='/favicon.png' />
       </Head>  
     <section>
+    
     <div className={styles.container} style={{ padding: '10px 20px', marginTop: '80px', fontSize: '15px',backgroundColor: '#fffef8'}}>
       <p className='c1'>
         <span className='c7 c4'>Digital Aided School </span>

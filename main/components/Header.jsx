@@ -87,7 +87,7 @@ function Header() {
                 styles.navmenu : styles.navmenu +' '+ styles.active}>  
                   
             <li className={styles.navitem}>
-            <button ref={btnRef}  onClick={()=>setToggleDropDown(!toggleDropDown)} className={styles.btn}>Courses<FaAngleDown className={styles.arrow_down}/>
+            <button ref={btnRef}  onClick={()=>setToggleDropDown(!toggleDropDown)} className={styles.btn}>Courses
             {toggleDropDown && <ul className={styles.dropdown}>
                <li onClick={() => {
                    router.push('/foundation-course')
@@ -106,7 +106,7 @@ function Header() {
             </li> 
 
             <li className={styles.navitem}>
-            <button ref={btnRef1} onClick={()=> {setToggleSocial(!toggleSocial)}} className={styles.btn}>Social<FaAngleDown className={styles.arrow_down}/>
+            <button ref={btnRef1} onClick={()=> {setToggleSocial(!toggleSocial)}} className={styles.btn}>Social
             {toggleSocial && <ul className={styles.dropdown}>
                <li onClick={() => {
                    router.push('/events')

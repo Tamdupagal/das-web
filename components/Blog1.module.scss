@@ -4,19 +4,31 @@
 .container {
   position: relative;
   width: 100%;
+  padding-top:5rem;
+  background-color:#FFFEF8;
   @include flex_layout(center, null, column);
   .section__header {
     text-align: center;
     margin-bottom: 5rem;
   }
-  .carousel__box {
+  .heading{
+    padding:1rem ;
+    font-size:2rem;
+    color: #fd7e14;
+  }
+  .heading1{
+    padding:1rem ;
+    font-size:2rem;
+    color: $main;
+  }
+   .carousel__box {
     position: relative;
     
     width: 100%;
     padding: 2rem 10rem;
     overflow: hidden;
     @media screen and (max-width: 768px) {
-      padding: 2rem 4.5rem;
+      padding: 2rem 6rem;
     }
     .card__wrapper {
       position: relative;
