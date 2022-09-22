@@ -16,7 +16,7 @@ function CoreFeature({ data, btnText,title}) {
         <section className={styles.container}>
             <div className={styles.content__box}>
                 <div className={styles.section__header}>
-                <SectionHeader slogan="ABOUT THE PROGRAM" title={title}/>
+                <SectionHeader text="ABOUT THE PROGRAM" title={title}/>
                 </div>
                 <div className={styles.feature__box}>
                     <FeatureDetails style={style} description={data} btnText={btnText}/>

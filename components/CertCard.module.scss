@@ -1,0 +1,80 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.card {
+  position: relative;
+  width: 37rem;
+  @include flex_layout(null, null, column);
+  box-shadow: 0 0 1rem rgba(black, 0.1);
+
+  border-radius: 1rem;
+  border: 0.1rem solid #e4e4e4;
+  padding: 4rem;
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #fd7e14;
+  }
+  .datetime{
+    font-size:1.5rem;
+    text-align: left;
+    font-weight: 600;
+    padding:5px;
+
+  }
+  .desc {
+    font-size: 1.6rem;
+    line-height: 1.9;
+    text-align: justify;
+    color: $main;
+    padding-left: 0.2rem;
+    min-height: 15rem;
+    max-height: 15rem;
+    max-width: 30rem;
+    min-width: 30rem;
+    overflow-y: auto;
+    border-top: 0.1rem solid $main;
+    padding-top: 1.5rem;
+    &::-webkit-scrollbar {
+      display: inline;
+      background-color: white;
+      width: 0.4rem;
+      border-radius: 1rem;
+      &-thumb {
+        width: 0.1rem;
+        background-color: $gray;
+        border-radius: 10rem;
+      }
+      &-track {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+  .btn{
+    background-color: #fd7e14;
+      color: white;
+      font-size: 1.5rem;
+      border-radius: 8px;
+      padding: 1.1rem 5rem;
+      // width: max-content;
+      border: 1px solid $orange;
+      letter-spacing:0.009rem;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+      font-weight: 500;
+      transition : {
+        property: transform, box-shadow;
+        duration: 0.01s;
+      }
+      margin-top: 2rem;
+      &:hover {
+        transform: translate(0.1rem, -0.1rem);
+        box-shadow: -0.1rem 0.2rem 0.3rem rgba(rgb(11, 11, 11), 0.2);
+        transition-duration: 0.1s;
+        background-color: #005877 ;
+        border: 2px solid #005877;
+      }
+
+  }
+}
