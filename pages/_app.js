@@ -37,6 +37,7 @@ const LoaderWrapper = function () {
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
 
+ /* A hook that is used to track page views. */
   useEffect(() => {
     import('react-facebook-pixel')
       .then((x) => x.default)
