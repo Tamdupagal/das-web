@@ -12,19 +12,16 @@ class MyDocument extends Document {
         <Head>
           <link rel="icon" href="/favicon.png" />
        
-          <Script
-            src='https://www.googletagmanager.com/gtag/js?id=UA-223710261-1'
-            strategy='afterInteractive'
-          />
-          <Script id='google-analytics' strategy='afterInteractive'>
-                {`
-                  window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'UA-223710261-1');
-                `}
-          </Script>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-223710261-1"></script>
+          <script>
+           {`
+          window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'UA-223710261-1');
+          
+          `} </script>
         </Head>
         <body>
           <Main />
