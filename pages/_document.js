@@ -13,7 +13,7 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.png" />
        
           <Script
-            src='https://www.googletagmanager.com/gtag/js?id=G-SVC560TV66'
+            src='https://www.googletagmanager.com/gtag/js?id=UA-223710261-1'
             strategy='afterInteractive'
           />
           <Script id='google-analytics' strategy='afterInteractive'>
@@ -22,7 +22,7 @@ class MyDocument extends Document {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-SVC560TV66');
+          gtag('config', 'UA-223710261-1');
                 `}
           </Script>
         </Head>
