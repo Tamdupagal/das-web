@@ -7,6 +7,7 @@ import { useContext, useEffect } from 'react'
 import Form from '../main/components/Form'
 import ReactLoading from 'react-loading'
 import { useRouter } from 'next/router'
+import TagManager from 'react-gtm-module';
 
 
 
@@ -50,6 +51,11 @@ function MyApp({ Component, pageProps }) {
       })
   }, [router.events])
 
+  useEffect(() => {
+    TagManager.initialize({ gtmId: 'GTM-N25VKH4' });
+}, []);
+
+
   if (Component.withoutLayout === true) {
     return (
       <AppContextProvider>
@@ -67,7 +73,7 @@ function MyApp({ Component, pageProps }) {
     <FormWrapper />
     <LoaderWrapper />
     </AppContextProvider>
-    
+     
   )
 }
 

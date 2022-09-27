@@ -10,18 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="icon" href="/favicon.png" />
-       
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-223710261-1"></script>
-          <script>
-           {`
-          window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-          
-            gtag('config', 'UA-223710261-1');
-          
-          `} </script>
+          <link rel="icon" href="/favicon.png" /> 
         </Head>
         <body>
           <Main />
