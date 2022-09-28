@@ -52,7 +52,7 @@ function Footer() {
         <ul className={styles.ul2}>
         <span><b>Contact Us</b></span>
           <li>
-            <FaPhone className={styles.icon} /> +91 7304360502
+            <FaPhone className={styles.icon} /> +919920350084
           </li>
           <li className={styles.smalll}>
             <FaEnvelope className={styles.icon} /> hello@digitalaidedschool.com
