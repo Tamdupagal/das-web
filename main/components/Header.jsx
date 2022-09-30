@@ -124,7 +124,7 @@ function Header() {
                </button>
             </li>
             <li className={styles.navitem}>
-                <Link href="https://wa.me/917304360502?text=I'm%20interested%20in%20Game%20Development%20Career%20Course">
+                <Link href="https://share.hsforms.com/1pNjOe_2IQC6jbHw4xtxlsgdk9uk">
                 <button className={styles.bttn}>
                 <a target="_blank" style={{color:'white', padding:'0 2px',letterSpacing:'1px'}} className={isOpen === false ? styles.navlink : styles.navlink+' '+styles.active}
                 onClick={openMenu}><GiGameConsole style={{fontSize:'16px'}}/>&nbsp;Game Dev Careers</a>

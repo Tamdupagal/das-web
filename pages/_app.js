@@ -55,7 +55,6 @@ function MyApp({ Component, pageProps }) {
     TagManager.initialize({ gtmId: 'GTM-N25VKH4' });
 }, []);
 
-
   if (Component.withoutLayout === true) {
     return (
       <AppContextProvider>

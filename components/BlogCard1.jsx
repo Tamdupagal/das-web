@@ -12,7 +12,7 @@ function BlogCard(props) {
                     {props.text}
                 </p>
                 <button className={styles.btn}>
-              <Link  href="https://wa.me/917304360502?text=I'm%20interested%20in%20your%20Game%20Development%20Course" >
+              <Link  href="https://share.hsforms.com/1pNjOe_2IQC6jbHw4xtxlsgdk9uk" >
               <a target="_blank" className={styles.Link}>LEARN MORE</a> 
               </Link>
               </button>
