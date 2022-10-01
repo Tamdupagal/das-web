@@ -8,7 +8,7 @@ export const BLOG_DATA1 = [
         id: 1,
         title: 'Land your first game developer job (Certification)',
         imgSrc: img1,
-        td:"21-sep-2022",
+        td:"21-Oct-2022",
         text: "Ready to get that first job, then overdeliver in the first 30 days so you keep it? This course shows you how it’s done: Revamp your resume, ace your interview, and put points on the board. You’ve got this. ",
     },
     {

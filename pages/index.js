@@ -34,6 +34,7 @@ export default function Home() {
         <Association />
         <WorkFlow />
         <Blog1/>
+        
         <hr/>
       </main>
     </div>

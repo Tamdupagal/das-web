@@ -71,9 +71,8 @@ function Banner({ data, checkBanner }) {
             <span>Batches</span>
             </div>
               <p style={{textAlign: 'center' ,fontSize:'16px',color:'#005778'}}>
-              The Next batch starts Monday 26 September 2022
+              The Next batch starts from 15 October 2022
               </p>
-              
               <button className={styles.banner__btn}>
               <Link  href="https://share.hsforms.com/1pNjOe_2IQC6jbHw4xtxlsgdk9uk" >
               <a target="_blank" className={styles.Link}>PAY AS YOU LIKE</a> 
