@@ -73,10 +73,10 @@ function Banner({ data, checkBanner }) {
               <p style={{textAlign: 'center' ,fontSize:'16px',color:'#005778'}}>
               The Next batch starts from 15 October 2022
               </p>
-              <button className={styles.banner__btn}>
-              <Link  href="https://share.hsforms.com/1pNjOe_2IQC6jbHw4xtxlsgdk9uk" >
+              <button className={styles.banner__btn} onClick={handleForm}>
+              
               <a target="_blank" className={styles.Link}>PAY AS YOU LIKE</a> 
-              </Link>
+       
               </button>
         <p style={{ fontSize: '15px', marginTop: '10px' }}>
         </p>

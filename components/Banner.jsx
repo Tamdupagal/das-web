@@ -25,7 +25,7 @@ function Banner({ data, checkBanner }) {
   const { setToggleLoginForm, setIsAdmin } = useContext(AppContext)
 
   const handleForm = function () {
-    setIsAdmin(false)
+    setIsAdmin(true)
     setToggleLoginForm(true)
   }
 
@@ -74,10 +74,8 @@ function Banner({ data, checkBanner }) {
               The Next batch starts from 15 October 2022
               </p>
               
-              <button className={styles.banner__btn}>
-              <Link  href="https://share.hsforms.com/1MlcdCDN1QsapQmw-zTBt0wdk9uk" >
+              <button className={styles.banner__btn} onClick={handleForm}>
               <a target="_blank" className={styles.Link}>STUDY FIRST PAY LATER</a> 
-              </Link>
               </button>
         <p style={{ fontSize: '15px', marginTop: '10px' }}>
         </p>

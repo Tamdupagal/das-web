@@ -56,10 +56,10 @@ function Package({ data }) {
             <div className={styles.section__header}>
                 <SectionHeader slogan="PRICING PLAN" text="Choose your pricing policy"/>
             </div>
-                    <button  className={styles.button}>
-                    <Link  href="https://share.hsforms.com/1pNjOe_2IQC6jbHw4xtxlsgdk9uk" >
+                    <button  className={styles.button} onClick={handleForm}>
+                    
                     <a target="_blank" className={styles.Link}>STUDY FIRST PAY LATER</a> 
-                    </Link>
+                 
                     </button> 
             <p className={styles.price__desc}>{data}</p>
         </section>

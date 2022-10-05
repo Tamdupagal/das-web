@@ -41,10 +41,10 @@ export default function Banner() {
                 <h1 className={styles.title3}>Be a Creator, Not a Player</h1>
                 <h1 className={styles.title3}>Connect with the real gaming community.</h1>
                 </div>
-                <button className={styles.button}>
-                <Link  href="https://share.hsforms.com/1pNjOe_2IQC6jbHw4xtxlsgdk9uk" >
+                <button className={styles.button} onClick={handleForm}>
+               
                 <a target="_blank" className={styles.Link}>Study now and pay later</a> 
-                </Link>
+             
                 </button>
             </div>
         </section>

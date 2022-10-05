@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import {motion} from 'framer-motion'
 import styles from './FeatureDetails.module.scss';
 import { GoPrimitiveDot as Dot } from "react-icons/go";
-import Link from 'next/link';
+// import Link from 'next/link';
 import { AppContext } from '../AppContext';
 
 
@@ -44,9 +44,9 @@ function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, p
                 {description && <p className={styles.text}>
                     {description}
                 </p>}
-                {btnText && <button className={styles.feature__btn}> <Link  href="https://share.hsforms.com/1pNjOe_2IQC6jbHw4xtxlsgdk9uk" >
+                {btnText && <button className={styles.feature__btn} onClick={handleForm}> 
                 <a target="_blank" className={styles.Link}>{btnText}</a> 
-                </Link></button>}
+                </button>}
             </div>
         </>
     )

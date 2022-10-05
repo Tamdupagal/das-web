@@ -1,9 +1,16 @@
 import styles from './BlogCard.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
-
+import { AppContext } from '../AppContext'
+import { useContext } from 'react'
 
 function BlogCard(props) {
+    const { setToggleLoginForm, setIsAdmin } = useContext(AppContext)
+
+    const handleForm = function () {
+      setIsAdmin(false)
+      setToggleLoginForm(true)
+    }
     return (
         <div className={styles.card}>
             <div className={styles.blog__details}>
@@ -15,10 +22,10 @@ function BlogCard(props) {
                 <p className={styles.desc}>
                     {props.text}
                 </p>
-                <button className={styles.btn}>
-              <Link  href="https://share.hsforms.com/1pNjOe_2IQC6jbHw4xtxlsgdk9uk" >
+                <button className={styles.btn} onClick={handleForm}>
+              
               <a target="_blank" className={styles.Link}>JOIN EVENT</a> 
-              </Link>
+             
               </button>
             </div>
         </div>

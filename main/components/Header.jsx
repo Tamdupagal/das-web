@@ -9,9 +9,9 @@ import { AppContext } from '../../AppContext';
 import Link from 'next/link'
 
 function Header(props) {
-
-    const { setIsAdmin, setToggleLoginForm} = useContext(AppContext)
+   const { setIsAdmin, setToggleLoginForm} = useContext(AppContext)
     
+ 
 
     const headerRef = useRef()
     const btnRef = useRef();
