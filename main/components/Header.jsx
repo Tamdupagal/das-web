@@ -8,7 +8,7 @@ import {useRouter} from 'next/router'
 import { AppContext } from '../../AppContext';
 import Link from 'next/link'
 
-function Header() {
+function Header(props) {
 
     const { setIsAdmin, setToggleLoginForm} = useContext(AppContext)
     
@@ -124,12 +124,11 @@ function Header() {
                </button>
             </li>
             <li className={styles.navitem}>
-                <Link href="https://share.hsforms.com/1pNjOe_2IQC6jbHw4xtxlsgdk9uk">
-                <button className={styles.bttn}>
+                <button className={styles.bttn} onClick={handleAdminLogin}>
                 <a target="_blank" style={{color:'white', padding:'0 2px',letterSpacing:'1px'}} className={isOpen === false ? styles.navlink : styles.navlink+' '+styles.active}
                 onClick={openMenu}><GiGameConsole style={{fontSize:'16px'}}/>&nbsp;Game Dev Careers</a>
                 </button>
-                </Link>
+               
             </li>
         </ul>
         <button  className={isOpen === false ? 

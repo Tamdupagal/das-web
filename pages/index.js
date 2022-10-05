@@ -5,9 +5,8 @@ import Association from '../main/components/Association'
 import Head from 'next/head'
 import WorkFlow from '../components/WorkFlow'
 import Blog1 from '../components/Blog1'
-
-
-
+// import HubSpot from '../main/components/HubSpot'
+// import Login from '../main/components/Login'
 
 export default function Home() {
 
@@ -27,14 +26,13 @@ export default function Home() {
         <link rel='icon' href='/favicon.png' />
       </Head>
       <main>
-      
+
         <Banner />
         <Courses />
         <Misson />
         <Association />
         <WorkFlow />
-        <Blog1/>
-        
+        <Blog1/>       
         <hr/>
       </main>
     </div>

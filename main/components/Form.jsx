@@ -17,80 +17,30 @@ import logo from '../assets/das.webp';
 import Image from 'next/image'
 import { useRouter } from 'next/router';
 import { CgClose } from 'react-icons/cg';
+import HubspotForm from "react-hubspot-form";
 
 
+const HubSpot = (props) => {
 
-
-const AdminForm = ({register, details, setDetails, errors}) => {
     return (
-        <>
-                <div className={styles.form__input}>
-                        <label htmlFor="email">Email</label>
-                        <div tabIndex={0} className={styles.input__box}>
-                            <MdEmail className={styles.icon} />
-                            <input
-                                type="email" name="email"   {...register("email")} value={details.email} onChange={(e) => setDetails(prev => ({ ...prev, email: e.target.value }))} />
-                            {/* <p className={styles.login__error}>{errors.email?.message}</p> */}
-                        </div>
-                </div>
-                <div className={styles.form__input}>
-                    <label htmlFor="password">password</label>
-                    <div tabIndex={0} className={styles.input__box}>
-                    <HiKey className={styles.icon} />
-                    <input type="password" name="password"  {...register("password")} value={details.password} onChange={(e) => setDetails(prev => ({ ...prev, password: e.target.value }))} />
-                    {/* <p className={styles.login__error}>{errors.password?.message}</p> */}
-                </div>
-            </div>
-        </>
+      <div>
+
+      <div style={{width: '380px', height:'600px',padding: '10px'}}>
+      <h1 style={{padding: '2px' ,fontSize:'20px',textAlign: 'center',color: '#FD7E14'}}> DIGITAL AIDED SCHOOL</h1>
+      <h1 style={{padding: '2px' ,fontSize:'14px',textAlign: 'center',color: '#005778'}}> Game Development & Web3 Courses</h1>
+   
+      <HubspotForm 
+      portalId='22780892'
+      formId='a4d8ce7b-fd88-402e-a36c-7c38c6dc65b2'
+      onSubmit={() => console.log('Submit!')}
+      onReady={(form) => console.log('Form ready!')}
+      loading={<div style={{fontSize:'20px',textAlign:'center'}}>Loading...</div>}
+      />
+      </div>
+      </div>
     )
-}
+  }
 
-
-
-const LeadForm = ({register, details, setDetails, errors}) => {
-    return (
-        <>
-            <div className={styles.form__input}>
-                        <label htmlFor="username">Name</label>
-                        <div tabIndex={0} className={styles.input__box}>
-                            <FaUserAlt className={styles.icon} />
-                            <input
-                                type="username" name="username"  {...register("username")} value={details.username} onChange={(e) => setDetails(prev => ({ ...prev, username: e.target.value }))} />
-                            {/* <p className={styles.login__error}>{errors.username?.message}</p> */}
-                        </div>
-                    </div>
-                    <div className={styles.form__input}>
-                        <label htmlFor="email">Email</label>
-                        <div tabIndex={0} className={styles.input__box}>
-                            <MdEmail className={styles.icon} />
-                            <input
-                                type="email" name="email"   {...register("email")} value={details.email} onChange={(e) => setDetails(prev => ({ ...prev, email: e.target.value }))} />
-                            {/* <p className={styles.login__error}>{errors.email?.message}</p> */}
-                        </div>
-                    </div>
-                    <div className={styles.form__input}>
-                            <label htmlFor="number">Number</label>
-                            <div tabIndex={0} className={styles.input__box}>
-                                <ImPhone className={styles.icon} />
-                                <input type="tel" name="number"  {...register("number")} value={details.number} onChange={(e) => setDetails(prev => ({ ...prev, number: e.target.value }))} />
-                                <p className={styles.login__error}>{errors.number?.message}</p>
-                            </div>
-                        </div>
-                    <div className={styles.form__input}>
-                            <label htmlFor="qualification">Qualification</label>
-                            <div tabIndex={0} className={styles.input__box}>
-                                <GiWhiteBook className={styles.icon} />
-                            <select {...register("qualification")} defaultValue={details.qualification} value={details.qualification} onChange={(e) => setDetails(prev => ({ ...prev, qualification: e.target.value }))} className={styles.select} name="qualification" id="qualification">
-                                    <option value="10">10th</option>
-                                    <option value="12">12th</option>
-                                    <option value="graduation">Graduation</option>
-                            </select>
-                              {/* <p className={styles.login__error}>{errors.qualification?.message}</p> */}
-                            </div>
-                    </div>
-        </>
-    )
-}
 
 
 
@@ -176,39 +126,18 @@ function Form() {
 
     return (
         <div className={styles.form__wrapper}>
-        <form
-            onSubmit={handleSubmit(handleLeadsForm, handleFormError)}
-                className={styles.feedback__form}>
+        <form className={styles.feedback__form}>
                 <CgClose onClick={()=>setToggleLoginForm(false)} className={styles.close__btn__cross__form}/>
-            <div className={styles.form__area}>
-                    {form.dataSubmitted ? 
-                        <div className={styles.form__input}>
-                            <label htmlFor="otp">OTP</label>
-                            <div tabIndex={0} className={styles.input__box}>
-                                <RiLockPasswordFill className={styles.icon} />
-                            <input type="password" name="otp" value={form.otp} onChange={(e) => setOtp(prev =>
-                                ({ ...prev, otp: e.target.value }))} />
-                                {/* <p className={styles.login__error}>{errors.number?.message}</p> */}
-                            </div>
-                    </div> : 
-                    <>
-                        {isAdmin ?
-                         <AdminForm register={register} details ={details} setDetails={setDetails} errors={errors}/> 
-                            : 
-                        <LeadForm register={register} details ={details} setDetails={setDetails} errors={errors}/> 
-                        }   
-                    </>
-                     }
-            </div>
-            <div className={styles.button__wrapper}>
-                <button type="submit" className={styles.form__submit__btn}>Submit</button>
-            </div>
+            <HubSpot/>
         </form>
             <div className={styles.overlay__panel} >
                 <figure className={styles.logo}>
                     <Image src={logo} objectFit="fill"  alt="Digital Aided School" /> 
                 </figure>
-                <h1 className={styles.panel__title}>Digital Aided School</h1>
+                <h1 className={styles.panel__title}>Game Development </h1>
+                <h1 className={styles.panel__title}>& </h1>
+                <h1 className={styles.panel__title}>Web3 Courses</h1>
+              
                 <CgClose onClick={()=>setToggleLoginForm(false)} className={styles.close__btn__cross}/>
             </div>
         </div>
