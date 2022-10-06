@@ -1,0 +1,32 @@
+.container{
+    margin: 0;
+    padding-top: 100px;
+
+
+    .box{
+        margin: 6% auto;
+        padding:20px;
+        
+
+        .title{
+            font-size:20px;
+            color:#FD7E14;
+            // text-transform:uppercase;
+            text-align: center;
+
+        }
+        .logo {
+            max-width: 25rem;
+            object-fit: contain;
+            margin: 0 auto;
+          }
+          .description {
+            text-align: center;
+            padding:10px;
+            font-size:15px;
+            font-weight: 600;
+            color: #005788;
+          }
+       
+    }
+}
