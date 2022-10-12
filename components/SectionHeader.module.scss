@@ -1,0 +1,44 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.title {
+  font-size: 2rem;
+  color: #005778;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: 0.2rem;
+  &[data-white="true"] {
+    color: white;
+  }
+}
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.0025rem;
+  color: $main;
+  &[data-white="true"] {
+    color: white;
+  }
+  white-space: pre-line;
+}
+.heading1{
+  text-align: center;
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 0.0025rem;
+  color: $main;
+  &[data-white="true"] {
+    color: white;
+  }
+}
+
+.heading,
+.big__heading {
+  @extend .heading;
+}
+.big__heading {
+  font-size: 4rem;
+}

@@ -1,0 +1,114 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.card {
+  position: relative;
+  width: 37rem;
+  min-height: 40rem;
+  padding: 3rem 3rem;
+  @include flex_layout(null, null, column);
+  border: 0.1rem solid #fd7e14;
+  border-radius: 1rem;
+  margin: 0 auto;
+  background-color: white;
+
+  &::before {
+    content: "";
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 2.2rem rgba(black, 0.25);
+    opacity: 0;
+
+    transition: {
+      property: opacity;
+      duration: 0.2s;
+    }
+  }
+
+
+  .review__star {
+    @include flex_layout(center, null);
+    margin-bottom: 1rem;
+
+    &>li {
+      position: relative;
+      list-style: none;
+      position: relative;
+      margin-right: 0.8rem;
+      color: #fd7e14;
+
+      &[data-color="false"] {
+        color: rgba(gray, 0.4);
+      }
+
+      .star {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .title {
+    font-size: 1.7rem;
+    font-weight: bold;
+
+  }
+
+  .desc {
+    font-size: 1.6rem;
+    color: rgba(black, 0.9);
+    text-align: justify;
+    line-height: 1.5;
+    height: 24rem;
+    max-height: 25rem;
+    overflow-y: auto;
+  }
+
+  .author__box {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    margin-top: 2rem;
+
+    &>figure {
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 6rem;
+      height: 6rem;
+      margin-right: 1.7rem;
+    }
+
+    .author__about {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+
+      .author_img {
+        object-fit: cover;
+      }
+
+      .author__name {
+        font-size: 1.65rem;
+        font-weight: bold;
+        margin-bottom: 0.6rem;
+        color: #005877;
+      }
+
+      .author__designation {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: rgba(#fd7e14, 0.6);
+      }
+    }
+  }
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.2s;
+
+}

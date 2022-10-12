@@ -1,0 +1,21 @@
+@import "../styles/config/variable";
+
+.left__arow,
+.right__arow {
+  border-radius: 100%;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 1rem rgba(black, 0.2);
+  &:active {
+    transform: scale(0.9);
+  }
+  .arrow {
+    font-size: 2.2rem;
+    color: $main;
+  }
+}

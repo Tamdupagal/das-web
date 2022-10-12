@@ -1,0 +1,67 @@
+@import "../styles/config/variable";
+@import "../styles/config/utilities";
+
+.container {
+  position: relative;
+  width: 100%;
+  @include flex_layout(null, null, column);
+  margin-top: 5rem;
+  background-color: $main;
+  padding: 3rem 0;
+  .main_title {
+    font-size: 2.5rem;
+    color: $white;
+    align-self: center;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .main_wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 35rem));
+    grid-gap: 3rem;
+    overflow: hidden;
+    padding: 2rem;
+    place-content: center;
+    .wrapper {
+      @include flex_layout(center, null, column);
+      position: relative;
+      .course_box {
+        width: 100%;
+        border: 0.05rem solid black;
+        border-radius: 0.8rem;
+        box-shadow: 0 0 0.5rem rgba($main, 0.5);
+        overflow: hidden;
+        .course_image {
+          width: 100%;
+        }
+        .info_box {
+          background-color: $white;
+          @include flex_layout(null, null, column);
+          padding: 1.5rem 1rem;
+          .title {
+            font-size: 1.8rem;
+            color: black;
+          }
+          .points {
+            @include flex_layout(null, null, column);
+            margin: 2rem 0;
+            & > span {
+              font-size: 1.5rem;
+              font-weight: 600;
+              color: rgba(black, 0.5);
+              .dot {
+                font-size: 0.6rem;
+                margin-right: 0.8rem;
+              }
+              @include flex_layout(center, null);
+              &:not(:last-child) {
+                margin-bottom: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

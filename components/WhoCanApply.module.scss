@@ -1,0 +1,56 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.container {
+  position: relative;
+  width: 100%;
+  @include flex_layout(center, null, column);
+  margin-top: 1rem;
+  background-color: $white;
+  color: $white;
+  padding: 4rem 1rem;
+  .main_heading {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    color: $main;
+    align-self: center;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(10rem, 20rem));
+    grid-gap: 3rem 10rem;
+    overflow: hidden;
+    place-content: center;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(2, minmax(10rem, 20rem));
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, minmax(10rem, 20rem));
+    }
+    .track_box {
+      position: relative;
+      text-align: justify;
+      @include flex_layout(null, null, column);
+      .tract_image {
+        width: 100%;
+        height: 20rem;
+        border-radius: 50%;
+        overflow: hidden;
+        @include flex_layout();
+        background-color: rgba($main, 0.05);
+        border: 0.13rem solid $main;
+      }
+      .title {
+        font-size: 1.8rem;
+        color: black;
+        margin: 1.4rem 0;
+        align-self: center;
+      }
+      .desc {
+        font-size: 1.4rem;
+        color: black;
+      }
+    }
+  }
+}

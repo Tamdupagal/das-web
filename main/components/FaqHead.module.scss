@@ -1,0 +1,103 @@
+@import "../../styles/config/utilities";
+@import "../../styles/config/variable";
+
+.container {
+  position: relative;
+  width: 100%;
+  @include flex_layout(center, null, column);
+  height: 100%;
+  padding: 3rem 0;
+  padding-top: 20rem;
+  text-align: left;
+  @media screen and (max-width: 768px) {
+    padding-top: 15rem;
+  }
+  .heading {
+    color: #fd7e14;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding-bottom: 4rem;
+    @media screen and (max-width: 500px) {
+      font-size: 2.5rem;
+      padding: 30px 20px;
+      text-align: center;
+    }
+  }
+  .wrapper {
+    position: relative;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 0 1rem rgba(black, 0.1);
+    @include flex_layout(null, center);
+    display: flex;
+    .footer_text {
+      position: relative;
+      display: flex;
+      font-size: 17px;
+      color: $main;
+      font-weight: 500;
+      padding:4rem 4rem 4rem 2rem;
+      background-color: white;
+      border-radius: 1rem;
+      .check{
+        font-size:15px;
+        color: #fd7e14;
+      }
+     @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      margin: 0 20px;
+      font-size: 15px;
+      
+     }
+      & > strong {
+        color: $main;
+        // text-align: left;
+        border: 1px solid red;
+      }
+      & > ul {
+        &:not(:last-child) {
+                }
+        & > strong {
+          display: inline-block;
+          padding: 1rem 0;
+          color: #fd7e14;
+          margin-bottom: 1.5rem;
+          margin-left: 3rem;
+        }
+        & > li {
+          margin-left: 3rem;
+          margin-bottom: 2rem;
+          @include flex_layout(center, null,row);
+          color: $main;
+          .check {
+            color: #005778;
+            font-size: 2.5rem;
+            margin-right: 1.5rem;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      width: 90%;
+      
+      @include flex_layout(center, null, column);
+      padding: 0;
+      .footer_text {
+        width: 95%;
+        margin: 0 auto;
+        li {
+          @include flex_layout(center, null);
+          margin-left:2rem;
+          margin-bottom: 0.8rem !important;
+         
+        }
+      }
+    }
+  }
+
+  .wrapper:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition:0.2s;
+  }
+}

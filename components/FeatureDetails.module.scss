@@ -1,0 +1,120 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.feature__details {
+  display: flex;
+
+  flex-direction: column;
+  @include flex_layout(center, null, column);
+  @media screen and (max-width: 768px) {
+    min-width: 30rem;
+  }
+  &[data-for="feature"] {
+    padding-top: 2rem;
+    // margin-left:0rem ;
+    .title {
+      text-align: center;
+    }
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
+      margin-left: 3rem;
+      text-align: left;
+      .title {
+        text-align: left;
+      }
+    }
+  }
+  
+  &[data-for="quality"],
+  &[data-for="services"] {
+    margin-left: 0.5rem;
+
+    .title {
+      text-align: left;
+    }
+    @media screen and (max-width: 768px) {
+      text-align: left;
+      .title {
+        text-align: left;
+      }
+    }
+  }
+
+  .title {
+    font-size: 1.8rem;
+    color: $orange;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  .description {
+    width: 100%;
+    font-size: 2rem;
+    font-weight:400;
+    .phrase {
+      @include flex_layout(null, null);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color:#005778;
+      .dot {
+        color: $main;
+        margin-right: 1rem;
+      }
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .text {
+    font-size: 1.5rem;
+    color:#005778;
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  .feature__btn {
+    background-color:#fd7e14;
+    color: white;
+    font-size: 17px;
+    margin-top: 4rem;
+    border-radius: 8px;
+    @media screen and (max-width: 768px){
+      font-size:1rem;
+      
+    }
+    padding: 1.1rem 2.5rem;
+    width: max-content;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    font-weight: 700;
+    transition : {
+      property: transform, box-shadow;
+      duration: 0.01s;
+    }
+    &:hover {
+      transform: translate(0.1rem, -0.1rem);
+      box-shadow: -0.1rem 0.2rem 0.3rem rgba(rgb(11, 11, 11), 0.2);
+      transition-duration: 0.1s;
+      color:white;
+      background-color:#005778;
+      // border: 2px solid #fd7e14;
+    }
+  }
+  &[data-for="growth"] {
+    padding-top: 2rem;
+    padding:10px;
+    text-align: justify;
+    .text {
+      text-align: inherit;
+    }
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
+      margin-left: 2rem;
+      text-align: left;
+    }
+  }
+}
+// .feature__details:hover{
+//   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+//   transition:0.2s;
+// }
