@@ -67,7 +67,7 @@ function Footer() {
           <li className={styles.smalll}>
             <FaEnvelope className={styles.icon} /> hello@digitalaidedschool.com
           </li>
-          <li className={styles.smalll} onClick={handleForm}>
+          <li className={styles.ico} onClick={handleForm}>
             <AiTwotoneMessage className={styles.icon} /> Connect us
           </li>
         </ul>
