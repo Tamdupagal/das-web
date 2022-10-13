@@ -50,7 +50,7 @@ function Blog() {
 
     return (
         <section className={styles.container}>
-        <SectionHeader className={styles.heading} text='CERTIFICATIONS FOR EACH STAGE OF YOUR GAME DEVELOPMENT CAREER' />
+        <SectionHeader className={styles.heading} text='CERTIFICATIONS FOR GAME DEVELOPMENT CAREER' />
         <h1 className={styles.heading}>Boost Your Career with Game Development Certifications</h1>
         <h1 className={styles.heading1}>Turn a Gaming Passion Into a Career</h1>
             <div className={styles.carousel__box}>
