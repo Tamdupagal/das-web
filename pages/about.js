@@ -17,19 +17,10 @@ function AboutUs({name}) {
   <h1 className={styles.main_heading}>About Us</h1>
       <article className={styles.about}>
         <p className={styles.desc}>
-          <FaQuoteLeft className={styles.quote} /> We are Digital Aided School, a team of passionate tech geeks and enthusiasts who
-          believe in quality education for all. We love solving problems and addressing the
-          existing pain points in the current system.
-          
-          <br />
-          <br />
-          We provide Education & Technology related solutions tailor-made to cater to the
-existing challenges with the goal of Digitally enabling and aiding people.
-
-          <br />
-          <br />
-          Integrating Tech with Education to work on a plethora of products helping various
-people with their needs and requirements
+          <FaQuoteLeft className={styles.quote} /> Digital Aided School (DAS) is a platform that aims to provide quality education to 
+          everyone, everywhere. Our objective is to revolutionize the way students learn game
+           development. We are focused on making learning fun, engaging, and effective by integrating 
+           technology into the learning process. We bridge the gap between game developers and the gaming industry.
           <FaQuoteRight className={styles.quote} />
           </p>
           </article>

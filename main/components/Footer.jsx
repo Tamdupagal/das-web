@@ -2,6 +2,8 @@ import styles from './Footer.module.scss'
 import Link from 'next/link'
 import Image from 'next/image';
 import joy from '../../assets/joy.png'
+import { AppContext } from '../../AppContext'
+import { useContext } from 'react'
 
 import {
   FaEnvelope,
@@ -15,8 +17,16 @@ import {
   FaHeart,
   FaGamepad,
 } from 'react-icons/fa'
+import {AiTwotoneMessage} from 'react-icons/ai'
 
 function Footer() {
+  const { setToggleLoginForm, setIsAdmin } = useContext(AppContext)
+
+  const handleForm = function () {
+    setIsAdmin(true)
+    setToggleLoginForm(true)
+  }
+
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
@@ -43,7 +53,7 @@ function Footer() {
             </Link>
           </li>
           <li>
-            <Link href='#'>
+            <Link href='/customer-feedback'>
               <a className={styles.link}>Customer Feedback</a>
             </Link>
           </li>
@@ -56,6 +66,9 @@ function Footer() {
           </li>
           <li className={styles.smalll}>
             <FaEnvelope className={styles.icon} /> hello@digitalaidedschool.com
+          </li>
+          <li className={styles.smalll} onClick={handleForm}>
+            <AiTwotoneMessage className={styles.icon} /> Connect us
           </li>
         </ul>
         <hr/>
@@ -97,11 +110,11 @@ function Footer() {
           <hr/>
         <ul className={styles.ul4}>
         <span><b>Our Address</b></span>
-        <li>India</li>
         <li>
             Spectrum Tower, 5th, Chincholi Bunder Road, Mindspace, Malad
             West, Mumbai Maharastra 400064{' '}
           </li> 
+          <li>India</li>
           </ul>
           <hr/>
           </div>
@@ -109,6 +122,7 @@ function Footer() {
           <div className={styles.copyright}>
           <p>Made with <FaGamepad className={styles.heart} /> by <b>DIGITAL AIDED SCHOOL </b> All rights reserved.
           </p>
+
           </div>
           </div>
     </footer>

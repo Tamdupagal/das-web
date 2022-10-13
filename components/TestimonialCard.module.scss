@@ -3,11 +3,13 @@
 
 .card {
   position: relative;
-  width: 40rem;
-  min-height: 40rem;
-  padding: 4rem 3rem;
+  width: 37rem;
+  min-height: 30rem;
+  padding: 2rem 3rem;
+  background-color:white;
+  box-shadow: 0 0 1rem rgba(black, 0.1);
   @include flex_layout(null, null, column);
-  border: 0.1rem solid #e4e4e4;
+  // border: 0.1rem solid $main;
   border-radius: 1rem;
   margin: 0 auto;
   &::before {
@@ -34,7 +36,7 @@
       list-style: none;
       position: relative;
       margin-right: 0.8rem;
-      color: red;
+      color: #fd7e14;
       &[data-color="false"] {
         color: rgba(gray, 0.4);
       }
@@ -49,10 +51,10 @@
   }
   .desc {
     font-size: 1.6rem;
-    color: rgba(black, 0.9);
+    color: rgba(#005877, 0.9);
     padding: 1.5rem 0;
     text-align: justify;
-    line-height: 1.8;
+    line-height: 1.5;
     height: 25rem;
     max-height: 25rem;
     overflow: scroll;
@@ -79,8 +81,14 @@
       .author__designation {
         font-size: 1.5rem;
         font-weight: bold;
-        color: rgba(red, 0.6);
+        color: rgba(#fd7e14, 0.6);
       }
     }
   }
 }
+.card:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition:0.2s;
+
+}
+

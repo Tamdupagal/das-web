@@ -54,7 +54,8 @@ function Testimonial() {
     return (
         <section className={styles.container} id="testimonial">
             <div className={styles.section__header}>
-                <SectionHeader slogan="TESTIMONIAL" text="Meet Client Satisfaction"/>
+            <h1 className={styles.title}>TESTIMONIAL</h1>
+                <SectionHeader slogan="" text="Meet Client Satisfaction"/>
             </div>
             <div className={styles.carousel__box}>
                 <Slider {...settings} ref={sliderRef}>

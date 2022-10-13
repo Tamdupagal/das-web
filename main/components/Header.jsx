@@ -85,7 +85,7 @@ function Header(props) {
             </figure>
         <ul className={isOpen === false ? 
                 styles.navmenu : styles.navmenu +' '+ styles.active}>  
-                  
+                <li className={`${styles.navitem} ${styles.btn}`} onClick={() => { router.push('/') }}>Home</li>  
             <li className={styles.navitem}>
             <button ref={btnRef}  onClick={()=>setToggleDropDown(!toggleDropDown)} className={styles.btn}>Courses
             {toggleDropDown && <ul className={styles.dropdown}>

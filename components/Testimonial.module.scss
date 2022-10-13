@@ -4,11 +4,18 @@
 .container {
   position: relative;
   width: 100%;
+  background-color: #FFFEF8;
   @include flex_layout(center, null, column);
-  margin-bottom: 8rem;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
   .section__header {
     text-align: center;
-    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    .title{
+      color: #fd7e14;
+      font-size: 2.5rem;
+
+    }
   }
   .carousel__box {
     position: relative;

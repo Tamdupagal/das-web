@@ -4,7 +4,7 @@
 .container {
   position: relative;
   width: 100%;
-  padding-top:5rem;
+  padding-top:1rem;
   background-color:#FFFEF8;
   @include flex_layout(center, null, column);
   .section__header {
