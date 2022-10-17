@@ -38,8 +38,8 @@ export default function Banner() {
                 <h1 className={styles.title2}>
                 Be a Fullstack Game Developer As Per Industry Standards<br/> Portfolio & Interview Ready Program.
                 </h1>
-                <h1 className={styles.title3}>Be a Creator, Not a Player</h1>
                 <h1 className={styles.title3}>Connect with the real gaming community.</h1>
+                <h1 className={styles.title3}>Be a Creator, Not a Player</h1>
                 </div>
                 <button className={styles.button} onClick={handleForm}>
                

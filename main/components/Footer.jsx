@@ -4,6 +4,8 @@ import Image from 'next/image';
 import joy from '../../assets/joy.png'
 import { AppContext } from '../../AppContext'
 import { useContext } from 'react'
+import box from '../assets/1.png';
+
 
 import {
   FaEnvelope,
@@ -120,7 +122,7 @@ function Footer() {
           </div>
           <div className={styles.fot}>
           <div className={styles.copyright}>
-          <p>Made with <FaGamepad className={styles.heart} /> by <b>DIGITAL AIDED SCHOOL </b> All rights reserved.
+          <p>Made with <Image src={box}  alt=""  height="25" width="25"/> by <b>DIGITAL AIDED SCHOOL </b> All rights reserved.
           </p>
 
           </div>
