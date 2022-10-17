@@ -52,9 +52,9 @@ function MyApp({ Component, pageProps }) {
   }, [router.events])
 
   useEffect(() => {
-    TagManager.initialize({ gtmId: 'GTM-WTLJF45' });
+    TagManager.initialize({ gtmId: 'G-SVC560TV66' });
 }, []);
-
+// GTM-WTLJF45
   if (Component.withoutLayout === true) {
     return (
       <AppContextProvider>
