@@ -77,8 +77,11 @@ function Banner({ data, checkBanner }) {
               <button className={styles.banner__btn} onClick={handleForm}>
               <a target="_blank" className={styles.Link}>STUDY FIRST PAY LATER</a> 
               </button>
-        <p style={{ fontSize: '15px', marginTop: '10px' }}>
-        </p>
+              <div className={styles.price} style={{ marginTop: '15px', border: '2px solid #005877 ' ,padding: '8px',borderRadius: '8px'}}>
+              <b style={{ color:'#005877' }}>
+              <s>₹10000</s>&nbsp;₹2999 + GST 
+              </b>
+              </div>
       </div>
     </section>
   )

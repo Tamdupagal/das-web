@@ -3,10 +3,11 @@
 
 .container {
   position: relative;
-  width: 100%;
+  width: 80%;
   // padding-top: 2rem;
   background-color: #FFFEF8;
   padding: 0.5rem 0.5rem 7rem 0.5rem;
+  margin: 0 auto;
   .main_title {
     font-size: 2.5rem;
     color: #005778;
@@ -21,11 +22,11 @@
   }
   .mission__box {
     position: relative;
-    width: 90%;
-    padding: 4rem 10rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 4rem;
+    // width: 90%;
+    padding: 2rem 10rem;
+    // // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // grid-gap: 4rem;
     place-content: center;
     margin: 0 auto;
     @media screen and (max-width: 768px) {
@@ -41,7 +42,7 @@
       position: relative;
       @include flex_layout(center, null);
       padding: 1rem 4rem;
-      min-height: 25rem;
+      min-height: 15rem;
       background-color: #FEFEFE;
       border-radius: 1.2rem;
       box-shadow: 0 0 1rem rgba(black, 0.1);
