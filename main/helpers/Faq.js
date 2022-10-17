@@ -74,5 +74,51 @@ export const COURSE_DATA = [
     title:'13. When do my ISA repayments start, and what if I get fired or leave a job in between?',
     desc:'The repayment amount is calculated based on the minimum salary in a month, so if you lose your job, then you have no salary, and hence this calculation is not possible. Your repayment will be temporarily stopped, and the repayment term will be extended.'
 }
+,
+{
+    id:13,
+    title:'14. Who is eligible to apply for the Game Development Course?',
+    desc:'The specialization program is meant for pre-final and final year students, recent graduates, and young professionals who wish to build a career in Full Stack Game Development. You should also be authorized and available to work in India upon completion of the program if you wish to avail of the placement guarantee benefits.'
+},
+{
+    id:14,
+    title:'15. I am in the early years of college and will NOT be graduating in the next 12 months, can I still apply?',
+    desc:'Yes, if you have decided to make a career in full-stack Game development and are ready to put in the required time and effort to complete the program, you can still apply and we will evaluate your application based on its quality.'
+},
+{
+    id:15,
+    title:'16. I have more than 3 years of work experience in a different field and now I want to switch to Full Stack Game Development, can I apply?',
+    desc:'Yes, you can. However, please note that the placement opportunities that we would be curating for the students of the course would be those of internships and the same will be made available to you too. Different companies may factor in your prior work experience in their hiring decisions differently and it will be at the sole discretion of the companies.'
+},
+{
+    id:16,
+    title:'17.  What questions will the application process consist of?    ',
+    desc:'The application form would consist of questions on your education, your motivation to build a career in full-stack game development, and questions to test your communication skills.Q. Who is eligible to apply for the Game Development Course? The specialization program is meant for pre-final and final year students, recent graduates, and young professionals who wish to build a career in Full Stack Game Development. You should also be authorized and available to work in India upon completion of the program if you wish to avail of the placement guarantee benefits.'
+},
+{
+    id:17,
+    title:'18.  On what parameters would my application be evaluated?',
+    desc:'The specialization program is meant for pre-final and final year students, recent graduates, and young professionals who wish to build a career in Full Stack Game Development. You should also be authorized and available to work in India upon completion of the program if you wish to avail of the placement guarantee benefits.'
+},
+// {
+//     id:18,
+//     title:'14. Who is eligible to apply for the Game Development Course?',
+//     desc:'The specialization program is meant for pre-final and final year students, recent graduates, and young professionals who wish to build a career in Full Stack Game Development. You should also be authorized and available to work in India upon completion of the program if you wish to avail of the placement guarantee benefits.'
+// },
+// {
+//     id:19,
+//     title:'14. Who is eligible to apply for the Game Development Course?',
+//     desc:'The specialization program is meant for pre-final and final year students, recent graduates, and young professionals who wish to build a career in Full Stack Game Development. You should also be authorized and available to work in India upon completion of the program if you wish to avail of the placement guarantee benefits.'
+// },
+// {
+//     id:20,
+//     title:'14. Who is eligible to apply for the Game Development Course?',
+//     desc:'The specialization program is meant for pre-final and final year students, recent graduates, and young professionals who wish to build a career in Full Stack Game Development. You should also be authorized and available to work in India upon completion of the program if you wish to avail of the placement guarantee benefits.'
+// },
+// {
+//     id:21,
+//     title:'14. Who is eligible to apply for the Game Development Course?',
+//     desc:'The specialization program is meant for pre-final and final year students, recent graduates, and young professionals who wish to build a career in Full Stack Game Development. You should also be authorized and available to work in India upon completion of the program if you wish to avail of the placement guarantee benefits.'
+// }
 
 ]

@@ -4,15 +4,17 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styles from './TestimonialCard.module.scss';
 
+
+// <figure>
+//         <Image src={props.avatar} alt={props.name} layout="fill"/>
+//         </figure>
 function TestimonialCard(props) {
 
     return (
         <div className={styles.card}>
           
         <div className={styles.author__box}>
-        <figure>
-        <Image src={props.avatar} alt={props.name} layout="fill"/>
-        </figure>
+        
         <div className={styles.author__about}>
         <p className={styles.author__name}>{props.name} </p>
         </div>

@@ -46,6 +46,15 @@ export default function Banner() {
                 <a target="_blank" className={styles.Link}>Study now and pay later</a> 
              
                 </button>
+
+                <Link href="https://rzp.io/l/xVAzXSaY6" passHref={true}>
+                <div className={styles.price} style={{ marginTop: '15px' ,padding: '8px',borderRadius: '8px'}}>
+                <b style={{ color:'#005877' }}>
+                Was  <s>₹10000</s> &nbsp;Now ₹2999 + GST 
+                </b>
+                </div>
+                </Link>
+
             </div>
         </section>
     )
