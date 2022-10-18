@@ -29,16 +29,19 @@
     border-radius: 16px;
     padding: 6rem 4rem 6rem 4rem ;
     .price{
-
-      font-size:18px;
+      font-size:15px;
       cursor: pointer;
-      border-radius:8px;
-      border: 2px solid #005877;
+      color: #fff;
+      border: 2px solid #005778;
+      background-color: #005778;
       @media (max-width: 768px) {
         font-size:12px;
-      
       }
-
+    }
+    .price:hover {
+      background-color: #FD7E14;
+      border: 2px solid #FD7E14;
+  
     }
     .regis{
       font-size:17px;

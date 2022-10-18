@@ -98,12 +98,19 @@
   }
 
   .price{
-    font-size:18px;
+    font-size:15px;
     cursor: pointer;
-    border: 2px solid #005877; 
+    color: #fff;
+    border: 2px solid #005778;
+    background-color: #005778;
     @media (max-width: 768px) {
       font-size:12px;
     }
+  }
+  .price:hover {
+    background-color: #FD7E14;
+    border: 2px solid #FD7E14;
+
   }
   .regis{
     font-size:17px;
@@ -137,7 +144,7 @@
   }
   margin-top: 2rem;
   &:hover {
-    transform: translate(0.1rem, -0.1rem);
+    // transform: translate(0.1rem, -0.1rem);
     box-shadow: -0.1rem 0.2rem 0.3rem rgba(rgb(11, 11, 11), 0.2);
     transition-duration: 0.1s;
     background-color: #005877 ;

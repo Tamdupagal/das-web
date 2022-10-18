@@ -10,7 +10,7 @@ import styles from './Misson.module.scss'
 function Misson() {
   return (
     <section className={styles.container}>
-      <h1 className={styles.main_title}>Digital Aided School Mission</h1>
+      <h1 className={styles.main_title}>Digital Aided School</h1>
       <div className={styles.mission__box}>
         <div className={styles.box}>
           <p>
