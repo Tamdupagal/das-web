@@ -4,7 +4,7 @@
 .container {
   position: relative;
   width: 100%;
-  padding-top:16rem;
+  padding-top:13rem;
   // margin-top: 8rem;
   @include flex_layout(center, center);
   background-color: #FFFEF8;
@@ -100,11 +100,16 @@
   .price{
     font-size:18px;
     cursor: pointer;
+    border: 2px solid #005877; 
     @media (max-width: 768px) {
       font-size:12px;
-    
     }
-
+  }
+  .regis{
+    font-size:17px;
+    color: #005778;
+    padding-top: 10px;
+    font-weight:600;
   }
 }
 

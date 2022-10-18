@@ -78,6 +78,7 @@ function Banner({ data, checkBanner }) {
               <a target="_blank" className={styles.Link}>PAY AS YOU LIKE</a> 
        
               </button>
+              <p className={styles.regis}>Registration Charge</p>
               <Link href="https://rzp.io/l/xVAzXSaY6" passHref={true}>
               <div className={styles.price} style={{ marginTop: '15px' ,padding: '8px',borderRadius: '8px'}}>
               <b style={{ color:'#005877' }}>
