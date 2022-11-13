@@ -22,7 +22,7 @@ export const BLOG_DATA = [
         id: 3,
         title: 'Game Development',
         imgSrc: img3,
-        td:"15-Oct-2022",
+        td:"1-Dec-2022",
         text: "The launch events will be on 22-sep-22 everyone can register yourself and get free scholarship 100% "
 
     },

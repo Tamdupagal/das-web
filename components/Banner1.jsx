@@ -71,7 +71,7 @@ function Banner({ data, checkBanner }) {
             <span>Batches</span>
             </div>
               <p style={{textAlign: 'center' ,fontSize:'16px',color:'#005778'}}>
-              The Next batch starts from 15 October 2022
+              The Next batch starts from 1 December 2022
               </p>
               <button className={styles.banner__btn} onClick={handleForm}>
               
