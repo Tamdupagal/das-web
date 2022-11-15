@@ -125,8 +125,8 @@ function Header(props) {
             </li>
             <li className={styles.navitem}>
                 <button className={styles.bttn} onClick={handleAdminLogin}>
-                <a target="_blank" style={{color:'white', padding:'0 2px',letterSpacing:'1px'}} className={isOpen === false ? styles.navlink : styles.navlink+' '+styles.active}
-                onClick={openMenu}><GiGameConsole style={{fontSize:'16px'}}/>&nbsp;Game Dev Careers</a>
+                <p style={{color:'white', padding:'0 2px',letterSpacing:'1px'}} className={isOpen === false ? styles.navlink : styles.navlink+' '+styles.active}
+                onClick={openMenu}><GiGameConsole style={{fontSize:'16px'}}/>&nbsp;Game Dev Careers</p>
                 </button>
                
             </li>
