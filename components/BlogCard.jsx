@@ -24,7 +24,7 @@ function BlogCard(props) {
                 </p>
                 <button className={styles.btn} onClick={handleForm}>
               
-              <a target="_blank" className={styles.Link}>JOIN EVENT</a> 
+              <p className={styles.Link}>JOIN EVENT</p> 
              
               </button>
             </div>

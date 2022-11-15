@@ -19,7 +19,7 @@ function BlogCard(props) {
                     {props.text}
                 </p>
                 <button className={styles.btn}  onClick={handleForm}>
-              <a target="_blank" className={styles.Link}>LEARN MORE</a> 
+              <p className={styles.Link}>LEARN MORE</p> 
               </button>
             </div>
         </div>

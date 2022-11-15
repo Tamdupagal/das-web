@@ -75,7 +75,7 @@ function Banner({ data, checkBanner }) {
               </p>
               <button className={styles.banner__btn} onClick={handleForm}>
               
-              <a target="_blank" className={styles.Link}>PAY AS YOU LIKE</a> 
+              <p className={styles.Link}>PAY AS YOU LIKE</p> 
        
               </button>
               <p className={styles.regis}>Registration Charge</p>

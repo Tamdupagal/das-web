@@ -75,7 +75,7 @@ function Banner({ data, checkBanner }) {
               </p>
               
               <button className={styles.banner__btn} onClick={handleForm}>
-              <a target="_blank" className={styles.Link}>STUDY FIRST PAY LATER</a> 
+              <p className={styles.Link}>STUDY FIRST PAY LATER</p> 
               </button>
               <p className={styles.regis}>Registration Charge</p>
               <Link href="https://rzp.io/l/xVAzXSaY6" passHref={true}>

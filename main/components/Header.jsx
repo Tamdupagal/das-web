@@ -81,7 +81,7 @@ function Header(props) {
         <header className={styles.header}>
         <nav className={styles.navbar}>
         <figure className={styles.logo} onClick={()=>router.push('/')}>
-                    <Images src={logo} objectFit="contain" layout='responsive' className={styles.image}/>
+                    <Images src={logo} objectFit="contain" layout='responsive' alt='logo' className={styles.image}/>
             </figure>
         <ul className={isOpen === false ? 
                 styles.navmenu : styles.navmenu +' '+ styles.active}>  

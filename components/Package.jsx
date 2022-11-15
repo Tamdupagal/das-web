@@ -58,7 +58,7 @@ function Package({ data }) {
             </div>
                     <button  className={styles.button} onClick={handleForm}>
                     
-                    <a target="_blank" className={styles.Link}>STUDY FIRST PAY LATER</a> 
+                    <p className={styles.Link}>STUDY FIRST PAY LATER</p> 
                  
                     </button> 
             <p className={styles.price__desc}>{data}</p>

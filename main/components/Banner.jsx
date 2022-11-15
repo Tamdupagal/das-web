@@ -43,7 +43,7 @@ export default function Banner() {
                 </div>
                 <button className={styles.button} onClick={handleForm}>
                
-                <a target="_blank" className={styles.Link}>Study now and pay later</a> 
+                <p className={styles.Link}>Study now and pay later</p> 
              
                 </button>
                 <p className={styles.regis}>Registration Charge</p>

@@ -45,7 +45,7 @@ function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, p
                     {description}
                 </p>}
                 {btnText && <button className={styles.feature__btn} onClick={handleForm}> 
-                <a target="_blank" className={styles.Link}>{btnText}</a> 
+                <p className={styles.Link}>{btnText}</p> 
                 </button>}
             </div>
         </>
