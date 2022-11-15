@@ -38,6 +38,9 @@
     overflow-y: auto;
     border-top: 0.1rem solid $main;
     padding-top: 1.5rem;
+     @media screen and (max-width: 768px){
+      font-size:13px;
+    }
     &::-webkit-scrollbar {
       display: inline;
       background-color: white;

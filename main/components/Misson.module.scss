@@ -65,6 +65,9 @@
         line-height: 1.8;
         color: $main;
         font-weight: 500;
+         @media screen and (max-width: 768px){
+      font-size:13px;
+    }
         & > strong {
           color: #FD7E14;
           font-size: 1.5rem;

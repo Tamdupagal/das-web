@@ -63,6 +63,9 @@
       line-height: 1.4;
       font-style: normal;
       margin: 2.5rem 0;
+       @media screen and (max-width: 768px){
+      font-size:13px;
+    }
     }
   }
 }
