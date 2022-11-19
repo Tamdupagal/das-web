@@ -1,0 +1,156 @@
+@import "../../styles/config/utilities";
+@import "../../styles/config/variable";
+
+.container {
+  position: relative;
+  width: 100%;
+  padding-top:13rem;
+  // margin-top: 8rem;
+  @include flex_layout(center, center);
+  background-color: #FFFEF8;
+  .banner_info {
+    padding: 2rem 4rem;
+    @include flex_layout(center, center, column);
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      padding: 2rem;
+      @include flex_layout(center, center, column);
+    
+    }
+    .title {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: #005877;
+      padding-bottom: 2rem;
+      text-align: center;
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        font-size:2.3rem;
+      }
+      
+    }
+
+    .typewriter {
+      font-size: 60px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $orange;
+      width: 100%;
+      min-height: 9rem;
+      white-space: pre-line;
+      font-weight: 700;
+      cursor: grab;
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        font-size:33px;
+        min-height: 7rem;
+      }
+      @media screen and (max-width: 436px) {
+        text-align: center;
+        font-size:25px;
+        min-height: 5rem;
+      }
+      @media screen and (max-width: 335px) {
+        text-align: center;
+        font-size:20px;
+        min-height: 5rem;
+      }
+    }
+    .para{
+      text-align: center;
+      line-height: 3rem;
+      min-height:4rem;
+      .title2{
+        font-size: 1.5rem;
+        color: $main;
+        font-weight:600;
+        text-transform: uppercase;
+        text-align: center;
+        @media screen and (max-width: 415px) {
+          // min-height:6rem;
+          font-size:1.5rem;
+          font-weight:700;
+          }
+      }
+      .title3{
+        font-size: 1.5rem;
+        color: $orange;
+        font-weight:800;
+        text-transform: uppercase;
+        text-align: center;
+        @media screen and (max-width: 415px) {
+          // min-height:6rem;
+          font-size:1.5rem;
+          font-weight:800;
+          }
+      }
+    }
+    
+  }
+
+  .banner__img {
+    position: relative;
+    @media screen and (max-width: 768px) {
+      display: none !important;
+    }
+    position: relative;
+    flex: 0.6;
+  }
+
+  .price{
+    font-size:15px;
+    cursor: pointer;
+    color: #fff;
+    border: 2px solid #005778;
+    background-color: #005778;
+    @media (max-width: 768px) {
+      font-size:12px;
+    }
+  }
+  .price:hover {
+    background-color: #FD7E14;
+    border: 2px solid #FD7E14;
+
+  }
+  .regis{
+    font-size:17px;
+    color: #005778;
+    padding-top: 10px;
+    font-weight:600;
+  }
+}
+
+.button {
+  background-color: #FD7E14;
+  color: white;
+  font-size:17px;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  text-align: center;
+  padding:10px 30px;
+  width: max-content;
+  border: 1px solid #FD7E14;
+  cursor: pointer;
+  letter-spacing: 0.005rem;
+  font-weight: 600;
+  @media screen and (max-width: 768px) {
+    font-size:10px;
+    
+  }
+  transition : {
+    property: transform, box-shadow;
+    duration: 0.01s;
+  }
+  margin-top: 2rem;
+  &:hover {
+    // transform: translate(0.1rem, -0.1rem);
+    box-shadow: -0.1rem 0.2rem 0.3rem rgba(rgb(11, 11, 11), 0.2);
+    transition-duration: 0.1s;
+    background-color: #005877 ;
+    border: 2px solid #005877;
+  }
+
+  
+}
+

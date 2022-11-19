@@ -1,0 +1,32 @@
+@import "./variable";
+
+.Toastify__toast {
+  background-color: white !important;
+  box-shadow: 0 0 0.5rem rgba(black, 0.3);
+}
+.Toastify__close-button {
+  color: black;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  opacity: 1;
+  align-self: flex-start;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.Toastify__close-button--default {
+  color: #000;
+  opacity: 0.3;
+}
+.Toastify__close-button > svg {
+  fill: rgba(black, 0.3);
+  height: 1.5rem;
+  width: 1.5rem;
+  stroke: rgba(black, 0.3);
+  stroke-width: 0.5;
+  transition: 0.3s ease;
+  &:active {
+    transform: scale(0.9);
+  }
+}

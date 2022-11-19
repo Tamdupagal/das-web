@@ -1,0 +1,73 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.container {
+  position: relative;
+  width: 100%;
+  background-color: #ea3a60;
+  background-color: $main;
+  background-image: url(../assets/patternBG.png);
+  background-repeat: no-repeat;
+  // padding-top: 5rem;
+  background-size: cover;
+  padding: 10rem 0;
+  .workflow__icon {
+    width: max-content;
+    height: max-content;
+    @include flex_layout(center, null);
+    margin-bottom: 2.5rem;
+    & > span {
+      display: inline-block;
+      background-color: white;
+      color: #234582;
+      border-radius: 3rem;
+      font-size: 2.7rem;
+      width: 7rem;
+      height: 7rem;
+      font-weight: bolder;
+      display: grid;
+      place-items: center;
+      letter-spacing: 0.1rem;
+      margin-right: 1rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .arrow__odd,
+      .arrow__even {
+        display: none;
+      }
+    }
+    .arrow__odd {
+      transform: translateY(-1rem);
+    }
+    .arrow__even {
+      transform: translateY(1rem);
+    }
+  }
+  .section__header {
+    text-align: center;
+    margin-bottom: 7rem;
+  }
+  .content__box {
+    position: relative;
+    width: 100%;
+    @include flex_layout(null);
+    flex-wrap: wrap;
+    grid-gap: 5rem 2rem;
+    .workflow__box {
+      flex-grow: 1;
+      max-width: 30rem;
+      padding: 0 2rem;
+      .title {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        color: white;
+        margin-bottom: 1.5rem;
+      }
+      @media screen and (max-width: 768px) {
+        @include flex_layout(center, null, column);
+        text-align: center;
+      }
+    }
+  }
+}

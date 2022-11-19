@@ -1,0 +1,68 @@
+@import "../../styles/config/utilities";
+@import "../../styles/config/variable";
+
+.course_box {
+  position: relative;
+  width: 35rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 1.2rem;
+  margin: 0 auto;
+  transition: {
+    property: border;
+    duration: 0.4s;
+  }
+  background-color: white;
+  .course_image {
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    max-height: 0rem;
+  }
+  .info_box {
+    @include flex_layout(null, null, column);
+    padding: 3rem 3rem;
+    .title {
+      font-size: 15px;
+      color: $main;
+      letter-spacing: 0.1rem;
+      white-space: pre-line;
+      text-align: center;
+      @media screen and (max-width: 768px) {
+        font-size:12px;
+        
+      }
+    }
+    .heading {
+      font-size: 1.8rem;
+      color: $orange;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    .btn_wrapper {
+      display: grid;
+      place-items: center;
+      padding-top: 2rem;
+     
+      .btn{
+
+        @media screen and (max-width: 768px){
+          font-size:13px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          
+        }
+      }
+    
+    }
+    .desc {
+      font-size: 1.5rem;
+      color:#005778;
+      font-weight: 500;
+      line-height: 1.4;
+      font-style: normal;
+      margin: 2.5rem 0;
+    }
+  }
+}

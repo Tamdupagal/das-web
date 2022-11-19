@@ -1,0 +1,66 @@
+@import "../../styles/config/utilities";
+@import "../../styles/config/variable";
+
+.container {
+  position: relative;
+  width: 100%;
+  background-color:#fffef8;
+  @include flex_layout(center, null, column);
+  padding: 0 0.5rem;
+  padding-bottom: 5rem;
+  .main_heading {
+    font-size: 3.5rem;
+    color: $main;
+    align-self: center;
+    padding: 2rem 0;
+    text-transform: uppercase;
+  }
+  .about {
+    position: relative;
+    width: 100%;
+    @include flex_layout(center, center);
+    padding: 3rem 0;
+    & > figure {
+      position: relative;
+      width: 50%;
+      padding: 4rem;
+      margin-right: 3rem;
+    }
+    .desc {
+      width: 70%;
+      padding: 3rem;
+      font-size: 1.7rem;
+      font-weight: 500;
+      color: $main;
+      line-height: 1.8;
+      border-radius: 1rem;
+      text-align: justify;
+      .quote {
+        display: inline-block;
+        color: "primary";
+        font-size: 4rem;
+        margin-right: 1rem;
+        &:last-child {
+          margin-left: 2rem;
+          margin-bottom: -1.5rem;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        width: 80%;
+        padding: 1rem;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      @include flex_layout(center, null, column);
+      padding: 0;
+      & > figure,
+      .about {
+        width: 100%;
+        margin: 0;
+      }
+      & > figure {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

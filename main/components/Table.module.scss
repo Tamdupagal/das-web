@@ -1,0 +1,47 @@
+@import "../../styles/config/variable";
+
+.table__wrapper {
+  position: relative;
+  width: 100%;
+}
+.table {
+  padding: 1rem;
+  display: table;
+  position: relative;
+  border-collapse: separate;
+  width: 100%;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  th,
+  td {
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    max-width: 8rem;
+    text-align: center;
+    word-break: break-all;
+    padding: 1.5rem 0;
+    font-weight: bold;
+    @media screen and (max-width: 400px) {
+      font-size: 1.2rem !important;
+      padding: 0.5rem 0 !important;
+    }
+  }
+  th {
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 0.08rem;
+    background-color: $main;
+  }
+  td {
+    border: 0.1rem solid rgba($black, 0.3);
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: $main;
+    text-transform: capitalize;
+  }
+  tr:nth-child(even) {
+    background-color: $light_black;
+  }
+}

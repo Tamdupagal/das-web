@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://digitalaidedschool.com/
+
+# Sitemaps
+Sitemap: https://digitalaidedschool.com/sitemap.xml

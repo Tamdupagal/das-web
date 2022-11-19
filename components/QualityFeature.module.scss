@@ -1,0 +1,40 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+.container {
+  width: 100%;
+  position:relative;
+  background-color:#fffef8;
+  padding-top: 5rem;
+  
+  @media screen and (max-width: 768px) {
+    padding-top: 6rem;
+  }
+  .section__header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  .features {
+    padding: 2rem;
+    @include flex_layout();
+    flex-wrap: wrap;
+    gap: 2rem;
+    @media screen and (max-width: 768px) {
+      padding: 1rem;
+    }
+    .feature {
+      flex-grow: 1;
+      background-color: #fff;
+      max-width: 38rem;
+      padding: 3rem;
+      min-height: 20rem;
+      @include flex_layout(null, null);
+      border-radius: 1rem;
+      box-shadow: 0 0 1rem rgba(black, 0.1);
+    }
+  }
+  .feature:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition:0.2s;
+  }
+}
