@@ -155,11 +155,11 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #FFFEF8;
 
   table {
     border: 1px solid $orange;
-    min-width: 90vw;
-    min-height: 700px;
+    width: 90vw;
     font-size: 20px;
     color: $main;
     border-radius: 10px;
@@ -167,10 +167,12 @@ a {
 
   th {
     border-bottom: 1px solid $orange;
+    padding:10px 0;
   }
 
   td {
     text-align: center;
+    padding: 10px 0;
   }
 }
 

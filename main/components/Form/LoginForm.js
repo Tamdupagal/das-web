@@ -20,9 +20,9 @@ import { toast } from "react-toastify";
 
 
 
-const LoginForm = () => {
+const LoginForm = ({ close }) => {
     const [details, setDetails] = useState([])
-    const { register, handleSubmit,reset, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     let router = useRouter();
 
     const onSubmit = (data) => {
@@ -31,13 +31,14 @@ const LoginForm = () => {
 
         if (email === "admin@digitalaidedschool.com" && password === "DAS@admin123") {
             toast.success("login Success!");
+            close();
             router.push('/info');
 
         } else {
             toast.error("login Failed!")
             return
         };
-       
+
     };
 
 
@@ -46,6 +47,7 @@ const LoginForm = () => {
 
             <div className={styles.form__wrapper}>
                 <div style={{ backgroundColor: "white" }}>
+                    <CgClose className={styles.close__btn__cross} onClick={close} />
                     <div style={{ paddingTop: "70px", marginLeft: "16px" }}>
                         <h2 style={{ fontSize: "40px", color: "#005778" }}>Welcome Back !</h2>
                         <h4 style={{ fontSize: "30px", color: "#FD7E14", marginTop: "5px" }}>Login</h4>
@@ -54,7 +56,6 @@ const LoginForm = () => {
                     <form
                         onSubmit={handleSubmit(onSubmit)}
                         className={styles.feedback__form}>
-                        {/* <CgClose className={styles.close__btn__cross__form} /> */}
 
                         <div className={styles.form__area}>
                             <div className={styles.form__input}>
@@ -86,7 +87,7 @@ const LoginForm = () => {
                         <Image src={logo} objectFit="fill" alt="Digital Aided School" />
                     </figure>
                     {/* <h1 className={styles.panel__title}>Digital Aided School</h1> */}
-                    {/* <CgClose className={styles.close__btn__cross} /> */}
+                    {/* <CgClose className={styles.close__btn__cross}  /> */}
                 </div>
             </div>
         </div>

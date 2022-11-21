@@ -1,42 +1,80 @@
+import axios from 'axios';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Pagination from './Pagination';
 
 const Dashboar = () => {
     const [leadsData, setLeadsData] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postPerPage] = useState(10);
+
+
     useEffect(() => {
-        const url = `https://guarded-peak-36082.herokuapp.com/api/users-data`;
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setLeadsData(data))
+        const fetchData = async () => {
+            setLoading(true);
+            const res = await axios.get('https://guarded-peak-36082.herokuapp.com/api/users-data');
+            setLeadsData(res.data);
+            setLoading(false);
+        };
+        fetchData();
     }, []);
 
+    if (loading) {
+        return <h2>Loading.....</h2>
+    };
+
     console.log(leadsData);
+
+    //Get Current posts
+    const indexOfLastPost = currentPage * postPerPage;
+    const indexOfFirstPost = indexOfLastPost - postPerPage;
+    const currentPosts = leadsData.slice(indexOfFirstPost, indexOfLastPost);
+
+    //Change Page
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    const handlePrevBtn = () => setCurrentPage(currentPage - 1);
+    const handleNextBtn = () => setCurrentPage(currentPage + 1);
 
 
     return (
         <div >
-            <h2 style={{ fontSize: "30px", marginBottom: "25px", color: "#FD7E14" }}>DAS Dashboard</h2>
+            <h2 style={{ fontSize: "30px", marginBottom: "25px", color: "#FD7E14", textAlign: "center" }}>DAS Dashboard</h2>
             <table>
-                <tr>
-                    <th>No.</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Number</th>
-                    <th>Qualification</th>
-                </tr>
-                {leadsData.map((val, index) => {
+                <thead>
+                    <tr>
+                        {/* <th>No.</th> */}
+                        <th>Name</th>
+                        <th>Number</th>
+                        <th>Email</th>
+                        <th>Qualification</th>
+                    </tr>
+                </thead>
+                {currentPosts.map((val, index) => {
                     return (
-                        <tr key={index}>
-                            <td>{index + 1}</td>
-                            <td>{val.name}</td>
-                            <td>{val.phoneNumber}</td>
-                            <td>{val.email}</td>
-                            <td>{val.qualification}</td>
-                        </tr>
+                        <tbody key={index}>
+                            <tr >
+                                {/* <td>{index + 1}</td> */}
+                                <td>{val.name}</td>
+                                <td>{val.phoneNumber}</td>
+                                <td>{val.email}</td>
+                                <td>{val.qualification}</td>
+                            </tr>
+                        </tbody>
                     )
                 })}
             </table>
+
+            <Pagination
+                currentPage={currentPage}
+                postPerPage={postPerPage}
+                totalPost={leadsData.length}
+                handlePrevBtn={handlePrevBtn}
+                handleNextBtn={handleNextBtn}
+                paginate={paginate} />
+
+
         </div>
     );
 };

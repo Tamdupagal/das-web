@@ -15,14 +15,14 @@ import logo from '../../assets/das.webp';
 import styles from '../Form.module.scss';
 import { AppContext } from "../../../AppContext";
 
-const LeadForm = () => {
+const LeadForm = ({ close }) => {
     // const { setToggleLoginForm, toggleLoginForm } = useContext(AppContext);
     const router = useRouter();
     const [details, setDetails] = useState([])
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     const onSubmit = (data) => {
-        console.log(data);
+        // console.log(data);
         const { name, email, phoneNumber, qualification } = data;
 
         //post lead form to server
@@ -35,16 +35,18 @@ const LeadForm = () => {
             body: JSON.stringify(data)
         }).then(res => res.json())
             .then(result => {
-                // console.log(result);
+                console.log(result);
                 setDetails(result);
                 reset();
+                close();
             })
     };
 
     return (
         <div>
             <div className={styles.form__wrapper}>
-                <div style={{ backgroundColor: "white",padding:"10px" }}>
+                <div style={{ backgroundColor: "white", padding: "10px" }}>
+                    <CgClose className={styles.close__btn__cross} onClick={close} />
                     <div style={{ paddingTop: "50px", marginLeft: "16px" }}>
                         <h2 style={{ fontSize: "27px", color: "#FD7E14" }}>DIGITAL AIDED SCHOOL</h2>
                         <h4 style={{ fontSize: "18px", color: "#005778", marginTop: "5px" }}>Game Development & Web3 Courses</h4>

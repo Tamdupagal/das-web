@@ -47,7 +47,12 @@ export default function Banner() {
                     <Popup
                         trigger={<a target="_blank" className={styles.Link}>Study now and pay later</a>}
                         position="center">
-                        <LeadForm />
+                        {
+                            close => (
+                                <LeadForm close={close} />
+                            )
+                        }
+
                     </Popup>
                 </button>
 

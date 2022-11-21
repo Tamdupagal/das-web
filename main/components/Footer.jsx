@@ -32,11 +32,11 @@ function Footer() {
     setToggleLoginForm(true)
   };
  */
-  const handleLogin = function () {
+  /* const handleLogin = function () {
     // setIsAdmin(true)
     setOpenLoginForm(true);
     console.log("login form");
-  };
+  }; */
 
   return (
     <footer className={styles.footer}>
@@ -83,7 +83,12 @@ function Footer() {
             <Popup
               trigger={<span><IoMdLogIn className={styles.icon} /> Login </span>}
               position="top center">
-              <LoginForm />
+              {
+                close => (
+                  <LoginForm close={close}/>
+                )
+              }
+
             </Popup>
 
           </li>
