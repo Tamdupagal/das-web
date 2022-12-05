@@ -44,7 +44,6 @@ const data = [
 
 const packageData =
   'STUDY FIRST PAY LATER. PAY ZERO TILL YOU LAND A JOB.\n\n Total fees: Rs 2.99L inclusive of GST.'
-
 function development({name}) {
   return (
     <div>
