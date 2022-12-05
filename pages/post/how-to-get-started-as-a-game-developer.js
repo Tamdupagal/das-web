@@ -9,7 +9,7 @@ import blog5 from '../../main/assets/cybpnk.jpg'
 
 const Post1 = () => {
   return (
-  <div style={{paddingTop:'5rem'}} className="container2">
+  <div style={{paddingTop:'10rem'}} className="container2">
     <h1 className="title">How to get started as a game developer</h1>
     <p style={{fontSize:'15px'}}>Date: 19/11/2022  / 2:00Pm</p>
     <div className='imgg'> 

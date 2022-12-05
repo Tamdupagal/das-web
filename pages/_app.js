@@ -2,12 +2,12 @@ import Header from '../main/components/Header'
 import Footer from '../main/components/Footer'
 import { toast } from 'react-toastify'
 import { AppContext, AppContextProvider } from '../AppContext'
-import '../styles/globals.scss'
 import { useContext, useEffect } from 'react'
 import Form from '../main/components/Form'
 import ReactLoading from 'react-loading'
 import { useRouter } from 'next/router'
 import TagManager from 'react-gtm-module';
+import '../styles/globals.scss'
 
 //this is commit 
 
