@@ -1,0 +1,49 @@
+.pagi_nav {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    ul {
+        display: flex;
+        align-items: center;
+
+        li {
+            list-style-type: none;
+        }
+    }
+}
+
+;
+
+.pagi_btn {
+    background: #005778;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    list-style-type: none;
+    margin-right: 8px;
+    transition: ease .1s;
+}
+
+;
+
+.pagi_btn:hover {
+    background: white;
+    color: #005778;
+    border: 1px solid #005778;
+}
+
+.pagi_btn:focus {
+    background: white;
+    color: #005778;
+    border: 1px solid #005778;
+}
+
+.focused_Btn {
+    @extend .pagi_btn;
+    background: white;
+    color: #005778;
+    border: 1px solid #005778;
+}

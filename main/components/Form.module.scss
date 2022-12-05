@@ -8,8 +8,9 @@
   margin-bottom: 1rem;
   padding-left: 0.1rem;
   display: block;
-  color: rgba(black, 0.8);
+  color: $main;
   letter-spacing: 0.1rem;
+
   @media screen and (max-width: 768px) {
     font-size: 1.5rem;
   }
@@ -21,16 +22,19 @@
   width: max-content;
   height: max-content;
   overflow: hidden;
-  @include flex_layout(null);
+  display: flex;
+  flex-direction: row-reverse;
   border-radius: 1rem;
   box-shadow: 0 0 15rem rgba(black, 0.2);
   overflow: hidden;
-  background-color: #FFFEF8;
+  background-color: #FEE7D4;
+
   @media screen and (max-width: 768px) {
     width: 100%;
     height: 100%;
     background-color: transparent;
   }
+
   .overlay__panel {
     position: relative;
     width: 40rem;
@@ -38,20 +42,24 @@
     min-height: 60rem;
     padding: 2rem 2rem;
     overflow: hidden;
-    background-color: white;
+    background-color: #FEE7D4;
     @include flex_layout(center, center, column);
+
     transition: {
       property: transform;
       duration: 0.3s;
       timing-function: ease-out;
     }
+
     @media screen and (max-width: 768px) {
       display: none;
     }
-    & > .logo {
+
+    &>.logo {
       max-width: 25rem;
       object-fit: contain;
     }
+
     .panel__title {
       font-size: 3rem;
       color: $black;
@@ -60,12 +68,14 @@
       margin-bottom: 0.2rem;
       font-variant: small-caps;
     }
-    & > p {
+
+    &>p {
       font-size: 2rem;
       color: lighten($black, 0.6);
       text-align: center;
     }
   }
+
   .feedback__form {
     position: relative;
     width: max-content;
@@ -79,11 +89,13 @@
     border-radius: 1rem;
     overflow: hidden;
     @include flex_layout(null, null, column);
+
     @media screen and (max-width: 768px) {
       width: 100%;
       padding: 2rem 1rem;
       min-height: max-content;
     }
+
     .form__title {
       color: rgba(black, 0.6);
       text-align: center;
@@ -91,17 +103,20 @@
       font-weight: bold;
       font-size: $font_size + 0.5rem;
     }
+
     .form__area {
       position: relative;
       height: 100%;
+
       .form__input {
         position: relative;
-        margin-bottom: 3rem;
-        & > label {
+        margin-bottom: 2rem;
+
+        &>label {
           @extend .labels;
         }
 
-        & > .input__box {
+        &>.input__box {
           position: relative;
           height: 5rem;
           width: 100%;
@@ -109,7 +124,8 @@
           border-radius: 0.5rem;
           overflow: hidden;
           border: 0.1rem solid rgba($black, 0.3);
-          & > .login__error {
+
+          &>.login__error {
             position: absolute;
             border: 4px solid red;
             top: 0;
@@ -119,12 +135,14 @@
             color: $orange;
             // padding-top: 1rem;
           }
+
           .select {
             width: 100%;
             height: 100%;
             border: none;
             padding: 0 1rem;
-            color: rgba(black, 0.7);
+            color: $main;
+
             &:focus {
               outline: none;
             }
@@ -133,7 +151,8 @@
           &:focus {
             outline: none;
           }
-          & > .icon {
+
+          &>.icon {
             color: white;
             width: 5rem;
             height: 100%;
@@ -141,39 +160,46 @@
             font-size: 1.4rem;
             background: $main;
           }
+
           @media screen and (max-width: 768px) {
             width: 100%;
             height: 8rem;
-            & > .icon {
+
+            &>.icon {
               width: 8rem;
               padding: 2.5rem;
             }
           }
+
           input {
             &::placeholder {
               color: rgb(178, 178, 178);
               font-size: 1.5rem;
             }
+
             padding: 0 1.5rem;
-            color: rgba(black, 0.7);
+            color: $main;
             border: none;
             width: 100%;
             height: 100%;
             z-index: 999;
+
             &:hover {
               box-shadow: none;
             }
+
             &:focus {
               outline: none;
               border: none;
             }
           }
         }
-        & > span {
+
+        &>span {
           display: block;
           margin-bottom: 0.3rem;
           font-size: 1.5rem;
-          color: black;
+          color: $main;
         }
       }
     }
@@ -181,30 +207,36 @@
     .button__wrapper {
       @include flex_layout(center);
       width: 100%;
+
       .form__submit__btn,
       .close__btn {
         flex-grow: 1;
         padding: 1.5rem;
-        background-color: $main;
+        background-color: #FD7E14;
         color: white;
-        border-radius: 0.3rem;
+        border-radius: 0.6rem;
         font-weight: bold;
         font-size: 1.5rem;
         cursor: pointer;
+
         transition: {
           property: transform;
           duration: 0.05s;
         }
+
         border: none;
+
         &:active {
           transform: scale(0.98);
         }
+
         &.close__btn {
           border: 0.1rem solid $main;
           color: black;
           background-color: $white;
           margin-right: 0;
         }
+
         @media screen and (max-width: 768px) {
           padding: 2.5rem 5rem;
           font-size: 2rem;
@@ -237,6 +269,7 @@
   float: right;
   margin-left: auto;
   margin-bottom: 2rem;
+
   @media screen and (max-width: 768px) {
     display: inline-block;
   }
