@@ -13,10 +13,15 @@ const Dashboar = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            setLoading(true);
-            const res = await axios.get('https://guarded-peak-36082.herokuapp.com/api/users-data');
-            setLeadsData(res.data);
-            setLoading(false);
+            try {
+                setLoading(true);
+                // const res = await axios.get('http://localhost:5000/api/users-data');
+                const res = await axios.get('https://back-das-web-server.onrender.com/api/users-data');
+                setLeadsData(res.data);
+                setLoading(false);
+            } catch (err) {
+                console.log(err.response);
+            }
         };
         fetchData();
     }, []);

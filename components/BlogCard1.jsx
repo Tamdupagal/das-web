@@ -3,13 +3,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { AppContext } from '../AppContext'
 import { useContext } from 'react'
+import Popup from 'reactjs-popup'
+import LeadForm from '../main/components/Form/LeadForm'
 
 function BlogCard(props) {
     const { setToggleLoginForm, setIsAdmin } = useContext(AppContext)
 
     const handleForm = function () {
-      setIsAdmin(false)
-      setToggleLoginForm(true)
+        setIsAdmin(false)
+        setToggleLoginForm(true)
     }
     return (
         <div className={styles.card}>
@@ -18,9 +20,11 @@ function BlogCard(props) {
                 <p className={styles.desc}>
                     {props.text}
                 </p>
-                <button className={styles.btn}  onClick={handleForm}>
-              <p className={styles.Link}>LEARN MORE</p> 
-              </button>
+                <button className={styles.btn} >
+                    <Link href={"/foundation-course"} className={styles.Link}>LEARN MORE</Link>
+
+
+                </button>
             </div>
         </div>
     )

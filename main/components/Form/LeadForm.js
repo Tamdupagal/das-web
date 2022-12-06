@@ -14,6 +14,7 @@ import { useRouter } from 'next/router';
 import logo from '../../assets/das.webp';
 import styles from '../Form.module.scss';
 import { AppContext } from "../../../AppContext";
+import { toast } from 'react-toastify';
 
 const LeadForm = ({ close }) => {
     // const { setToggleLoginForm, toggleLoginForm } = useContext(AppContext);
@@ -26,7 +27,7 @@ const LeadForm = ({ close }) => {
         const { name, email, phoneNumber, qualification } = data;
 
         //post lead form to server
-        const url = `https://guarded-peak-36082.herokuapp.com/api/new-register`;
+        const url = `https://back-das-web-server.onrender.com/api/new-register`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -37,8 +38,12 @@ const LeadForm = ({ close }) => {
             .then(result => {
                 console.log(result);
                 setDetails(result);
+                toast.success('Submitted Successfully!')
                 reset();
                 close();
+
+                router.push('/thankyou');
+
             })
     };
 
