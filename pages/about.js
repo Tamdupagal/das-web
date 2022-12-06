@@ -10,7 +10,7 @@ function AboutUs({name}) {
     <>
     <Head>
     <title>About us | Digitalaidedschool </title>
-    <meta name='description' content='game development courses' />
+    <meta name='description' content='DAS - We are an online learning platform that provides training and placement support to creators and helps them succeed in their game development careers.' />
     <link rel='icon' href='/favicon.png' /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </Head>

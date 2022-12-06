@@ -420,13 +420,13 @@ ul.lst-kix_list_1-5 {
 ul.lst-kix_list_1-6 {
   list-style-type: none;
 
-
+}
 
 .container2{
   margin: auto;
   width:50%;
   line-height:2.5rem;
-  text-align: justify;
+  // text-align: justify;
 
   .description{
     padding-top:2rem;
@@ -445,13 +445,21 @@ ul.lst-kix_list_1-6 {
     font-size:3rem;
     padding-top:1rem;
     padding-bottom:3rem;
-    color:#FD7E14
+    color:#FD7E14;
+    // line-height:80px;
   }
   
   .sub-heading{
     font-size:2rem;
     padding:1rem;
     color:#FD7E14
+  }
+  
+  .sub-link{
+    font-size:2rem;
+    padding:1rem;
+    color:#005778;
+    cursor: pointer;
   }
   
   .list{
@@ -478,7 +486,7 @@ ul.lst-kix_list_1-6 {
     line-height:2.4rem;
 
   }
-  text-align:justify;
+  // text-align:justify;
   
   .sub-heading{
     font-size:2.5rem;
@@ -509,7 +517,7 @@ ul.lst-kix_list_1-6 {
     line-height:2.4rem;
 
   }
-  text-align:justify;
+  // text-align:justify;
   
   .sub-heading{
     font-size:2.5rem;
@@ -529,8 +537,10 @@ ul.lst-kix_list_1-6 {
     line-height:3rem
   }
 
-}
+
 
   
 
+
 }}
+
