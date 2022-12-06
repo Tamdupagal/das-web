@@ -7,7 +7,9 @@ import Form from '../main/components/Form'
 import ReactLoading from 'react-loading'
 import { useRouter } from 'next/router'
 import TagManager from 'react-gtm-module';
+import { SessionProvider } from 'next-auth/react'
 import '../styles/globals.scss'
+
 
 //this is commit 
 
@@ -38,7 +40,7 @@ const LoaderWrapper = function () {
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
 
- /* A hook that is used to track page views. */
+  /* A hook that is used to track page views. */
   useEffect(() => {
     import('react-facebook-pixel')
       .then((x) => x.default)
@@ -53,8 +55,8 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     TagManager.initialize({ gtmId: 'G-SVC560TV66' });
-}, []);
-// GTM-WTLJF45
+  }, []);
+  // GTM-WTLJF45
   if (Component.withoutLayout === true) {
     return (
       <AppContextProvider>
@@ -65,14 +67,16 @@ function MyApp({ Component, pageProps }) {
   }
 
   return (
-    <AppContextProvider>
-    <Header />
-    <Component {...pageProps} />
-    <Footer />
-    <FormWrapper />
-    <LoaderWrapper />
-    </AppContextProvider>
-     
+    <SessionProvider session={pageProps.session}>
+      <AppContextProvider>
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+        <FormWrapper />
+        <LoaderWrapper />
+      </AppContextProvider>
+    </SessionProvider>
+
   )
 }
 

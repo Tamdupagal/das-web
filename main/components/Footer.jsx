@@ -23,20 +23,15 @@ import { AiTwotoneMessage } from 'react-icons/ai'
 import { IoMdLogIn } from 'react-icons/io'
 import Popup from 'reactjs-popup';
 import LoginForm from './Form/LoginForm';
+import { signOut, useSession } from 'next-auth/react';
 
 function Footer() {
-  const { setIsAdmin, setOpenLoginForm } = useContext(AppContext)
+  const { setIsAdmin, setOpenLoginForm } = useContext(AppContext);
+  const { data, status } = useSession();
 
-  /* const handleForm = function () {
-    setIsAdmin(true)
-    setToggleLoginForm(true)
-  };
- */
-  /* const handleLogin = function () {
-    // setIsAdmin(true)
-    setOpenLoginForm(true);
-    console.log("login form");
-  }; */
+  // console.log(data, status);
+
+  
 
   return (
     <footer className={styles.footer}>
@@ -79,19 +74,22 @@ function Footer() {
             <FaEnvelope className={styles.icon} /> hello@digitalaidedschool.com
           </li>
 
-          <li className={styles.smalll} >
-            <Popup
-              trigger={<span><IoMdLogIn className={styles.icon} /> Login </span>}
-              position="top center">
-              {
-                close => (
-                  <LoginForm close={close}/>
-                )
-              }
-
-            </Popup>
-
-          </li>
+          {
+            status !== "authenticated" ?
+              <li className={styles.smalll} >
+                <Popup
+                  trigger={<span><IoMdLogIn className={styles.icon} /> Login </span>}
+                  position="top left">
+                  {
+                    close => (
+                      <LoginForm close={close} />
+                    )
+                  }
+                </Popup>
+              </li>
+              :
+              <li className={styles.smalll} onClick={() => signOut()}><span><IoMdLogIn className={styles.icon} /> Logout </span></li>
+          }
 
 
 

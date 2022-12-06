@@ -16,6 +16,7 @@ import { useContext } from "react";
 import styles from '../Form.module.scss';
 import { AppContext } from "../../../AppContext";
 import { toast } from "react-toastify";
+import { signIn } from "next-auth/react";
 
 
 
@@ -25,19 +26,14 @@ const LoginForm = ({ close }) => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     let router = useRouter();
 
-    const onSubmit = (data) => {
-        // console.log(data);
+    const onSubmit = async (data) => {
         const { email, password } = data;
 
-        if (email === "admin@digitalaidedschool.com" && password === "DAS@admin123") {
-            toast.success("login Success!");
-            close();
-            router.push('/info');
+        const res = await signIn("credentials", { email, password, redirect: false });
+        // console.log(res);
+        toast.success('Signin Successfully!')
 
-        } else {
-            toast.error("login Failed!")
-            return
-        };
+        router.push('/info');
 
     };
 
