@@ -46,9 +46,7 @@ const Post1 = () => {
    prefer working alone because they do not need another person to distract them from their work all day!
    </li>
    </div>
-   <div style={{textAlign:'center',}} className='imgg'>
-   <Image src={Blog1} alt='intro' className='imgg' />
-    </div>
+  
     <h2 className="sub-heading">Determine your educational path.</h2>
     <p style={{paddingTop:'1rem',}} className="description">
     Learning to code is a great way to get started as a game programmer. However, 
@@ -63,6 +61,9 @@ it when compared against other options available today.
 </p>
 
 
+<div style={{textAlign:'center',}} className='imgg'>
+<Image src={Blog1} alt='intro' className='imgg' />
+ </div>
 <h2 className="sub-heading">Learn programming languages.</h2>
 <p style={{paddingTop:'1rem',}} className="description">
   One of the most common questions from people interested in becoming game developers is,
@@ -83,9 +84,6 @@ it when compared against other options available today.
   </li>
   </div>
   
-  <div style={{textAlign:'center',}} className='imgg'>
-  <Image src={blog5} alt='intro' className='imgg' />
-   </div>
   <h2 className="sub-heading">Learn the basics of computer graphics.</h2>
   <div className='list'>
   <li>What is computer graphics?
@@ -104,6 +102,10 @@ We can accomplish it in a variety of ways, including:
      no depth or perspective involved whatsoever! Famous examples include Super Mario Bros., 
       Sonic the Hedgehog, and Contra III: The Alien Wars.
       </p>
+    <div style={{textAlign:'left',}} className='imgg'>
+      <Image src={blog4} alt='intro' className='imgg' />
+ <p>source: https://www.programsbuzz.com/ </p>
+ </div>
      <h2 className="sub-heading">Get familiar with the main types of software used in game development.</h2>
      <p style={{paddingTop:'1rem',}} className="description">
      Familiarize yourself with the main types of software used in game development.
@@ -124,9 +126,7 @@ We can accomplish it in a variety of ways, including:
      They may also need knowledge about lighting techniques if they want their designs to look realistic!
      </li>
      </div>
-     <div style={{textAlign:'center',}} className='imgg'>
-   <Image src={blog2} alt='intro' className='imgg' />
-   </div>
+    
    <h2 className="sub-heading">Meet other game developers.</h2>
    <p style={{paddingTop:'1rem',}} className="description">
    You can find a game development community or meetup group by searching
@@ -136,9 +136,9 @@ We can accomplish it in a variety of ways, including:
  </p>
  
    <div className='list'>
-   <li>[GameDev.net](https://www.gamedev.net/) - This is an online resource center with forums and articles that cover everything from programming languages to art techniques and business practices in the gaming industry (Including information on how to get started in game development).
+   <li><a href="https://www.gamedev.net/" >[GameDev.net](https://www.gamedev.net/) </a> - This is an online resource center with forums and articles that cover everything from programming languages to art techniques and business practices in the gaming industry (Including information on how to get started in game development).
    </li>
-   <li>[Digital Aided School](https://digitalaidedschool.com/) - an online learning platform that provides training and placement support to creators and helps them succeed in their game development. Promotes community-based learning by offering live online classes and industry-level project-building opportunities</li>
+   <li><a href="https://digitalaidedschool.com/" >[Digital Aided School](https://digitalaidedschool.com/) </a> - an online learning platform that provides training and placement support to creators and helps them succeed in their game development. Promotes community-based learning by offering live online classes and industry-level project-building opportunities</li>
    </div>
    <div style={{textAlign:'center',}} className='imgg'>
    <Image src={blog3} alt='intro' className='imgg' />
@@ -154,10 +154,9 @@ We can accomplish it in a variety of ways, including:
    One of the best ways to get feedback is to publish your work online. If you&apos;re developing a game and want to see what people think of it, then publishing it on your website is perfectly fine. But if you want more people looking at it or have a larger audience in mind, consider using services like itch.io or Indie DB (which charges $5 per month). You can also publish on places like Reddit, Quora, and Stack Overflow, where millions of users will read every post submitted by anyone interested in whatever topic gets discussed there!
    </p>
    
-   
-   <div style={{textAlign:'center',}} className='imgg'>
- <Image src={blog4} alt='intro' className='imgg' />
- </div>
+ <div style={{textAlign:'left',}} className='imgg'>
+   <Image src={blog2} alt='intro' className='imgg' />
+   </div>
 
 <h2 className="sub-heading">Improve your communication skills.</h2>
 <p style={{paddingTop:'1rem',}} className="description">
@@ -173,6 +172,10 @@ The first step is figuring out what you want to do.
 Once you&apos;ve decided on a segment of the industry and have some ideas about your educational path, it&apos;s time to start learning! There are numerous ways to accomplish this. If you&apos;re already familiar with programming languages and computer graphics, this may be the most optimal path for getting started as a game developer. However, if your background is more business or design oriented (or both), studying those subjects would be more beneficial than learning about coding or artistry (though still important).
 If nothing else works for your needs or interests then perhaps taking classes at local colleges/universities will help in discovering new potential paths down which one could take themselves further along their journey towards becoming professionally employed within gaming development companies such as EA Games offer internships throughout North America including locations such as Canada & Mexico City where opportunities exist locally through programs provided by local industry leaders such as Ubisoft Montreal Studio Manager Martin Anfinsen who recently spoke at WIRED 2015 Conference held earlier this year back home near Montreal Quebec City Canada - &quot;We want our students from Ontario University to come here because we are trying hard every day working hard so they have fun while doing their job.&quot;
 </p>
+<div style={{textAlign:'left',}} className='imgg'>
+ <Image src={blog5} alt='intro' className='imgg' />
+ <p>Source: Cyberpunk-twitter</p>
+ </div>
 
 <h2 className="sub-heading">Conclusion</h2>
 <p style={{paddingTop:'1rem',}} className="description">
