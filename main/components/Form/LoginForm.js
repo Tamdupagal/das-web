@@ -31,9 +31,14 @@ const LoginForm = ({ close }) => {
 
         const res = await signIn("credentials", { email, password, redirect: false });
         // console.log(res);
-        toast.success('Signin Successfully!')
+        if (res.status !== 401) {
+            toast.success('Signin Successfully!')
+            router.push('/info');
+        } else {
+            toast.error('Signin Failed!');
+            console.log(res.error);
+        }
 
-        router.push('/info');
 
     };
 
