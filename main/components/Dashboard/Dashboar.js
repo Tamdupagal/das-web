@@ -3,6 +3,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Pagination from './Pagination';
+import ReactLoading from 'react-loading'
 
 const Dashboar = () => {
     const [leadsData, setLeadsData] = useState([]);
@@ -27,7 +28,9 @@ const Dashboar = () => {
     }, []);
 
     if (loading) {
-        return <h2>Loading.....</h2>
+        return <div className='loader'>
+            <ReactLoading type='bars' height={70} width={70} color='#005778' />
+        </div>
     };
 
     console.log(leadsData);
