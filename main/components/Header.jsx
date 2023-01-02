@@ -165,7 +165,7 @@ function Header(props) {
                         <button className={styles.bttn} >
                             <p style={{ color: 'white', padding: '0 2px', letterSpacing: '1px' }} className={isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active}
                                 onClick={openMenu}><GiGameConsole style={{ fontSize: '16px' }} />
-                                <a onClick={onOpenModal} target="_blank" className={styles.Link}>&nbsp;Game Dev Careers</a>
+                                <a onClick={onOpenModal} className={styles.Link}>&nbsp;Game Dev Careers</a>
                             </p>
                         </button>
 

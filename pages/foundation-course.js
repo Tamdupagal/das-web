@@ -71,5 +71,6 @@ export default function Home({name}) {
   
       </div>
       )
-    }
+}
+    
     // <Blog />
