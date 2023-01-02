@@ -95,14 +95,14 @@ function Banner({ data, checkBanner }) {
           <LeadForm />
         </Modal>
 
-        <p className={styles.regis}>Registration Charge</p>
+       {/*  <p className={styles.regis}>Registration Charge</p>
         <Link href="https://rzp.io/l/xVAzXSaY6" passHref={true}>
           <div className={styles.price} style={{ marginTop: '12px', padding: '8px', borderRadius: '8px' }}>
             <b style={{ color: '#fff' }}>
               Was <s>₹10000</s> &nbsp;Now ₹2999 + GST
             </b>
           </div>
-        </Link>
+        </Link> */}
       </div>
     </section>
   );

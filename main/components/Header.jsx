@@ -7,9 +7,7 @@ import { GiGameConsole } from 'react-icons/gi'
 import { useContext, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router'
 import { AppContext } from '../../AppContext';
-import Link from 'next/link'
 import { useSession } from 'next-auth/react';
-import Popup from 'reactjs-popup';
 import LeadForm from './Form/LeadForm';
 import Modal from 'react-responsive-modal';
 
@@ -65,15 +63,9 @@ function Header(props) {
         setIsAdmin(true)
         setToggleLoginForm(true)
     }
-  };
+  
 
-  useEffect(() => {
-    setToggleDropDown(false);
-    window.addEventListener("scroll", classToggle);
-    return () => {
-      window.removeEventListener("scroll", classToggle);
-    };
-  }, []);
+ 
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => setIsOpen(!isOpen);
 
@@ -169,25 +161,6 @@ function Header(props) {
             FAQ
           </li>
 
-          {/* <li className={styles.navitem}>
-                        <button ref={btnRef1} onClick={() => { setToggleSocial(!toggleSocial) }} className={styles.btn}>Social
-                            {toggleSocial && <ul className={styles.dropdown}>
-                                <li onClick={() => {
-                                    router.push('/events')
-                                    setToggleSocial(false)
-                                    setIsOpen(false)
-                                }
-                                }>  <FaAngleRight className={styles.arrow_right} />Events</li>
-                                <li onClick={() => {
-                                    router.push('/frequently-asked-question')
-                                    setToggleSocial(false)
-                                    setIsOpen(false)
-                                }
-                                }><FaAngleRight className={styles.arrow_right} /> FAQ</li>
-                            </ul>}
-
-                        </button>
-                    </li>
                     <li className={styles.navitem}>
                         <button className={styles.bttn} >
                             <p style={{ color: 'white', padding: '0 2px', letterSpacing: '1px' }} className={isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active}
@@ -210,11 +183,8 @@ function Header(props) {
                     onClick={openMenu}
                 >
                   {(close) => <LeadForm close={close} />}
-                </Popup>
-              </p>
-            </button>
-          </li>
-        </ul>
+                          </button>
+        
         <button
           className={
             isOpen === false
