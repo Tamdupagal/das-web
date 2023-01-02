@@ -7,13 +7,21 @@ import SectionHeader from './SectionHeader';
 import Link from 'next/link';
 import Popup from 'reactjs-popup';
 import LeadForm from '../main/components/Form/LeadForm';
+import { useState } from 'react';
+import Modal from 'react-responsive-modal';
 
 
 
 function Package({ data }) {
-
-
     const { setToggleLoginForm, setIsAdmin } = useContext(AppContext)
+
+    
+    const [open, setOpen] = useState(false);
+
+    const onOpenModal = () => setOpen(true);
+    const onCloseModal = () => setOpen(false);
+
+
 
     const handleForm = function () {
 
@@ -61,19 +69,16 @@ function Package({ data }) {
             <button className={styles.button} >
 
                 <p className={styles.Link}>
-                    <Popup
-                        trigger={<a target="_blank" className={styles.Link}>STUDY FIRST PAY LATER</a>}
-                        position="center">
-                        {
-                            close => (
-                                <LeadForm close={close} />
-                            )
-                        }
-
-                    </Popup>
+                    <a onClick={onOpenModal} target="_blank" className={styles.Link}>STUDY FIRST PAY LATER</a>
                 </p>
 
             </button>
+            <Modal
+                open={open}
+                onClose={onCloseModal}
+                center>
+                <LeadForm />
+            </Modal>
             <p className={styles.price__desc}>{data}</p>
         </section>
     )

@@ -5,6 +5,8 @@ import { AppContext } from '../../AppContext';
 import Link from 'next/link'
 import Popup from 'reactjs-popup';
 import LeadForm from './Form/LeadForm';
+import Modal from 'react-responsive-modal';
+import { useState } from 'react';
 
 const phrases = [
     "Game Development.",
@@ -13,7 +15,13 @@ const phrases = [
 
 export default function Banner() {
 
-    const { setToggleLoginForm, setIsAdmin } = useContext(AppContext)
+    const { setToggleLoginForm, setIsAdmin } = useContext(AppContext);
+
+    const [open, setOpen] = useState(false);
+
+    const onOpenModal = () => setOpen(true);
+    const onCloseModal = () => setOpen(false);
+
 
     /*  const handleForm = function () {
          setIsAdmin(false);
@@ -44,17 +52,14 @@ export default function Banner() {
                     <h1 className={styles.title3}>Be a Creator, Not a Player</h1>
                 </div>
                 <button className={styles.button}>
-                    <Popup
-                        trigger={<a target="_blank" className={styles.Link}>Study now and pay later</a>}
-                        position="center">
-                        {
-                            close => (
-                                <LeadForm close={close} />
-                            )
-                        }
-
-                    </Popup>
+                    <a onClick={onOpenModal} target="_blank" className={styles.Link}>Study now and pay later</a>
                 </button>
+                <Modal
+                    open={open}
+                    onClose={onCloseModal}
+                    center>
+                    <LeadForm />
+                </Modal>
 
                 <p className={styles.regis}>Registration Charge</p>
 

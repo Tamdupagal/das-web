@@ -10,6 +10,7 @@ import Link from 'next/link'
 import { useSession } from 'next-auth/react';
 import Popup from 'reactjs-popup';
 import LeadForm from './Form/LeadForm';
+import Modal from 'react-responsive-modal';
 
 function Header(props) {
     const { setIsAdmin, setToggleLoginForm } = useContext(AppContext);
@@ -19,6 +20,12 @@ function Header(props) {
     const btnRef = useRef();
     const btnRef1 = useRef();
     const headRef = useRef();
+
+    const [open, setOpen] = useState(false);
+
+    const onOpenModal = () => setOpen(true);
+    const onCloseModal = () => setOpen(false);
+
 
 
     const [toggleDropDown, setToggleDropDown] = useState(false)
@@ -136,18 +143,16 @@ function Header(props) {
                         <button className={styles.bttn} >
                             <p style={{ color: 'white', padding: '0 2px', letterSpacing: '1px' }} className={isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active}
                                 onClick={openMenu}><GiGameConsole style={{ fontSize: '16px' }} />
-                                <Popup
-                                    trigger={<a target="_blank" className={styles.Link}>&nbsp;Game Dev Careers</a>}
-                                    position="bottom center">
-                                    {
-                                        close => (
-                                            <LeadForm close={close} />
-                                        )
-                                    }
-
-                                </Popup>
+                                <a onClick={onOpenModal} target="_blank" className={styles.Link}>&nbsp;Game Dev Careers</a>
                             </p>
                         </button>
+
+                        <Modal
+                            open={open}
+                            onClose={onCloseModal}
+                            center>
+                            <LeadForm />
+                        </Modal>
 
                     </li>
                 </ul>

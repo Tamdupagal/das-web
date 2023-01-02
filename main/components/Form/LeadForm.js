@@ -51,7 +51,7 @@ const LeadForm = ({ close }) => {
         <div>
             <div className={styles.form__wrapper}>
                 <div style={{ backgroundColor: "white", padding: "10px" }}>
-                    <CgClose className={styles.close__btn__cross} onClick={close} />
+                    {/* <CgClose className={styles.close__btn__cross} onClick={close} /> */}
                     <div style={{ paddingTop: "50px", marginLeft: "16px" }}>
                         <h2 style={{ fontSize: "27px", color: "#FD7E14" }}>DIGITAL AIDED SCHOOL</h2>
                         <h4 style={{ fontSize: "18px", color: "#005778", marginTop: "5px" }}>Game Development & Web3 Courses</h4>

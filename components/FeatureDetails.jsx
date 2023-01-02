@@ -7,6 +7,8 @@ import { GoPrimitiveDot as Dot } from "react-icons/go";
 import { AppContext } from '../AppContext';
 import Popup from 'reactjs-popup';
 import LeadForm from '../main/components/Form/LeadForm';
+import Modal from 'react-responsive-modal';
+import { useState } from 'react';
 
 
 function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, pattern, description, className }) {
@@ -18,6 +20,10 @@ function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, p
         setIsAdmin(false);
         setToggleLoginForm(true);
     }
+    const [open, setOpen] = useState(false);
+
+    const onOpenModal = () => setOpen(true);
+    const onCloseModal = () => setOpen(false);
 
     return (
         <>
@@ -48,18 +54,15 @@ function FeatureDetails({ id, title, text, imgSrc, altText, btnText, showIcon, p
                 </p>}
                 {btnText && <button className={styles.feature__btn}>
                     <p className={styles.Link}>
-                        <Popup
-                            trigger={<a target="_blank" className={styles.Link}>{btnText}</a>}
-                            position="center">
-                            {
-                                close => (
-                                    <LeadForm close={close} />
-                                )
-                            }
-
-                        </Popup>
+                        <a onClick={onOpenModal} target="_blank" className={styles.Link}>{btnText}</a>
                     </p>
                 </button>}
+                <Modal
+                    open={open}
+                    onClose={onCloseModal}
+                    center>
+                    <LeadForm />
+                </Modal>
             </div>
         </>
     )
