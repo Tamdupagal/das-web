@@ -1,9 +1,13 @@
-import { useContext } from "react";
-import React from "react";
-import styles from "./Banner.module.scss";
-import { GoPrimitiveDot as Dot } from "react-icons/go";
-import { AppContext } from "../AppContext";
-import Link from "next/link";
+
+import { useContext } from 'react'
+import React from 'react'
+import styles from './Banner.module.scss'
+import { GoPrimitiveDot as Dot } from 'react-icons/go'
+import { AppContext } from '../AppContext'
+import Link from 'next/link'
+import Modal from 'react-responsive-modal'
+import LeadForm from '../main/components/Form/LeadForm'
+import { useState } from 'react'
 
 const FadeIn = {
   initial: {
@@ -22,12 +26,17 @@ const FadeIn = {
 };
 
 function Banner({ data, checkBanner }) {
-  const { setToggleLoginForm, setIsAdmin } = useContext(AppContext);
+  const { setToggleLoginForm, setIsAdmin } = useContext(AppContext)
+  const [open, setOpen] = useState(false);
 
-  const handleForm = function () {
-    setIsAdmin(true);
-    setToggleLoginForm(true);
-  };
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+
+
+  /* const handleForm = function () {
+    setIsAdmin(true)
+    setToggleLoginForm(true)
+  } */
 
   return (
     <section className={styles.container} id="home">
@@ -44,15 +53,15 @@ function Banner({ data, checkBanner }) {
           <ul>
             <div clasName={styles.dev}>
               <li>
-                <Dot className={styles.dot} /> Live online classes{" "}
+                <Dot className={styles.dot} /> Live online classes{' '}
               </li>
               <li>
-                <Dot className={styles.dot} /> Agency style cohort-based
-                learning{" "}
+                <Dot className={styles.dot} /> Agency style cohort-based learning{' '}
               </li>
               <li>
                 <Dot className={styles.dot} /> 1:10 collaborative Live project
-                building academic experience{" "}
+                building academic experience{' '}
+
               </li>
             </div>
             <div clasName={styles.dev}>
@@ -71,20 +80,29 @@ function Banner({ data, checkBanner }) {
           </ul>
           <span>Batches</span>
         </div>
-        <p style={{ textAlign: "center", fontSize: "16px", color: "#005778" }}>
+        <p style={{ textAlign: 'center', fontSize: '16px', color: '#005778' }}>
           The Next batch starts from 1 December 2022
         </p>
 
-        <button className={styles.banner__btn} onClick={handleForm}>
+        <button onClick={onOpenModal} className={styles.banner__btn} >
           <p className={styles.Link}>STUDY FIRST PAY LATER</p>
         </button>
-        {/*  <p className={styles.regis}>Registration Charge</p>
-        <div
-          className={styles.price}
-          style={{ marginTop: "12px", padding: "8px", borderRadius: "8px" }}
-        >
-          <b style={{ color: "#fff" }}>&nbsp; ₹30000 + GST</b> 
-        </div>*/}
+
+        <Modal
+          open={open}
+          onClose={onCloseModal}
+          center>
+          <LeadForm />
+        </Modal>
+
+        <p className={styles.regis}>Registration Charge</p>
+        <Link href="https://rzp.io/l/xVAzXSaY6" passHref={true}>
+          <div className={styles.price} style={{ marginTop: '12px', padding: '8px', borderRadius: '8px' }}>
+            <b style={{ color: '#fff' }}>
+              Was <s>₹10000</s> &nbsp;Now ₹2999 + GST
+            </b>
+          </div>
+        </Link>
       </div>
     </section>
   );

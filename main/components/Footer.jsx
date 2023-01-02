@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image';
 import joy from '../../assets/joy.png'
 import { AppContext } from '../../AppContext'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import box from '../assets/1.png';
 
 
@@ -24,14 +24,19 @@ import { IoMdLogIn } from 'react-icons/io'
 import Popup from 'reactjs-popup';
 import LoginForm from './Form/LoginForm';
 import { signOut, useSession } from 'next-auth/react';
+import Modal from 'react-responsive-modal';
 
 function Footer() {
   const { setIsAdmin, setOpenLoginForm } = useContext(AppContext);
   const { data, status } = useSession();
 
   // console.log(data, status);
+  const [open, setOpen] = useState(false);
 
-  
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+
+
 
   return (
     <footer className={styles.footer}>
@@ -76,23 +81,18 @@ function Footer() {
 
           {
             status !== "authenticated" ?
-              <li className={styles.smalll} >
-                <Popup
-                  trigger={<span><IoMdLogIn className={styles.icon} /> Login </span>}
-                  position="top left">
-                  {
-                    close => (
-                      <LoginForm close={close} />
-                    )
-                  }
-                </Popup>
+              <li className={styles.smalll} onClick={onOpenModal}><span><IoMdLogIn className={styles.icon} /> Login </span>
               </li>
               :
               <li className={styles.smalll} onClick={() => signOut()}><span><IoMdLogIn className={styles.icon} /> Logout </span></li>
           }
 
-
-
+          <Modal
+            open={open}
+            onClose={onCloseModal}
+            center>
+            <LoginForm />
+          </Modal>
 
         </ul>
         <hr />

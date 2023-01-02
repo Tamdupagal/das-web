@@ -8,7 +8,8 @@ import ReactLoading from 'react-loading'
 import { useRouter } from 'next/router'
 import TagManager from 'react-gtm-module';
 import { SessionProvider } from 'next-auth/react'
-import '../styles/globals.scss'
+import '../styles/globals.scss';
+import 'react-responsive-modal/styles.css';
 
 
 //this is commit 

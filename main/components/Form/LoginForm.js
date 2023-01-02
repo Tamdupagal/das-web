@@ -48,7 +48,7 @@ const LoginForm = ({ close }) => {
 
             <div className={styles.form__wrapper}>
                 <div style={{ backgroundColor: "white" }}>
-                    <CgClose className={styles.close__btn__cross} onClick={close} />
+                    {/* <CgClose className={styles.close__btn__cross} onClick={close} /> */}
                     <div style={{ paddingTop: "70px", marginLeft: "16px" }}>
                         <h2 style={{ fontSize: "40px", color: "#005778" }}>Welcome Back !</h2>
                         <h4 style={{ fontSize: "30px", color: "#FD7E14", marginTop: "5px" }}>Login</h4>

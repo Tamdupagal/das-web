@@ -1,65 +1,69 @@
-import styles from "./Header.module.scss";
-import Images from "next/image";
-import logo from "../assets/das.webp";
-import { FaAngleDown, FaAngleRight } from "react-icons/fa";
-import { GiGameConsole } from "react-icons/gi";
-import { useContext, useEffect, useRef, useState } from "react";
-import { useRouter } from "next/router";
-import { AppContext } from "../../AppContext";
-import Link from "next/link";
-import { useSession } from "next-auth/react";
-import Popup from "reactjs-popup";
-import LeadForm from "./Form/LeadForm";
+
+import styles from './Header.module.scss';
+import Images from 'next/image'
+import logo from '../assets/das.webp'
+import { FaAngleDown, FaAngleRight, } from 'react-icons/fa'
+import { GiGameConsole } from 'react-icons/gi'
+import { useContext, useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/router'
+import { AppContext } from '../../AppContext';
+import Link from 'next/link'
+import { useSession } from 'next-auth/react';
+import Popup from 'reactjs-popup';
+import LeadForm from './Form/LeadForm';
+import Modal from 'react-responsive-modal';
 
 function Header(props) {
-  const { setIsAdmin, setToggleLoginForm } = useContext(AppContext);
-  const { status } = useSession();
+    const { setIsAdmin, setToggleLoginForm } = useContext(AppContext);
+    const { status } = useSession();
 
-  const headerRef = useRef();
-  const btnRef = useRef();
-  const btnRef1 = useRef();
-  const headRef = useRef();
+    const headerRef = useRef()
+    const btnRef = useRef();
+    const btnRef1 = useRef();
+    const headRef = useRef();
 
-  const [toggleDropDown, setToggleDropDown] = useState(false);
-  const [toggleSocial, setToggleSocial] = useState(false);
+    const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const closeDropDown = (e) => {
-      if (e.path[0] !== btnRef.current) {
-        setToggleDropDown(false);
-      }
-    };
+    const onOpenModal = () => setOpen(true);
+    const onCloseModal = () => setOpen(false);
 
-    document.body.addEventListener("click", closeDropDown);
-    return () => document.body.removeEventListener("click", closeDropDown);
-  }, []);
 
-  useEffect(() => {
-    const closeDropDown1 = (e) => {
-      if (e.path[0] !== btnRef1.current) {
-        setToggleSocial(false);
-      }
-    };
 
-    document.body.addEventListener("click", closeDropDown1);
-    return () => document.body.removeEventListener("click", closeDropDown1);
-  }, []);
+    const [toggleDropDown, setToggleDropDown] = useState(false)
+    const [toggleSocial, setToggleSocial] = useState(false)
 
-  const router = useRouter();
+    useEffect(() => {
 
-  const handleAdminLogin = function () {
-    setIsAdmin(true);
-    setToggleLoginForm(true);
-  };
+        const closeDropDown = e => {
 
-  const classToggle = () => {
-    if (!headerRef.current) return;
-    if (window.scrollY >= 5) {
-      headerRef.current.classList.add(styles.active);
-      return;
-    } else {
-      if (!headerRef.current.classList.contains(styles.active)) return;
-      headerRef.current.classList.remove(styles.active);
+            if (e.path[0] !== btnRef.current) {
+                setToggleDropDown(false);
+            }
+        }
+
+        document.body.addEventListener('click', closeDropDown);
+        return () => document.body.removeEventListener('click', closeDropDown);
+    }, []);
+
+
+
+
+    useEffect(() => {
+        const closeDropDown1 = e => {
+            if (e.path[0] !== btnRef1.current) {
+                setToggleSocial(false);
+            }
+        }
+
+        document.body.addEventListener('click', closeDropDown1);
+        return () => document.body.removeEventListener('click', closeDropDown1);
+    }, []);
+
+    const router = useRouter()
+
+    const handleAdminLogin = function () {
+        setIsAdmin(true)
+        setToggleLoginForm(true)
     }
   };
 
@@ -183,28 +187,27 @@ function Header(props) {
                             </ul>}
 
                         </button>
-                    </li> */}
-          <li className={styles.navitem}>
-            <button className={styles.bttn}>
-              <p
-                style={{
-                  color: "white",
-                  padding: "0 2px",
-                  letterSpacing: "1px",
-                }}
-                className={
-                  isOpen === false
-                    ? styles.navlink
-                    : styles.navlink + " " + styles.active
-                }
-                onClick={openMenu}
-              >
-                <GiGameConsole style={{ fontSize: "16px" }} />
-                <Popup
-                  trigger={
-                    <a className={styles.Link}>&nbsp;Game Dev Careers</a>
-                  }
-                  position="bottom center"
+                    </li>
+                    <li className={styles.navitem}>
+                        <button className={styles.bttn} >
+                            <p style={{ color: 'white', padding: '0 2px', letterSpacing: '1px' }} className={isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active}
+                                onClick={openMenu}><GiGameConsole style={{ fontSize: '16px' }} />
+                                <a onClick={onOpenModal} target="_blank" className={styles.Link}>&nbsp;Game Dev Careers</a>
+                            </p>
+                        </button>
+
+                        <Modal
+                            open={open}
+                            onClose={onCloseModal}
+                            center>
+                            <LeadForm />
+                        </Modal>
+
+                    </li>
+                </ul>
+                <button className={isOpen === false ?
+                    styles.hamburger : styles.hamburger + ' ' + styles.active}
+                    onClick={openMenu}
                 >
                   {(close) => <LeadForm close={close} />}
                 </Popup>

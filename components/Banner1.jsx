@@ -1,11 +1,14 @@
-import { useContext } from "react";
-import React from "react";
-import styles from "./Banner.module.scss";
-import { GoPrimitiveDot as Dot } from "react-icons/go";
-import { AppContext } from "../AppContext";
-import Link from "next/link";
-import Popup from "reactjs-popup";
-import LeadForm from "../main/components/Form/LeadForm";
+
+import { useContext } from 'react'
+import React from 'react'
+import styles from './Banner.module.scss'
+import { GoPrimitiveDot as Dot } from 'react-icons/go'
+import { AppContext } from '../AppContext'
+import Link from 'next/link'
+import Popup from 'reactjs-popup'
+import LeadForm from '../main/components/Form/LeadForm'
+import Modal from 'react-responsive-modal'
+import { useState } from 'react'
 
 const FadeIn = {
   initial: {
@@ -24,12 +27,16 @@ const FadeIn = {
 };
 
 function Banner({ data, checkBanner }) {
-  const { setToggleLoginForm, setIsAdmin } = useContext(AppContext);
+  const { setToggleLoginForm, setIsAdmin } = useContext(AppContext)
+  const [open, setOpen] = useState(false);
 
-  const handleForm = function () {
-    setIsAdmin(false);
-    setToggleLoginForm(true);
-  };
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+
+ /*  const handleForm = function () {
+    setIsAdmin(false)
+    setToggleLoginForm(true)
+  } */
 
   return (
     <section className={styles.container} id="home">
@@ -76,27 +83,28 @@ function Banner({ data, checkBanner }) {
         <p style={{ textAlign: "center", fontSize: "16px", color: "#005778" }}>
           The Next batch starts from 1 December 2022
         </p>
-        <button className={styles.banner__btn} onClick={handleForm}>
+        <button className={styles.banner__btn}>
+
           <p className={styles.Link}>
-            <Popup
-              trigger={
-                <a target="_blank" className={styles.Link}>
-                  PAY AS YOU LIKE
-                </a>
-              }
-              position="center"
-            >
-              {(close) => <LeadForm close={close} />}
-            </Popup>
+            <a onClick={onOpenModal} target="_blank" className={styles.Link}>PAY AS YOU LIKE</a>
           </p>
         </button>
-        {/*  <p className={styles.regis}>Registration Charge</p>
-        <div
-          className={styles.price}
-          style={{ marginTop: "12px", padding: "8px", borderRadius: "8px" }}
-        >
-          <b style={{ color: "#fff" }}>&nbsp; ₹30000 + GST</b> 
-        </div> */}
+
+        <Modal
+          open={open}
+          onClose={onCloseModal}
+          center>
+          <LeadForm />
+        </Modal>
+
+        <p className={styles.regis}>Registration Charge</p>
+        <Link href="https://rzp.io/l/xVAzXSaY6" passHref={true}>
+          <div className={styles.price} style={{ marginTop: '12px', padding: '8px', borderRadius: '8px' }}>
+            <b style={{ color: '#fff' }}>
+              Was  <s>₹10000</s> &nbsp;Now ₹2999 + GST
+            </b>
+          </div>
+        </Link>
       </div>
     </section>
   );
