@@ -8,12 +8,10 @@ import LeadForm from './Form/LeadForm';
 import Modal from 'react-responsive-modal';
 import { useState } from 'react';
 
-const phrases = [
-    "Game Development.",
-    "Web3 Courses.",
-]
+const phrases = ["Game Development.", "Web3 Courses."];
 
 export default function Banner() {
+  const { setToggleLoginForm, setIsAdmin } = useContext(AppContext);
 
     const { setToggleLoginForm, setIsAdmin } = useContext(AppContext);
 
@@ -28,6 +26,42 @@ export default function Banner() {
          setToggleLoginForm(true);
      } */
 
+  return (
+    <section className={styles.container}>
+      <div className={styles.banner_info}>
+        <h1 className={styles.title}>Study Now and Pay later</h1>
+        <div className={styles.typewriter}>
+          <Typewriter
+            onInit={(t) => t.changeDeleteSpeed(1).changeDelay(0.4)}
+            options={{
+              strings: phrases,
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </div>
+        <div className={styles.para}>
+          <h1 className={styles.title2}>
+            Be a Fullstack Game Developer As Per Industry Standards
+            <br /> Portfolio & Interview Ready Program.
+          </h1>
+          <h1 className={styles.title3}>
+            Connect with the real gaming community.
+          </h1>
+          <h1 className={styles.title3}>Be a Creator, Not a Player</h1>
+        </div>
+        <button className={styles.button}>
+          <Popup
+            trigger={
+              <a target="_blank" className={styles.Link}>
+                Study now and pay later
+              </a>
+            }
+            position="center"
+          >
+            {(close) => <LeadForm close={close} />}
+          </Popup>
+        </button>
 
     return (
         <section className={styles.container}>
@@ -75,4 +109,3 @@ export default function Banner() {
         </section>
     )
 }
-

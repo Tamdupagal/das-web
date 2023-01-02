@@ -1,3 +1,4 @@
+
 import { useContext } from 'react'
 import React from 'react'
 import styles from './Banner.module.scss'
@@ -10,19 +11,19 @@ import { useState } from 'react'
 
 const FadeIn = {
   initial: {
-    y: '5rem',
+    y: "5rem",
     opacity: 0,
   },
   vissible: {
     y: 0,
     opacity: 1,
     transition: {
-      type: 'spring',
+      type: "spring",
       bouces: 0.25,
       delay: 0.2,
     },
   },
-}
+};
 
 function Banner({ data, checkBanner }) {
   const { setToggleLoginForm, setIsAdmin } = useContext(AppContext)
@@ -38,11 +39,11 @@ function Banner({ data, checkBanner }) {
   } */
 
   return (
-    <section className={styles.container} id='home'>
+    <section className={styles.container} id="home">
       <div
         variants={FadeIn}
-        animate='vissible'
-        initial='initial'
+        animate="vissible"
+        initial="initial"
         className={styles.content__box}
       >
         <h1 className={styles.heading}>Learn First, Pay Later !</h1>
@@ -60,6 +61,7 @@ function Banner({ data, checkBanner }) {
               <li>
                 <Dot className={styles.dot} /> 1:10 collaborative Live project
                 building academic experience{' '}
+
               </li>
             </div>
             <div clasName={styles.dev}>
@@ -103,7 +105,7 @@ function Banner({ data, checkBanner }) {
         </Link>
       </div>
     </section>
-  )
+  );
 }
-
-export default Banner
+// href = "https://rzp.io/l/xVAzXSaY6";
+export default Banner;

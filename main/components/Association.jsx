@@ -15,7 +15,7 @@ function Association() {
 
                 <div className={styles.footer_text}>
                 <ul>
-                <strong>Ouality Outcome</strong>
+                <strong>Quality Outcome</strong>
                 <li><FaCheckCircle className={styles.check} />Learning Life and technology</li>
                 <li><FaCheckCircle className={styles.check} />Digitally Aided Support</li>
             </ul>&nbsp;&nbsp;&nbsp;&nbsp;

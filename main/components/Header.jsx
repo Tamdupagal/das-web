@@ -1,3 +1,4 @@
+
 import styles from './Header.module.scss';
 import Images from 'next/image'
 import logo from '../assets/das.webp'
@@ -64,63 +65,111 @@ function Header(props) {
         setIsAdmin(true)
         setToggleLoginForm(true)
     }
+  };
 
-    const classToggle = () => {
-        if (!headerRef.current) return
-        if (window.scrollY >= 5) {
-            headerRef.current.classList.add(styles.active);
-            return
-        } else {
-            if (!headerRef.current.classList.contains(styles.active)) return
-            headerRef.current.classList.remove(styles.active);
-        }
-    }
+  useEffect(() => {
+    setToggleDropDown(false);
+    window.addEventListener("scroll", classToggle);
+    return () => {
+      window.removeEventListener("scroll", classToggle);
+    };
+  }, []);
+  const [isOpen, setIsOpen] = useState(false);
+  const openMenu = () => setIsOpen(!isOpen);
 
-    useEffect(() => {
-        setToggleDropDown(false)
-        window.addEventListener('scroll', classToggle)
-        return () => {
-            window.removeEventListener('scroll', classToggle)
-        }
-    }, [])
-    const [isOpen, setIsOpen] = useState(false);
-    const openMenu = () => setIsOpen(!isOpen);
+  return (
+    <header className={styles.header}>
+      <nav className={styles.navbar}>
+        <figure className={styles.logo} onClick={() => router.push("/")}>
+          <Images
+            src={logo}
+            objectFit="contain"
+            layout="responsive"
+            alt="logo"
+            className={styles.image}
+          />
+        </figure>
+        <ul
+          className={
+            isOpen === false
+              ? styles.navmenu
+              : styles.navmenu + " " + styles.active
+          }
+        >
+          <li
+            className={`${styles.navitem} ${styles.btn}`}
+            onClick={() => {
+              router.push("/");
+            }}
+          >
+            Home
+          </li>
 
-    return (
-        <header className={styles.header}>
-            <nav className={styles.navbar}>
-                <figure className={styles.logo} onClick={() => router.push('/')}>
-                    <Images src={logo} objectFit="contain" layout='responsive' alt='logo' className={styles.image} />
-                </figure>
-                <ul className={isOpen === false ?
-                    styles.navmenu : styles.navmenu + ' ' + styles.active}>
-                    <li className={`${styles.navitem} ${styles.btn}`} onClick={() => { router.push('/') }}>Home</li>
+          {status === "authenticated" ? (
+            <li
+              className={`${styles.navitem} ${styles.btn}`}
+              onClick={() => {
+                router.push("/info");
+              }}
+            >
+              Dashboard
+            </li>
+          ) : (
+            ""
+          )}
 
-                    {
-                        status === "authenticated" ? <li className={`${styles.navitem} ${styles.btn}`} onClick={() => { router.push('/info') }}>Dashboard</li> : ""
-                    }
+          <li className={styles.navitem}>
+            <button
+              ref={btnRef}
+              onClick={() => setToggleDropDown(!toggleDropDown)}
+              className={styles.btn}
+            >
+              Courses
+              {toggleDropDown && (
+                <ul className={styles.dropdown}>
+                  <li
+                    onClick={() => {
+                      router.push("/foundation-course");
+                      setToggleDropDown(false);
+                      setIsOpen(false);
+                    }}
+                  >
+                    {" "}
+                    <FaAngleRight className={styles.arrow_right} />
+                    Foundation Course
+                  </li>
+                  <li
+                    onClick={() => {
+                      router.push("/game-development");
+                      setToggleDropDown(false);
+                      setIsOpen(false);
+                    }}
+                  >
+                    <FaAngleRight className={styles.arrow_right} /> Game
+                    Development
+                  </li>
+                </ul>
+              )}
+            </button>
+          </li>
+          <li
+            className={`${styles.navitem} ${styles.btn}`}
+            onClick={() => {
+              router.push("/blog");
+            }}
+          >
+            Blog
+          </li>
+          <li
+            className={`${styles.navitem} ${styles.btn}`}
+            onClick={() => {
+              router.push("frequently-asked-question");
+            }}
+          >
+            FAQ
+          </li>
 
-
-                    <li className={styles.navitem}>
-                        <button ref={btnRef} onClick={() => setToggleDropDown(!toggleDropDown)} className={styles.btn}>Courses
-                            {toggleDropDown && <ul className={styles.dropdown}>
-                                <li onClick={() => {
-                                    router.push('/foundation-course')
-                                    setToggleDropDown(false)
-                                    setIsOpen(false)
-                                }
-                                }>  <FaAngleRight className={styles.arrow_right} />Foundation Course</li>
-                                <li onClick={() => {
-                                    router.push('/game-development')
-                                    setToggleDropDown(false)
-                                    setIsOpen(false)
-                                }
-                                }><FaAngleRight className={styles.arrow_right} /> Game Development</li>
-                            </ul>}
-                        </button>
-                    </li>
-                    <li className={`${styles.navitem} ${styles.btn}`} onClick={() => { router.push('/blog') }}>Blog</li>
-                    <li className={styles.navitem}>
+          {/* <li className={styles.navitem}>
                         <button ref={btnRef1} onClick={() => { setToggleSocial(!toggleSocial) }} className={styles.btn}>Social
                             {toggleSocial && <ul className={styles.dropdown}>
                                 <li onClick={() => {
@@ -160,14 +209,27 @@ function Header(props) {
                     styles.hamburger : styles.hamburger + ' ' + styles.active}
                     onClick={openMenu}
                 >
-                    <span className={styles.bar}></span>
-                    <span className={styles.bar}></span>
-                    <span className={styles.bar}></span>
-                </button>
-            </nav>
-        </header>
-
-    )
+                  {(close) => <LeadForm close={close} />}
+                </Popup>
+              </p>
+            </button>
+          </li>
+        </ul>
+        <button
+          className={
+            isOpen === false
+              ? styles.hamburger
+              : styles.hamburger + " " + styles.active
+          }
+          onClick={openMenu}
+        >
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+        </button>
+      </nav>
+    </header>
+  );
 }
 
-export default Header
+export default Header;

@@ -17,7 +17,7 @@ Build a strong foundation for the gaming industry." />
 <div className={styles.sec}>
                 <div className={styles.divi}>
                 <h5>Understanding Programming & Logic</h5>
-                <li>C++ & C#</li>
+                <li>Unity & Unreal Engine</li>
                 <li>Creative & Problem solving skills.</li>
                 </div>
                 <div className={styles.divi}>
