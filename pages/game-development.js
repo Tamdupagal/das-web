@@ -66,7 +66,7 @@ function development({name}) {
       <Feature className='growth' data={DATA().growth.dm} />
       <WorkFlow />
       <Blog1/>
-      <Package data={packageData} />
+     { <Package data={packageData} />}
       <hr/>
     </div>
   )

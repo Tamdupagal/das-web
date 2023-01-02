@@ -26,7 +26,7 @@ const data = [
     imgSrc: Performance,
     altText: 'Understanding DM',
     title: 'Understanding Programming & Logic',
-    text: ['Understand Basics C++ & C#    ', 'Creative & Problem solving     '],
+    text: ['Understand Basics Unity & Unreal Engline    ', 'Creative & Problem solving     '],
   },
   {
     id: 2,
@@ -66,7 +66,7 @@ export default function Home({name}) {
       <Feature className='growth' data={DATA().growth.dm} />
       <WorkFlow />
       <Blog1/>
-      <Package data={packageData} />
+      {/* <Package data={packageData} /> */}
       <hr/>
   
       </div>

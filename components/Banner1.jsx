@@ -90,13 +90,13 @@ function Banner({ data, checkBanner }) {
             </Popup>
           </p>
         </button>
-        <p className={styles.regis}>Registration Charge</p>
+        {/*  <p className={styles.regis}>Registration Charge</p>
         <div
           className={styles.price}
           style={{ marginTop: "12px", padding: "8px", borderRadius: "8px" }}
         >
-          <b style={{ color: "#fff" }}>&nbsp; ₹30000 + GST</b>
-        </div>
+          <b style={{ color: "#fff" }}>&nbsp; ₹30000 + GST</b> 
+        </div> */}
       </div>
     </section>
   );
