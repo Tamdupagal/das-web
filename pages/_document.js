@@ -12,6 +12,7 @@ class MyDocument extends Document {
         <Head>
           <link rel="icon" href="/favicon.png" />
           <meta name="description" content="game development course" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <body>
           <Main />
