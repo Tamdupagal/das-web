@@ -67,11 +67,11 @@ const Post3 = () => {
           <Image src={f3} alt="intro" className="imgg" />
         </div>
         <p style={{ paddingTop: "1rem" }} className="description">
-          The Unreal Engine Developer Course| Udemy: This course is specifically
-          designed to teach you how to use Unreal Engine, a highly popular and
-          powerful game engine, to create impressive and visually stunning
-          games. The course covers a wide range of key concepts that are
-          essential for working with Unreal Engine, including blueprints,
+          <b>The Unreal Engine Developer Course| Udemy:</b> This course is
+          specifically designed to teach you how to use Unreal Engine, a highly
+          popular and powerful game engine, to create impressive and visually
+          stunning games. The course covers a wide range of key concepts that
+          are essential for working with Unreal Engine, including blueprints,
           materials, and lighting. Throughout the course, you will learn about
           the various features and tools provided by Unreal Engine and how to
           use them to create and customize your game projects. The course also

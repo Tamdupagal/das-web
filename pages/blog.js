@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Post1 from "../assets/post-images/tip.png";
 import Post2 from "../main/assets/Blog.png";
-import post3 from '../assets/blog5_12.png'
+import Post3 from "../assets/blog5_12.png";
 // import Blog from '../main/components/Blog'
 const blog = () => {
   return (
@@ -12,7 +12,7 @@ const blog = () => {
       <hr />
       <div className="blogg">
         <div className="Imagess">
-          <Image src={post3} alt="main image" className="Main-Blog imgg" />
+          <Image src={Post3} alt="main image" className="Main-Blog imgg" />
         </div>
         <Link href="../post/Top-5-Game-Development-Courses">
           <h1 className="sub-link">Top 5 Game Development Courses</h1>
