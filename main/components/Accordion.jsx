@@ -8,40 +8,33 @@ export default function Accordion(props) {
   };
 
   return (
-    <div className={styles.container}
+    <div className={ styles.head }>
+     
+    <details
+      className={styles.container}
       style={{
         width: "100%",
         marginBottom: "15px",
         lineHeight: "20px",
         border: "2px solid white",
-        borderRadius:'8px',
+        borderRadius: "8px",
+        padding: "8px",
+        backgroundColor: "#fff",
       }}
     >
-      <button
+      <summary style={{ fontSize: "1.7rem" }}> {props.title}</summary>
+      <p
         style={{
-          width: "100%",
-          position: "relative",
-          textAlign: "left",
-          fontSize:'2rem',
-          color:'#005778',
-          fontWeight:'500',
-          padding: "8px",
-          border: "none",
-          backgroundColor: 'white',
-          outline: "none",
-          cursor: "pointer",
+          fontSize: "1.5rem",
+          color: "#005778",
+          padding: "15px",
         }}
-        onClick={toggle}
-        type="button"
       >
-        <p> {props.title}</p>
-      </button>
-      <div
-        style={{ display: isShowing ? "block" : "none" ,fontSize: "1.5rem", color:'#fd7e14',padding: "15px"}}
-        dangerouslySetInnerHTML={{
-          __html: props.content
-        }}
-      />
-    </div>
+        {props.content}
+      </p>
+      </details>
+      </div>
   );
 }
+
+

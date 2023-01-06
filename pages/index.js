@@ -13,11 +13,11 @@ import Testimonial from '../components/Testimonial'
 
 export default function Home() {
 
-  const search = () => {
+ {/*  const search = () => {
     window.rudderanalytics.page();
     window.rudderanalytics.track("Track Event");
   };
-
+ */}
 
   return (
     <div>

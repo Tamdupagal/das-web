@@ -208,7 +208,7 @@ a {
 
 .c11 {
   border-right-style: solid;
-  background-color: #fff;
+  // background-color: #fff;
   padding: 12pt 10pt 12pt 10pt;
   border-bottom-color: #000000;
   border-top-width: 0pt;
@@ -227,7 +227,7 @@ a {
 
 .c9 {
   border-right-style: solid;
-  background-color: #fff;
+  // background-color: #fff;
   padding: 12pt 10pt 12pt 10pt;
   border-bottom-color: #000000;
   border-top-width: 0pt;
@@ -245,7 +245,7 @@ a {
 }
 
 .c1 {
-  background-color: #fff;
+  // background-color: #fff;
   padding-top: 0pt;
   padding-bottom: 21pt;
   line-height: 1.1500000000000001;
@@ -256,7 +256,7 @@ a {
 
 .c0 {
   color: #1d1d1d;
-  background-color: #fff;
+  // background-color: #fff;
   font-weight: 400;
   text-decoration: none;
   vertical-align: baseline;
@@ -277,14 +277,14 @@ a {
 
 .c13 {
   border-spacing: 0;
-  background-color: #fff;
+  // background-color: #fff;
   border-collapse: collapse;
   margin-right: auto;
 }
 
 .c7 {
   text-decoration: none;
-  background-color: #fff;
+  // background-color: #fff;
   vertical-align: baseline;
   font-family: "Arial";
   font-style: normal;
@@ -292,53 +292,53 @@ a {
 
 .c15 {
   color: #000000;
-  background-color: #fff;
+  // background-color: #fff;
   font-weight: 400;
   font-size: 11pt;
 }
 
 .c14 {
-  background-color: #fff;
+  // background-color: #fff;
   max-width: 468pt;
   padding: 72pt 72pt 72pt 72pt;
 }
 
 .c4 {
   font-size: 13.5pt;
-  background-color: #fff;
+  // background-color: #fff;
   color: #1d1d1d;
   // font-weight: 700;
 }
 
 .c6 {
   color: #1d1d1d;
-  background-color: #fff;
+  // background-color: #fff;
   font-size: 13.5pt;
 }
 
 .c8 {
   font-size: 12pt;
-  background-color: #fff;
+  // background-color: #fff;
   color: #1d1d1d;
 }
 
 .c10 {
   height: 11pt;
-  background-color: #fff;
+  // background-color: #fff;
 }
 
 .c2 {
   height: 38.2pt;
-  background-color: #fff;
+  // background-color: #fff;
 }
 
 .c3 {
-  background-color: #fff;
+  // background-color: #fff;
 }
 
 .c12 {
   height: 51.8pt;
-  background-color: #fff;
+  // background-color: #fff;
 }
 
 .lst-kix_list_1-3 > li:before {
@@ -551,3 +551,22 @@ ul.lst-kix_list_1-6 {
 p {
   font-size: 13px;
 }
+
+.privacy_cont2{
+
+  background-color: #fffef8;
+  .privacy_cont {
+    padding-top: 4rem;
+    font-family: "Montserrat", sans-serif;
+    width: 80%;
+    // font-size: 2rem;
+  margin: auto;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    margin: auto;
+  }
+  .privacy {
+  }
+}
+
+  }

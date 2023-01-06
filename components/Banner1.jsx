@@ -81,23 +81,19 @@ function Banner({ data, checkBanner }) {
           <span>Batches</span>
         </div>
         <p style={{ textAlign: "center", fontSize: "16px", color: "#005778" }}>
-          The Next batch starts from 1 December 2022
+          The Next batch starts from 15 January 2023
         </p>
         <button className={styles.banner__btn}>
-
-          <p className={styles.Link}
-             onClick={onOpenModal} >PAY AS YOU LIKE
+          <p className={styles.Link} onClick={onOpenModal}>
+            PAY AS YOU LIKE
           </p>
         </button>
 
-        <Modal
-          open={open}
-          onClose={onCloseModal}
-          center>
+        <Modal open={open} onClose={onCloseModal} center>
           <LeadForm />
         </Modal>
 
-      {/*   <p className={styles.regis}>Registration Charge</p>
+        {/*   <p className={styles.regis}>Registration Charge</p>
         <Link href="https://rzp.io/l/xVAzXSaY6" passHref={true}>
           <div className={styles.price} style={{ marginTop: '12px', padding: '8px', borderRadius: '8px' }}>
             <b style={{ color: '#fff' }}>

@@ -7,12 +7,14 @@ import Accordion from './Accordion'
 export default function FaqData(props) {
   return (
     <div>
-    <section className={styles.container}>
-    <div className={styles.box}>
-    <Accordion title={props.title} content={props.desc} />
+      <div>
+        
+      </div>
+      <section className={styles.container}>
+        <div className={styles.box}>
+          <Accordion title={props.title} content={props.desc} />
+        </div>
+      </section>
     </div>
-    </section>
-    
-    </div>
-  )
+  );
 }

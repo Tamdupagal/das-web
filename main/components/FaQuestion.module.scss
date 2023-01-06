@@ -1,21 +1,27 @@
 @import "../../styles/config/utilities";
 @import "../../styles/config/variable";
 
+.FaqQuestion{
+  background-color: #fffef8;
+  color:#fd7e14;
+  padding-top: 4rem;
+
+}
+
 .container {
-    position: relative;
-    width: 70%;
-    margin:auto;
-    background-color: #FFFEF8;
-    padding: 3rem 0.5rem 7rem 0.5rem;
-    // border: 2px solid #fd7e14;
-    // border-radius:8px;
-    border:none;
-    text-align: left;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  width: 70%;
+  margin: auto;
+  background-color: #fffef8;
+  padding: 3rem 0.5rem 7rem 0.5rem;
+  // border: 2px solid #fd7e14;
+  // border-radius:8px;
+  font-size: 18px;
+  border: none;
+  text-align: left;
 
-    @media screen and (max-width:768px) {
-        width: 90%;
-        
-    }
-    
-
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
 }

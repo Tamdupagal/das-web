@@ -3,12 +3,30 @@ import React from "react";
 import Image from "next/image";
 import Post1 from "../assets/post-images/tip.png";
 import Post2 from "../main/assets/Blog.png";
+import post3 from '../assets/blog5_12.png'
 // import Blog from '../main/components/Blog'
 const blog = () => {
   return (
     <div style={{ paddingTop: "10rem" }} className="container2">
       <h1 className="title">Latest Post</h1>
       <hr />
+      <div className="blogg">
+        <div className="Imagess">
+          <Image src={post3} alt="main image" className="Main-Blog imgg" />
+        </div>
+        <Link href="../post/Top-5-Game-Development-Courses">
+          <h1 className="sub-link">Top 5 Game Development Courses</h1>
+        </Link>
+        <Link href="../post/Top-5-Game-Development-Courses">
+          <p>
+            Game development is an exciting field to break into today. There has
+            never been a better time to start developing your games and making
+            money from them. The gaming industry is bigger than Hollywood, and
+            it&apos;s growing every year.{" "}
+          </p>
+        </Link>
+        <br />
+      </div>
       <div className="blogg">
         <Image src={Post1} alt="main image" className="Main-Blog imgg" />
         <Link

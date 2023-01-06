@@ -81,7 +81,7 @@ function Banner({ data, checkBanner }) {
           <span>Batches</span>
         </div>
         <p style={{ textAlign: 'center', fontSize: '16px', color: '#005778' }}>
-          The Next batch starts from 1 December 2022
+          The Next batch starts from 15 January 2023
         </p>
 
         <button onClick={onOpenModal} className={styles.banner__btn} >
