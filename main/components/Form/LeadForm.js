@@ -25,7 +25,6 @@ const LeadForm = ({ close }) => {
     const onSubmit = (data) => {
         // console.log(data);
         const { name, email, phoneNumber, qualification } = data;
-
         //post lead form to server
         const url = `https://back-das-web-server.onrender.com/api/new-register`;
         fetch(url, {
@@ -39,10 +38,9 @@ const LeadForm = ({ close }) => {
                 console.log(result);
                 setDetails(result);
                 toast.success('Submitted Successfully!')
+                router.push('/thankyou');
                 reset();
                 close();
-
-                router.push('/thankyou');
 
             })
     };

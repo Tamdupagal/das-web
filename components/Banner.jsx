@@ -44,7 +44,7 @@ function Banner({ data, checkBanner }) {
     } = useForm();
 
     const onSubmit = (data) => {
-      // console.log(data);
+      console.log(data);
       const { name, email, phoneNumber, qualification } = data;
 
       //post lead form to server
@@ -61,10 +61,10 @@ function Banner({ data, checkBanner }) {
           console.log(result);
           setDetails(result);
           toast.success("Submitted Successfully!");
+          router.push("/thankyou");
           reset();
           close();
 
-          router.push("/thankyou");
         });
     };
 
@@ -81,7 +81,6 @@ function Banner({ data, checkBanner }) {
               border: "2px solid #fd7e14",
               borderRadius: "25px",
               padding: "10px",
-            
             }}
           >
             6 Month Program
@@ -133,7 +132,7 @@ function Banner({ data, checkBanner }) {
                 paddingTop: "2rem",
               }}
             >
-            Registration Charge  ₹20,00/- <strike>30,000/- </strike> 
+              Registration Charge ₹20,00/- <strike>30,000/- </strike>
             </p>
             <p
               style={{
@@ -168,7 +167,7 @@ function Banner({ data, checkBanner }) {
         </div>
 
         <div className={styles.content__box}>
-          <form className={styles.formL}>
+          <form className={styles.formL} onSubmit={handleSubmit(onSubmit)}>
             <div className={styles.form__area}>
               <div className={styles.form__input}>
                 <label htmlFor="username">Name</label>

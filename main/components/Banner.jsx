@@ -37,15 +37,15 @@ export default function Banner() {
                     <h1 className={styles.title3}>Be a Creator, Not a Player</h1>
                 </div>
                 <button className={styles.button}
-                     onClick={onOpenModal} >Study now and pay later
+                      >Study now and pay later
                 </button>
-                <Modal
+               {/*  <Modal
                     open={open}
                     onClose={onCloseModal}
                     center>
                     <LeadForm />
                 </Modal>
-
+ */}
               {/*   <p className={styles.regis}>Registration Charge</p>
 
                 <Link href="https://rzp.io/l/xVAzXSaY6" passHref={true}>

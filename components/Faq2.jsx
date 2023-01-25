@@ -17,7 +17,7 @@ const Accordion = styled((props) => (
   />
 ))(({ theme }) => ({
   border: `1px solid #005778`,
-  borderRadius: "10px",
+  // borderRadius: "10px",
   "&:not(:last-child)": {
     borderBottom: 0,
   },
@@ -113,7 +113,11 @@ export default function CustomizedAccordions() {
             className={styles.cont}
             expanded={expanded === "panel1"}
             onChange={handleChange("panel1")}
-            fontSize={14}
+            fontSize={16}
+            style={{
+              borderTopLeftRadius: "10px",
+              borderTopRightRadius: "10px",
+            }}
           >
             <AccordionSummary
               aria-controls="panel1d-content"
@@ -121,7 +125,7 @@ export default function CustomizedAccordions() {
               className={styles.accordian}
             >
               <Typography color={"#005778"} className={styles.accor}>
-                <h5>1: Introduction to Web3 Gaming </h5>
+                <h5>Module 1: Introduction to Web3 Gaming </h5>
 
                 <h6> 📃3 Modules</h6>
                 <h6>
@@ -131,7 +135,7 @@ export default function CustomizedAccordions() {
               </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
-              <Typography fontSize={14} pt={2} pb={2}>
+              <Typography fontSize={16} pt={2} pb={2}>
                 Learning Outcomes: Understand the basics of web3 gaming,
                 including what it is, how it differs from traditional gaming,
                 and the technologies and platforms involved. Projects: Create a
@@ -160,7 +164,7 @@ export default function CustomizedAccordions() {
               </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
-              <Typography fontSize={14}>
+              <Typography fontSize={16}>
                 Learning Outcomes: Learn how to create and deploy smart
                 contracts on web3 platforms, and how to integrate them into web3
                 games. Projects: Create a web3 game that utilizes smart
@@ -188,7 +192,7 @@ export default function CustomizedAccordions() {
               </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
-              <Typography fontSize={14}>
+              <Typography fontSize={16}>
                 Learning Outcomes: Learn how to design and implement web3 game
                 mechanics, such as non-fungible tokens (NFTs), decentralized
                 finance (Defi), and blockchain-based economies. Projects: Create
@@ -214,12 +218,12 @@ export default function CustomizedAccordions() {
               </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
-              <Typography fontSize={14}>
+              <Typography fontSize={16}>
                 Learning Outcomes: Learn how to create multiplayer web3 games
                 including how to handle player interactions and game state
                 management. Projects: Create a web3 multiplayer game.
               </Typography>
-              <Typography fontSize={14}>
+              <Typography fontSize={16}>
                 Module 2: Server-client architecture and how to synchronize game
                 state between players
               </Typography>{" "}
@@ -245,20 +249,20 @@ export default function CustomizedAccordions() {
               </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
-              <Typography fontSize={14}>
+              <Typography fontSize={16}>
                 Learning Outcomes: Learn how to monetize web3 games and how to
                 market them to a wider audience. Projects: Create a web3 game
                 that incorporates monetization strategies and develop a
                 marketing plan for the game.
               </Typography>
-              <Typography fontSize={14}>
+              <Typography fontSize={16}>
                 Module 2: Understanding game mechanics such as game balancing,
                 level design, and player progression
               </Typography>{" "}
-              <Typography fontSize={14}>
+              <Typography fontSize={16}>
                 Module 3: Implementing game mechanics in a sample game
               </Typography>
-              <Typography fontSize={14}>
+              <Typography fontSize={16}>
                 Module 4: Understanding player psychology and how to create a
                 fun and engaging game experience
               </Typography>
@@ -283,12 +287,12 @@ export default function CustomizedAccordions() {
               </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
-              <Typography fontSize={14}>
+              <Typography fontSize={16}>
                 Learning Outcomes: Learn how to secure web3 games and protect
                 them from malicious attacks. Projects: Create a web3 game with
                 security measures in place.
               </Typography>
-              <Typography fontSize={14}>
+              <Typography fontSize={16}>
                 Module 2: Debugging and testing a sample game, identifying and
                 fixing common game development bugs and issues
               </Typography>{" "}
@@ -315,12 +319,12 @@ export default function CustomizedAccordions() {
               </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
-              <Typography fontSize={14}>
+              <Typography fontSize={16}>
                 Learning Outcomes: Learn how to secure web3 games and protect
                 them from malicious attacks. Projects: Create a web3 game with
                 security measures in place.
               </Typography>
-              <Typography fontSize={14}>
+              <Typography fontSize={16}>
                 Module 2: Debugging and testing a sample game, identifying and
                 fixing common game development bugs and issues
               </Typography>{" "}
@@ -329,6 +333,10 @@ export default function CustomizedAccordions() {
           <Accordion
             expanded={expanded === "panel8"}
             onChange={handleChange("panel8")}
+            style={{
+              borderBottomLeftRadius: "10px",
+              borderBottomRightRadius: "10px",
+            }}
           >
             <AccordionSummary
               aria-controls="panel8d-content"
@@ -345,11 +353,11 @@ export default function CustomizedAccordions() {
               </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
-              <Typography fontSize={14}>
+              <Typography fontSize={16}>
                 Learning Outcomes: Work on a final project to put into practice
                 all the skills learned in the previous months.
               </Typography>
-              <Typography fontSize={14}>
+              <Typography fontSize={16}>
                 Projects: Create a full web3 game that incorporates all the
                 elements learned throughout the course.
               </Typography>{" "}

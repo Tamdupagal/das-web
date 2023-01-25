@@ -164,7 +164,7 @@ function Banner({ data, checkBanner }) {
         </div>
 
         <div className={styles.content__box}>
-          <form className={styles.formL}>
+          <form className={styles.formL} onSubmit={handleSubmit(onSubmit)}>
             <div className={styles.form__area}>
               <div className={styles.form__input}>
                 <label htmlFor="username">Name</label>
