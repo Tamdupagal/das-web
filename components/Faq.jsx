@@ -5,7 +5,7 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import styles from "./faq.module.scss";
+import styles from "./Faq.module.scss";
 
 const Accordion = styled((props) => (
   <MuiAccordion
@@ -53,7 +53,6 @@ export default function CustomizedAccordions() {
     setExpanded(newExpanded ? panel : false);
   };
 
-  
   return (
     <div className={styles.containers}>
       <div className={styles.Contt}>
@@ -126,7 +125,6 @@ export default function CustomizedAccordions() {
               <Typography fontSize={16} color={"#005778"}>
                 Month 1: Introduction to Game Development
               </Typography>{" "}
-            
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14} pt={2} pb={2}>
