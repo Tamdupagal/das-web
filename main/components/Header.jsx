@@ -125,17 +125,7 @@ function Header(props) {
               Courses
               {toggleDropDown && (
                 <ul className={styles.dropdown}>
-                  <li
-                    onClick={() => {
-                      router.push("/foundation-course");
-                      setToggleDropDown(false);
-                      setIsOpen(false);
-                    }}
-                  >
-                    {" "}
-                    <FaAngleRight className={styles.arrow_right} />
-                    Foundation Course
-                  </li>
+                 
                   <li
                     onClick={() => {
                       router.push("/game-development");

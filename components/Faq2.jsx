@@ -16,7 +16,8 @@ const Accordion = styled((props) => (
     {...props}
   />
 ))(({ theme }) => ({
-  border: `2px solid #005778`,
+  border: `1px solid #005778`,
+  borderRadius: "10px",
   "&:not(:last-child)": {
     borderBottom: 0,
   },
@@ -59,24 +60,24 @@ export default function CustomizedAccordions() {
         <h1
           style={{
             textAlign: "left",
-            fontSize: "2.3rem",
+            fontSize: "2.8rem",
             fontWeight: "600",
-            color: "#005778",
-            paddingLeft: "6rem",
+            color: "#fd7e14",
+            padding: "1rem",
+            // paddingLeft: "10rem",
           }}
         >
-          Web 3 Game Development Course
+          Web3 Development course
         </h1>
         <div className={styles.co}>
           <p
             style={{
               textAlign: "left",
-              fontSize: "1.8rem",
+              fontSize: "2rem",
               fontWeight: "600",
               color: "#005778",
-              paddingBottom: "1.5rem",
-              paddingTop: "1.5rem",
-              paddingLeft: "6rem",
+              padding: "1rem",
+              // paddingLeft: "6rem",
             }}
           >
             250+ hours of training & project building
@@ -84,12 +85,10 @@ export default function CustomizedAccordions() {
           <p
             style={{
               textAlign: "left",
-              fontSize: "1.7rem",
+              fontSize: "2rem",
               fontWeight: "600",
               color: "#005778",
-              paddingBottom: "1.5rem",
-              paddingTop: "1.5rem",
-              paddingLeft: "6rem",
+              padding: "1rem",
             }}
           >
             8+ industry-standard guided projects{" "}
@@ -97,12 +96,10 @@ export default function CustomizedAccordions() {
           <p
             style={{
               textAlign: "left",
-              fontSize: "1.7rem",
+              fontSize: "2rem",
               fontWeight: "600",
               color: "#005778",
-              paddingBottom: "1.5rem",
-              paddingTop: "1.5rem",
-              paddingLeft: "6rem",
+              padding: "1rem",
             }}
           >
             8 learning modules
@@ -121,9 +118,16 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel1d-content"
               id="panel1d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Module 1 (weeks 1-4): Introduction to Web3 Gaming
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>1: Introduction to Web3 Gaming </h5>
+
+                <h6> 📃3 Modules</h6>
+                <h6>
+                  Project: Create a simple web3 game using a platform like
+                  Ethereum or EOS.
+                </h6>
               </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
@@ -143,10 +147,17 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel2d-content"
               id="panel2d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Module 2 (Week 5-8): Smart Contracts and Web3 Development
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>Module 2: Smart Contracts and Web3 Development</h5>
+
+                <h6> 📃2 Modules</h6>
+                <h6>
+                  Project: Create a web3 game that utilizes smart contracts for
+                  in-game transactions and other functionality.
+                </h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
@@ -164,10 +175,17 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel3d-content"
               id="panel3d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Module 3 (Week 9-12): Web3 Game Design and Mechanics{" "}
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>Module 3: Web3 Game Design and Mechanics</h5>
+
+                <h6> 📃3 Modules</h6>
+                <h6>
+                  Project: Create a web3 game that utilizes NFTs, DeFi, and
+                  blockchain-based economies.
+                </h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
@@ -186,10 +204,14 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel3d-content"
               id="panel3d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Module 4 (Week 13-16): Web3 Multiplayer Games{" "}
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>Module 4: Web3 Multiplayer Games </h5>
+
+                <h6> 📃3 Modules</h6>
+                <h6>Project: Create a web3 multiplayer game.</h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
@@ -210,10 +232,17 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel3d-content"
               id="panel3d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Module 5 (Week 17-20): Web3 Game Monetization and Marketing{" "}
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>Module 5: Web3 Game Monetization and Marketing </h5>
+
+                <h6> 📃2 Modules</h6>
+                <h6>
+                  Project: Create a web3 game that incorporates monetization
+                  strategies and develop a marketing plan for the game.
+                </h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
@@ -242,10 +271,16 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel3d-content"
               id="panel3d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Module 6 (Week 21-24): Web3 Game Security
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>Module 6: Web3 Game Security</h5>
+
+                <h6> 📃3 Modules</h6>
+                <h6>
+                  Project: Create a web3 game with security measures in place.
+                </h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
@@ -261,16 +296,23 @@ export default function CustomizedAccordions() {
           </Accordion>
 
           <Accordion
-            expanded={expanded === "panel5"}
-            onChange={handleChange("panel5")}
+            expanded={expanded === "panel7"}
+            onChange={handleChange("panel7")}
           >
             <AccordionSummary
-              aria-controls="panel3d-content"
-              id="panel3d-header"
+              aria-controls="panel7d-content"
+              id="panel7d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Module 7 (Week 25-28): Web3 Game Analytics and Metrics{" "}
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>Module 7: Web3 Game Analytics and Metrics </h5>
+
+                <h6> 📃2 Modules</h6>
+                <h6>
+                  Project: Create a web3 game with analytics and metrics in
+                  place.
+                </h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
@@ -285,16 +327,22 @@ export default function CustomizedAccordions() {
             </AccordionDetails>
           </Accordion>
           <Accordion
-            expanded={expanded === "panel5"}
-            onChange={handleChange("panel5")}
+            expanded={expanded === "panel8"}
+            onChange={handleChange("panel8")}
           >
             <AccordionSummary
-              aria-controls="panel3d-content"
-              id="panel3d-header"
+              aria-controls="panel8d-content"
+              id="panel8d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Module 8 (Week 29-36): Web3 Game Capstone Project{" "}
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5> Module 8 (Week 29-36): Web3 Game Capstone Project </h5>
+                <h6> 📃1 Modules</h6>
+                <h6>
+                  Project: Create a full web3 game that incorporates all the
+                  elements learned throughout the course.
+                </h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
