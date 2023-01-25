@@ -1,32 +1,88 @@
 @import "../styles/config/utilities";
 @import "../styles/config/variable";
 
+.containers {
+  @include flex_layout(left, center, column);
+  border-radius: 16px;
+  
+  background-color: #fffef8;
+  width:90%;
+  margin: auto;
 
-.containers{
-@include flex_layout(left, center, column);
-      border-radius: 16px;
-      padding: 4rem 4rem 6rem 4rem;
-      background-color: #fffef8;
-      
-      
-      .Contt{
-        padding-left: 30px;
+  .Contt {
+    width: 90%;
+    margin: auto;
 
-        .co{
-            display: flex;
-            flex-direction: row;
-            font-size: 2rem;
-            // padding-left: 150px;
+    .co {
+      display: flex;
+      flex-direction: row;
+      font-size: 2rem;
+      // padding-left: 150px;
 
-             @media screen and (max-width: 768px) {
-    // font-size: 1.5rem;
-     display: flex;
-            flex-direction: column;
-
+      @media screen and (max-width: 768px) {
+        // font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
 
+  .division {
+   
+    @media screen and (max-width: 768px) {
+     
+        width: 100%;
+      }
+    .division3 {
+      padding-top: 50px;
+      width:70%;
+    
+    
+      @media screen and (max-width: 768px) {
+        // font-size: 1.5rem;
+               width: 100%;
+      }
+      .accordian {
+        height: 110px;
+        .accor {
+          h5{
+           color:"#fd7e14"
+          }
+          font-size: 2.5rem;
+          display: flex;
+          flex-direction: column;
+          gap:10;
+          
         }
       }
-}
+    }
 
+    .division2 {
+      width:70%;
+      
+      border-radius: 8px;
+       padding-top: 40px;
+       @media screen and (max-width: 768px) {
+        // font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .accordian {
+        height: 110px;
+        .accor {
+          h1{
+ font-size: 28px;
+          };
+          
+          font-size: 2.4rem;
+          display: flex;
+          flex-direction: column;
+          gap:10;
+        
+        }
+      }
+    }
+  }
+}
 

@@ -16,7 +16,8 @@ const Accordion = styled((props) => (
     {...props}
   />
 ))(({ theme }) => ({
-  border: `2px solid #005778`,
+  border: `1px solid #005778`,
+  borderRadius:"10px",
   "&:not(:last-child)": {
     borderBottom: 0,
   },
@@ -61,7 +62,8 @@ export default function CustomizedAccordions() {
             textAlign: "left",
             fontSize: "2.8rem",
             fontWeight: "600",
-            color: "#005778",
+            color: "#fd7e14",
+            padding: "1rem",
             // paddingLeft: "10rem",
           }}
         >
@@ -71,11 +73,10 @@ export default function CustomizedAccordions() {
           <p
             style={{
               textAlign: "left",
-              fontSize: "2.3rem",
+              fontSize: "2rem",
               fontWeight: "600",
               color: "#005778",
-              paddingBottom: "1.5rem",
-              paddingTop: "1.5rem",
+              padding: "1rem",
               // paddingLeft: "6rem",
             }}
           >
@@ -84,12 +85,10 @@ export default function CustomizedAccordions() {
           <p
             style={{
               textAlign: "left",
-              fontSize: "2.3rem",
+              fontSize: "2rem",
               fontWeight: "600",
               color: "#005778",
-              paddingBottom: "1.5rem",
-              paddingTop: "1.5rem",
-              paddingLeft: "6rem",
+              padding: "1rem",
             }}
           >
             3+ industry-standard guided projects{" "}
@@ -97,12 +96,10 @@ export default function CustomizedAccordions() {
           <p
             style={{
               textAlign: "left",
-              fontSize: "2.3rem",
+              fontSize: "2rem",
               fontWeight: "600",
               color: "#005778",
-              paddingBottom: "1.5rem",
-              paddingTop: "1.5rem",
-              paddingLeft: "6rem",
+              padding: "1rem",
             }}
           >
             6 learning modules
@@ -121,9 +118,14 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel1d-content"
               id="panel1d-header"
+              minHeight={100}
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Month 1: Introduction to Game Development
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5 >
+                  Month 1: Introduction to Game Development
+                </h5>
+                <h6> 📃4 Modules</h6>
               </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
@@ -153,10 +155,16 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel2d-content"
               id="panel2d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Month 2: 2D Game Development
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>Month 2: 2D Game Development</h5>
+                <h6> 📃4 Modules</h6>
+                <h6>
+                  Project: Creating a simple 2D game using Unity or Unreal
+                  Engine
+                </h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
@@ -183,10 +191,16 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel3d-content"
               id="panel3d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Month 3: 3D Game Development
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>Month 3: 3D Game Development</h5>
+                <h6> 📃3 Modules</h6>
+                <h6>
+                  Project: Creating a simple 2D game using Unity or Unreal
+                  Engine
+                </h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
@@ -213,10 +227,16 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel3d-content"
               id="panel3d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Month 4: Multiplayer Game Development
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>Month 4: Multiplayer Game Development</h5>
+                <h6> 📃3 Modules</h6>
+                <h6>
+                  Project: Creating a simple multiplayer game using Unity or
+                  Unreal Engine
+                </h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
@@ -244,10 +264,13 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel3d-content"
               id="panel3d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Month 5: Game Design and Mechanics
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>Month 5: Game Design and Mechanics</h5>
+                <h6> 📃 3 Modules</h6>
+                <h6>Project: Implementing game mechanics in a sample game</h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
@@ -274,11 +297,16 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel3d-content"
               id="panel3d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Month 6: Game Testing and Debugging, Game Monetization and Final
-                Project
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>
+                  Month 6: Game Testing and Debugging, Game Monetization, and
+                  Final Project
+                </h5>
+                <h6> 📃4 Modules</h6>
+                <h6> Project: Final project, presentation, and Q&A</h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
@@ -303,10 +331,7 @@ export default function CustomizedAccordions() {
             </AccordionDetails>
           </Accordion>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
+
         <div className={styles.division3}>
           <Accordion
             className={styles.cont}
@@ -317,17 +342,15 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel21d-content"
               id="panel21d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Month 1: Introduction to Game Design
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>Month 1: Introduction to Game Design</h5>
+                <h6> 📃4 Modules</h6>
+                <h6>
+                  Projects: Create a game design document for a simple game
+                </h6>
               </Typography>{" "}
-              <br />
-              <Typography fontSize={16} color={"#005778"}>
-                4 Modules
-              </Typography>
-              <Typography fontSize={16} color={"#005778"}>
-                Project:
-              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14} pt={2} pb={2}>
@@ -363,10 +386,13 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel22d-content"
               id="panel22d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Month 2: Level Design
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>Month 2: Level Design</h5>
+                <h6> 📃4 Modules</h6>
+                <h6>Projects: Create a level layout for a simple game</h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
@@ -402,10 +428,16 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel23d-content"
               id="panel23d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Month 3: Game Mechanics
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>Month 3: Game Mechanics</h5>
+                <h6> 📃3 Modules</h6>
+                <h6>
+                  Project: Create and implement game rules and win conditions
+                  for a simple game
+                </h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
@@ -445,10 +477,15 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel23d-content"
               id="panel23d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Month 4: Game Monetization and Business Models
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>Month 4: Game Monetization and Business Models</h5>
+                <h6> 📃4 Modules</h6>
+                <h6>
+                  Projects: Create a monetization strategy for a simple game
+                </h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
@@ -489,10 +526,15 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel23d-content"
               id="panel23d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Month 5: Game Testing and Quality Assurance
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>Month 5: Game Testing and Quality Assurance</h5>
+                <h6> 📃3 Modules</h6>
+                <h6>
+                  Projects: Test and debug a simple game Conduct playtesting
+                </h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
@@ -529,10 +571,13 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel23d-content"
               id="panel23d-header"
+              className={styles.accordian}
             >
-              <Typography fontSize={16} color={"#005778"}>
-                Month 6: Final Project and Presentation
-              </Typography>
+              <Typography color={"#005778"} className={styles.accor}>
+                <h5>Month 6: Final Project and Presentation</h5>
+                <h6> 📃3 Modules</h6>
+                <h6>Project: Presenting the final project and Q&A</h6>
+              </Typography>{" "}
             </AccordionSummary>
             <AccordionDetails>
               <Typography fontSize={14}>
