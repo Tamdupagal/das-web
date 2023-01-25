@@ -59,10 +59,10 @@ export default function CustomizedAccordions() {
         <h1
           style={{
             textAlign: "left",
-            fontSize: "2.3rem",
+            fontSize: "2.8rem",
             fontWeight: "600",
             color: "#005778",
-            paddingLeft: "6rem",
+            // paddingLeft: "10rem",
           }}
         >
           Full-stack Game Development/ Design course
@@ -76,7 +76,7 @@ export default function CustomizedAccordions() {
               color: "#005778",
               paddingBottom: "1.5rem",
               paddingTop: "1.5rem",
-              paddingLeft: "6rem",
+              // paddingLeft: "6rem",
             }}
           >
             200+ hours of training & project building
