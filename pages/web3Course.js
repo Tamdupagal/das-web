@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Banner from "../components/Banner";
+import Banner3 from "../components/Banner3";
 import Feature from "../components/Feature";
 import Services from "../components/Services";
 import QualityFeature from "../components/QualityFeature";
@@ -11,7 +11,7 @@ import Performance from "../main/assets/art.svg";
 import Partnership from "../main/assets/art.svg";
 import Blog1 from "../components/Blog1";
 import FaqQuestion from "../main/components/FaqQuestion";
-import Faq from "../components/Faq"
+import Faq2 from "../components/Faq2";
 
 const bannerData = {
   title: "MASTERS IN FULL-STACK Game Development.",
@@ -40,7 +40,7 @@ const data = [
 
 const packageData =
   "STUDY FIRST PAY LATER. PAY ZERO TILL YOU LAND A JOB.\n\n Total fees: Rs 2.99L inclusive of GST.";
-function development({ name }) {
+function web3({ name }) {
   return (
     <div>
       <Head>
@@ -59,8 +59,8 @@ function development({ name }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <Banner data={ bannerData } checkBanner={ false } />
-      <Faq/>
+      <Banner3 data={bannerData} checkBanner={false} />
+      <Faq2 />
       <Feature className="feature" data={DATA().featureWD} />
       <Services className="services" data={data} />
       <QualityFeature className="quality" data={DATA().learning.web} />
@@ -80,4 +80,4 @@ function development({ name }) {
   );
 }
 
-export default development;
+export default web3;

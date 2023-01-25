@@ -27,27 +27,43 @@ function Header(props) {
   const [toggleDropDown, setToggleDropDown] = useState(false);
   const [toggleSocial, setToggleSocial] = useState(false);
 
+  // useEffect(() => {
+  //   const closeDropDown = (e) => {
+  //     if (e.path[0] !== btnRef.current) {
+  //       setToggleDropDown(false);
+  //     }
+  //   };
+
+  //   document.body.addEventListener("click", closeDropDown);
+  //   return () => document.body.removeEventListener("click", closeDropDown);
+  // }, [] );
+  
   useEffect(() => {
     const closeDropDown = (e) => {
       if (e.path[0] !== btnRef.current) {
         setToggleDropDown(false);
       }
-    };
-
-    document.body.addEventListener("click", closeDropDown);
-    return () => document.body.removeEventListener("click", closeDropDown);
-  }, []);
-
-  useEffect(() => {
-    const closeDropDown1 = (e) => {
       if (e.path[0] !== btnRef1.current) {
         setToggleSocial(false);
       }
     };
 
-    document.body.addEventListener("click", closeDropDown1);
-    return () => document.body.removeEventListener("click", closeDropDown1);
+    document.body.addEventListener("click", closeDropDown);
+    return () => document.body.removeEventListener( "click", closeDropDown );
+    
   }, []);
+
+
+  // useEffect(() => {
+  //   const closeDropDown1 = (e) => {
+  //     if (e.path[0] !== btnRef1.current) {
+  //       setToggleSocial(false);
+  //     }
+  //   };
+
+  //   document.body.addEventListener("click", closeDropDown1);
+  //   return () => document.body.removeEventListener("click", closeDropDown1);
+  // }, []);
 
   const router = useRouter();
 
@@ -129,6 +145,16 @@ function Header(props) {
                   >
                     <FaAngleRight className={styles.arrow_right} /> Game
                     Development
+                  </li>
+                  <li
+                    onClick={() => {
+                      router.push("/web3Course");
+                      setToggleDropDown(false);
+                      setIsOpen(false);
+                    }}
+                  >
+                    <FaAngleRight className={styles.arrow_right} /> Web3 Course
+                    
                   </li>
                 </ul>
               )}

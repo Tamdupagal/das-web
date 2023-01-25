@@ -1,0 +1,22 @@
+@import "../styles/config/utilities";
+@import "../styles/config/variable";
+
+
+.containers{
+@include flex_layout(left, center, column);
+      border-radius: 16px;
+      padding: 4rem 4rem 6rem 4rem;
+      background-color: aqua;
+
+
+      .Contt{
+
+        .co{
+            display: flex;
+            flex-direction: row;
+
+        }
+      }
+}
+
+

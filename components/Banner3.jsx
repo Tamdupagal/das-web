@@ -1,16 +1,14 @@
-
-import { useContext } from 'react'
-import React from 'react'
-import styles from './Banner.module.scss'
-import { GoPrimitiveDot as Dot } from 'react-icons/go'
-import { AppContext } from '../AppContext'
-import { useState } from 'react'
+import { useContext } from "react";
+import React from "react";
+import styles from "./Banner.module.scss";
+import { GoPrimitiveDot as Dot } from "react-icons/go";
+import { AppContext } from "../AppContext";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 
 import { toast } from "react-toastify";
-import { borderRadius } from '@mui/system'
-
+import { borderRadius } from "@mui/system";
 
 const FadeIn = {
   initial: {
@@ -29,45 +27,44 @@ const FadeIn = {
 };
 
 function Banner({ data, checkBanner }) {
-  const { setToggleLoginForm, setIsAdmin } = useContext(AppContext)
+  const { setToggleLoginForm, setIsAdmin } = useContext(AppContext);
   const [open, setOpen] = useState(false);
 
   const onOpenModal = () => setOpen(true);
-  const onCloseModal = () => setOpen( false );
-    const router = useRouter();
-    const [details, setDetails] = useState([]);
-    const {
-      register,
-      handleSubmit,
-      reset,
-      formState: { errors },
-    } = useForm();
+  const onCloseModal = () => setOpen(false);
+  const router = useRouter();
+  const [details, setDetails] = useState([]);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
-    const onSubmit = (data) => {
-      // console.log(data);
-      const { name, email, phoneNumber, qualification } = data;
+  const onSubmit = (data) => {
+    // console.log(data);
+    const { name, email, phoneNumber, qualification } = data;
 
-      //post lead form to server
-      const url = `https://back-das-web-server.onrender.com/api/new-register`;
-      fetch(url, {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-        .then((res) => res.json())
-        .then((result) => {
-          console.log(result);
-          setDetails(result);
-          toast.success("Submitted Successfully!");
-          reset();
-          close();
+    //post lead form to server
+    const url = `https://back-das-web-server.onrender.com/api/new-register`;
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        setDetails(result);
+        toast.success("Submitted Successfully!");
+        reset();
+        close();
 
-          router.push("/thankyou");
-        });
-    };
-
+        router.push("/thankyou");
+      });
+  };
 
   return (
     <div className={styles.topcont}>
@@ -81,12 +78,11 @@ function Banner({ data, checkBanner }) {
               border: "2px solid #fd7e14",
               borderRadius: "25px",
               padding: "10px",
-            
             }}
           >
-            6 Month Program
+            9 Month Program
           </h2>
-          <h1 className={styles.heading}>Full-Stack Game Development Course</h1>
+          <h1 className={styles.heading}>Web 3 Game Development Course</h1>
           <div className={styles.desc}>
             <p
               style={{
@@ -133,7 +129,7 @@ function Banner({ data, checkBanner }) {
                 paddingTop: "2rem",
               }}
             >
-            Registration Charge  ₹20,00/- <strike>30,000/- </strike> 
+              Registration Charge ₹20,00/- <strike>30,000/- </strike>
             </p>
             <p
               style={{
@@ -262,5 +258,3 @@ function Banner({ data, checkBanner }) {
   );
 }
 export default Banner;
-
-
