@@ -6,6 +6,7 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import styles from "./Faq.module.scss";
+import { VscProject } from "react-icons/vsc";
 
 const Accordion = styled((props) => (
   <MuiAccordion
@@ -70,40 +71,13 @@ export default function CustomizedAccordions() {
           Web3 Development course
         </h1>
         <div className={styles.co}>
-          <p
-            style={{
-              textAlign: "left",
-              fontSize: "2rem",
-              fontWeight: "600",
-              color: "#005778",
-              padding: "1rem",
-              // paddingLeft: "6rem",
-            }}
-          >
+          <p className={styles.coursesinfo}>
             250+ hours of training & project building
           </p>
-          <p
-            style={{
-              textAlign: "left",
-              fontSize: "2rem",
-              fontWeight: "600",
-              color: "#005778",
-              padding: "1rem",
-            }}
-          >
-            8+ industry-standard guided projects{" "}
+          <p className={styles.coursesinfo}>
+            <VscProject /> 8+ industry-standard guided projects{" "}
           </p>
-          <p
-            style={{
-              textAlign: "left",
-              fontSize: "2rem",
-              fontWeight: "600",
-              color: "#005778",
-              padding: "1rem",
-            }}
-          >
-            8 learning modules
-          </p>
+          <p className={styles.coursesinfo}>8 learning modules</p>
         </div>
       </div>
 
