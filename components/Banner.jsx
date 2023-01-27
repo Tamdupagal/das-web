@@ -62,9 +62,7 @@ function Banner({ data, checkBanner }) {
           setDetails(result);
           toast.success("Submitted Successfully!");
           router.push("/thankyou");
-          reset();
-          close();
-
+      
         });
     };
 
