@@ -1,33 +1,33 @@
-import course2 from '../assets/fswd.jpg'
-import course1 from '../assets/dm.png'
+import course2 from "../assets/fswd.jpg";
+import course1 from "../assets/dm.png";
 // import course3 from '../assets/ds.png'
 
 export const COURSE_DATA = [
   {
     id: 1,
-    heading: 'Solid Foundation course(4 weeks)',
-    altText: 'Solid Foundation course(4 weeks)',
+    heading: "Web3 Game Development Course",
+    altText: "Web3 Game Development Course",
     imgSrc: course1,
     description:
-      '30-days Program. \n 1.5 hour/class instructor-led classes. \n Live online everyday classes. \n 200+ hours of training & project building.',
+      "9 Month Program. \n 1.5 hour/class instructor-led classes. \n Live online everyday classes. \n 250+ hours of training & project building.",
     // title: 'MASTERS/PROFESSIONAL CERTIFICATION IN',
-    heading: 'Solid Foundation course',
-    classes: '',
-    btnText: 'Pay As You Like',
-    path: 'foundation-course',
+    heading: "Web3 Game Development Course",
+    classes: "",
+    btnText: "Pay As You Like",
+    path: "web3Course",
   },
   {
     id: 2,
-    heading: 'Full-stack Game development',
-    altText: 'Fullstack Game development',
+    heading: "Full-stack Game development",
+    altText: "Fullstack Game development",
     imgSrc: course2,
     description:
-      '6-months Program \n Live online classes. \n 500+ hours of training & project building. \n Portfolio - Interview Ready',
+      "6-months Program \n Live online classes. \n 500+ hours of training & project building. \n Portfolio - Interview Ready",
     // title: 'MASTERS/PROFESSIONAL CERTIFICATION IN ',
-    heading: 'Full-stack Game development',
-    classes: '',
-    btnText: 'Learn First Pay Later',
-    path: 'game-development',
+    heading: "Full-stack Game development",
+    classes: "",
+    btnText: "Learn First Pay Later",
+    path: "game-development",
   },
   // {
   //     id: 3,
@@ -41,4 +41,4 @@ export const COURSE_DATA = [
   //     btnText: "Find Out More",
   //     path: "data-science"
   // },
-]
+];
