@@ -130,7 +130,7 @@ function Banner({ data, checkBanner }) {
                 paddingTop: "2rem",
               }}
             >
-              Registration Charge ₹20,00/- <strike>30,000/- </strike>
+              Registration Charge ₹20,000/- <strike>30,000/- </strike>
             </p>
             <p
               style={{
