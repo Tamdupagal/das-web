@@ -96,6 +96,7 @@ function Header(props) {
             className={`${styles.navitem} ${styles.btn}`}
             onClick={() => {
               router.push("/");
+              setIsOpen(false);
             }}
           >
             Home
@@ -106,6 +107,7 @@ function Header(props) {
               className={`${styles.navitem} ${styles.btn}`}
               onClick={() => {
                 router.push("/info");
+                setIsOpen(false);
               }}
             >
               Dashboard
@@ -150,6 +152,7 @@ function Header(props) {
             className={`${styles.navitem} ${styles.btn}`}
             onClick={() => {
               router.push("/blog");
+              setIsOpen(false);
             }}
           >
             Blog
@@ -158,6 +161,7 @@ function Header(props) {
             className={`${styles.navitem} ${styles.btn}`}
             onClick={() => {
               router.push("frequently-asked-question");
+              setIsOpen(false);
             }}
           >
             FAQ
@@ -165,8 +169,8 @@ function Header(props) {
 
           <li className={styles.navitem}>
             <button className={styles.bttn} onClick={onOpenModal}>
-              <GiGameConsole style={{ fontSize: "16px" }} />
-              {" "} Careers / Partnerships
+              <GiGameConsole style={{ fontSize: "16px" }} /> Careers /
+              Partnerships
             </button>
 
             <Modal open={open} onClose={onCloseModal} center>
