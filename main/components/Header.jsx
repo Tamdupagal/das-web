@@ -37,7 +37,7 @@ function Header(props) {
   //   document.body.addEventListener("click", closeDropDown);
   //   return () => document.body.removeEventListener("click", closeDropDown);
   // }, [] );
-  
+
   useEffect(() => {
     const closeDropDown = (e) => {
       if (e.path[0] !== btnRef.current) {
@@ -49,10 +49,8 @@ function Header(props) {
     };
 
     document.body.addEventListener("click", closeDropDown);
-    return () => document.body.removeEventListener( "click", closeDropDown );
-    
+    return () => document.body.removeEventListener("click", closeDropDown);
   }, []);
-
 
   // useEffect(() => {
   //   const closeDropDown1 = (e) => {
@@ -125,7 +123,6 @@ function Header(props) {
               Courses
               {toggleDropDown && (
                 <ul className={styles.dropdown}>
-                 
                   <li
                     onClick={() => {
                       router.push("/game-development");
@@ -144,7 +141,6 @@ function Header(props) {
                     }}
                   >
                     <FaAngleRight className={styles.arrow_right} /> Web3 Course
-                    
                   </li>
                 </ul>
               )}
@@ -170,7 +166,7 @@ function Header(props) {
           <li className={styles.navitem}>
             <button className={styles.bttn} onClick={onOpenModal}>
               <GiGameConsole style={{ fontSize: "16px" }} />
-              Game Dev Careers
+              {" "} Careers / Partnerships
             </button>
 
             <Modal open={open} onClose={onCloseModal} center>

@@ -46,7 +46,7 @@ function Banner({ data, checkBanner }) {
     const { name, email, phoneNumber, qualification } = data;
 
     //post lead form to server
-    const url = `https://back-das-web-server.onrender.com/api/new-register`;
+    const url = `https://das.dijitization.com/api/new-register`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -105,7 +105,7 @@ function Banner({ data, checkBanner }) {
                 paddingTop: "1.5rem",
               }}
             >
-              Average ₹3 LPA salary
+              Average ₹4 LPA salary
             </p>
             <p
               style={{
@@ -129,7 +129,7 @@ function Banner({ data, checkBanner }) {
                 paddingTop: "2rem",
               }}
             >
-              Registration Charge ₹20,000/- <strike>30,000/- </strike>
+              Registration Charge ₹30,000/- <strike>40,000/- </strike>
             </p>
             <p
               style={{

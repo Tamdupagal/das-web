@@ -8,13 +8,13 @@ export const COURSE_DATA = [
   {
     id: 1,
     title: "2. Cost of the programs?",
-    desc: "The Solid Foundation course costs 30,000 INR, and the full-stack game development course costs 2.99 Lakh. Though, these costs will never restrict a deserving student from taking the course as there are multiple payment options and provisions like Scholarships, the Study First Pay Later program, etc",
+    desc: "The Web3 course costs 4 Lakh , and the full-stack game development course costs 2.99 Lakh. Though, these costs will never restrict a deserving student from taking the course as there are multiple payment options and provisions like Scholarships, the Study First Pay Later program, etc",
   },
 
   {
     id: 2,
     title: "3. Length of the programs?",
-    desc: "The Solid Foundation course is 1 month long, the full-stack game development course is 6 months long.",
+    desc: "The Web3 course is 9 month long, the full-stack game development course is 6 months long.",
   },
   {
     id: 3,

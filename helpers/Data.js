@@ -57,7 +57,7 @@ export const DATA = () => {
         imgSrc: liveclass,
         altText: "Live online everyday classes",
         title: "Live online classes",
-        text: ["Live Instructor-led classes", "200+ hours of training"],
+        text: ["Live Instructor-led classes", "250+ hours of training"],
       },
       {
         id: 2,
@@ -101,7 +101,7 @@ export const DATA = () => {
           id: 2,
           imgSrc: Ba,
           altText: "Introduction Unity ",
-          title: "Introduction Unity & Unreal Engine",
+          title: "Introduction Web3 Game Dev",
           text: [
             "A cross-platform used for developing games and consoles.",
             "Learn to develop games using Unity & Unreal Engine.",
@@ -283,7 +283,7 @@ export const DATA = () => {
       dm: {
         title: "MASTER Solid foundation Game Development Program",
         description:
-          "Solid Foundation course gives you an extensive & comprehensive introduction to advanced knowledge of the all-important gaming domains. You will be introduced to and taught many essential software and programming languages Game Developers use. Besides informative lectures, the course includes an introduction to real-world projects and practical simulations for gaining domain experience. You’ll learn all tools in gaming experience and authentic Pro simulations to make you industry-ready. After successfully completing this 30 days program, you will understand & learn all basics of being an amazing game developer.",
+          "The Web3 Game Development Course provides an in-depth education in the field of web3 gaming. With a week-by-week structure, students will learn all aspects of web3 gaming, starting from the fundamentals and covering topics such as smart contracts, game design, multiplayer games, monetization, security, analytics, and metrics. The course prioritizes hands-on learning through projects, culminating in a final capstone project where students can showcase their skills and develop a full web3 game.",
         buttonText: "STUDY FIRST PAY LATER",
       },
     },

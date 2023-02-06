@@ -65,9 +65,9 @@ function web3({ name }) {
       <Services className="services" data={data} />
       <QualityFeature className="quality" data={DATA().learning.web} />
       <CoreFeature
-        title={DATA().coreFeature.web.title}
-        data={DATA().coreFeature.web.description}
-        btnText={DATA().coreFeature.web.buttonText}
+        title={DATA().coreFeature.dm.title}
+        data={DATA().coreFeature.dm.description}
+        btnText={DATA().coreFeature.dm.buttonText}
       />
       <Feature className="growth" data={DATA().growth.dm} />
       <WorkFlow />

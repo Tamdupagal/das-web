@@ -48,7 +48,7 @@ function Banner({ data, checkBanner }) {
       const { name, email, phoneNumber, qualification } = data;
 
       //post lead form to server
-      const url = `https://back-das-web-server.onrender.com/api/new-register`;
+      const url = `https://das.dijitization.com/api/new-register`;
       fetch(url, {
         method: "POST",
         headers: {
