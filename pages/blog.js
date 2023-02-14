@@ -2,8 +2,10 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import Post1 from "../assets/post-images/tip.png";
+import Post4 from "../assets/post-images/20.jpg";
 import Post2 from "../main/assets/Blog.png";
 import Post3 from "../assets/blog5_12.png";
+
 // import Blog from '../main/components/Blog'
 const blog = () => {
   return (
@@ -12,7 +14,7 @@ const blog = () => {
       <hr />
       <div className="blogg">
         <div className="Imagess">
-          <Image src={Post3} alt="main image" className="Main-Blog imgg" />
+          <Image src={Post4} alt="main image" className="Main-Blog imgg" />
         </div>
         <Link href="../post/A-Guide-to_Game_Design_the_process_behind_making_a_video_game">
           <h1 className="sub-link">
