@@ -14,6 +14,24 @@ const blog = () => {
         <div className="Imagess">
           <Image src={Post3} alt="main image" className="Main-Blog imgg" />
         </div>
+        <Link href="../post/A-Guide-to_Game_Design_the_process_behind_making_a_video_game">
+          <h1 className="sub-link">
+            A Guide to Game Design: the process behind making a video game
+          </h1>
+        </Link>
+        <Link href="../post/A-Guide-to_Game_Design_the_process_behind_making_a_video_game">
+          <p>
+            The process of designing a video game is an exciting, creative
+            endeavor that spurs you to think in new ways and helps you learn
+            more about your strengths.
+          </p>
+        </Link>
+        <br />
+      </div>
+      <div className="blogg">
+        <div className="Imagess">
+          <Image src={Post3} alt="main image" className="Main-Blog imgg" />
+        </div>
         <Link href="../post/Top-5-Game-Development-Courses">
           <h1 className="sub-link">Top 5 Game Development Courses</h1>
         </Link>
