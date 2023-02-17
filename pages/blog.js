@@ -2,14 +2,34 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import Post1 from "../assets/post-images/tip.png";
+import Post4 from "../assets/post-images/20.jpg";
 import Post2 from "../main/assets/Blog.png";
 import Post3 from "../assets/blog5_12.png";
+
 // import Blog from '../main/components/Blog'
 const blog = () => {
   return (
     <div style={{ paddingTop: "10rem" }} className="container2">
       <h1 className="title">Latest Post</h1>
       <hr />
+      <div className="blogg">
+        <div className="Imagess">
+          <Image src={Post4} alt="main image" className="Main-Blog imgg" />
+        </div>
+        <Link href="../post/A-Guide-to_Game_Design_the_process_behind_making_a_video_game">
+          <h1 className="sub-link">
+            A Guide to Game Design: the process behind making a video game
+          </h1>
+        </Link>
+        <Link href="../post/A-Guide-to_Game_Design_the_process_behind_making_a_video_game">
+          <p>
+            The process of designing a video game is an exciting, creative
+            endeavor that spurs you to think in new ways and helps you learn
+            more about your strengths.
+          </p>
+        </Link>
+        <br />
+      </div>
       <div className="blogg">
         <div className="Imagess">
           <Image src={Post3} alt="main image" className="Main-Blog imgg" />
