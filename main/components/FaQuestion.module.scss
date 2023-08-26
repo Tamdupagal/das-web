@@ -1,11 +1,17 @@
 @import "../../styles/config/utilities";
 @import "../../styles/config/variable";
 
-.FaqQuestion{
-  background-color: #fffef8;
-  color:#fd7e14;
-  padding-top: 4rem;
-
+.FaqQuestion {
+  position: relative;
+  width: 100%;
+  padding: 20rem 0 10rem 0;
+  @include flex_layout(center, null, column);
+  background-image: url(../assets/wave1.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and (max-width: 768px) {
+    padding: 15rem 0;
+  }
 }
 
 .container {
@@ -13,15 +19,33 @@
   font-family: "Montserrat", sans-serif;
   width: 70%;
   margin: auto;
-  background-color: #fffef8;
+  // background-color: #fffef8;
   padding: 3rem 0.5rem 7rem 0.5rem;
   // border: 2px solid #fd7e14;
   // border-radius:8px;
   font-size: 18px;
   border: none;
   text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
 
+  @media screen and (max-width: 350px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 90%;
+  }
   @media screen and (max-width: 768px) {
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
   }
 }
