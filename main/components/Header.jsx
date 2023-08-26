@@ -6,13 +6,13 @@ import { GiGameConsole } from "react-icons/gi";
 import { useContext, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { AppContext } from "../../AppContext";
-import { useSession } from "next-auth/react";
-import LeadForm from "./Form/LeadForm";
+// import { useSession } from "next-auth/react";
+// import LeadForm from "./Form/LeadForm";
 import Modal from "react-responsive-modal";
 
 function Header(props) {
   const { setIsAdmin, setToggleLoginForm } = useContext(AppContext);
-  const { status } = useSession();
+  // const { status } = useSession();
 
   const headerRef = useRef();
   const btnRef = useRef();
@@ -102,7 +102,7 @@ function Header(props) {
             Home
           </li>
 
-          {status === "authenticated" ? (
+          {/* {status === "authenticated" ? (
             <li
               className={`${styles.navitem} ${styles.btn}`}
               onClick={() => {
@@ -114,7 +114,7 @@ function Header(props) {
             </li>
           ) : (
             ""
-          )}
+          )} */}
 
           <li className={styles.navitem}>
             <button
