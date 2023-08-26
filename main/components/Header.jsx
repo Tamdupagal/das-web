@@ -7,7 +7,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { AppContext } from "../../AppContext";
 // import { useSession } from "next-auth/react";
-// import LeadForm from "./Form/LeadForm";
+import LeadForm from "./Form/LeadForm";
 import Modal from "react-responsive-modal";
 
 function Header(props) {
