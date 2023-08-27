@@ -1,8 +1,7 @@
-import React from 'react'
-import styles from './FaqData.module.scss'
-import { GoPrimitiveDot as Dot } from 'react-icons/go'
-import Accordion from './Accordion'
-
+import React from "react";
+import styles from "./FaqData.module.scss";
+import { GoDotFill as Dot } from "react-icons/go";
+import Accordion from "./Accordion";
 
 export default function FaqData(props) {
   return (
