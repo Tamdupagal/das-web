@@ -141,7 +141,7 @@ function Banner({ data, checkBanner }) {
                 borderLeft: "4px solid #fd7e14",
               }}
             >
-              100% Refund if You're Not Satisfied
+              100% Refund if You &apos;re Not Satisfied
             </p>
             <p
               style={{
