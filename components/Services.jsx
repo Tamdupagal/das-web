@@ -9,27 +9,32 @@ function Services({ data, className}) {
     
 
     return (
-        <section className={styles.container}>
-            <div className={styles.content__box}>
-                <div className={styles.service__header}>
-                    <SectionHeader slogan="OBJECTIVES" text="Start getting Industry ready Identified & solve problems for companies 
-Build a strong foundation for the gaming industry." />
-<div className={styles.sec}>
-                <div className={styles.divi}>
-                <h5>Understanding Programming & Logic</h5>
-                <li>Web3 Game Development</li>
+      <section className={styles.container}>
+        <div className={styles.content__box}>
+          <div className={styles.service__header}>
+            <SectionHeader
+              slogan="OBJECTIVES"
+              text="Empower Yourself for the AI-Driven Future
+Master Generative AI for Real-World Problem Solving
+Build a Strong Foundation in AI Innovation
+"
+            />
+            <div className={styles.sec}>
+              <div className={styles.divi}>
+                <h5>Mastering AI Tools & Techniques</h5>
+                <li>Create Solutions Beyond Coding</li>
                 <li>Creative & Problem solving skills.</li>
-                </div>
-                <div className={styles.divi}>
+              </div>
+              <div className={styles.divi}>
                 <h5>Structured Curriculum</h5>
-                <li>Build, run, analyze and optimize web3 games</li>
-                <li>Set up and run basic games from scratch.</li>
-                </div>
-                </div>
-                </div>            
-                </div>
-        </section >
-    )
+                <li>Build AI-Powered Solutions</li>
+                <li>From Concept to Implementation</li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
 }
 
 export default Services

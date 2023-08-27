@@ -14,7 +14,7 @@ import FaqQuestion from "../main/components/FaqQuestion";
 import Faq from "../components/Faq"
 
 const bannerData = {
-  title: "MASTERS IN FULL-STACK Game Development.",
+  title: "Generative AI Mastery Course.",
   program: "(6-month Program)",
 };
 
@@ -73,7 +73,7 @@ function development({ name }) {
       <WorkFlow />
       <Blog1 />
       {<Package data={packageData} />}
-      <FaqQuestion />
+      {/* <FaqQuestion /> */}
 
       <hr />
     </div>

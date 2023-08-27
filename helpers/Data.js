@@ -57,7 +57,10 @@ export const DATA = () => {
         imgSrc: liveclass,
         altText: "Live online everyday classes",
         title: "Live online classes",
-        text: ["Live Instructor-led classes", "250+ hours of training"],
+        text: [
+          "Engage in Interactive Learning",
+          "250+ Hours of Expert Training",
+        ],
       },
       {
         id: 2,
@@ -65,8 +68,8 @@ export const DATA = () => {
         altText: "Learning",
         title: "Learning",
         text: [
-          "Agency style COHORT based learning",
-          "1:10 collaborative academic experience",
+          "Cohort-Based Learning Approach",
+          "1:10 Collaborative Academic Experience",
         ],
       },
       {
@@ -74,7 +77,10 @@ export const DATA = () => {
         imgSrc: pm,
         altText: "Project & Portfolio Management",
         title: "Project & Portfolio Management",
-        text: ["Introduction to Live Projects.", "Portfolio Management."],
+        text: [
+          "Experience Real-Life Generative AI Projects",
+          "Portfolio Development and Management",
+        ],
       },
       // {
       //   id: 4,
@@ -148,8 +154,8 @@ export const DATA = () => {
           id: 1,
           // imgSrc: Dmbasics,
           altText: "Game development",
-          title: "Game development",
-          text: ["Build games with C++", "Learn Coding games using C#"],
+          title: "Generative AI Techniques",
+          text: ["Harness the Power of AI for Creative Outputs"],
         },
         {
           id: 2,
@@ -277,7 +283,7 @@ export const DATA = () => {
       web: {
         title: "MASTERS IN FULL-STACK Game Development.",
         description:
-          "The Full-Stack Game Development course gives you an extensive & comprehensive introduction to advanced knowledge of the all-important gaming domains. You will be introduced to and taught many essential software and programming languages Game Developers use. Besides informative lectures, the course includes an introduction to real-world projects and practical simulations for gaining domain experience. You’ll learn all tools in gaming experience and authentic Pro simulations to make you industry-ready. After successful completion of this 6 months program, you will receive a certificate from DIGITAL AIDED SCHOOL stating that you possess the expertise and authenticate your abilities to create TECH and certifying that you are placement ready",
+          "The Generative AI Mastery Course is designed to equip you with in-depth knowledge and practical skills in the field of Generative AI. Our comprehensive curriculum introduces you to cutting-edge AI tools and techniques, allowing you to harness the power of AI for creative problem-solving and innovation. Through a combination of expert-led virtual classes and hands-on projects, you'll develop a deep understanding of how to leverage Generative AI in various domains. Upon successful completion of this transformative 6-month program, you'll earn a certificate from Digital Aided School, validating your expertise in Generative AI and positioning you for a successful career in the AI-driven world.",
         buttonText: "STUDY FIRST PAY LATER",
       },
       dm: {
