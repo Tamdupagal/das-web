@@ -127,13 +127,12 @@ function Header(props) {
                 <ul className={styles.dropdown}>
                   <li
                     onClick={() => {
-                      router.push("/game-development");
+                      router.push("/gen-ai");
                       setToggleDropDown(false);
                       setIsOpen(false);
                     }}
                   >
-                    <FaAngleRight className={styles.arrow_right} /> Game
-                    Development
+                    <FaAngleRight className={styles.arrow_right} /> Generative AI
                   </li>
                   <li
                     onClick={() => {
@@ -160,7 +159,7 @@ function Header(props) {
           <li
             className={`${styles.navitem} ${styles.btn}`}
             onClick={() => {
-              router.push("frequently-asked-question");
+              router.push("/frequently-asked-question");
               setIsOpen(false);
             }}
           >

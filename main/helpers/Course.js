@@ -5,30 +5,31 @@ import course1 from "../assets/dm.png";
 export const COURSE_DATA = [
   {
     id: 1,
-    heading: "Web3 Game Development Course",
-    altText: "Web3 Game Development Course",
-    imgSrc: course1,
-    description:
-      "9 Month Program. \n 1.5 hour/class instructor-led classes. \n Live online everyday classes. \n 250+ hours of training & project building.",
-    // title: 'MASTERS/PROFESSIONAL CERTIFICATION IN',
-    heading: "Web3 Game Development Course",
-    classes: "",
-    btnText: "Pay As You Like",
-    path: "web3Course",
-  },
-  {
-    id: 2,
-    heading: "Full-stack Game development",
-    altText: "Fullstack Game development",
+    heading: "Generative Ai Course",
+    altText: "Generative Ai Course",
     imgSrc: course2,
     description:
-      "6-months Program \n Live online classes. \n 500+ hours of training & project building. \n Portfolio - Interview Ready",
+      "6-months Program \n Live virtual classes. \n 250+ hours of training & project building. \n Portfolio - Interview Ready",
     // title: 'MASTERS/PROFESSIONAL CERTIFICATION IN ',
     heading: "Full-stack Game development",
     classes: "",
     btnText: "Learn First Pay Later",
     path: "game-development",
   },
+  {
+    id: 2,
+    heading: "Web3 Game Development Course",
+    altText: "Web3 Game Development Course",
+    imgSrc: course1,
+    description:
+      "9 Month Program. \n 1.5 hour/class instructor-led classes. \n Live virtual everyday classes. \n 250+ hours of training & project building.",
+    // title: 'MASTERS/PROFESSIONAL CERTIFICATION IN',
+    heading: "Web3 Game Development Course",
+    classes: "",
+    btnText: "Pay As You Like",
+    path: "web3Course",
+  },
+
   // {
   //     id: 3,
   //     heading: "Data Science",

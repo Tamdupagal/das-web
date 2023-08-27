@@ -1,6 +1,6 @@
 // import React from "react";
 import FaqData from "./FaqData";
-import { COURSE_DATA } from "../helpers/Faq";
+import { COURSE_DATA, COURSE_DATA2 } from "../helpers/Faq";
 import styles from "./FaQuestion.module.scss";
 
 function FaqQuestion() {
@@ -28,7 +28,7 @@ function FaqQuestion() {
           })}
         </section>
         <section>
-          {COURSE_DATA.map((item) => {
+          {COURSE_DATA2.map((item) => {
             return (
               <div className={styles.card} key={item.id}>
                 <FaqData {...item} />
