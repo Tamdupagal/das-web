@@ -23,12 +23,12 @@ import { AiTwotoneMessage } from 'react-icons/ai'
 import { IoMdLogIn } from 'react-icons/io'
 import Popup from 'reactjs-popup';
 import LoginForm from './Form/LoginForm';
-import { signOut, useSession } from 'next-auth/react';
+// import { signOut, useSession } from 'next-auth/react';
 import Modal from 'react-responsive-modal';
 
 function Footer() {
   const { setIsAdmin, setOpenLoginForm } = useContext(AppContext);
-  const { data, status } = useSession();
+  // const { data, status } = useSession();
 
   // console.log(data, status);
   const [open, setOpen] = useState(false);
@@ -79,13 +79,13 @@ function Footer() {
             <FaEnvelope className={styles.icon} /> hello@digitalaidedschool.com
           </li>
 
-          {
+          {/* {
             status !== "authenticated" ?
               <li className={styles.smalll} onClick={onOpenModal}><span><IoMdLogIn className={styles.icon} /> Login </span>
               </li>
               :
               <li className={styles.smalll} onClick={() => signOut()}><span><IoMdLogIn className={styles.icon} /> Logout </span></li>
-          }
+          } */}
 
           <Modal
             open={open}
