@@ -6,6 +6,7 @@ import Head from 'next/head'
 import WorkFlow from '../components/WorkFlow'
 import Blog1 from '../components/Blog1'
 import Testimonial from '../components/Testimonial'
+import NewState from '../components/NewState'
 // import HubSpot from '../main/components/HubSpot'
 // import Login from '../main/components/Login'
 // import ThankYou from '../main/components/ThankYou'
@@ -29,15 +30,15 @@ export default function Home() {
         <link rel='icon' href='/favicon.png' />
       </Head>
       <main>
-
-        <Banner />
+<NewState/>
+        {/* <Banner />
         <Courses />
         <Misson />
         <Blog1/>  
         <Association />
         <WorkFlow />
         <Testimonial/>
-         
+          */}
         <hr/>
       </main>
     </div>

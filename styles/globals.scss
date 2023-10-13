@@ -23,7 +23,7 @@ body {
   font-family: "Montserrat", sans-serif;
   width: 100%;
   position: relative;
-  background-color: white;
+  background-color: black;
 }
 
 html {
@@ -552,35 +552,35 @@ p {
   font-size: 13px;
 }
 
-.privacy_cont2{
-
+.privacy_cont2 {
   background-color: #fffef8;
   .privacy_cont {
     padding-top: 4rem;
     font-family: "Montserrat", sans-serif;
     width: 80%;
     // font-size: 2rem;
-  margin: auto;
-  @media screen and (max-width: 768px) {
-    width: 90%;
     margin: auto;
-  }
-  .privacy {
+    @media screen and (max-width: 768px) {
+      width: 90%;
+      margin: auto;
+    }
+    .privacy {
+    }
   }
 }
 
-  }
+h5 {
+  color: #fd7e14;
+  font-family: "Montserrat", sans-serif;
+}
 
+h6 {
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
 
-
-  h5{
-    color: #fd7e14;
-     font-family: "Montserrat", sans-serif;
- 
-  }
-
-  h6{
-    font-weight: 500;
-     font-family: "Montserrat", sans-serif;
- 
-  }
+.changetextto:hover {
+  scale: 2;
+  transition: 5s;
+   
+}

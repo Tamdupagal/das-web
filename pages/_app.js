@@ -69,9 +69,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <SessionProvider session={pageProps.session}>
       <AppContextProvider>
-        <Header />
+        {/* <Header /> */}
         <Component {...pageProps} />
-        <Footer />
+        {/* <Footer /> */}
         <FormWrapper />
         <LoaderWrapper />
       </AppContextProvider>
