@@ -6,13 +6,13 @@ import { GiGameConsole } from "react-icons/gi";
 import { useContext, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { AppContext } from "../../AppContext";
-import { useSession } from "next-auth/react";
+// import { useSession } from "next-auth/react";
 import LeadForm from "./Form/LeadForm";
 import Modal from "react-responsive-modal";
 
 function Header(props) {
   const { setIsAdmin, setToggleLoginForm } = useContext(AppContext);
-  const { status } = useSession();
+  // const { status } = useSession();
 
   const headerRef = useRef();
   const btnRef = useRef();
@@ -102,7 +102,7 @@ function Header(props) {
             Home
           </li>
 
-          {status === "authenticated" ? (
+          {/* {status === "authenticated" ? (
             <li
               className={`${styles.navitem} ${styles.btn}`}
               onClick={() => {
@@ -114,7 +114,7 @@ function Header(props) {
             </li>
           ) : (
             ""
-          )}
+          )} */}
 
           <li className={styles.navitem}>
             <button
@@ -127,13 +127,12 @@ function Header(props) {
                 <ul className={styles.dropdown}>
                   <li
                     onClick={() => {
-                      router.push("/game-development");
+                      router.push("/gen-ai");
                       setToggleDropDown(false);
                       setIsOpen(false);
                     }}
                   >
-                    <FaAngleRight className={styles.arrow_right} /> Game
-                    Development
+                    <FaAngleRight className={styles.arrow_right} /> Generative AI
                   </li>
                   <li
                     onClick={() => {
@@ -160,7 +159,7 @@ function Header(props) {
           <li
             className={`${styles.navitem} ${styles.btn}`}
             onClick={() => {
-              router.push("frequently-asked-question");
+              router.push("/frequently-asked-question");
               setIsOpen(false);
             }}
           >

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import Document, { Html, Head, Main, NextScript } from "next/document";
 // import Script from 'next/script';
 

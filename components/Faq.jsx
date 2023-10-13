@@ -66,7 +66,7 @@ export default function CustomizedAccordions() {
             // paddingLeft: "10rem",
           }}
         >
-          Full-stack Game Development/ Design course
+          Generative AI Mastery Program
         </h1>
         <div className={styles.co}>
           <p
@@ -79,7 +79,7 @@ export default function CustomizedAccordions() {
               // paddingLeft: "6rem",
             }}
           >
-            200+ hours of training & project building
+            Comprehensive Training & Transformational Projects
           </p>
           <p
             style={{
@@ -90,7 +90,7 @@ export default function CustomizedAccordions() {
               padding: "1rem",
             }}
           >
-            3+ industry-standard guided projects{" "}
+            3+ Industry-Driven Projects{" "}
           </p>
           <p
             style={{
@@ -101,7 +101,7 @@ export default function CustomizedAccordions() {
               padding: "1rem",
             }}
           >
-            6 learning modules
+           
           </p>
         </div>
       </div>
@@ -337,7 +337,7 @@ export default function CustomizedAccordions() {
           </Accordion>
         </div>
 
-        <div className={styles.division3}>
+        {/* <div className={styles.division3}>
           <Accordion
             className={styles.cont}
             expanded={expanded === "panel21"}
@@ -615,7 +615,7 @@ export default function CustomizedAccordions() {
               </Typography>
             </AccordionDetails>
           </Accordion>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -1,14 +1,15 @@
+/* eslint-disable react/no-unknown-property */
 
-import { useContext } from 'react'
-import React from 'react'
-import styles from './Banner.module.scss'
-import { GoPrimitiveDot as Dot } from 'react-icons/go'
-import { AppContext } from '../AppContext'
-import Link from 'next/link'
-import Popup from 'reactjs-popup'
-import LeadForm from '../main/components/Form/LeadForm'
-import Modal from 'react-responsive-modal'
-import { useState } from 'react'
+import { useContext } from "react";
+import React from "react";
+import styles from "./Banner.module.scss";
+import { GoDotFill as Dot } from "react-icons/go";
+import { AppContext } from "../AppContext";
+// import Link from 'next/link'
+import Popup from "reactjs-popup";
+import LeadForm from "../main/components/Form/LeadForm";
+import Modal from "react-responsive-modal";
+import { useState } from "react";
 
 const FadeIn = {
   initial: {
@@ -27,13 +28,13 @@ const FadeIn = {
 };
 
 function Banner({ data, checkBanner }) {
-  const { setToggleLoginForm, setIsAdmin } = useContext(AppContext)
+  const { setToggleLoginForm, setIsAdmin } = useContext(AppContext);
   const [open, setOpen] = useState(false);
 
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
 
- /*  const handleForm = function () {
+  /*  const handleForm = function () {
     setIsAdmin(false)
     setToggleLoginForm(true)
   } */

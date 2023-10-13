@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import React from "react";
 import styles from "./Banner.module.scss";
-import { GoPrimitiveDot as Dot } from "react-icons/go";
+import { GoDotFill as Dot } from "react-icons/go";
 import { AppContext } from "../AppContext";
 import { useState } from "react";
 import { useForm } from "react-hook-form";

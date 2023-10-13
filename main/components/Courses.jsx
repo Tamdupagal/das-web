@@ -49,9 +49,15 @@ function Courses() {
     <section className={styles.container}>
       <h1 className={styles.main_title}>About our course</h1>
       <p className={styles.about__course}>
-        The real <span>STUDY FIRST PAY LATER programs.<br/></span>World&apos;s 1st Live online classes
-       cohort-based learning.<br/>  1:10 (batch) collaborative Live project building academic experience.<br/> Live Real Life
-        industry-standard projects.
+        <span>
+          Unlock the Power of Generative AI.
+          <br />
+        </span>
+        Revolutionize your productivity with cutting-edge AI skills.
+        <br />
+        Join the pioneers of Generative AI learning.
+        <br /> 1:10 (batch) collaborative Live project building academic
+        experience.
       </p>
       <div className={styles.carousel__box}>
         <Slider {...settings} ref={sliderRef}>
@@ -60,7 +66,7 @@ function Courses() {
               <div className={styles.card__wrapper} key={item.id}>
                 <CourseBox {...item} />
               </div>
-            )
+            );
           })}
         </Slider>
         {isBtnEnabled && (
@@ -76,7 +82,7 @@ function Courses() {
         )}
       </div>
     </section>
-  )
+  );
 }
 
 export default Courses

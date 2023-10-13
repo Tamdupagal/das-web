@@ -1,16 +1,14 @@
-
-import { useContext } from 'react'
-import React from 'react'
-import styles from './Banner.module.scss'
-import { GoPrimitiveDot as Dot } from 'react-icons/go'
-import { AppContext } from '../AppContext'
-import { useState } from 'react'
+import { useContext } from "react";
+import React from "react";
+import styles from "./Banner.module.scss";
+// import { GoDotFill as Dot } from "react-icons/go";
+import { AppContext } from "../AppContext";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 
 import { toast } from "react-toastify";
-import { borderRadius } from '@mui/system'
-
+import { borderRadius } from "@mui/system";
 
 const FadeIn = {
   initial: {
@@ -29,43 +27,41 @@ const FadeIn = {
 };
 
 function Banner({ data, checkBanner }) {
-  const { setToggleLoginForm, setIsAdmin } = useContext(AppContext)
+  const { setToggleLoginForm, setIsAdmin } = useContext(AppContext);
   const [open, setOpen] = useState(false);
 
   const onOpenModal = () => setOpen(true);
-  const onCloseModal = () => setOpen( false );
-    const router = useRouter();
-    const [details, setDetails] = useState([]);
-    const {
-      register,
-      handleSubmit,
-      reset,
-      formState: { errors },
-    } = useForm();
+  const onCloseModal = () => setOpen(false);
+  const router = useRouter();
+  const [details, setDetails] = useState([]);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
-    const onSubmit = (data) => {
-      console.log(data);
-      const { name, email, phoneNumber, qualification } = data;
+  const onSubmit = (data) => {
+    console.log(data);
+    const { name, email, phoneNumber, qualification } = data;
 
-      //post lead form to server
-      const url = `https://das.dijitization.com/api/new-register`;
-      fetch(url, {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-        .then((res) => res.json())
-        .then((result) => {
-          console.log(result);
-          setDetails(result);
-          toast.success("Submitted Successfully!");
-          router.push("/thankyou");
-      
-        });
-    };
-
+    //post lead form to server
+    const url = `https://das.dijitization.com/api/new-register`;
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        setDetails(result);
+        toast.success("Submitted Successfully!");
+        router.push("/thankyou");
+      });
+  };
 
   return (
     <div className={styles.topcont}>
@@ -83,7 +79,7 @@ function Banner({ data, checkBanner }) {
           >
             6 Month Program
           </h2>
-          <h1 className={styles.heading}>Full-Stack Game Development Course</h1>
+          <h1 className={styles.heading}>Generative AI Mastery Course</h1>
           <div className={styles.desc}>
             <p
               style={{
@@ -94,7 +90,7 @@ function Banner({ data, checkBanner }) {
                 fontWeight: "bold",
               }}
             >
-              with Guaranteed Placement
+              Unlock Your Potential with Generative AI
             </p>
             <p
               style={{
@@ -106,7 +102,7 @@ function Banner({ data, checkBanner }) {
                 paddingTop: "1.5rem",
               }}
             >
-              Average ₹3 LPA salary
+              Boost Productivity, Innovation, and Efficiency
             </p>
             <p
               style={{
@@ -118,7 +114,7 @@ function Banner({ data, checkBanner }) {
                 paddingTop: "2rem",
               }}
             >
-              Admissions close on February 1st.
+              Admissions Now Open. Limited Seats Available.
             </p>
             <p
               style={{
@@ -130,7 +126,8 @@ function Banner({ data, checkBanner }) {
                 paddingTop: "2rem",
               }}
             >
-              Registration Charge ₹20,000/- <strike>30,000/- </strike>
+              Registration Fee ₹20,000/-{" "}
+              <strike style={{ fontSize: "2.5rem" }}>₹30,000/-</strike>
             </p>
             <p
               style={{
@@ -144,7 +141,7 @@ function Banner({ data, checkBanner }) {
                 borderLeft: "4px solid #fd7e14",
               }}
             >
-              100% refund if not hired
+              100% Refund if You &apos;re Not Satisfied
             </p>
             <p
               style={{
@@ -156,7 +153,7 @@ function Banner({ data, checkBanner }) {
                 borderLeft: "4px solid #fd7e14",
               }}
             >
-              Study first, then pay once you are placed.
+              Learn First, Pay After Placement
             </p>
             <p
               style={{ textAlign: "left", fontSize: "16px", color: "#005778" }}
@@ -259,5 +256,3 @@ function Banner({ data, checkBanner }) {
   );
 }
 export default Banner;
-
-

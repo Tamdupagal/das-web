@@ -14,16 +14,14 @@ function Misson() {
       <div className={styles.mission__box}>
         <div className={styles.box}>
           <p>
-            We are an online learning platform that provides training
-             and placement
-             support to creators and helps them succeed in their 
-            game development journey. Linking the gaming industry with passionate developers.
+            Empower Yourself with Generative AI Expertise. We're your partner on
+            the journey to mastering Generative AI. Bridging the gap between
+            aspiring learners and the AI revolution.
           </p>
         </div>
-        
       </div>
     </section>
-  )
+  );
 }
 
 export default Misson

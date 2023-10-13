@@ -7,7 +7,7 @@ import Form from "../main/components/Form";
 import ReactLoading from "react-loading";
 import { useRouter } from "next/router";
 import TagManager from "react-gtm-module";
-import { SessionProvider } from "next-auth/react";
+// import { SessionProvider } from "next-auth/react";
 import "../styles/globals.scss";
 import "react-responsive-modal/styles.css";
 
@@ -67,7 +67,7 @@ function MyApp({ Component, pageProps }) {
   }
 
   return (
-    <SessionProvider session={pageProps.session}>
+  
       <AppContextProvider>
         {/* <Header /> */}
         <Component {...pageProps} />
@@ -75,7 +75,7 @@ function MyApp({ Component, pageProps }) {
         <FormWrapper />
         <LoaderWrapper />
       </AppContextProvider>
-    </SessionProvider>
+    
   );
 }
 

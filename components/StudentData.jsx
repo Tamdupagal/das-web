@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { useState, useEffect, useMemo } from "react";
 // import { useTable, usePagination } from "react-table";
 import { getUsers, deleteUser } from "./StudentDataColumns";

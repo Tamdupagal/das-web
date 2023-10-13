@@ -119,7 +119,7 @@ const Post3 = () => {
         </div>
         <p style={{ paddingTop: "1rem" }} className="description">
           <b>
-            <Link href="https://digitalaidedschool.com/game-development">
+            <Link href="https://digitalaidedschool.com/gen-ai">
               Masters in full-stack Game Development| Digital Aided School: The
             </Link>
           </b>
